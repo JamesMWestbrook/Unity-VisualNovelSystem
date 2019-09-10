@@ -36,6 +36,7 @@ public class CutsceneManager : MonoBehaviour {
     [Header("")]
     [SerializeField] private Image _cgGraphic;
     [SerializeField] public GameObject dialoguePanel;
+    [SerializeField] public GameObject speakerPanel;
     [SerializeField] private TextMeshProUGUI dialogueTMP;
     [SerializeField] private TextMeshProUGUI speakerTMP;
 
@@ -89,8 +90,6 @@ public class CutsceneManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-        Debug.Log(leftCharacter.GetComponent<CharacterSprite>().Outfit.color);
-
 	    PlayerInput();
     }
 
@@ -212,12 +211,9 @@ public class CutsceneManager : MonoBehaviour {
                     //ChoiceOptionHolder _holder = _newOption.GetComponent<ChoiceOptionHolder>();
                     OptionNode optionNode = _NP.node as OptionNode;
                         _newOption.GetComponentInChildren<Text>().text = optionNode.optionText;
-
+                    _newOption.GetComponent<ChoiceOptionHolder>().node = _NP.node;
                    // _holder.node = _NP.node;
                    // _holder.indexOfOptions = listIndex;
-
-                    
-
                 }
 
                 return; //do not load next node, since we want the player input to decide the branch to go down
@@ -238,17 +234,19 @@ public class CutsceneManager : MonoBehaviour {
     public void ShowDialogue(DialogueNode dialogue)
     {
         dialoguePanel.SetActive(true);
+       
         //set dialogue text
         dialogueTMP.text = dialogue.Dialogue;
         
-        if (dialogue.Speaker != null)
+        if (dialogue.Speaker != "")
         {
+            speakerPanel.SetActive(true);
             //speaker will be assumed to be previous speaker
             speakerTMP.text = currentDialogue.Speaker;
         }
         else
         {
-            speakerTMP.text = "";
+            speakerPanel.SetActive(false);
         }
 
 
@@ -260,31 +258,18 @@ public class CutsceneManager : MonoBehaviour {
         {
             speakerCharacter = leftCharacter.GetComponent<CharacterSprite>();
             dimmedCharacter = rightCharacter.GetComponent<CharacterSprite>();
-
-            speakerCharacter.IsSpeaking = true;
-            //speakerCharacter.Outfit.color = new Color()
-//            speakerCharacter.Outfit.color = new Color32(160, 160, 160, 100);
-            /*
-            Color NotDimmed = speakerCharacter.Outfit.color;
-            NotDimmed.r = 1;
-            NotDimmed.g = 1;
-            NotDimmed.b = 1;
-            speakerCharacter.Outfit.color = NotDimmed;
-
-            Color Dimmed = dimmedCharacter.Outfit.color;
-            Dimmed.r = 0.5f;
-            Dimmed.g = 0.5f;
-            Dimmed.b = 0.5f;
-            dimmedCharacter.Outfit.color = Dimmed;
-            Debug.Log(dimmedCharacter.Outfit.color);
-        */
         }
         else
         {
-            
+            speakerCharacter = rightCharacter.GetComponent<CharacterSprite>();
+            dimmedCharacter = leftCharacter.GetComponent<CharacterSprite>();
         }
 
-        
+        speakerCharacter.IsSpeaking = true;
+        dimmedCharacter.IsSpeaking = false;
+        speakerCharacter.Outfit.color = new Color(1f, 1f, 1f);
+        dimmedCharacter.Outfit.color = new Color(0.7f, 0.7f, 0.7f);
+
     }
 
     public void showCG(CG cgNode)

@@ -726,6 +726,7 @@ MonoBehaviour:
   CurrentOutfit: {fileID: 0}
   Face: {fileID: 0}
   CurrentFace: {fileID: 0}
+  IsSpeaking: 0
   battle: 0
 --- !u!222 &475743702
 CanvasRenderer:
@@ -945,8 +946,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -512, y: 369.5}
-  m_SizeDelta: {x: 216.5, y: 272.5}
+  m_AnchoredPosition: {x: -504.19, y: 359.45}
+  m_SizeDelta: {x: 232.13, y: 292.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &509042872
 GameObject:
@@ -983,7 +984,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 13.19, y: -10.600005}
-  m_SizeDelta: {x: 500.91, y: 557.35}
+  m_SizeDelta: {x: 500.91, y: 683.47}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &509042874
 MonoBehaviour:
@@ -1005,7 +1006,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4caca4788ee73b247b585b577945cf68, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 249c4ef2662d5094aaa449d1be2d0fbb, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1079,6 +1080,7 @@ MonoBehaviour:
   CurrentOutfit: {fileID: 0}
   Face: {fileID: 0}
   CurrentFace: {fileID: 0}
+  IsSpeaking: 0
   battle: 0
 --- !u!222 &545531843
 CanvasRenderer:
@@ -1174,6 +1176,7 @@ MonoBehaviour:
   CurrentOutfit: {fileID: 0}
   Face: {fileID: 0}
   CurrentFace: {fileID: 0}
+  IsSpeaking: 0
   battle: 0
 --- !u!222 &796204151
 CanvasRenderer:
@@ -1654,11 +1657,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentDialogue: {fileID: 0}
   ChoicePanel: {fileID: 505532120}
-  choiceButton: {fileID: 0}
+  choiceButton: {fileID: 114395968484956172, guid: 82632751079ff3c41b94a409480f0889,
+    type: 3}
   selecting: 0
   currentlySelected: {fileID: 0}
   _cgGraphic: {fileID: 464395148}
   dialoguePanel: {fileID: 1194913911}
+  speakerPanel: {fileID: 145059516}
   dialogueTMP: {fileID: 1240042621}
   speakerTMP: {fileID: 1090763059}
   activeImages: []
@@ -2397,6 +2402,7 @@ MonoBehaviour:
   CurrentOutfit: {fileID: 0}
   Face: {fileID: 0}
   CurrentFace: {fileID: 0}
+  IsSpeaking: 0
   battle: 0
 --- !u!222 &1468457439
 CanvasRenderer:
@@ -2573,6 +2579,7 @@ MonoBehaviour:
   CurrentOutfit: {fileID: 0}
   Face: {fileID: 1080863247}
   CurrentFace: {fileID: 0}
+  IsSpeaking: 0
   battle: 0
 --- !u!222 &1637375661
 CanvasRenderer:
@@ -2730,7 +2737,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 59.8, y: -10.600005}
-  m_SizeDelta: {x: 500.91, y: 914}
+  m_SizeDelta: {x: 500.91, y: 680}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1843214961
 MonoBehaviour:
@@ -2976,6 +2983,7 @@ MonoBehaviour:
   CurrentOutfit: {fileID: 0}
   Face: {fileID: 2021131660}
   CurrentFace: {fileID: 0}
+  IsSpeaking: 0
   battle: 0
 --- !u!222 &2013115713
 CanvasRenderer:
@@ -3050,7 +3058,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 59.8, y: -10.600005}
-  m_SizeDelta: {x: 500.91, y: 914}
+  m_SizeDelta: {x: 500.91, y: 683.47}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &2021131660
 MonoBehaviour:
