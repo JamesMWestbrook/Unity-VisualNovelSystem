@@ -12,7 +12,7 @@ public class SampleCutscene : MonoBehaviour {
     void Start()
     {
         cutsceneManager = GameObject.Find("CutsceneManager").GetComponent<CutsceneManager>();
-        
+        cutsceneManager.PlayCutscene(scene);
     }
 
     private void Update()
@@ -20,7 +20,7 @@ public class SampleCutscene : MonoBehaviour {
         if (!hasStarted) {
             if (Input.GetButtonDown("Submit"))
             {
-                cutsceneManager.PlayCutscene(scene);
+                //cutsceneManager.PlayCutscene(scene);
                 Destroy(this.gameObject);
             }
         }

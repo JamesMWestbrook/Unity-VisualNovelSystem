@@ -184,12 +184,18 @@ public class CutsceneManager : MonoBehaviour {
             }
             if(_node.GetType() == typeof(SetSpriteNode)){
                 SetImage(_node as SetSpriteNode);
-                
+                    
             }
 
             if (_node.GetType() == typeof(CGHide))
             {
                 _cgGraphic.enabled = false;
+            }if(_node.GetType() == typeof(WaitFor))
+            {
+                WaitFor _waitForNode = _node as WaitFor;
+                StartCoroutine(WaitToAdvance(_waitForNode));
+                //do not get next node automatically
+                return;
             }
             if (_node.GetType() == typeof(Choices))
             {
@@ -234,14 +240,15 @@ public class CutsceneManager : MonoBehaviour {
     public void ShowDialogue(DialogueNode dialogue)
     {
         dialoguePanel.SetActive(true);
-       
+
         //set dialogue text
-        dialogueTMP.text = dialogue.Dialogue;
-        
+        //        dialogueTMP.text = dialogue.Dialogue;
+        dialogueTMP.text = "";
+        StartCoroutine(AnimateText(dialogue.Dialogue));
+
         if (dialogue.Speaker != "")
         {
             speakerPanel.SetActive(true);
-            //speaker will be assumed to be previous speaker
             speakerTMP.text = currentDialogue.Speaker;
         }
         else
@@ -249,11 +256,8 @@ public class CutsceneManager : MonoBehaviour {
             speakerPanel.SetActive(false);
         }
 
-
-
         CharacterSprite speakerCharacter;
         CharacterSprite dimmedCharacter;
-        
         if (dialogue.whoIsSpeaking.IsLeft())
         {
             speakerCharacter = leftCharacter.GetComponent<CharacterSprite>();
@@ -264,27 +268,113 @@ public class CutsceneManager : MonoBehaviour {
             speakerCharacter = rightCharacter.GetComponent<CharacterSprite>();
             dimmedCharacter = leftCharacter.GetComponent<CharacterSprite>();
         }
+        if (!dialogue.IsMoving)
+        {
+            speakerCharacter.IsSpeaking = true;
+            dimmedCharacter.IsSpeaking = false;
+            speakerCharacter.Outfit.color = new Color(1f, 1f, 1f);
+        }
+        
 
-        speakerCharacter.IsSpeaking = true;
-        dimmedCharacter.IsSpeaking = false;
-        speakerCharacter.Outfit.color = new Color(1f, 1f, 1f);
-        dimmedCharacter.Outfit.color = new Color(0.7f, 0.7f, 0.7f);
+        if(dimmedCharacter.Outfit.color.a > 0)
+        {
+            dimmedCharacter.Outfit.color = new Color(0.7f, 0.7f, 0.7f);
+        }
+
+        //StartCoroutine(AnimateDim(false, speakerCharacter));
+        //StartCoroutine(AnimateDim(true, dimmedCharacter));
+    }
+
+    private IEnumerator AnimateDim(bool isDimmed, CharacterSprite cSprite)
+    {
+        float _lerpTime = 1f;
+        float _curLerpTime = 0f;
+
+
+        float _startDim = 0f;
+        float _endDim = 0.7f;
+
+        if (!isDimmed)
+        {
+            _endDim = 1f;
+        }
+
+        Color _outfitColor = new Color();
+
+        do
+        {
+            _curLerpTime += Time.deltaTime;
+            float t = _curLerpTime / _lerpTime;
+            float _currentDim = Mathf.Lerp(_startDim, _endDim, t);
+            
+            _outfitColor.r = _currentDim;
+            _outfitColor.g = _currentDim;
+            _outfitColor.b = _currentDim;
+
+            cSprite.Face.color = _outfitColor;
+
+            yield return null;
+        } while (_curLerpTime < _lerpTime);
+    }
+
+    private IEnumerator AnimateText(string dialogue)
+    {
+        string onScreenText = "";
+        foreach (char letter in dialogue.ToCharArray())
+        {
+            onScreenText += letter;
+            dialogueTMP.text += letter;
+            yield return new WaitForSeconds(0.05f);
+        }
 
     }
+
 
     public void showCG(CG cgNode)
     {
         _cgGraphic.enabled = true;
-        if (cgNode.CGGraphic)
+        
+        StartCoroutine(AnimateCG(cgNode.CGGraphic));
+    }
+    public IEnumerator AnimateCG(Sprite newCG)
+    {
+        float _curLerpTime = 0f;
+        float _lerpTime = 1f;
+        Color _opacity = new Color() { a = 0 };
+        do
         {
-            _cgGraphic.sprite = cgNode.CGGraphic;
-        }
-        else
+            _curLerpTime += Time.deltaTime;
+            float t = _curLerpTime / _lerpTime;
+
+            _opacity.a = Mathf.Lerp(1, 0, t);
+
+            yield return null;
+        } while (_curLerpTime < _lerpTime);
+
+        _cgGraphic.sprite = newCG;
+        _curLerpTime = 0f;
+        _lerpTime = 1f;
+        _opacity = new Color() { a = 0 };
+        do
         {
-            Debug.Log("You need to assign a sprite first or it'll just be the same CG as last time this was used");
+            _curLerpTime += Time.deltaTime;
+            float t = _curLerpTime / _lerpTime;
+
+            _opacity.a = Mathf.Lerp(0, 1, t);
+
+            yield return null;
+        } while (_curLerpTime < _lerpTime);
+    }
+    IEnumerator WaitToAdvance(WaitFor _waitFor)
+    {
+        yield return new WaitForSeconds(_waitFor.TimeToPause);
+        NodePort _port = _waitFor.GetOutputPort("output");
+        if (_port.IsConnected)
+        {
+            GetNodeFunction(_port.GetConnections());
+
         }
     }
-
     public void EndCutscene()
     {
         //GameManager.gm.CanMove = true; 
@@ -417,18 +507,14 @@ public class CutsceneManager : MonoBehaviour {
         }
         charSprite = _image.GetComponent<CharacterSprite>();
 
-        float colorDim = 1f;
-        if (!moveNode.IsSpeaking)
-        {
-            colorDim = 0.7f;
-        }
+        
 
 
         Vector3 _beginPoint = new Vector3(RightSpot.transform.position.x + _distance, _image.transform.position.y, _image.transform.position.z);
         Vector3 _endPoint = new Vector3(RightSpot.position.x, _beginPoint.y, _beginPoint.z);
 
         float _lerpTime = 1f;
-        float _curLepTime = 0f;
+        float _curLerpTime = 0f;
 
         Image _face = charSprite.Face;
         Image _outfit = charSprite.Outfit;
@@ -439,9 +525,16 @@ public class CutsceneManager : MonoBehaviour {
         float _startOpacity = 0;
         float _endOpacity = 1;
 
+        float colorDim = 1f;
+        if (!moveNode.IsSpeaking)
+        {
+            colorDim = 0.7f;
+        }
 
-        
-        if(!scopedSpotOnScreen.IsRight())
+        float _startDim = 0f;
+        float _endDim = colorDim;
+
+        if (!scopedSpotOnScreen.IsRight())
         {
             _beginPoint = new Vector3(LeftSpot.transform.position.x - _distance, _image.transform.position.y, _image.transform.position.z);
             _endPoint = new Vector3(LeftSpot.position.x, _beginPoint.y, _beginPoint.z);
@@ -483,27 +576,26 @@ public class CutsceneManager : MonoBehaviour {
 
                 //here is where we put in return for if player hits skip
 
-                _curLepTime += Time.deltaTime;
-                float t = _curLepTime / _lerpTime;
+                _curLerpTime += Time.deltaTime;
+                float t = _curLerpTime / _lerpTime;
                 
                 //distance moved
                 _image.transform.position = Vector3.Lerp(_beginPoint, _endPoint, t);
 
                 //calculate opacity
                 float _currentAlpha = Mathf.Lerp(_startOpacity, _endOpacity, t);
+                float _currentDim = Mathf.Lerp(_startDim, _endDim, t);
                 _faceColor.a = _currentAlpha;
                 _outfitColor.a = _currentAlpha;
-                _outfitColor.r = colorDim;
-                _outfitColor.g = colorDim;
-                _outfitColor.b = colorDim;
+                _outfitColor.r = _currentDim;
+                _outfitColor.g = _currentDim;
+                _outfitColor.b = _currentDim;
 
                 _face.color = _faceColor;
                 _outfit.color = _outfitColor;
 
-               
-
                 yield return 0;
-            } while (_curLepTime < _lerpTime);
+            } while (_curLerpTime < _lerpTime);
         }
         else
         {//when just moving to a different spot
