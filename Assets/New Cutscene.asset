@@ -126,7 +126,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: input
-        node: {fileID: 7591932022835163758}
+        node: {fileID: 4169832712077182426}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   whoIsSpeaking: 1
   Speaker: 
   Dialogue: ONE OF US HAS TO CHANGE
-  IsMoving: 0
+  IsMoving: 1
 --- !u!114 &-4417009735529933932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Name: Cutscene Root Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -936, y: -120}
+  position: {x: -1000, y: -88}
   ports:
     keys:
     - beginScene
@@ -696,10 +696,7 @@ MonoBehaviour:
       _node: {fileID: 3724128788739050757}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: input
-        node: {fileID: 4169832712077182426}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _dynamic: 0
@@ -731,7 +728,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: output
-        node: {fileID: 3724128788739050757}
+        node: {fileID: -5860750981667572868}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -856,7 +853,7 @@ MonoBehaviour:
   m_Name: Movement Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3176, y: -72}
+  position: {x: 3160, y: -72}
   ports:
     keys:
     - input
@@ -932,7 +929,7 @@ MonoBehaviour:
   whoIsSpeaking: 0
   Speaker: 
   Dialogue: No
-  IsMoving: 0
+  IsMoving: 1
 --- !u!114 &7591932022835163758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -956,10 +953,7 @@ MonoBehaviour:
       _node: {fileID: 7591932022835163758}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: output
-        node: {fileID: -5860750981667572868}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _dynamic: 0

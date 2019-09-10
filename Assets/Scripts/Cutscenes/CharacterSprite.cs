@@ -10,7 +10,7 @@ public class CharacterSprite : MonoBehaviour {
     public Image Face;
     [HideInInspector] public Sprite CurrentFace;
     [HideInInspector] public bool IsSpeaking = false;
-
+    [HideInInspector] public bool InScene = false;
     public bool battle = false;
 
     

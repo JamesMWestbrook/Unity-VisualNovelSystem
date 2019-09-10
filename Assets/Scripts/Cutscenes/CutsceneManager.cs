@@ -156,9 +156,13 @@ public class CutsceneManager : MonoBehaviour {
 
 
 
+            if (_node.GetType() == typeof(EndSceneNode))
+            {
+                EndCutscene();
+                return;
+            }
             if (_node.GetType() == typeof(MovementNode))
             {//manage character movement in the scene
-
                 StartCoroutine(CharacterMovement(_node as MovementNode));
             }
 
@@ -177,20 +181,16 @@ public class CutsceneManager : MonoBehaviour {
                 }
             }
 
-            if(_node.GetType() == typeof(EndSceneNode))
-            {
-                EndCutscene();
-                return;
-            }
             if(_node.GetType() == typeof(SetSpriteNode)){
                 SetImage(_node as SetSpriteNode);
-                    
             }
 
             if (_node.GetType() == typeof(CGHide))
             {
                 _cgGraphic.enabled = false;
-            }if(_node.GetType() == typeof(WaitFor))
+            }
+
+            if (_node.GetType() == typeof(WaitFor))
             {
                 WaitFor _waitForNode = _node as WaitFor;
                 StartCoroutine(WaitToAdvance(_waitForNode));
@@ -231,7 +231,6 @@ public class CutsceneManager : MonoBehaviour {
             if (_port.IsConnected)
             {
                 GetNodeFunction(_port.GetConnections());
-
             }
         }
     }
@@ -273,14 +272,14 @@ public class CutsceneManager : MonoBehaviour {
             speakerCharacter.IsSpeaking = true;
             dimmedCharacter.IsSpeaking = false;
             speakerCharacter.Outfit.color = new Color(1f, 1f, 1f);
+
         }
         
-
-        if(dimmedCharacter.Outfit.color.a > 0)
+        if (dimmedCharacter.InScene)
         {
             dimmedCharacter.Outfit.color = new Color(0.7f, 0.7f, 0.7f);
+            StartCoroutine(AnimateDim(true, speakerCharacter));
         }
-
         //StartCoroutine(AnimateDim(false, speakerCharacter));
         //StartCoroutine(AnimateDim(true, dimmedCharacter));
     }
@@ -531,7 +530,7 @@ public class CutsceneManager : MonoBehaviour {
             colorDim = 0.7f;
         }
 
-        float _startDim = 0f;
+        float _startDim = charSprite.Outfit.color.r;
         float _endDim = colorDim;
 
         if (!scopedSpotOnScreen.IsRight())
@@ -551,7 +550,7 @@ public class CutsceneManager : MonoBehaviour {
             _endPoint = new Vector3(MidRightSpot.position.x, _beginPoint.y, _beginPoint.z);
         }
 
-        
+        bool inScene = false;
         if (movementType.IsLeaving())
         {
             Vector3 _newStart = new Vector3(_endPoint.x, _endPoint.y, _endPoint.z);
@@ -567,6 +566,7 @@ public class CutsceneManager : MonoBehaviour {
         {
             activeImages.Add(_outfit);
             activeImages.Add(_face);
+            inScene = true;
         }
 
         if (!moveNode.enterOrLeave.isMoving())
@@ -596,13 +596,14 @@ public class CutsceneManager : MonoBehaviour {
 
                 yield return 0;
             } while (_curLerpTime < _lerpTime);
+
+            charSprite.InScene = inScene;
         }
         else
         {//when just moving to a different spot
             _image.transform.position = _endPoint;
         }
-        
-        
+
         yield return 0;
     }
 
