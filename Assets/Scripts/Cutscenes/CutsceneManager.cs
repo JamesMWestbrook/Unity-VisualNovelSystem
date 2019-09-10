@@ -165,6 +165,11 @@ public class CutsceneManager : MonoBehaviour {
             {//manage character movement in the scene
                 StartCoroutine(CharacterMovement(_node as MovementNode));
             }
+            if(_node.GetType() == typeof(CloseDialogue))
+            {
+                dialoguePanel.SetActive(false);
+                speakerPanel.SetActive(false);
+            }
 
             if (_node.GetType() == typeof(CG))
             {
