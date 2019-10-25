@@ -19,12 +19,12 @@ public class ChoiceOptionHolder : MonoBehaviour
     }
    public void ButtonClicked()
     {
-        CutsceneManager.cutsceneManager.dialoguePanel.SetActive(true);
-        foreach(Transform child in CutsceneManager.cutsceneManager.ChoicePanel.transform)
+        CutsceneManager.Instance.dialoguePanel.SetActive(true);
+        foreach(Transform child in CutsceneManager.Instance.ChoicePanel.transform)
         {
             Destroy(child.gameObject);
         }
-        CutsceneManager.cutsceneManager.ChoicePanel.SetActive(false);
+        CutsceneManager.Instance.ChoicePanel.SetActive(false);
 
 
         if (node)
@@ -37,7 +37,7 @@ public class ChoiceOptionHolder : MonoBehaviour
                 List<NodePort> _outputList = new List<NodePort>();
                 _outputList.Add(scopedOutput.Connection);
 
-                CutsceneManager.cutsceneManager.GetNodeFunction(_outputList);
+                CutsceneManager.Instance.GetNodeFunction(_outputList);
             }
         }
         else

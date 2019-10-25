@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -727,6 +727,7 @@ MonoBehaviour:
   Face: {fileID: 0}
   CurrentFace: {fileID: 0}
   IsSpeaking: 0
+  InScene: 0
   battle: 0
 --- !u!222 &475743702
 CanvasRenderer:
@@ -1081,6 +1082,7 @@ MonoBehaviour:
   Face: {fileID: 0}
   CurrentFace: {fileID: 0}
   IsSpeaking: 0
+  InScene: 0
   battle: 0
 --- !u!222 &545531843
 CanvasRenderer:
@@ -1177,6 +1179,7 @@ MonoBehaviour:
   Face: {fileID: 0}
   CurrentFace: {fileID: 0}
   IsSpeaking: 0
+  InScene: 0
   battle: 0
 --- !u!222 &796204151
 CanvasRenderer:
@@ -1635,6 +1638,7 @@ GameObject:
   - component: {fileID: 1157526763}
   - component: {fileID: 1157526762}
   - component: {fileID: 1157526761}
+  - component: {fileID: 1157526766}
   m_Layer: 5
   m_Name: CutsceneManager
   m_TagString: Untagged
@@ -1676,6 +1680,7 @@ MonoBehaviour:
   midLeftCharacter: {fileID: 545531844}
   rightCharacter: {fileID: 796204152}
   midRightCharacter: {fileID: 475743700}
+  MoveDistance: 100
 --- !u!114 &1157526762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1764,6 +1769,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1157526766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157526760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f029476cd6a9b4688f5f49c8aaa8dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1161444789
 GameObject:
   m_ObjectHideFlags: 0
@@ -2402,6 +2419,7 @@ MonoBehaviour:
   Face: {fileID: 0}
   CurrentFace: {fileID: 0}
   IsSpeaking: 0
+  InScene: 0
   battle: 0
 --- !u!222 &1468457439
 CanvasRenderer:
@@ -2579,6 +2597,7 @@ MonoBehaviour:
   Face: {fileID: 1080863247}
   CurrentFace: {fileID: 0}
   IsSpeaking: 0
+  InScene: 0
   battle: 0
 --- !u!222 &1637375661
 CanvasRenderer:
@@ -2983,6 +3002,7 @@ MonoBehaviour:
   Face: {fileID: 2021131660}
   CurrentFace: {fileID: 0}
   IsSpeaking: 0
+  InScene: 0
   battle: 0
 --- !u!222 &2013115713
 CanvasRenderer:

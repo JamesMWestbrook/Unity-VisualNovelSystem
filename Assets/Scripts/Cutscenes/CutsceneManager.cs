@@ -17,7 +17,7 @@ using Node = XNode.Node;
     */
 public class CutsceneManager : MonoBehaviour {
     
-    public static CutsceneManager cutsceneManager;
+    public static CutsceneManager Instance;
     //private GameManager GM; //not necessary for purely cutscene stuff
 
     private bool inCutscene = false;
@@ -40,36 +40,45 @@ public class CutsceneManager : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI dialogueTMP;
     [SerializeField] private TextMeshProUGUI speakerTMP;
 
-    [SerializeField] private List<Image> activeImages;
+    [SerializeField] public List<Image> activeImages;
 
     //points used for reference when moving characters
     [Header("")]
-    [SerializeField] private Transform LeftSpot;
+    [SerializeField] public Transform LeftSpot;
     [SerializeField] private Transform MidLeftSpot;
     [SerializeField] private Transform MidRightSpot;
-    [SerializeField] private Transform RightSpot;
+    [SerializeField] public Transform RightSpot;
 
     //people in cutscene
     [Header("")]
     [SerializeField] private GameObject _charactersInScene;
-    [SerializeField] private Image leftCharacter;
-    [SerializeField] private Image midLeftCharacter;
-    [SerializeField] private Image rightCharacter;
-    [SerializeField] private Image midRightCharacter;
+    [SerializeField] public Image leftCharacter;
+    [SerializeField] public Image midLeftCharacter;
+    [SerializeField] public Image rightCharacter;
+    [SerializeField] public Image midRightCharacter;
+
+    //default move speed
 
 
-    
-    
+
     // Use this for initialization
-	void Awake () {
-        cutsceneManager = this;
-	    /*if (GM == null)
+    void Awake () {
+
+        if(Instance != null)
+        {
+            GameObject.Destroy(this);
+            return;
+        }
+        Instance = this;
+
+
+        /*if (GM == null)
 	    {
 	       // GM = GameObject.Find("GameManager").GetComponent<GameManager>();
 
 	    }
 */
-	    DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
 
         //disable UI
 	    if (_cgGraphic)
@@ -161,11 +170,12 @@ public class CutsceneManager : MonoBehaviour {
                 EndCutscene();
                 return;
             }
-            if (_node.GetType() == typeof(MovementNode))
-            {//manage character movement in the scene
-                StartCoroutine(CharacterMovement(_node as MovementNode));
+            if (_node is MovementNode movementNode)
+            {
+                StartCoroutine(movementNode.CharacterMovement());
             }
-            if(_node.GetType() == typeof(CloseDialogue))
+
+            if (_node.GetType() == typeof(CloseDialogue))
             {
                 dialoguePanel.SetActive(false);
                 speakerPanel.SetActive(false);
@@ -323,14 +333,14 @@ public class CutsceneManager : MonoBehaviour {
 
     private IEnumerator AnimateText(string dialogue)
     {
-        string onScreenText = "";
+        Debug.Log("AnimateText");
+        dialogueTMP.text = dialogue;
+        dialogueTMP.maxVisibleCharacters = 0;
         foreach (char letter in dialogue.ToCharArray())
         {
-            onScreenText += letter;
-            dialogueTMP.text += letter;
+            dialogueTMP.maxVisibleCharacters++;
             yield return new WaitForSeconds(0.05f);
         }
-
     }
 
 
@@ -421,7 +431,7 @@ public class CutsceneManager : MonoBehaviour {
 
     }
     */
-    private float _distance = 100f;
+    public float MoveDistance = 100f;
 
     void SetImage(SetSpriteNode setSpriteNode){
 
@@ -477,143 +487,6 @@ public class CutsceneManager : MonoBehaviour {
         //charSprite.Face.enabled = false;
         //charSprite.Outfit.enabled = false;
     }
-
-
-    IEnumerator CharacterMovement(MovementNode moveNode)
-    {
-        MovementNode.SpotOnScreen scopedSpotOnScreen = moveNode.spotOnScreen;
-        MovementNode.EnterOrLeave movementType = moveNode.enterOrLeave;
-
-
-        //manage face/outfit
-        int _whichImage = 1;
-        _whichImage = scopedSpotOnScreen.spotNumber();
-        //SetSpriteOnScreen(_whichImage, scopedActor, scopedActor.baseClass.FaceID, scopedActor.baseClass.OutfitID);
-
-
-        //setting up variables
-        Image _image = rightCharacter;
-        CharacterSprite charSprite = _image.GetComponent<CharacterSprite>();
-        switch (_whichImage)
-        {
-            case 1:
-                _image = leftCharacter;
-                break;
-            case 2:
-                _image = midLeftCharacter;
-                break;
-            case 3:
-                _image = midRightCharacter;
-                break;
-            case 4:
-                _image = rightCharacter;
-                break;
-        }
-        charSprite = _image.GetComponent<CharacterSprite>();
-
-        
-
-
-        Vector3 _beginPoint = new Vector3(RightSpot.transform.position.x + _distance, _image.transform.position.y, _image.transform.position.z);
-        Vector3 _endPoint = new Vector3(RightSpot.position.x, _beginPoint.y, _beginPoint.z);
-
-        float _lerpTime = 1f;
-        float _curLerpTime = 0f;
-
-        Image _face = charSprite.Face;
-        Image _outfit = charSprite.Outfit;
-
-        Color _faceColor = _face.color;
-        Color _outfitColor = _outfit.color;
-
-        float _startOpacity = 0;
-        float _endOpacity = 1;
-
-        float colorDim = 1f;
-        if (!moveNode.IsSpeaking)
-        {
-            colorDim = 0.7f;
-        }
-
-        float _startDim = charSprite.Outfit.color.r;
-        float _endDim = colorDim;
-
-        if (!scopedSpotOnScreen.IsRight())
-        {
-            _beginPoint = new Vector3(LeftSpot.transform.position.x - _distance, _image.transform.position.y, _image.transform.position.z);
-            _endPoint = new Vector3(LeftSpot.position.x, _beginPoint.y, _beginPoint.z);
-            // _endPoint = _beginPoint + Vector3.right * distance;
-            if (scopedSpotOnScreen.IsMiddle())
-            {
-                _beginPoint = new Vector3(midLeftCharacter.transform.position.x - _distance, _image.transform.position.y, _image.transform.position.z);
-                _endPoint = new Vector3(MidLeftSpot.position.x, _beginPoint.y, _beginPoint.z);
-            }
-        }
-        else if(scopedSpotOnScreen.IsMiddle())
-        {
-            _beginPoint = new Vector3(MidRightSpot.transform.position.x + _distance, _image.transform.position.y, _image.transform.position.z);
-            _endPoint = new Vector3(MidRightSpot.position.x, _beginPoint.y, _beginPoint.z);
-        }
-
-        bool inScene = false;
-        if (movementType.IsLeaving())
-        {
-            Vector3 _newStart = new Vector3(_endPoint.x, _endPoint.y, _endPoint.z);
-            Vector3 _newEnd = new Vector3(_beginPoint.x, _endPoint.y, _endPoint.z);
-            _beginPoint = _newStart;
-            _endPoint = _newEnd;
-            _startOpacity = 1f;
-            _endOpacity = 0f;
-            activeImages.Remove(_outfit);
-            activeImages.Remove(_face);
-        }
-        else
-        {
-            activeImages.Add(_outfit);
-            activeImages.Add(_face);
-            inScene = true;
-        }
-
-        if (!moveNode.enterOrLeave.isMoving())
-        {
-            do
-            {
-
-                //here is where we put in return for if player hits skip
-
-                _curLerpTime += Time.deltaTime;
-                float t = _curLerpTime / _lerpTime;
-                
-                //distance moved
-                _image.transform.position = Vector3.Lerp(_beginPoint, _endPoint, t);
-
-                //calculate opacity
-                float _currentAlpha = Mathf.Lerp(_startOpacity, _endOpacity, t);
-                float _currentDim = Mathf.Lerp(_startDim, _endDim, t);
-                _faceColor.a = _currentAlpha;
-                _outfitColor.a = _currentAlpha;
-                _outfitColor.r = _currentDim;
-                _outfitColor.g = _currentDim;
-                _outfitColor.b = _currentDim;
-
-                _face.color = _faceColor;
-                _outfit.color = _outfitColor;
-
-                yield return 0;
-            } while (_curLerpTime < _lerpTime);
-
-            charSprite.InScene = inScene;
-        }
-        else
-        {//when just moving to a different spot
-            _image.transform.position = _endPoint;
-        }
-
-        yield return 0;
-    }
-
-
-
 
     //This isn't used anywhere, and I'm not sure if this even worked.
     //Just keeping this here for the time being
