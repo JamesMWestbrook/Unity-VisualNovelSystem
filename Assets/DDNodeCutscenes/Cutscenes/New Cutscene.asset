@@ -557,8 +557,8 @@ MonoBehaviour:
   input: 0
   output: 0
   actor: {fileID: 0}
-  Outfit: {fileID: 21300000, guid: 4caca4788ee73b247b585b577945cf68, type: 3}
-  Face: {fileID: 21300000, guid: 44b6c1ec45ce4ce4aa2ea4726ba898e6, type: 3}
+  Outfit: {fileID: 21300000, guid: 9b8fdfc5787d7164b8f5efdd2b475c14, type: 3}
+  Face: {fileID: 21300000, guid: 4794179af9314f543a280c71bafadb5a, type: 3}
   Spot: 0
 --- !u!114 &-4208893707030911737
 MonoBehaviour:
@@ -604,8 +604,8 @@ MonoBehaviour:
   input: 0
   output: 0
   actor: {fileID: 0}
-  Outfit: {fileID: 21300000, guid: 3c3e36a1e47505a4aa3ca6c84ddae661, type: 3}
-  Face: {fileID: 21300000, guid: 44b6c1ec45ce4ce4aa2ea4726ba898e6, type: 3}
+  Outfit: {fileID: 21300000, guid: 5e81c39da6c08814db0b0479642a6e7e, type: 3}
+  Face: {fileID: 21300000, guid: 9902bebf63486b94fb1a7559391ae59b, type: 3}
   Spot: 3
 --- !u!114 &-3719072753197991322
 MonoBehaviour:
