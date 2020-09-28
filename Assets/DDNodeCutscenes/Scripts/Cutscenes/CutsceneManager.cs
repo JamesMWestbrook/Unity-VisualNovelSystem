@@ -10,6 +10,7 @@ using UnityEditor.Experimental.UIElements.GraphView;
 using XNode;
 using Node = XNode.Node;
 
+
 /*CutsceneManager
  * Does all of the calculations involved when running cutscenes. 
  * Yes paper the naming scheme isn't that great(publics not being capitalized) I'll fix it while ya'll are testing it :P
