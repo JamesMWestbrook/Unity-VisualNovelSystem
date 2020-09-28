@@ -1420,7 +1420,8 @@ MonoBehaviour:
   output: 0
   whoIsSpeaking: 0
   Speaker: 
-  Dialogue: 
+  Dialogue: You weren't meant to click that option. Restart the scene and click the
+    other one.
   IsMoving: 0
 --- !u!114 &6529623388416518325
 MonoBehaviour:

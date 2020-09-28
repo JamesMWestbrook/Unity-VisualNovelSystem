@@ -147,43 +147,6 @@ public class MovementNode : Node
 				image.color = val;
 			}
 		);
-        return;
-        if (!moveNode.enterOrLeave.isMoving())
-        {
-            do
-            {
-
-                //here is where we put in return for if player hits skip
-
-                _curLerpTime += Time.deltaTime;
-                float t = _curLerpTime / _lerpTime;
-
-                //distance moved
-                _image.transform.position = Vector3.Lerp(_beginPoint, _endPoint, t);
-
-                //calculate opacity
-                float _currentAlpha = Mathf.Lerp(_startOpacity, _endOpacity, t);
-                float _currentDim = Mathf.Lerp(_startDim, _endDim, t);
-                _faceColor.a = _currentAlpha;
-                _outfitColor.a = _currentAlpha;
-                _outfitColor.r = _currentDim;
-                _outfitColor.g = _currentDim;
-                _outfitColor.b = _currentDim;
-
-                _face.color = _faceColor;
-                _outfit.color = _outfitColor;
-
-               // yield return 0;
-            } while (_curLerpTime < _lerpTime);
-
-            charSprite.InScene = inScene;
-        }
-        else
-        {//when just moving to a different spot
-            _image.transform.position = _endPoint;
-        }
-
-       // yield return 0;
     }
 }
 
