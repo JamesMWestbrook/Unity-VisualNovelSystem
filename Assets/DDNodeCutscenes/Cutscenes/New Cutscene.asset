@@ -416,8 +416,8 @@ MonoBehaviour:
   input: 0
   output: 0
   actor: {fileID: 0}
-  Outfit: {fileID: 21300000, guid: 4caca4788ee73b247b585b577945cf68, type: 3}
-  Face: {fileID: 0}
+  Outfit: {fileID: 21300000, guid: 9b8fdfc5787d7164b8f5efdd2b475c14, type: 3}
+  Face: {fileID: 21300000, guid: 311aa71adaa23ea45a0f47404268308a, type: 3}
   Spot: 0
 --- !u!114 &-5250697920917734309
 MonoBehaviour:
@@ -466,53 +466,6 @@ MonoBehaviour:
   Outfit: {fileID: 21300000, guid: 8157962c3652bd94fb2c3d2e3d756eb1, type: 3}
   Face: {fileID: 0}
   Spot: 3
---- !u!114 &-5009708401289742006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e12824dbed1f5434eb0513126d04650b, type: 3}
-  m_Name: Set Sprite Node
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 7048, y: 8}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: -5009708401289742006}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: output
-        node: {fileID: -909424680804885198}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: -5009708401289742006}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: input
-        node: {fileID: -2202084831964314329}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _dynamic: 0
-  input: 0
-  output: 0
-  actor: {fileID: 0}
-  Outfit: {fileID: 21300000, guid: 39568ef192920c145b37068d345ca3d0, type: 3}
-  Face: {fileID: 0}
-  Spot: 0
 --- !u!114 &-4417009735529933932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -865,50 +818,6 @@ MonoBehaviour:
   Speaker: Ms. Pringle
   Dialogue: No one has class at 6:30 PM!
   IsMoving: 0
---- !u!114 &-2202084831964314329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 922025726bb0ece4c9ac90e5fdad0955, type: 3}
-  m_Name: Dialogue Node
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 7272, y: -24}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: -2202084831964314329}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: output
-        node: {fileID: -5009708401289742006}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: -2202084831964314329}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _dynamic: 0
-  input: 0
-  output: 0
-  whoIsSpeaking: 0
-  Speaker: Jennifer
-  Dialogue: 'It really is. '
-  IsMoving: 0
 --- !u!114 &-2182954784834624088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -999,101 +908,6 @@ MonoBehaviour:
       _dynamic: 0
   input: 0
   output: 0
---- !u!114 &-931355165722488356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 922025726bb0ece4c9ac90e5fdad0955, type: 3}
-  m_Name: Dialogue Node
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 6600, y: -72}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: -931355165722488356}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: output
-        node: {fileID: 7028634958490305580}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: -931355165722488356}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: input
-        node: {fileID: -909424680804885198}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _dynamic: 0
-  input: 0
-  output: 0
-  whoIsSpeaking: 0
-  Speaker: 
-  Dialogue: I reach my night class, and sit next to Richard.  He's probably the only
-    student who is actually above 20 in here.
-  IsMoving: 0
---- !u!114 &-909424680804885198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 922025726bb0ece4c9ac90e5fdad0955, type: 3}
-  m_Name: Dialogue Node
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 6824, y: -24}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: -909424680804885198}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: output
-        node: {fileID: -931355165722488356}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: -909424680804885198}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: input
-        node: {fileID: -5009708401289742006}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _dynamic: 0
-  input: 0
-  output: 0
-  whoIsSpeaking: 1
-  Speaker: Richard
-  Dialogue: "Oh hey, you\u2019re late too. Shocking. "
-  IsMoving: 0
 --- !u!114 &-564336195522705002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1138,8 +952,8 @@ MonoBehaviour:
   input: 0
   output: 0
   actor: {fileID: 0}
-  Outfit: {fileID: 21300000, guid: 3c3e36a1e47505a4aa3ca6c84ddae661, type: 3}
-  Face: {fileID: 21300000, guid: 44b6c1ec45ce4ce4aa2ea4726ba898e6, type: 3}
+  Outfit: {fileID: 21300000, guid: 9b8fdfc5787d7164b8f5efdd2b475c14, type: 3}
+  Face: {fileID: 21300000, guid: 629f44b9c4a7e0e4691bdf6034690adc, type: 3}
   Spot: 0
 --- !u!114 &-445457680256074408
 MonoBehaviour:
@@ -1279,18 +1093,15 @@ MonoBehaviour:
   - {fileID: -6739179861019656619}
   - {fileID: -7763661751885817661}
   - {fileID: -7982087429898883000}
-  - {fileID: -931355165722488356}
-  - {fileID: -909424680804885198}
   - {fileID: 8527908652168468807}
   - {fileID: -5250697920917734309}
   - {fileID: 7028634958490305580}
   - {fileID: -3543574885470639938}
-  - {fileID: -2202084831964314329}
   - {fileID: 5010770899536085996}
   - {fileID: 1433183984817429843}
   - {fileID: -1173238890346853271}
   - {fileID: -5664457252897476660}
-  - {fileID: -5009708401289742006}
+  - {fileID: 9104953348593838915}
 --- !u!114 &1433183984817429843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1336,7 +1147,7 @@ MonoBehaviour:
   output: 0
   actor: {fileID: 0}
   Outfit: {fileID: 21300000, guid: f47d7ea3bdce55b48811b006704df1af, type: 3}
-  Face: {fileID: 21300000, guid: 44b6c1ec45ce4ce4aa2ea4726ba898e6, type: 3}
+  Face: {fileID: 21300000, guid: d375d9fbfe9617246abc6b69ab77bb38, type: 3}
   Spot: 3
 --- !u!114 &2041911987031921615
 MonoBehaviour:
@@ -1382,8 +1193,8 @@ MonoBehaviour:
   input: 0
   output: 0
   actor: {fileID: 0}
-  Outfit: {fileID: 21300000, guid: 9e78cab98c8149545adc037bd4815c28, type: 3}
-  Face: {fileID: 21300000, guid: 44b6c1ec45ce4ce4aa2ea4726ba898e6, type: 3}
+  Outfit: {fileID: 21300000, guid: 005884b5dc2a47e4791dd15bfd4d2e9e, type: 3}
+  Face: {fileID: 21300000, guid: d375d9fbfe9617246abc6b69ab77bb38, type: 3}
   Spot: 3
 --- !u!114 &3499355604369548964
 MonoBehaviour:
@@ -1517,8 +1328,8 @@ MonoBehaviour:
   input: 0
   output: 0
   actor: {fileID: 0}
-  Outfit: {fileID: 21300000, guid: ee0e841123c610447a0228c9455cb1dd, type: 3}
-  Face: {fileID: 21300000, guid: 44b6c1ec45ce4ce4aa2ea4726ba898e6, type: 3}
+  Outfit: {fileID: 21300000, guid: 5e81c39da6c08814db0b0479642a6e7e, type: 3}
+  Face: {fileID: 21300000, guid: 9902bebf63486b94fb1a7559391ae59b, type: 3}
   Spot: 3
 --- !u!114 &5010770899536085996
 MonoBehaviour:
@@ -1533,7 +1344,7 @@ MonoBehaviour:
   m_Name: Set Sprite Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 4568, y: -216}
+  position: {x: 4504, y: -248}
   ports:
     keys:
     - input
@@ -1565,7 +1376,7 @@ MonoBehaviour:
   output: 0
   actor: {fileID: 0}
   Outfit: {fileID: 21300000, guid: c202d926a0e303f43b1ae0d0be778ffe, type: 3}
-  Face: {fileID: 21300000, guid: 44b6c1ec45ce4ce4aa2ea4726ba898e6, type: 3}
+  Face: {fileID: 21300000, guid: d375d9fbfe9617246abc6b69ab77bb38, type: 3}
   Spot: 3
 --- !u!114 &6523107823335404037
 MonoBehaviour:
@@ -1829,7 +1640,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: input
-        node: {fileID: -931355165722488356}
+        node: {fileID: 9104953348593838915}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1975,8 +1786,8 @@ MonoBehaviour:
   input: 0
   output: 0
   actor: {fileID: 0}
-  Outfit: {fileID: 21300000, guid: aa5ecd3e9d8a0b441b815a6339dac4ea, type: 3}
-  Face: {fileID: 21300000, guid: 44b6c1ec45ce4ce4aa2ea4726ba898e6, type: 3}
+  Outfit: {fileID: 21300000, guid: 5e81c39da6c08814db0b0479642a6e7e, type: 3}
+  Face: {fileID: 21300000, guid: d375d9fbfe9617246abc6b69ab77bb38, type: 3}
   Spot: 3
 --- !u!114 &8194017829675472467
 MonoBehaviour:
@@ -2070,3 +1881,33 @@ MonoBehaviour:
   enterOrLeave: 1
   spotOnScreen: 3
   IsSpeaking: 0
+--- !u!114 &9104953348593838915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e4bd9cdee6b8d3458acc546e54c33ee, type: 3}
+  m_Name: End Scene Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 6714, y: -35}
+  ports:
+    keys:
+    - input
+    values:
+    - _fieldName: input
+      _node: {fileID: 9104953348593838915}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: output
+        node: {fileID: 7028634958490305580}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  input: 0

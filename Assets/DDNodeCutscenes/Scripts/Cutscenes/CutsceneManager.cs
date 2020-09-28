@@ -172,7 +172,7 @@ public class CutsceneManager : MonoBehaviour {
             }
             if (_node is MovementNode movementNode)
             {
-                StartCoroutine(movementNode.CharacterMovement());
+                movementNode.CharacterMovement();
             }
 
             if (_node.GetType() == typeof(CloseDialogue))
@@ -337,7 +337,6 @@ public class CutsceneManager : MonoBehaviour {
 
     private IEnumerator AnimateText(string dialogue)
     {
-        Debug.Log("AnimateText");
         dialogueTMP.text = dialogue;
         dialogueTMP.maxVisibleCharacters = 0;
         foreach (char letter in dialogue.ToCharArray())

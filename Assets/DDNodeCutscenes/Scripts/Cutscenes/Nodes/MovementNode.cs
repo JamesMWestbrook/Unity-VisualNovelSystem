@@ -35,7 +35,7 @@ public class MovementNode : Node
         return base.GetValue(port);
     }
 
-    public IEnumerator CharacterMovement()
+    public void CharacterMovement()
     {
         MovementNode moveNode = this;
         MovementNode.SpotOnScreen scopedSpotOnScreen = moveNode.spotOnScreen;
@@ -83,6 +83,7 @@ public class MovementNode : Node
         Color _faceColor = _face.color;
         Color _outfitColor = _outfit.color;
 
+
         float _startOpacity = 0;
         float _endOpacity = 1;
 
@@ -94,7 +95,7 @@ public class MovementNode : Node
 
         float _startDim = charSprite.Outfit.color.r;
         float _endDim = colorDim;
-
+        
         if (!scopedSpotOnScreen.IsRight())
         {
             Transform LeftSpot = CutsceneManager.Instance.LeftSpot;
@@ -128,7 +129,25 @@ public class MovementNode : Node
             CutsceneManager.Instance.activeImages.Add(_face);
             inScene = true;
         }
-
+        //move
+        _image.transform.position = _beginPoint;
+        LeanTween.move(_image.gameObject, _endPoint,_lerpTime);
+       // _face.color = new Color(1,1,1,0);
+       // _outfit.color = new Color(1,1,1,0);
+        
+        LeanTween.value(_face.gameObject,  new Color(1,1,1,_startOpacity), new Color(1,1,1,_endOpacity), _lerpTime).setOnUpdate( 
+			(Color val)=>{
+				UnityEngine.UI.Image image = (UnityEngine.UI.Image)_face.gameObject.GetComponent( typeof(UnityEngine.UI.Image) );
+				image.color = val;
+			}
+		);
+        LeanTween.value(_outfit.gameObject, new Color(1,1,1,_startOpacity), new Color(1,1,1,_endOpacity), _lerpTime).setOnUpdate( 
+			(Color val)=>{
+				UnityEngine.UI.Image image = (UnityEngine.UI.Image)_outfit.gameObject.GetComponent( typeof(UnityEngine.UI.Image) );
+				image.color = val;
+			}
+		);
+        return;
         if (!moveNode.enterOrLeave.isMoving())
         {
             do
@@ -154,7 +173,7 @@ public class MovementNode : Node
                 _face.color = _faceColor;
                 _outfit.color = _outfitColor;
 
-                yield return 0;
+               // yield return 0;
             } while (_curLerpTime < _lerpTime);
 
             charSprite.InScene = inScene;
@@ -164,7 +183,7 @@ public class MovementNode : Node
             _image.transform.position = _endPoint;
         }
 
-        yield return 0;
+       // yield return 0;
     }
 }
 
