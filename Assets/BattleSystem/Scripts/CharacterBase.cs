@@ -14,11 +14,10 @@ public class CharacterBase
 
     public CharStats MaxStats = new CharStats();
     public CharStats CurStats = new CharStats();
-
+    public List<Skills> Skills = new List<Skills>();
     public string FacePath;
     public string SpriteGUI;
-
-
+    
     public List<string> testString = new List<string>
     {
         "Attack",

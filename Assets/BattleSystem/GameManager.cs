@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public List<ActorSlot> ActorSlots;
+    public static GameManager Instance;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(Instance != null) Destroy(gameObject);
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
