@@ -15,13 +15,12 @@ public class CreateCharacters : MonoBehaviour
 
         for (int i = 0; i < _actors.Count; i++)
         {
-           CharacterBase _curActor = _actors[i].Actor;
-            _curActor.CurStats = _curActor.MaxStats.DeepStatsCopy( _curActor.MaxStats);
+            CharacterBase _curActor = _actors[i].Actor;
+            _curActor.CurStats = _curActor.MaxStats.DeepStatsCopy(_curActor.MaxStats);
 
             _actors[i].SetGraphics();
             _actors[i].UpdateStats();
         }
-        
     }
 
     // Update is called once per frame

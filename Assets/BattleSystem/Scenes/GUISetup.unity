@@ -853,7 +853,7 @@ MonoBehaviour:
   Face: {fileID: 0}
   AnimationSpawnPoint: {fileID: 0}
   Actor:
-    Name: Fallen Angel
+    Name: 
     NickName: EmptyNN
     Lvl: 1
     MaxStats:
@@ -891,6 +891,7 @@ MonoBehaviour:
     SpriteGUI: 
     BattleOutfitPath: 
     BattleFacePath: 
+  EnemySO: {fileID: 11400000, guid: ed1abc104fcf6a34b909157d2e1a423c, type: 2}
   HP: {fileID: 0}
   HPForeground: {fileID: 0}
   MP: {fileID: 0}

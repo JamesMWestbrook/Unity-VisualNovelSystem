@@ -15,7 +15,7 @@ public class ActorSlot : MonoBehaviour
     {
         Face.sprite = Resources.Load<Sprite>(Actor.FacePath);
     }
-
+    public CharacterSO EnemySO;
 
     public TextMeshProUGUI HP;
     public Image HPForeground;
@@ -37,6 +37,7 @@ public class ActorSlot : MonoBehaviour
         if (IsAI)
         {
             GameManager.Instance.BattleManager.Enemies.Add(this);
+            Actor = EnemySO.Character.Clone(EnemySO.Character);
         }
     }
 

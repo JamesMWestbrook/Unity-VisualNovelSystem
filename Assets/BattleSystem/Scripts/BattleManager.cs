@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class BattleManager : MonoBehaviour
 {
@@ -79,16 +80,22 @@ public class BattleManager : MonoBehaviour
             charSprite.Face.sprite = Resources.Load<Sprite>(CurrentActor.Actor.BattleFacePath);
             charSprite.Outfit.sprite = Resources.Load<Sprite>(CurrentActor.Actor.BattleOutfitPath);
 
-            
-            //set sprite
-            //move actor image in
+            // +100
+            Transform dest = CutsceneManager.Instance.RightSpot;
+            Image rightImage = CutsceneManager.Instance.rightCharacter;
 
-            /*  SetSpriteNode SetSprite = new SetSpriteNode();
-              SetSprite.Face = Resources.Load<Sprite>(CurrentActor.Actor.BattleFacePath);
-              SetSprite.Outfit = Resources.Load<Sprite>(CurrentActor.Actor.BattleOutfitPath);
-              SetSprite.Spot = MovementNode.SpotOnScreen.Right;
+            Vector3 _beginPoint = new Vector3(dest.position.x + 100, rightImage.transform.position.y, rightImage.transform.position.z);
+            Vector3 _endPoint = new Vector3(CutsceneManager.Instance.RightSpot.position.x, _beginPoint.y, _beginPoint.z);
 
-              CutsceneManager.Instance.SetImage(SetSprite); */
+            float time = 0.4f;
+
+            Image _face = charSprite.Face;
+            Image _outfit = charSprite.Outfit;
+            rightImage.transform.position = _beginPoint;
+            LeanTween.move(rightImage.gameObject,  _endPoint, time);
+
+            MovementNode.ColorChange(_outfit.gameObject, new Color(0.7f,0.7f,0.7f,1), new Color(1,1,1,1),time);
+            MovementNode.ColorChange(_face.gameObject, new Color(0.7f,0.7f,0.7f,1), new Color(1,1,1,1),time);
         }
     }
     public IEnumerator DelayActor()
