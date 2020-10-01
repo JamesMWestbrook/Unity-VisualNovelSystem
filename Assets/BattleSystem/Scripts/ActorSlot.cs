@@ -11,7 +11,8 @@ public class ActorSlot : MonoBehaviour
     public Image Face;
     public Transform AnimationSpawnPoint;
     public CharacterBase Actor;
-    public void SetGraphics(){
+    public void SetGraphics()
+    {
         Face.sprite = Resources.Load<Sprite>(Actor.FacePath);
     }
 
@@ -20,7 +21,8 @@ public class ActorSlot : MonoBehaviour
     public Image HPForeground;
     public TextMeshProUGUI MP;
     public Image MPForeground;
-    public void UpdateStats(){
+    public void UpdateStats()
+    {
         HP.text = Actor.CurStats.HP.ToString();
         HPForeground.fillAmount = 100 * Actor.CurStats.HP / Actor.MaxStats.HP;
 
@@ -31,8 +33,9 @@ public class ActorSlot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(IsAI){
-            GameManager.Instance.BattleManager.Actors.Add(this);
+        GameManager.Instance.BattleManager.Actors.Add(this);
+        if (IsAI)
+        {
             GameManager.Instance.BattleManager.Enemies.Add(this);
         }
     }
@@ -40,6 +43,6 @@ public class ActorSlot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
