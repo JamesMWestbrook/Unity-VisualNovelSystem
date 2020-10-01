@@ -12,7 +12,8 @@ public class StarterCharacters : MonoBehaviour
                 MP = 50
             },
             FacePath = "Luisella Face",
-            
+            BattleOutfitPath = "BattleGraphics/Luisella/Body/LuisellaBattle",
+            BattleFacePath = "BattleGraphics/Luisella/Face/LuisellaSmile"
     };
     List<Skills> LuiSkills = new List<Skills>();
     public Skills LuiCyro = new Skills(){
@@ -37,7 +38,9 @@ public class StarterCharacters : MonoBehaviour
                 HP = 250,
                 MP = 30
             },
-            FacePath = "Margherita Face"
+            FacePath = "Margherita Face",
+            BattleOutfitPath = "BattleGraphics/Margherita/Body/MargheritaBattle",
+            BattleFacePath = "BattleGraphics/Margherita/Face/MarghNormal"
     };
     public Skills MargPunch = new Skills(){
         Name = "Square Punch",

@@ -4,21 +4,14 @@ using UnityEngine;
 
 public class CreateCharacters : MonoBehaviour
 {
-    private StarterCharacters Starter = new StarterCharacters();
+    public CharacterSO Luisella;
+    public CharacterSO Margh;
     // Start is called before the first frame update
     void Awake()
     {
         List<ActorSlot> _actors = GetComponent<BattleManager>().Party;
-        _actors[0].Actor = Starter.Luisella;
-
-        List<Skills> LuiSkills = new List<Skills>(){
-            Starter.LuiCyro,
-            Starter.LuisellaHeal
-        };
-        _actors[0].Actor.Skills = LuiSkills;
-
-
-        _actors[1].Actor = Starter.Margherita;
+        _actors[0].Actor = Luisella.Character.Clone(Luisella.Character);
+        _actors[1].Actor = Margh.Character.Clone(Margh.Character);
 
         for (int i = 0; i < _actors.Count; i++)
         {

@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30a576ba28702f4fad836a35e0f9d1f, type: 3}
+  m_Name: Luisella
+  m_EditorClassIdentifier: 
+  Character:
+    Name: Luisella
+    NickName: EmptyNN
+    Lvl: 1
+    MaxStats:
+      HP: 300
+      MP: 50
+      Muscle: 3
+      Vigor: 5
+      Will: 4
+      Instinct: 5
+      Agility: 3
+      Normal: 1
+      Currene: 1
+      Terrene: 1
+      Pyro: 1
+      Cyro: 1
+      Solar: 1
+      Lunar: 1
+    CurStats:
+      HP: 50
+      MP: 30
+      Muscle: 3
+      Vigor: 5
+      Will: 4
+      Instinct: 5
+      Agility: 3
+      Normal: 1
+      Currene: 1
+      Terrene: 1
+      Pyro: 1
+      Cyro: 1
+      Solar: 1
+      Lunar: 1
+    Skills:
+    - Name: Cyro I
+      Prefab: KY_effects/MagicEffectsPackFree/prefab/ErikiBall2
+      BaseDamage: 2
+      hitType: 1
+      elementType: 1
+    - Name: Heal I
+      Prefab: KY_effects/MagicEffectsPackFree/prefab/GreenCore
+      BaseDamage: 3
+      hitType: 2
+      elementType: 0
+    FacePath: Luisella Face
+    SpriteGUI: 
+    BattleOutfitPath: BattleGraphics/Luisella/Body/LuisellaBattle
+    BattleFacePath: BattleGraphics/Luisella/Faces/LuisellaSmile

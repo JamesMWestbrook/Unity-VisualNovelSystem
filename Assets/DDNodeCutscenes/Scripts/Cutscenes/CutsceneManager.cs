@@ -15,6 +15,10 @@ using Node = XNode.Node;
  * Yes paper the naming scheme isn't that great(publics not being capitalized) I'll fix it while ya'll are testing it :P
  * Rn I'm just gonna focus on making sure it's good enough for testing, and it's clear what I'm doing. 
     */
+    #pragma warning disable 0168 // variable declared but not used.
+#pragma warning disable 0219 // variable assigned but not used.
+#pragma warning disable 0414 // private field assigned but not used.
+#pragma warning disable 0649 // private field assigned but not used.
 public class CutsceneManager : MonoBehaviour {
     
     public static CutsceneManager Instance;
@@ -436,7 +440,7 @@ public class CutsceneManager : MonoBehaviour {
     */
     public float MoveDistance = 100f;
 
-    void SetImage(SetSpriteNode setSpriteNode){
+    public void SetImage(SetSpriteNode setSpriteNode){
 
         int whichImage = 1;
         Image characterImage = leftCharacter;

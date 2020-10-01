@@ -17,13 +17,9 @@ public class CharacterBase
     public List<Skills> Skills = new List<Skills>();
     public string FacePath;
     public string SpriteGUI;
+    public string BattleOutfitPath;
+    public string BattleFacePath;
     
-    public List<string> testString = new List<string>
-    {
-        "Attack",
-        "Shield",
-
-    };
     //[SerializeField] public Dictionary<int, BaseBattleActions> BaseBattleActions;
 
     //public Weapon WeaponOne;
@@ -45,7 +41,7 @@ public class CharacterBase
 
 public static class CharacterExtensions
 {
-    public static CharacterBase Character<T>(this CharacterBase data, T other)
+    public static CharacterBase Clone<T>(this CharacterBase data, T other)
     {
 
         using (MemoryStream ms = new MemoryStream())

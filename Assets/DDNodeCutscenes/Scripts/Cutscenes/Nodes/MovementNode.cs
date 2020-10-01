@@ -5,6 +5,7 @@ using XNode;
 using UnityEngine.UI;
 [CreateNodeMenu("VN/Movement")]
 [NodeTint("#00FEFB")]
+#pragma warning disable 0219
 public class MovementNode : Node
 {
 
