@@ -95,7 +95,7 @@ public class MovementNode : Node
 
         float _startDim = charSprite.Outfit.color.r;
         float _endDim = colorDim;
-        
+
         if (!scopedSpotOnScreen.IsRight())
         {
             Transform LeftSpot = CutsceneManager.Instance.LeftSpot;
@@ -131,24 +131,37 @@ public class MovementNode : Node
         }
         //move
         _image.transform.position = _beginPoint;
-        LeanTween.move(_image.gameObject, _endPoint,_lerpTime);
-       // _face.color = new Color(1,1,1,0);
-       // _outfit.color = new Color(1,1,1,0);
+        LeanTween.move(_image.gameObject, _endPoint, _lerpTime);
+        // _face.color = new Color(1,1,1,0);
+        // _outfit.color = new Color(1,1,1,0);
         
-        LeanTween.value(_face.gameObject,  new Color(1,1,1,_startOpacity), new Color(1,1,1,_endOpacity), _lerpTime).setOnUpdate( 
-			(Color val)=>{
-				UnityEngine.UI.Image image = (UnityEngine.UI.Image)_face.gameObject.GetComponent( typeof(UnityEngine.UI.Image) );
-				image.color = val;
-			}
-		);
-        LeanTween.value(_outfit.gameObject, new Color(1,1,1,_startOpacity), new Color(1,1,1,_endOpacity), _lerpTime).setOnUpdate( 
-			(Color val)=>{
-				UnityEngine.UI.Image image = (UnityEngine.UI.Image)_outfit.gameObject.GetComponent( typeof(UnityEngine.UI.Image) );
-				image.color = val;
-			}
-		);
+        LeanTween.value(_face.gameObject, new Color(1, 1, 1, _startOpacity), new Color(1, 1, 1, _endOpacity), _lerpTime).setOnUpdate(
+            (Color val) =>
+            {
+                UnityEngine.UI.Image image = (UnityEngine.UI.Image)_face.gameObject.GetComponent(typeof(UnityEngine.UI.Image));
+                image.color = val;
+            }
+        );
+        LeanTween.value(_outfit.gameObject, new Color(1, 1, 1, _startOpacity), new Color(1, 1, 1, _endOpacity), _lerpTime).setOnUpdate(
+            (Color val) =>
+            {
+                UnityEngine.UI.Image image = (UnityEngine.UI.Image)_outfit.gameObject.GetComponent(typeof(UnityEngine.UI.Image));
+                image.color = val;
+            }
+        );
+    }
+    public static void ColorChange(GameObject game_object, Color from, Color to, float time)
+    {
+        LeanTween.value(game_object, from, to, time).setOnUpdate(
+            (Color val) =>
+            {
+                UnityEngine.UI.Image image = (UnityEngine.UI.Image)game_object.GetComponent(typeof(UnityEngine.UI.Image));
+                image.color = val;
+            }
+        );
     }
 }
+
 
 public static class MovementNodeExtension
 {

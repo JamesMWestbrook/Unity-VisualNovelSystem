@@ -12,7 +12,6 @@ public class ActorSlot : MonoBehaviour
     public Transform AnimationSpawnPoint;
     public CharacterBase Actor;
     public void SetGraphics(){
-        Debug.Log(Actor.FacePath);
         Face.sprite = Resources.Load<Sprite>(Actor.FacePath);
     }
 
@@ -32,7 +31,10 @@ public class ActorSlot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(IsAI){
+            GameManager.Instance.BattleManager.Actors.Add(this);
+            GameManager.Instance.BattleManager.Enemies.Add(this);
+        }
     }
 
     // Update is called once per frame

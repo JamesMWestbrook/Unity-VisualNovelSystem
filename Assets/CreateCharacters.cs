@@ -8,8 +8,16 @@ public class CreateCharacters : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        List<ActorSlot> _actors = GetComponent<BattleManager>().ActorSlots;
+        List<ActorSlot> _actors = GetComponent<BattleManager>().Party;
         _actors[0].Actor = Starter.Luisella;
+
+        List<Skills> LuiSkills = new List<Skills>(){
+            Starter.LuiCyro,
+            Starter.LuisellaHeal
+        };
+        _actors[0].Actor.Skills = LuiSkills;
+
+
         _actors[1].Actor = Starter.Margherita;
 
         for (int i = 0; i < _actors.Count; i++)
@@ -20,6 +28,7 @@ public class CreateCharacters : MonoBehaviour
             _actors[i].SetGraphics();
             _actors[i].UpdateStats();
         }
+        
     }
 
     // Update is called once per frame

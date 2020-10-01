@@ -25,7 +25,9 @@ public class Skills
     }
     public void Action(List<GameObject> targets, GameObject user){
         
+        GameManager.Instance.BattleManager.UpdateMove(user.GetComponent<CharacterBase>().Name);
         //end turn        
+
     }
 
 

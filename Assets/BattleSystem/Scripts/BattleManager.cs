@@ -1,13 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class BattleManager : MonoBehaviour
 {
-    public TextMeshProUGUI MoveText;
-    public List<ActorSlot> ActorSlots;
+    public ActorSlot CurrentActor;
 
+    public TextMeshProUGUI MoveText;
+    public List<ActorSlot> Party;
+
+    public List<ActorSlot> Actors = new List<ActorSlot>();
+    public List<ActorSlot> Enemies = new List<ActorSlot>();
     public void UpdateMove(string moveName){
         MoveText.text = moveName;
         MoveText.maxVisibleCharacters = 0;
@@ -18,7 +23,14 @@ public class BattleManager : MonoBehaviour
     {
         UpdateMove("smh smh smh smh");
     }
-
+    void DimText(){
+        
+    }
+    
+public IEnumerator DelayAction(Action action, float secondsToWait){
+    yield return new WaitForSeconds(secondsToWait);
+    action();
+}
     // Update is called once per frame
     void Update()
     {
