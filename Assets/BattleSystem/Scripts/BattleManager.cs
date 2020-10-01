@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class BattleManager : MonoBehaviour
 {
@@ -22,24 +23,45 @@ public class BattleManager : MonoBehaviour
         LeanTween.value(MoveText.gameObject, (float x) => MoveText.maxVisibleCharacters = (int)x, 0,MoveText.text.Length, 2f);
     }
     // Start is called before the first frame update
+
+    public UnityEvent StartOfBattle;
+    public UnityEvent StartOfTurn;
+    public UnityEvent EndOfTurn;
+    public UnityEvent EndOfBattle;
+
+
+
     void Start()
     {
-
+        StartBattle();
     }
     void DimText(){
         
     }
-
+    public void StartBattle(){
+        StartOfBattle.Invoke();
+    }
     public void NextActor(){
         ActorCounter++;
-        if(ActorCounter >= Actors.Count) ActorCounter = 0;
-        NextTurn();
+        if(ActorCounter >= Actors.Count) {
+            ActorCounter = 0;
+            StartCoroutine(DelayTurn());
 
-        CurrentActor = Actors[ActorCounter];
+        }
+    }
+    public bool DelayNextTurn;
+
+    public IEnumerator DelayTurn(){
+        EndOfTurn.Invoke();
+        do{
+            yield return null;
+        }while(DelayNextTurn);
+        NextTurn();
     }
     public void NextTurn(){
+        CurrentActor = Actors[ActorCounter];
         TurnCounter++;
-        Debug.ClearDeveloperConsole();
+        StartOfTurn.Invoke();
     }
 public IEnumerator DelayAction(Action action, float secondsToWait){
     yield return new WaitForSeconds(secondsToWait);

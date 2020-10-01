@@ -290,6 +290,55 @@ MonoBehaviour:
   - {fileID: 1531820770}
   Actors: []
   Enemies: []
+  StartOfBattle:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 170927426}
+        m_TargetAssemblyTypeName: AngelBattleEvents, Assembly-CSharp
+        m_MethodName: StartOfBattle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  StartOfTurn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 170927426}
+        m_TargetAssemblyTypeName: AngelBattleEvents, Assembly-CSharp
+        m_MethodName: StartOfTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  EndOfTurn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 170927426}
+        m_TargetAssemblyTypeName: AngelBattleEvents, Assembly-CSharp
+        m_MethodName: EndOfTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  EndOfBattle:
+    m_PersistentCalls:
+      m_Calls: []
+  DelayNextTurn: 0
 --- !u!114 &170927424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,6 +477,18 @@ MonoBehaviour:
     BaseDamage: 2
     hitType: 0
     elementType: 0
+--- !u!114 &170927426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170927421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1aae8c2b845ba429f4713b9f156212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!850595691 &274645899
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1094,7 +1155,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000012165564062, guid: 2988b50da91d6fc41901ad08e8797a4b, type: 3}
       propertyPath: m_Name
-      value: EvilArmor_C_SKEL
+      value: EvilArmor_C_SKEL_GO
       objectReference: {fileID: 0}
     - target: {fileID: 4000013651661664, guid: 2988b50da91d6fc41901ad08e8797a4b, type: 3}
       propertyPath: m_LocalPosition.x
