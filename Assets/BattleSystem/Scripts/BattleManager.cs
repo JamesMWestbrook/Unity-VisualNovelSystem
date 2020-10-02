@@ -31,7 +31,7 @@ public class BattleManager : MonoBehaviour
     public UnityEvent EndOfTurn;
     public UnityEvent EndOfBattle;
 
-
+    public bool AllowInput;
 
     void Start()
     {
@@ -69,7 +69,6 @@ public class BattleManager : MonoBehaviour
     }
     public void StartActor()
     {
-        Debug.Log(CurrentActor);
         if (!CurrentActor.IsAI)
         {
 
@@ -114,6 +113,10 @@ public class BattleManager : MonoBehaviour
         TurnCounter++;
         StartOfTurn.Invoke();
     }
+    public void PostSkill(float waitTime){
+        //this is used after every skill is done
+        StartCoroutine(DelayAction(NextActor, waitTime));
+    }
     public IEnumerator DelayAction(Action action, float secondsToWait)
     {
         yield return new WaitForSeconds(secondsToWait);
@@ -149,4 +152,13 @@ public class BattleManager : MonoBehaviour
     {
 
     }
+
+    public Skills NormalAttack = new Skills(){
+        Name = "Attack",
+        BaseDamage = 1,
+        hitType = Skills.HitType.Physical,
+        Prefab = "KY_effects/MagicEffectsPackFree/prefab/skillAttack",
+        DestructTimer = 0.7f
+    };
+
 }

@@ -7,7 +7,7 @@ public class Skills
 {
     public string Name;
     public string Prefab;
-
+    public float DestructTimer;
     public float BaseDamage;
     
     public HitType hitType;
@@ -26,9 +26,9 @@ public class Skills
     public void Action(List<GameObject> targets, GameObject user){
         
         GameManager.Instance.BattleManager.UpdateMove(user.GetComponent<CharacterBase>().Name);
-        //end turn        
-
+        //end turn
+        GameManager.Instance.BattleManager.PostSkill(DestructTimer + 0.3f);
     }
-
+    
 
 }
