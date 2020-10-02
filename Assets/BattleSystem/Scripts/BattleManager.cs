@@ -80,22 +80,24 @@ public class BattleManager : MonoBehaviour
             charSprite.Face.sprite = Resources.Load<Sprite>(CurrentActor.Actor.BattleFacePath);
             charSprite.Outfit.sprite = Resources.Load<Sprite>(CurrentActor.Actor.BattleOutfitPath);
 
-            // +100
+
             Transform dest = CutsceneManager.Instance.RightSpot;
             Image rightImage = CutsceneManager.Instance.rightCharacter;
 
             Vector3 _beginPoint = new Vector3(dest.position.x + 100, rightImage.transform.position.y, rightImage.transform.position.z);
             Vector3 _endPoint = new Vector3(CutsceneManager.Instance.RightSpot.position.x, _beginPoint.y, _beginPoint.z);
 
-            float time = 0.4f;
-
             Image _face = charSprite.Face;
             Image _outfit = charSprite.Outfit;
             rightImage.transform.position = _beginPoint;
-            LeanTween.move(rightImage.gameObject,  _endPoint, time);
+            LeanTween.move(rightImage.gameObject, _endPoint, SpriteTime);
 
-            MovementNode.ColorChange(_outfit.gameObject, new Color(0.7f,0.7f,0.7f,1), new Color(1,1,1,1),time);
-            MovementNode.ColorChange(_face.gameObject, new Color(0.7f,0.7f,0.7f,1), new Color(1,1,1,1),time);
+            MovementNode.ColorChange(_outfit.gameObject, new Color(0.7f, 0.7f, 0.7f, 1), new Color(1, 1, 1, 1), SpriteTime);
+            MovementNode.ColorChange(_face.gameObject, new Color(0.7f, 0.7f, 0.7f, 1), new Color(1, 1, 1, 1), SpriteTime);
+        }
+        else
+        {
+            HideSprite();
         }
     }
     public IEnumerator DelayActor()
@@ -117,6 +119,30 @@ public class BattleManager : MonoBehaviour
         yield return new WaitForSeconds(secondsToWait);
         action();
     }
+   [NonSerialized] public float SpriteTime = 0.3f;
+    public void HideSprite()
+    {
+        CharacterSprite charSprite = CutsceneManager.Instance.rightCharacter.GetComponent<CharacterSprite>();
+
+
+        Transform dest = CutsceneManager.Instance.RightSpot;
+        Image rightImage = CutsceneManager.Instance.rightCharacter;
+
+        Vector3 _endPoint = new Vector3(CutsceneManager.Instance.RightSpot.position.x + 100, charSprite.transform.position.y, charSprite.transform.position.z);
+
+        Image _face = charSprite.Face;
+        Image _outfit = charSprite.Outfit;
+        LeanTween.move(rightImage.gameObject, _endPoint, SpriteTime);
+
+        MovementNode.ColorChange(_outfit.gameObject, new Color(1f, 1f, 1f, 1), new Color(0.0f, 0.0f, 0.0f, 0.0f), SpriteTime);
+        MovementNode.ColorChange(_face.gameObject, new Color(1, 1, 1, 1), new Color(0.0f, 0.0f, 0.0f, 0.0f), SpriteTime);
+        StartCoroutine(DisableSprite(charSprite));
+    }
+    private IEnumerator DisableSprite(CharacterSprite charSprite){
+        yield return new WaitForSeconds(SpriteTime);
+        charSprite.Face.enabled = false;
+        charSprite.Outfit.enabled = false;
+}
 
     // Update is called once per frame
     void Update()
