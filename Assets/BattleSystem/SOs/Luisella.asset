@@ -47,15 +47,21 @@ MonoBehaviour:
       Solar: 1
       Lunar: 1
     Skills:
-    - Name: Cyro I
-      Prefab: KY_effects/MagicEffectsPackFree/prefab/ErikiBall2
-      BaseDamage: 2
-      hitType: 1
-      elementType: 1
-    - Name: Heal I
-      Prefab: KY_effects/MagicEffectsPackFree/prefab/GreenCore
+    - Name: Heal
+      Prefab: 
       BaseDamage: 3
-      hitType: 2
+      DestructTimer: 2
+      Friendly: 1
+      targetCount: 0
+      hitType: 1
+      elementType: 6
+    - Name: 
+      Prefab: 
+      BaseDamage: 0
+      DestructTimer: 0
+      Friendly: 0
+      targetCount: 0
+      hitType: 0
       elementType: 0
     FacePath: Luisella Face
     SpriteGUI: 

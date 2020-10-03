@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 
 [System.Serializable]
 public class CharacterBase
@@ -14,7 +16,7 @@ public class CharacterBase
 
     public CharStats MaxStats = new CharStats();
     public CharStats CurStats = new CharStats();
-    public List<Skills> Skills = new List<Skills>();
+    [OdinSerialize] public List<Skills> Skills = new List<Skills>();
     public string FacePath;
     public string SpriteGUI;
     public string BattleOutfitPath;

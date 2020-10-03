@@ -33,6 +33,10 @@ public class BattleManager : MonoBehaviour
 
     public bool AllowInput;
 
+    [Header("UI")]
+    public GameObject ChooseActionPanel;
+
+
     void Start()
     {
         StartBattle();
@@ -67,18 +71,19 @@ public class BattleManager : MonoBehaviour
         } while (DelayNextTurn);
         NextTurn();
     }
+
+    public Button AttackButton;
+    public Button SkillsButton;
     public void StartActor()
     {
         if (!CurrentActor.IsAI)
         {
-
+            //Sprite
             CharacterSprite charSprite = CutsceneManager.Instance.rightCharacter.GetComponent<CharacterSprite>();
             charSprite.Face.enabled = true;
             charSprite.Outfit.enabled = true;
-
             charSprite.Face.sprite = Resources.Load<Sprite>(CurrentActor.Actor.BattleFacePath);
             charSprite.Outfit.sprite = Resources.Load<Sprite>(CurrentActor.Actor.BattleOutfitPath);
-
 
             Transform dest = CutsceneManager.Instance.RightSpot;
             Image rightImage = CutsceneManager.Instance.rightCharacter;
@@ -93,11 +98,144 @@ public class BattleManager : MonoBehaviour
 
             MovementNode.ColorChange(_outfit.gameObject, new Color(0.7f, 0.7f, 0.7f, 1), new Color(1, 1, 1, 1), SpriteTime);
             MovementNode.ColorChange(_face.gameObject, new Color(0.7f, 0.7f, 0.7f, 1), new Color(1, 1, 1, 1), SpriteTime);
+
+            //UI Buttons
+            StartOptions();
         }
         else
         {
             HideSprite();
         }
+    }
+    public void StartOptions()
+    {
+        buttonState = ButtonState.First;
+
+        ChooseActionPanel.SetActive(true);
+        OpenTargetsButton TargetButton = AttackButton.GetComponent<OpenTargetsButton>();
+        TargetButton.AssignedSkill = NormalAttack;
+    }
+    public void SkillMenu()
+    {
+        InTargetMenu = true;
+        buttonState = ButtonState.Skills;
+        for (int i = 0; i < CurrentActor.Actor.Skills.Count; i++)
+        {
+            //fill each of the target buttons
+            TargetButtons[i].gameObject.SetActive(true);
+            TargetButtons[i].GetComponent<OpenTargetsButton>().AssignedSkill = CurrentActor.Actor.Skills[i];
+        }
+    }
+
+
+    public void TargetMenu(Button self)
+    {
+        InTargetMenu = true;
+        //close appropriate window
+        switch (buttonState)
+        {
+            case (ButtonState.First):
+                ChooseActionPanel.SetActive(false);
+                break;
+            case (ButtonState.Skills):
+                foreach (Button button in SkillButtons)
+                {
+                    button.gameObject.SetActive(false);
+                }
+                break;
+        }
+        Skills skill = self.GetComponent<OpenTargetsButton>().AssignedSkill;
+        List<ActorSlot> targets = new List<ActorSlot>();
+
+        //check if friendly
+        if (skill.Friendly) targets = Party;
+        else targets = Enemies;
+        List<GameObject> targetsGO = new List<GameObject>();
+        foreach (ActorSlot actor in targets)
+        {
+            targetsGO.Add(actor.gameObject);
+        }
+        //check if single or multi target
+        //Put target and skill on button. 
+        //When you click this the skill will affect its target.
+        if (skill.targetCount == Skills.TargetCount.Multiple)
+        {
+            //assign the entire list to a button
+        }
+        else
+        {//Single target
+            //Opens a button for each enemy/ally target to hit
+            for (int i = 0; i < targets.Count; i++)
+            {
+                TargetButtons[i].gameObject.SetActive(true);
+                TargetButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = targets[i].Actor.Name;
+                TargetButtons[i].GetComponent<SkillButton>().AssignedSkill = skill;
+                TargetButtons[i].GetComponent<SkillButton>().Targets = targetsGO;
+                //assign target to button's target list
+            }
+        }
+    }
+    void FillTargetButton(Button button, List<ActorSlot> targets, Skills skill)
+    {
+        button.gameObject.SetActive(true);
+        SkillButton skillButton = button.GetComponent<SkillButton>();
+        //set button name to skill's name
+        skillButton.AssignedSkill = skill;
+    }
+    public void OpenWindow(GameObject go)
+    {
+        go.SetActive(true);
+    }
+    public void CloseWindow(GameObject go)
+    {
+        go.SetActive(false);
+    }
+    public void CloseTargets()
+    {
+        foreach (Button go in TargetButtons)
+        {
+            go.gameObject.SetActive(false);
+        }
+    }
+
+    public bool InTargetMenu;
+    public void CancelMenu()
+    {
+
+        switch (buttonState)
+        {
+            case (ButtonState.First):
+
+                if (InTargetMenu)
+                {
+                    CloseTargets();
+
+                    //close target menu and open first menu
+                }
+
+                //                InTargetMenu = false;
+
+                break;
+            case (ButtonState.Skills):
+                if (InTargetMenu)
+                {
+                    //close target menu and open skill menu
+                    CloseTargets();
+                    SkillMenu();
+                }
+
+                //                InTargetMenu = false;
+                break;
+        }
+    }
+    public List<Button> TargetButtons;
+    public List<Button> SkillButtons;
+    public ButtonState buttonState;
+    public enum ButtonState
+    {
+        First,
+        Skills,
+        Items,
     }
     public IEnumerator DelayActor()
     {
@@ -113,7 +251,8 @@ public class BattleManager : MonoBehaviour
         TurnCounter++;
         StartOfTurn.Invoke();
     }
-    public void PostSkill(float waitTime){
+    public void PostSkill(float waitTime)
+    {
         //this is used after every skill is done
         StartCoroutine(DelayAction(NextActor, waitTime));
     }
@@ -122,7 +261,7 @@ public class BattleManager : MonoBehaviour
         yield return new WaitForSeconds(secondsToWait);
         action();
     }
-   [NonSerialized] public float SpriteTime = 0.3f;
+    [NonSerialized] public float SpriteTime = 0.3f;
     public void HideSprite()
     {
         CharacterSprite charSprite = CutsceneManager.Instance.rightCharacter.GetComponent<CharacterSprite>();
@@ -141,11 +280,12 @@ public class BattleManager : MonoBehaviour
         MovementNode.ColorChange(_face.gameObject, new Color(1, 1, 1, 1), new Color(0.0f, 0.0f, 0.0f, 0.0f), SpriteTime);
         StartCoroutine(DisableSprite(charSprite));
     }
-    private IEnumerator DisableSprite(CharacterSprite charSprite){
+    private IEnumerator DisableSprite(CharacterSprite charSprite)
+    {
         yield return new WaitForSeconds(SpriteTime);
         charSprite.Face.enabled = false;
         charSprite.Outfit.enabled = false;
-}
+    }
 
     // Update is called once per frame
     void Update()
@@ -153,12 +293,6 @@ public class BattleManager : MonoBehaviour
 
     }
 
-    public Skills NormalAttack = new Skills(){
-        Name = "Attack",
-        BaseDamage = 1,
-        hitType = Skills.HitType.Physical,
-        Prefab = "KY_effects/MagicEffectsPackFree/prefab/skillAttack",
-        DestructTimer = 0.7f
-    };
+    public Skills NormalAttack;
 
 }
