@@ -122,8 +122,9 @@ public class BattleManager : MonoBehaviour
         for (int i = 0; i < CurrentActor.Actor.Skills.Count; i++)
         {
             //fill each of the target buttons
-            TargetButtons[i].gameObject.SetActive(true);
-            TargetButtons[i].GetComponent<OpenTargetsButton>().AssignedSkill = CurrentActor.Actor.Skills[i];
+            SkillButtons[i].gameObject.SetActive(true);
+            SkillButtons[i].GetComponent<OpenTargetsButton>().AssignedSkill = CurrentActor.Actor.Skills[i];
+            SkillButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = SkillButtons[i].GetComponent<OpenTargetsButton>().AssignedSkill.Name;
         }
     }
 
@@ -255,6 +256,9 @@ public class BattleManager : MonoBehaviour
     {
         //this is used after every skill is done
         StartCoroutine(DelayAction(NextActor, waitTime));
+        foreach(Button button in TargetButtons){
+            button.gameObject.SetActive(false);
+        }
     }
     public IEnumerator DelayAction(Action action, float secondsToWait)
     {
