@@ -530,7 +530,7 @@ MonoBehaviour:
     targetCount: 0
     hitType: 0
     elementType: 6
---- !u!114 &170927424
+--- !u!114 &170927425
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -539,11 +539,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 170927421}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbbc701fcc54aaa42a816ff811ee1d58, type: 3}
+  m_Script: {fileID: 11500000, guid: 76a0ceae75e1b32488bc5f86c78f7302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Luisella: {fileID: 11400000, guid: f5542ddccb268e94f9bcaf2e13ae94cc, type: 2}
-  Margh: {fileID: 11400000, guid: 2f72e4c67b7e32d4e9a96853cbc1aecf, type: 2}
+  newData:
+    Party: []
 --- !u!114 &170927426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1929,10 +1929,15 @@ MonoBehaviour:
       Solar: 1
       Lunar: 1
     Skills: []
-    FacePath: 
+    ShowTest:
+      path: 
+    FacePath:
+      path: 
     SpriteGUI: 
-    BattleOutfitPath: 
-    BattleFacePath: 
+    BattleOutfitPath:
+      path: 
+    BattleFacePath:
+      path: 
   EnemySO: {fileID: 11400000, guid: ed1abc104fcf6a34b909157d2e1a423c, type: 2}
   HP: {fileID: 0}
   HPForeground: {fileID: 0}

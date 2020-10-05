@@ -82,8 +82,8 @@ public class BattleManager : MonoBehaviour
             CharacterSprite charSprite = CutsceneManager.Instance.rightCharacter.GetComponent<CharacterSprite>();
             charSprite.Face.enabled = true;
             charSprite.Outfit.enabled = true;
-            charSprite.Face.sprite = Resources.Load<Sprite>(CurrentActor.Actor.BattleFacePath);
-            charSprite.Outfit.sprite = Resources.Load<Sprite>(CurrentActor.Actor.BattleOutfitPath);
+            charSprite.Face.sprite = CurrentActor.Actor.BattleFacePath.Get();
+            charSprite.Outfit.sprite = CurrentActor.Actor.BattleOutfitPath.Get();
 
             Transform dest = CutsceneManager.Instance.RightSpot;
             Image rightImage = CutsceneManager.Instance.rightCharacter;

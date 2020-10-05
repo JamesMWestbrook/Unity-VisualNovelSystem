@@ -17,10 +17,11 @@ public class CharacterBase
     public CharStats MaxStats = new CharStats();
     public CharStats CurStats = new CharStats();
     [OdinSerialize] public List<Skills> Skills = new List<Skills>();
-    public string FacePath;
+    public ResourcePathAsset<Sprite> ShowTest;
+    public ResourcePathAsset<Sprite> FacePath;
     public string SpriteGUI;
-    public string BattleOutfitPath;
-    public string BattleFacePath;
+    public ResourcePathAsset<Sprite> BattleOutfitPath;
+    public ResourcePathAsset<Sprite> BattleFacePath;
     
     //[SerializeField] public Dictionary<int, BaseBattleActions> BaseBattleActions;
 
@@ -31,8 +32,15 @@ public class CharacterBase
     //public EquipmentBase AccOne;
     //public EquipmentBase AccTwo;
 
-
-
+    public CharacterBase DeepClone(){
+        CharacterBase cb = new CharacterBase();
+        DeepClone(cb);
+        return cb;
+    }
+    public virtual void DeepClone(CharacterBase dst){
+        dst.Name = Name;
+        dst.ShowTest = ShowTest;
+    }
 
     public virtual void Test(string test)
     {

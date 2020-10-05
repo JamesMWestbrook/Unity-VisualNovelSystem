@@ -13,7 +13,7 @@ public class ActorSlot : MonoBehaviour
     public CharacterBase Actor;
     public void SetGraphics()
     {
-        Face.sprite = Resources.Load<Sprite>(Actor.FacePath);
+        Face.sprite = Actor.FacePath.Get();
     }
     public CharacterSO EnemySO;
 
@@ -37,7 +37,7 @@ public class ActorSlot : MonoBehaviour
         if (IsAI)
         {
             GameManager.Instance.BattleManager.Enemies.Add(this);
-            Actor = EnemySO.Character.Clone(EnemySO.Character);
+            Actor = EnemySO.Character;
         }
     }
 
