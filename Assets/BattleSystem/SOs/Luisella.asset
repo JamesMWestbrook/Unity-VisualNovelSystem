@@ -48,13 +48,25 @@ MonoBehaviour:
       Lunar: 1
     Skills:
     - Name: Heal
-      Prefab: 
+      Prefab:
+        path: KY_effects/MagicEffectsPackFree/prefab/GreenCore
+        asset: {fileID: 100006, guid: 906ef3748a66347cfb2d72de10092732, type: 3}
       BaseDamage: 3
       DestructTimer: 2
       Friendly: 1
       targetCount: 0
-      hitType: 1
+      hitType: 2
       elementType: 6
+    - Name: Bomb
+      Prefab:
+        path: KY_effects/MagicEffectsPackFree/prefab/WhityBomb
+        asset: {fileID: 100010, guid: 4d0391f078db24fac9f5cba3075f9f5d, type: 3}
+      BaseDamage: 0
+      DestructTimer: 2
+      Friendly: 0
+      targetCount: 0
+      hitType: 0
+      elementType: 2
     ShowTest:
       path: BattleGraphics/Luisella/Body/LuisellaBattle
       asset: {fileID: 0}

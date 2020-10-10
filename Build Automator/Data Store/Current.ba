@@ -1,0 +1,93 @@
+{
+  "ModuleData": {
+    "qfsw.hidden.build-literals": {},
+    "qfsw.presets": {},
+    "qfsw.preset-pipeline": {},
+    "qfsw.general-settings": {
+      "_buildName": "Visual Novel System Example",
+      "_buildPath": "Builds",
+      "_revertPlatform": true,
+      "_terminateOnFailure": true,
+      "_useSubfolders": true,
+      "_subfolderNameCase": "RemoveSpace"
+    },
+    "qfsw.platforms": {
+      "_platformTable": {
+        "StandaloneWindows64": {
+          "Enabled": false,
+          "BuildPrefix": null,
+          "BuildSuffix": null,
+          "ScriptingBackend": "Mono2x"
+        },
+        "StandaloneWindows": {
+          "Enabled": false,
+          "BuildPrefix": null,
+          "BuildSuffix": null,
+          "ScriptingBackend": "Mono2x"
+        },
+        "StandaloneLinux64": {
+          "Enabled": false,
+          "BuildPrefix": null,
+          "BuildSuffix": null,
+          "ScriptingBackend": "Mono2x"
+        },
+        "Android": {
+          "Enabled": false,
+          "BuildPrefix": null,
+          "BuildSuffix": null,
+          "ScriptingBackend": "Mono2x"
+        }
+      }
+    },
+    "qfsw.scenes": {
+      "_ignoreSceneSettings": false,
+      "_scenes": [
+        null
+      ]
+    },
+    "qfsw.build-settings": {
+      "_devBuilds": false,
+      "_autoconnectProfiler": false,
+      "_scriptsOnlyBuild": false,
+      "_buildSettings": []
+    },
+    "qfsw.literals": {},
+    "qfsw.preprocessors": {
+      "_ignorePreprocessors": false,
+      "_clearOtherPreprocessors": false,
+      "_preprocessorsData": []
+    },
+    "qfsw.build-scripts": {
+      "_bindings": []
+    },
+    "qfsw.auto-save": {},
+    "qfsw.logging": {
+      "_enabled": false,
+      "_logFilePath": "",
+      "_appendLogs": false,
+      "_logTimestamps": true,
+      "_debugLogThreshold": "Error",
+      "_eventLogOptions": "Everything"
+    }
+  },
+  "LiteralData": {
+    "#LAST-BUILD-DIR#": {},
+    "#TIME#": {
+      "_separator": "-",
+      "_format": "H24MM"
+    },
+    "#DATE#": {
+      "_separator": "-",
+      "_format": "DDMMYYYY"
+    },
+    "#CURRENT-PLATFORM#": {
+      "_convention": "None"
+    },
+    "#VERSION#": {},
+    "#APP-ID#": {},
+    "#PRODUCT-NAME#": {},
+    "#COMPANY-NAME#": {},
+    "#UNITY-VERSION#": {},
+    "#LICENSE#": {}
+  }
+}

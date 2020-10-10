@@ -21,6 +21,7 @@ public class ActorSlot : MonoBehaviour
     public Image HPForeground;
     public TextMeshProUGUI MP;
     public Image MPForeground;
+    public Transform EffectTrans;
     public void UpdateStats()
     {
         HP.text = Actor.CurStats.HP.ToString();

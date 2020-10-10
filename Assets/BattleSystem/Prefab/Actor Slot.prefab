@@ -302,6 +302,41 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &1039671124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1039671125}
+  m_Layer: 5
+  m_Name: EffectTrans
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1039671125
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039671124}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -84}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2012790588902616734}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1163934593
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +867,7 @@ RectTransform:
   - {fileID: 864688582}
   - {fileID: 385698952}
   - {fileID: 1301294255}
+  - {fileID: 1039671125}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -890,8 +926,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d51e50de2db4b4ea820ee2a2206406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsAI: 0
   Face: {fileID: 3627667129543725969}
-  AnimationSpawnPoint: {fileID: 2074866344}
+  AnimationSpawnPoint: {fileID: 0}
   Actor:
     Name: Empty
     NickName: EmptyNN
@@ -927,12 +964,22 @@ MonoBehaviour:
       Solar: 1
       Lunar: 1
     Skills: []
-    FacePath: 
+    ShowTest:
+      path: 
+      asset: {fileID: 0}
+    FacePath:
+      path: 
+      asset: {fileID: 0}
     SpriteGUI: 
-    testString:
-    - Attack
-    - Shield
+    BattleOutfitPath:
+      path: 
+      asset: {fileID: 0}
+    BattleFacePath:
+      path: 
+      asset: {fileID: 0}
+  EnemySO: {fileID: 0}
   HP: {fileID: 1163934595}
   HPForeground: {fileID: 831637360}
   MP: {fileID: 1943752704}
   MPForeground: {fileID: 584613106}
+  EffectTrans: {fileID: 1039671125}

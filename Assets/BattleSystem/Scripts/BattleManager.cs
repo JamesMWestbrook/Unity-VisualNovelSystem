@@ -296,7 +296,16 @@ public class BattleManager : MonoBehaviour
     {
 
     }
-
+    public void CloseSkills(){
+        for(int i = 0; i < SkillButtons.Count; i++){
+            SkillButtons[i].gameObject.SetActive(false);
+        }
+    }
     public Skills NormalAttack;
+    public void SpawnGO(GameObject go, Transform dest, float time){
+       
+        go = Instantiate<GameObject>(go, dest.GetComponent<ActorSlot>().EffectTrans);
+        go.GetComponent<DestroyThis>().Timer = time;
+    }
 
 }

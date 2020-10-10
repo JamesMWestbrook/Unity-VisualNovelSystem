@@ -4,10 +4,10 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 
 [System.Serializable]
-public class Skills 
+public class Skills
 {
     public string Name;
-    public string Prefab;
+    public ResourcePathAsset<GameObject> Prefab;
     [HorizontalGroup]
     public float BaseDamage;
     [HorizontalGroup]
@@ -26,12 +26,15 @@ public class Skills
         Single,
         Multiple
     }
-    public enum HitType{
+    public enum HitType
+    {
         Physical,
         Magical,
-        Heal
+        Heal,
+        Status
     }
-    public enum ElementType { 
+    public enum ElementType
+    {
         Cyro,
         Solar,
         Terrene,
@@ -40,17 +43,46 @@ public class Skills
         Currene,
         Null
     }
-    public void Action(List<GameObject> targets, GameObject user){
-        
-        Debug.Log("Clicked");
+    public void Action(List<GameObject> targets, GameObject user)
+    {
+
+        Debug.Log(Prefab.Asset);
         BattleManager bm = GameManager.Instance.BattleManager;
         bm.UpdateMove(GameManager.Instance.BattleManager.CurrentActor.Actor.Name);
+
+        //activate skill
+
+        //feed BM a prefab to spawn
+        for (int i = 0; i < targets.Count; i++)
+        {
+            bm.SpawnGO(Prefab.Asset, targets[i].transform, DestructTimer);
+            //run check for damage
+        }
+
         //end turn
         bm.PostSkill(DestructTimer + 0.3f);
-
         //close all UI
         //advance to next turn
     }
-    
+
+    void SkillProcess()
+    {
+        switch (hitType)
+        {
+            case HitType.Physical:
+
+                break;
+            case HitType.Magical:
+
+                break;
+            case HitType.Heal:
+
+                break;
+            case HitType.Status:
+
+                break;
+
+        }
+    }
 
 }

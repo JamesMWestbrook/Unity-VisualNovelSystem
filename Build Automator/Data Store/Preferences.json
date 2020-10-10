@@ -1,0 +1,43 @@
+{
+  "ModulePreferences": {
+    "qfsw.hidden.build-literals": {},
+    "qfsw.presets": {
+      "_currentPreset": "None",
+      "_isUIExpanded": true
+    },
+    "qfsw.preset-pipeline": {
+      "_presetList": [],
+      "_isUIExpanded": true
+    },
+    "qfsw.general-settings": {
+      "_isUIExpanded": true
+    },
+    "qfsw.platforms": {
+      "_isUIExpanded": true
+    },
+    "qfsw.scenes": {
+      "_isUIExpanded": true
+    },
+    "qfsw.build-settings": {
+      "_isUIExpanded": true
+    },
+    "qfsw.literals": {
+      "_isUIExpanded": true
+    },
+    "qfsw.preprocessors": {
+      "_isUIExpanded": true
+    },
+    "qfsw.build-scripts": {
+      "_isUIExpanded": true
+    },
+    "qfsw.auto-save": {
+      "_saveOnFocusLoss": true,
+      "_saveOnContextDestroyed": true,
+      "_saveScenesOnBuild": true,
+      "_isUIExpanded": true
+    },
+    "qfsw.logging": {
+      "_isUIExpanded": true
+    }
+  }
+}

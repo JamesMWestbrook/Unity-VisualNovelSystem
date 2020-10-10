@@ -48,21 +48,25 @@ MonoBehaviour:
       Lunar: 1
     Skills:
     - Name: Square Punch
-      Prefab: KY_effects/MagicEffectsPackFree/prefab/skillAttack2
+      Prefab:
+        path: KY_effects/MagicEffectsPackFree/prefab/skillAttack2
+        asset: {fileID: 100002, guid: 75369bb81385f4904842bf20a51c14a2, type: 3}
       BaseDamage: 2
-      DestructTimer: 0
+      DestructTimer: 2
       Friendly: 0
       targetCount: 0
       hitType: 0
       elementType: 0
     - Name: Currene I
-      Prefab: KY_effects/MagicEffectsPackFree/prefab/Spark
+      Prefab:
+        path: KY_effects/MagicEffectsPackFree/prefab/ErekiBall
+        asset: {fileID: 100002, guid: 391ec6f1311384e75b4888fd6fc26b7e, type: 3}
       BaseDamage: 2
-      DestructTimer: 0
+      DestructTimer: 2
       Friendly: 0
       targetCount: 0
       hitType: 1
-      elementType: 2
+      elementType: 5
     ShowTest:
       path: 
       asset: {fileID: 0}
