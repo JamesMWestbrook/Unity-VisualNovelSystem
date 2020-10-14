@@ -18,6 +18,7 @@ public class BattleManager : MonoBehaviour
 
     public List<ActorSlot> Actors;
     public List<ActorSlot> Enemies;
+    public Transform EffectTrans;
     public void UpdateMove(string moveName)
     {
         MoveText.text = moveName;
@@ -304,7 +305,7 @@ public class BattleManager : MonoBehaviour
     public Skills NormalAttack;
     public void SpawnGO(GameObject go, Transform dest, float time){
        
-        go = Instantiate<GameObject>(go, dest.GetComponent<ActorSlot>().EffectTrans);
+        go = Instantiate<GameObject>(go, dest);
         go.GetComponent<DestroyThis>().Timer = time;
     }
 

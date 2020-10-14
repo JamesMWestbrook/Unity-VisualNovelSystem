@@ -46,7 +46,6 @@ public class Skills
     public void Action(List<GameObject> targets, GameObject user)
     {
 
-        Debug.Log(Prefab.Asset);
         BattleManager bm = GameManager.Instance.BattleManager;
         bm.UpdateMove(GameManager.Instance.BattleManager.CurrentActor.Actor.Name);
 
@@ -55,7 +54,8 @@ public class Skills
         //feed BM a prefab to spawn
         for (int i = 0; i < targets.Count; i++)
         {
-            bm.SpawnGO(Prefab.Asset, targets[i].transform, DestructTimer);
+            if(targets[i].GetComponent<ActorSlot>().IsAI)bm.SpawnGO(Prefab.Asset, targets[i].GetComponent<ActorSlot>().EffectTrans, DestructTimer);
+            else bm.SpawnGO(Prefab.Asset, bm.EffectTrans, DestructTimer);
             //run check for damage
         }
 
