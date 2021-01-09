@@ -46,7 +46,6 @@ public class Skills
     public void Action(List<GameObject> targets, GameObject user)
     {
 
-        Debug.Log(Prefab.Asset);
         BattleManager bm = GameManager.Instance.BattleManager;
         bm.UpdateMove(GameManager.Instance.BattleManager.CurrentActor.Actor.Name);
 
