@@ -143,6 +143,7 @@ public class BattleManager : MonoBehaviour
             case (ButtonState.Skills):
                 foreach (Button button in SkillButtons)
                 {
+                    
                     button.gameObject.SetActive(false);
                 }
                 break;
@@ -174,6 +175,7 @@ public class BattleManager : MonoBehaviour
                 TargetButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = targets[i].Actor.Name;
                 TargetButtons[i].GetComponent<SkillButton>().AssignedSkill = skill;
                 TargetButtons[i].GetComponent<SkillButton>().Targets = targetsGO;
+                TargetButtons[i].GetComponent<SkillButton>().user = CurrentActor.gameObject;
                 //assign target to button's target list
             }
         }

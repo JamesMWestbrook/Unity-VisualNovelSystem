@@ -85,7 +85,11 @@ public class Skills
                     break;
             }
             modifier = BaseDamage * tempAttack - tempDefense; //This is where we'd plug elements in
+            Debug.Log("HP Before " + Defender.Actor.CurStats.HP);
+            Debug.Log("Modifier " + modifier);
             Defender.Actor.CurStats.HP -= modifier;
+            Debug.Log("HP After " + Defender.Actor.CurStats.HP);
+
         }
         else
         {
@@ -94,7 +98,10 @@ public class Skills
                 case Skills.HitType.Heal:
                     tempAttack = Attacker.Actor.CurStats.Vigor;
                     modifier = BaseDamage * tempAttack;
+                    Debug.Log("HP Before " + Defender.Actor.CurStats.HP);
                     Defender.Actor.CurStats.HP += modifier;
+                    Debug.Log("Modifier " + modifier);
+                    Debug.Log("HP After " + Defender.Actor.CurStats.HP);
                     break;
                 case Skills.HitType.Status: //not touched in demo
                     break;
