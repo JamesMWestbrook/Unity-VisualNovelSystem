@@ -29,7 +29,27 @@ public class CharStats
     public float Cyro = 1;
     public float Solar = 1;
     public float Lunar = 1;
-
+    public float GetElement(Skills.ElementType element)
+    {
+        switch (element)
+        {
+            case Skills.ElementType.Null:
+                return Normal;
+            case Skills.ElementType.Currene:
+                return Currene;
+            case Skills.ElementType.Terrene:
+                return Terrene;
+            case Skills.ElementType.Pyro:
+                return Pyro;
+            case Skills.ElementType.Cyro:
+                return Cyro;
+            case Skills.ElementType.Solar:
+                return Solar;
+            case Skills.ElementType.Lunar:
+                return Lunar;
+        }
+        return 1;
+    }
 }
 
 public static class CStatsExt

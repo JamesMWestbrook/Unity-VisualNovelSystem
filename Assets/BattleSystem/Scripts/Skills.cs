@@ -9,7 +9,7 @@ public class Skills
     public string Name;
     public ResourcePathAsset<GameObject> Prefab;
     [HorizontalGroup]
-    public float BaseDamage;
+    public int BaseDamage;
     [HorizontalGroup]
     public float DestructTimer;
     public bool Friendly;
@@ -56,6 +56,7 @@ public class Skills
         for (int i = 0; i < targets.Count; i++)
         {
             bm.SpawnGO(Prefab.Asset, targets[i].transform, DestructTimer);
+            SkillProcess(targets[i], user, hitType);
             //run check for damage
         }
 
@@ -65,24 +66,41 @@ public class Skills
         //advance to next turn
     }
 
-    void SkillProcess()
+    public void SkillProcess(GameObject target, GameObject user, Skills.HitType hitType)
     {
-        switch (hitType)
+        int tempAttack = 0;
+        int tempDefense = 0;
+        int modifier;
+        ActorSlot Attacker = user.GetComponent<ActorSlot>();
+        ActorSlot Defender = user.GetComponent<ActorSlot>();
+        if (hitType == Skills.HitType.Physical || hitType == Skills.HitType.Magical)
         {
-            case HitType.Physical:
-
-                break;
-            case HitType.Magical:
-
-                break;
-            case HitType.Heal:
-
-                break;
-            case HitType.Status:
-
-                break;
-
+            tempDefense = Defender.Actor.CurStats.Will;
+            switch (hitType)
+            {
+                case Skills.HitType.Physical:
+                    tempAttack = Attacker.Actor.CurStats.Muscle;
+                    break;
+                case Skills.HitType.Magical:
+                    tempAttack = Attacker.Actor.CurStats.Vigor;
+                    break;
+            }
+            modifier = BaseDamage * tempAttack - tempDefense; //This is where we'd plug elements in
+            Defender.Actor.CurStats.HP -= modifier;
+        }
+        else
+        {
+            switch (hitType)
+            {
+                case Skills.HitType.Heal:
+                    tempAttack = Attacker.Actor.CurStats.Vigor;
+                    modifier = BaseDamage * tempAttack;
+                    Defender.Actor.CurStats.HP += modifier;
+                    break;
+                case Skills.HitType.Status: //not touched in demo
+                    break;
+            }
         }
     }
-
 }
+

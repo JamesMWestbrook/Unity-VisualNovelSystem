@@ -105,6 +105,7 @@ public class BattleManager : MonoBehaviour
         else
         {
             HideSprite();
+            // hide buttons
         }
     }
     public void StartOptions()
@@ -307,5 +308,4 @@ public class BattleManager : MonoBehaviour
         go = Instantiate<GameObject>(go, dest.GetComponent<ActorSlot>().EffectTrans);
         go.GetComponent<DestroyThis>().Timer = time;
     }
-
 }
