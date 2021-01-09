@@ -15,8 +15,6 @@ public class ResourcePathAsset<T> where T : UnityEngine.Object
     [HideLabel]
 #if UNITY_EDITOR
     [SerializeField]
-#else
-[NonSerialized]
 #endif
     private T asset;
     private void OnSet()
