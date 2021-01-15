@@ -17,7 +17,7 @@ MonoBehaviour:
     NickName: EmptyNN
     Lvl: 1
     MaxStats:
-      HP: 50
+      HP: 500
       MP: 30
       Muscle: 3
       Vigor: 5
@@ -47,7 +47,16 @@ MonoBehaviour:
       Solar: 1
       Lunar: 1
     Skills: []
-    FacePath: 
+    ShowTest:
+      path: 
+      asset: {fileID: 0}
+    FacePath:
+      path: 
+      asset: {fileID: 0}
     SpriteGUI: 
-    BattleOutfitPath: 
-    BattleFacePath: 
+    BattleOutfitPath:
+      path: 
+      asset: {fileID: 0}
+    BattleFacePath:
+      path: 
+      asset: {fileID: 0}

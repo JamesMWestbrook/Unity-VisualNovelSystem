@@ -71,7 +71,7 @@ public class Skills
         int tempDefense = 0;
         int modifier;
         ActorSlot Attacker = user.GetComponent<ActorSlot>();
-        ActorSlot Defender = user.GetComponent<ActorSlot>();
+        ActorSlot Defender = target.GetComponent<ActorSlot>();
         if (hitType == Skills.HitType.Physical || hitType == Skills.HitType.Magical)
         {
             tempDefense = Defender.Actor.CurStats.Will;
@@ -88,6 +88,8 @@ public class Skills
             Debug.Log("HP Before " + Defender.Actor.CurStats.HP);
             Debug.Log("Modifier " + modifier);
             Defender.Actor.CurStats.HP -= modifier;
+            if(Defender.Actor.CurStats.HP < 0) Defender.Actor.CurStats.HP = 0;
+            if(Defender.Actor.CurStats.HP > Defender.Actor.MaxStats.HP) Defender.Actor.CurStats.HP = Defender.Actor.MaxStats.HP;
             Debug.Log("HP After " + Defender.Actor.CurStats.HP);
 
         }

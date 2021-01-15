@@ -38,7 +38,9 @@ public class ActorSlot : MonoBehaviour
         if (IsAI)
         {
             GameManager.Instance.BattleManager.Enemies.Add(this);
-            Actor = EnemySO.Character;
+            Actor.Name = EnemySO.name;
+            EnemySO.Character.MaxStats.CopyStats(Actor.MaxStats);
+            Actor.MaxStats.CopyStats(Actor.CurStats);
         }
     }
 

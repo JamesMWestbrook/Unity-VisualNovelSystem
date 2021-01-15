@@ -50,10 +50,13 @@ public class CharStats
         }
         return 1;
     }
+    public void CopyStats(CharStats plug){
+        plug.HP = HP;
+    }
 }
 
 public static class CStatsExt
-{
+{   
     public static CharStats DeepStatsCopy<T>(this CharStats cStats, T other)
     {
 

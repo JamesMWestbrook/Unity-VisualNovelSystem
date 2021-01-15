@@ -13,9 +13,8 @@ public class ResourcePathAsset<T> where T : UnityEngine.Object
 
     [ShowInInspector, OnValueChanged(nameof(OnSet))]
     [HideLabel]
-#if UNITY_EDITOR
+
     [SerializeField]
-#endif
     private T asset;
     private void OnSet()
     {
