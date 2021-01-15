@@ -308,7 +308,7 @@ public class BattleManager : MonoBehaviour
     public Skills NormalAttack;
     public void SpawnGO(GameObject go, Transform dest, float time){
        
-        go = Instantiate<GameObject>(go, dest);
+        go = Instantiate<GameObject>(go, dest.Find("EffectTrans"));
         go.GetComponent<DestroyThis>().Timer = time;
     }
 }
