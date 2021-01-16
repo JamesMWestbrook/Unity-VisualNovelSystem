@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
@@ -88,7 +88,12 @@ public class Skills
             Debug.Log(tempAttack);
             modifier = BaseDamage * tempAttack - tempDefense; //This is where we'd plug elements in
             if(modifier < 0) modifier = 0;
-            Debug.Log("HP Before " + Defender.Actor.CurStats.HP);
+
+            //this is where we would calculate magic affecting the damage, here it would not matter if 
+            //it was below 0, since magic damage can turn into negative
+            Debug.Log("----");
+            Debug.Log(string.Format(" {0} HP before: {1}", Name, Defender.Actor.CurStats.HP));
+           // Debug.Log(Name + "HP Before using "  + "  " + Defender.Actor.CurStats.HP);
             Debug.Log("Modifier " + modifier);
             Defender.Actor.CurStats.HP -= modifier;
             if(Defender.Actor.CurStats.HP < 0) Defender.Actor.CurStats.HP = 0;

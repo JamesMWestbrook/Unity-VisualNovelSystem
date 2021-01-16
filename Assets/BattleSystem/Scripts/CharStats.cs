@@ -4,7 +4,6 @@ using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-
 [System.Serializable]
 public class CharStats
 {
@@ -20,15 +19,16 @@ public class CharStats
     public int Agility = 3; //Determines turn order
 
 
-
+    
     //Elements
-    public float Normal = 1;
-    public float Currene = 1;
-    public float Terrene = 1;
-    public float Pyro = 1;
-    public float Cyro = 1;
-    public float Solar = 1;
-    public float Lunar = 1;
+    public Element element;
+    public void CopyStats(CharStats plug){
+        plug.HP = HP;
+    }
+}
+[System.Serializable] public class Element
+{
+    
     public float GetElement(Skills.ElementType element)
     {
         switch (element)
@@ -50,11 +50,14 @@ public class CharStats
         }
         return 1;
     }
-    public void CopyStats(CharStats plug){
-        plug.HP = HP;
-    }
+    public float Normal = 1;
+    public float Currene = 1;
+    public float Terrene = 1;
+    public float Pyro = 1;
+    public float Cyro = 1;
+    public float Solar = 1;
+    public float Lunar = 1;
 }
-
 public static class CStatsExt
 {   
     public static CharStats DeepStatsCopy<T>(this CharStats cStats, T other)

@@ -17,7 +17,7 @@ MonoBehaviour:
     NickName: EmptyNN
     Lvl: 1
     MaxStats:
-      HP: 500
+      HP: 20
       MP: 30
       Muscle: 3
       Vigor: 5
@@ -46,7 +46,18 @@ MonoBehaviour:
       Cyro: 1
       Solar: 1
       Lunar: 1
-    Skills: []
+    Skills:
+    - Name: 
+      Prefab:
+        path: 
+        asset: {fileID: 0}
+      BaseDamage: 0
+      DestructTimer: 0
+      Rotation: {x: 0, y: 0, z: 0}
+      Friendly: 0
+      targetCount: 0
+      hitType: 0
+      elementType: 0
     ShowTest:
       path: 
       asset: {fileID: 0}
