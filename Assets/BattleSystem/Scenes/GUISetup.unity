@@ -4501,6 +4501,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Actor Slot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3627667129543725969, guid: 8d1b8c01204fede47b426f92bfa61cb4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d1b8c01204fede47b426f92bfa61cb4, type: 3}
 --- !u!224 &1531820769 stripped
@@ -6430,6 +6435,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Actor Slot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627667129543725969, guid: 8d1b8c01204fede47b426f92bfa61cb4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d1b8c01204fede47b426f92bfa61cb4, type: 3}

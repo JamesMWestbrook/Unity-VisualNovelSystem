@@ -239,6 +239,13 @@ public class BattleManager : MonoBehaviour
     public void EnableUI(){
         foreach(ActorSlot actor in Party){
             actor.gameObject.SetActive(true);
+            RectTransform actorTrans = actor.GetComponent<RectTransform>();
+            actorTrans.LeanScale(new Vector3(0,1,1), 0);
+            Vector3 endPos = actorTrans.position;
+          //  actorTrans.position = new Vector3(-500, actorTrans.position.y, actorTrans.position.z);
+           // actorTrans.LeanMove(endPos, 0.7);
+           // LeanTween.move(actorTrans.gameObject, endPos, 0.7f);
+            LeanTween.scale(actorTrans, Vector3.one, 0.7f);
         }
     }
     public List<Button> TargetButtons;
