@@ -197,7 +197,12 @@ public class BattleManager : MonoBehaviour
                 TargetButtons[i].gameObject.SetActive(true);
                 TargetButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = targets[i].GetComponent<ActorSlot>().Actor.Name;
                 TargetButtons[i].GetComponent<SkillButton>().AssignedSkill = skill;
-                TargetButtons[i].GetComponent<SkillButton>().Targets = targetsGO;
+
+
+                List<GameObject> singleTarget = new List<GameObject>();
+                singleTarget.Add(targetsGO[i]);
+                TargetButtons[i].GetComponent<SkillButton>().Targets = singleTarget;
+                //TargetButtons[i].GetComponent<SkillButton>().Targets = targetsGO;
                 TargetButtons[i].GetComponent<SkillButton>().user = CurrentActor.gameObject;
             }
         }
