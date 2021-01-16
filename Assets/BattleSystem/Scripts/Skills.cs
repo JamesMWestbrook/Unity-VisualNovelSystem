@@ -12,6 +12,7 @@ public class Skills
     public int BaseDamage;
     [HorizontalGroup]
     public float DestructTimer;
+    public Vector3 Rotation;
     public bool Friendly;
     [EnumToggleButtons]
     public TargetCount targetCount;
@@ -84,7 +85,9 @@ public class Skills
                     tempAttack = Attacker.Actor.CurStats.Vigor;
                     break;
             }
+            Debug.Log(tempAttack);
             modifier = BaseDamage * tempAttack - tempDefense; //This is where we'd plug elements in
+            if(modifier < 0) modifier = 0;
             Debug.Log("HP Before " + Defender.Actor.CurStats.HP);
             Debug.Log("Modifier " + modifier);
             Defender.Actor.CurStats.HP -= modifier;

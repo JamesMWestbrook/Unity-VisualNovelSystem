@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.Serialization;
@@ -10,10 +10,9 @@ public class ResourcePathAsset<T> where T : UnityEngine.Object
 {
     //    [HideInInspector]
     [SerializeField] private string path;
-
+    
     [ShowInInspector, OnValueChanged(nameof(OnSet))]
     [HideLabel]
-
     [SerializeField]
     private T asset;
     private void OnSet()
