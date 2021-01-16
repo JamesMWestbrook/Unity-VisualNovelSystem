@@ -184,6 +184,7 @@ MonoBehaviour:
       asset: {fileID: 0}
     BaseDamage: 0
     DestructTimer: 0
+    Rotation: {x: 0, y: 0, z: 0}
     Friendly: 0
     targetCount: 0
     hitType: 0
@@ -542,7 +543,8 @@ MonoBehaviour:
       path: KY_effects/MagicEffectsPackFree/prefab/skillAttack
       asset: {fileID: 100004, guid: a89abc0d2591545288f4c041059ae633, type: 3}
     BaseDamage: 1
-    DestructTimer: 0
+    DestructTimer: 1
+    Rotation: {x: 0, y: 0, z: 0}
     Friendly: 0
     targetCount: 0
     hitType: 0
@@ -774,6 +776,7 @@ MonoBehaviour:
       asset: {fileID: 0}
     BaseDamage: 0
     DestructTimer: 0
+    Rotation: {x: 0, y: 0, z: 0}
     Friendly: 0
     targetCount: 0
     hitType: 0
@@ -1694,6 +1697,7 @@ MonoBehaviour:
       asset: {fileID: 0}
     BaseDamage: 0
     DestructTimer: 0
+    Rotation: {x: 0, y: 0, z: 0}
     Friendly: 0
     targetCount: 0
     hitType: 0
@@ -1957,13 +1961,14 @@ MonoBehaviour:
       Will: 4
       Instinct: 5
       Agility: 3
-      Normal: 1
-      Currene: 1
-      Terrene: 1
-      Pyro: 1
-      Cyro: 1
-      Solar: 1
-      Lunar: 1
+      element:
+        Normal: 1
+        Currene: 1
+        Terrene: 1
+        Pyro: 1
+        Cyro: 1
+        Solar: 1
+        Lunar: 1
     CurStats:
       HP: 50
       MP: 30
@@ -1972,13 +1977,14 @@ MonoBehaviour:
       Will: 4
       Instinct: 5
       Agility: 3
-      Normal: 1
-      Currene: 1
-      Terrene: 1
-      Pyro: 1
-      Cyro: 1
-      Solar: 1
-      Lunar: 1
+      element:
+        Normal: 1
+        Currene: 1
+        Terrene: 1
+        Pyro: 1
+        Cyro: 1
+        Solar: 1
+        Lunar: 1
     Skills: []
     ShowTest:
       path: 
@@ -2018,6 +2024,7 @@ MonoBehaviour:
       asset: {fileID: 0}
     BaseDamage: 0
     DestructTimer: 0
+    Rotation: {x: 0, y: 0, z: 0}
     Friendly: 0
     targetCount: 0
     hitType: 0
@@ -2029,6 +2036,7 @@ MonoBehaviour:
       asset: {fileID: 0}
     BaseDamage: 0
     DestructTimer: 0
+    Rotation: {x: 0, y: 0, z: 0}
     Friendly: 0
     targetCount: 0
     hitType: 0
@@ -2040,6 +2048,7 @@ MonoBehaviour:
       asset: {fileID: 0}
     BaseDamage: 0
     DestructTimer: 0
+    Rotation: {x: 0, y: 0, z: 0}
     Friendly: 0
     targetCount: 0
     hitType: 0
@@ -2325,6 +2334,7 @@ MonoBehaviour:
       asset: {fileID: 0}
     BaseDamage: 0
     DestructTimer: 0
+    Rotation: {x: 0, y: 0, z: 0}
     Friendly: 0
     targetCount: 0
     hitType: 0
@@ -2706,6 +2716,7 @@ MonoBehaviour:
       asset: {fileID: 0}
     BaseDamage: 0
     DestructTimer: 0
+    Rotation: {x: 0, y: 0, z: 0}
     Friendly: 0
     targetCount: 0
     hitType: 0
@@ -3777,6 +3788,7 @@ MonoBehaviour:
       asset: {fileID: 0}
     BaseDamage: 0
     DestructTimer: 0
+    Rotation: {x: 0, y: 0, z: 0}
     Friendly: 0
     targetCount: 0
     hitType: 0
@@ -4223,6 +4235,7 @@ MonoBehaviour:
       asset: {fileID: 0}
     BaseDamage: 0
     DestructTimer: 0
+    Rotation: {x: 0, y: 0, z: 0}
     Friendly: 0
     targetCount: 0
     hitType: 0
@@ -5080,6 +5093,7 @@ MonoBehaviour:
       asset: {fileID: 0}
     BaseDamage: 0
     DestructTimer: 0
+    Rotation: {x: 0, y: 0, z: 0}
     Friendly: 0
     targetCount: 0
     hitType: 0
@@ -5655,6 +5669,7 @@ MonoBehaviour:
       asset: {fileID: 0}
     BaseDamage: 0
     DestructTimer: 0
+    Rotation: {x: 0, y: 0, z: 0}
     Friendly: 0
     targetCount: 0
     hitType: 0
