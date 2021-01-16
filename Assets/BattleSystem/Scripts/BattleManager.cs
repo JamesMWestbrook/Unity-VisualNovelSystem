@@ -233,6 +233,14 @@ public class BattleManager : MonoBehaviour
                 break;
         }
     }
+    public void RemoveUI(){
+
+    }
+    public void EnableUI(){
+        foreach(ActorSlot actor in Party){
+            actor.gameObject.SetActive(true);
+        }
+    }
     public List<Button> TargetButtons;
     public List<Button> SkillButtons;
     public ButtonState buttonState;

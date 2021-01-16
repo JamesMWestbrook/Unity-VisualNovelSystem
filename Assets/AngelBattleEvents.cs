@@ -6,9 +6,10 @@ public class AngelBattleEvents : MonoBehaviour
 {
     // Start is called before the first frame update
     public void StartOfBattle(){
+        CutsceneManager.Instance.PlayCutscene(cutscene);
         Debug.Log("Battle started");
     }
-
+    public Cutscene cutscene;
     public void EndOfTurn(){
         
         
