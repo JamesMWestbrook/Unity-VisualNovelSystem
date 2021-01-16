@@ -74,6 +74,7 @@ public class Skills
         int tempAttack = 0;
         int tempDefense = 0;
         int modifier;
+        int popupText;
         ActorSlot Attacker = user.GetComponent<ActorSlot>();
         ActorSlot Defender = target.GetComponent<ActorSlot>();
         if (hitType == Skills.HitType.Physical || hitType == Skills.HitType.Magical)
@@ -97,7 +98,6 @@ public class Skills
             Defender.Actor.CurStats.HP -= modifier;
             if(Defender.Actor.CurStats.HP < 0) Defender.Actor.CurStats.HP = 0;
             if(Defender.Actor.CurStats.HP > Defender.Actor.MaxStats.HP) Defender.Actor.CurStats.HP = Defender.Actor.MaxStats.HP;
-
         }
         else
         {
@@ -107,9 +107,13 @@ public class Skills
                     tempAttack = Attacker.Actor.CurStats.Vigor;
                     modifier = BaseDamage * tempAttack;
                     Debug.Log("HP Before " + Defender.Actor.CurStats.HP);
+                    popupText = Defender.Actor.CurStats.HP;
                     Defender.Actor.CurStats.HP += modifier;
                     Debug.Log("Modifier " + modifier);
                     Debug.Log("HP After " + Defender.Actor.CurStats.HP);
+                    popupText = Defender.Actor.CurStats.HP - popupText;
+                    GameObject.Find("BattleManager").GetComponent<BattleManager>().SpawnDamage(popupText, Defender, true);
+                    
                     break;
                 case Skills.HitType.Status: //not touched in demo
                     break;

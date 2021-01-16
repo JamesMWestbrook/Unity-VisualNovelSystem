@@ -75,7 +75,7 @@ public class MovementNode : Node
         Vector3 _beginPoint = new Vector3(CutsceneManager.Instance.RightSpot.transform.position.x + _distance, _image.transform.position.y, _image.transform.position.z);
         Vector3 _endPoint = new Vector3(CutsceneManager.Instance.RightSpot.position.x, _beginPoint.y, _beginPoint.z);
 
-        float _lerpTime = 1f;
+        float _lerpTime = 0.5f;
         float _curLerpTime = 0f;
 
         Image _face = charSprite.Face;

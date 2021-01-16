@@ -14,6 +14,7 @@ public class BattleManager : MonoBehaviour
     public int ActorCounter;
 
     public TextMeshProUGUI MoveText;
+    public GameObject DamagePopupPrefab;
     public List<ActorSlot> Party;
 
     public List<ActorSlot> Actors;
@@ -182,6 +183,11 @@ public class BattleManager : MonoBehaviour
         if (skill.targetCount == Skills.TargetCount.Multiple)
         {
             //assign the entire list to a button
+                TargetButtons[0].gameObject.SetActive(true);
+                TargetButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = "All";
+                TargetButtons[0].GetComponent<SkillButton>().AssignedSkill = skill;
+                TargetButtons[0].GetComponent<SkillButton>().Targets = targetsGO;
+                TargetButtons[0].GetComponent<SkillButton>().user = CurrentActor.gameObject;
         }
         else
         {//Single target
@@ -189,11 +195,10 @@ public class BattleManager : MonoBehaviour
             for (int i = 0; i < targets.Count; i++)
             {
                 TargetButtons[i].gameObject.SetActive(true);
-                TargetButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = targets[i].Actor.Name;
+                TargetButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = targets[i].GetComponent<ActorSlot>().Actor.Name;
                 TargetButtons[i].GetComponent<SkillButton>().AssignedSkill = skill;
                 TargetButtons[i].GetComponent<SkillButton>().Targets = targetsGO;
                 TargetButtons[i].GetComponent<SkillButton>().user = CurrentActor.gameObject;
-                //assign target to button's target list
             }
         }
     }
@@ -349,5 +354,13 @@ public class BattleManager : MonoBehaviour
 
         go = Instantiate<GameObject>(go, dest.Find("EffectTrans"));
         go.GetComponent<DestroyThis>().Timer = time;
+    }
+    public void SpawnDamage(int Damage, ActorSlot actor, bool Healing = false){
+        //spawn
+        //set parent
+        //set local transform
+ 
+        GameObject go = Instantiate<GameObject>(DamagePopupPrefab, actor.transform);
+        go.GetComponent<RectTransform>().localPosition = new Vector3(135, 87,0);
     }
 }
