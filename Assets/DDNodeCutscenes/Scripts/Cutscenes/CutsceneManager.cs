@@ -174,7 +174,9 @@ public class CutsceneManager : MonoBehaviour {
                 return;
             } else if(_node.GetType() == typeof(EndBattleSceneNode)){
                 EndCutscene();
-                GameObject.Find("BattleManager").GetComponent<BattleManager>().EnableUI();
+                BattleManager BM = GameObject.Find("BattleManager").GetComponent<BattleManager>();
+                BM.EnableUI();
+                BM.StartActor();
                 //Move Battle UI Back In?
                 return;
             }

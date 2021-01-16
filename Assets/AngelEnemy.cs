@@ -6,12 +6,13 @@ public class AngelEnemy : MonoBehaviour, IEnemy
 {
     public void AI()
     {
-        
+        List <GameObject> targets = new List<GameObject>();
+        targets.Add(GameObject.Find("BattleManager").GetComponent<BattleManager>().Actors[0].gameObject);
+        NormalAttack.Action(targets, gameObject);
     }
 
 
     public Skills NormalAttack = new Skills(){
-
     };
 
         public Skills DualSlash = new Skills(){

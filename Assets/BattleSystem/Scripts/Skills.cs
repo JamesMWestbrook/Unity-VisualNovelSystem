@@ -20,6 +20,7 @@ public class Skills
     public HitType hitType;
     [EnumToggleButtons]
     public ElementType elementType;
+    public string AnimTrigger;
     //Affects dead party member
     bool AffectsDead;
     public enum TargetCount
@@ -46,24 +47,26 @@ public class Skills
     }
     public void Action(List<GameObject> targets, GameObject user)
     {
-
+        bool ai = user.GetComponent<ActorSlot>().IsAI;
         BattleManager bm = GameManager.Instance.BattleManager;
         bm.UpdateMove(GameManager.Instance.BattleManager.CurrentActor.Actor.Name);
 
-        //activate skill
 
         //feed BM a prefab to spawn
         for (int i = 0; i < targets.Count; i++)
         {
-            bm.SpawnGO(Prefab.Asset, targets[i].transform, DestructTimer);
+           if(!ai) bm.SpawnGO(Prefab.Asset, targets[i].transform, DestructTimer);
             SkillProcess(targets[i], user, hitType);
             //run check for damage
         }
 
+        if(ai){
+            Animator anim = user.GetComponent<Animator>();
+            anim.SetTrigger(AnimTrigger);
+        }
         //end turn
+        Debug.Log(DestructTimer + " Destruct");
         bm.PostSkill(DestructTimer + 0.3f);
-        //close all UI
-        //advance to next turn
     }
 
     public void SkillProcess(GameObject target, GameObject user, Skills.HitType hitType)
@@ -85,20 +88,15 @@ public class Skills
                     tempAttack = Attacker.Actor.CurStats.Vigor;
                     break;
             }
-            Debug.Log(tempAttack);
             modifier = BaseDamage * tempAttack - tempDefense; //This is where we'd plug elements in
             if(modifier < 0) modifier = 0;
 
             //this is where we would calculate magic affecting the damage, here it would not matter if 
             //it was below 0, since magic damage can turn into negative
-            Debug.Log("----");
-            Debug.Log(string.Format(" {0} HP before: {1}", Name, Defender.Actor.CurStats.HP));
            // Debug.Log(Name + "HP Before using "  + "  " + Defender.Actor.CurStats.HP);
-            Debug.Log("Modifier " + modifier);
             Defender.Actor.CurStats.HP -= modifier;
             if(Defender.Actor.CurStats.HP < 0) Defender.Actor.CurStats.HP = 0;
             if(Defender.Actor.CurStats.HP > Defender.Actor.MaxStats.HP) Defender.Actor.CurStats.HP = Defender.Actor.MaxStats.HP;
-            Debug.Log("HP After " + Defender.Actor.CurStats.HP);
 
         }
         else

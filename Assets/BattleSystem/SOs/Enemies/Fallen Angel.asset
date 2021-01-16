@@ -24,13 +24,14 @@ MonoBehaviour:
       Will: 4
       Instinct: 5
       Agility: 3
-      Normal: 1
-      Currene: 1
-      Terrene: 1
-      Pyro: 1
-      Cyro: 1
-      Solar: 1
-      Lunar: 1
+      element:
+        Normal: 1
+        Currene: 1
+        Terrene: 1
+        Pyro: 1
+        Cyro: 1
+        Solar: 1
+        Lunar: 1
     CurStats:
       HP: 50
       MP: 30
@@ -39,25 +40,15 @@ MonoBehaviour:
       Will: 4
       Instinct: 5
       Agility: 3
-      Normal: 1
-      Currene: 1
-      Terrene: 1
-      Pyro: 1
-      Cyro: 1
-      Solar: 1
-      Lunar: 1
-    Skills:
-    - Name: 
-      Prefab:
-        path: 
-        asset: {fileID: 0}
-      BaseDamage: 0
-      DestructTimer: 0
-      Rotation: {x: 0, y: 0, z: 0}
-      Friendly: 0
-      targetCount: 0
-      hitType: 0
-      elementType: 0
+      element:
+        Normal: 1
+        Currene: 1
+        Terrene: 1
+        Pyro: 1
+        Cyro: 1
+        Solar: 1
+        Lunar: 1
+    Skills: []
     ShowTest:
       path: 
       asset: {fileID: 0}

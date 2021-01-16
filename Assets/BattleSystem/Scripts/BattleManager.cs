@@ -40,16 +40,31 @@ public class BattleManager : MonoBehaviour
 
     void Start()
     {
-        StartBattle();
+        StartOfBattle.Invoke();
+        StartCoroutine(SlightDelay());
+    }
+    public IEnumerator SlightDelay()
+    {
+        yield return new WaitForSeconds(0.01f);
+        CurrentActor = Actors[0];
+        if (!DelayedStart) StartActor();
     }
     void DimText()
     {
 
     }
+    public bool DelayedStart;
     public void StartBattle()
     {
-        StartOfBattle.Invoke();
+        //start Enemy if AI is first
+
+        //NextActor for the player?
+
+
+
     }
+
+
     public void NextActor()
     {
         ActorCounter++;
@@ -75,6 +90,7 @@ public class BattleManager : MonoBehaviour
 
     public Button AttackButton;
     public Button SkillsButton;
+
     public void StartActor()
     {
         if (!CurrentActor.IsAI)
@@ -105,6 +121,7 @@ public class BattleManager : MonoBehaviour
         }
         else
         {
+            CurrentActor.GetComponent<IEnemy>().AI();
             HideSprite();
             // hide buttons
         }
@@ -143,7 +160,7 @@ public class BattleManager : MonoBehaviour
             case (ButtonState.Skills):
                 foreach (Button button in SkillButtons)
                 {
-                    
+
                     button.gameObject.SetActive(false);
                 }
                 break;
@@ -233,18 +250,21 @@ public class BattleManager : MonoBehaviour
                 break;
         }
     }
-    public void RemoveUI(){
+    public void RemoveUI()
+    {
 
     }
-    public void EnableUI(){
-        foreach(ActorSlot actor in Party){
+    public void EnableUI()
+    {
+        foreach (ActorSlot actor in Party)
+        {
             actor.gameObject.SetActive(true);
             RectTransform actorTrans = actor.GetComponent<RectTransform>();
-            actorTrans.LeanScale(new Vector3(0,1,1), 0);
+            actorTrans.LeanScale(new Vector3(0, 1, 1), 0);
             Vector3 endPos = actorTrans.position;
-          //  actorTrans.position = new Vector3(-500, actorTrans.position.y, actorTrans.position.z);
-           // actorTrans.LeanMove(endPos, 0.7);
-           // LeanTween.move(actorTrans.gameObject, endPos, 0.7f);
+            //  actorTrans.position = new Vector3(-500, actorTrans.position.y, actorTrans.position.z);
+            // actorTrans.LeanMove(endPos, 0.7);
+            // LeanTween.move(actorTrans.gameObject, endPos, 0.7f);
             LeanTween.scale(actorTrans, Vector3.one, 0.7f);
         }
     }
@@ -275,7 +295,8 @@ public class BattleManager : MonoBehaviour
     {
         //this is used after every skill is done
         StartCoroutine(DelayAction(NextActor, waitTime));
-        foreach(Button button in TargetButtons){
+        foreach (Button button in TargetButtons)
+        {
             button.gameObject.SetActive(false);
         }
     }
@@ -315,14 +336,17 @@ public class BattleManager : MonoBehaviour
     {
 
     }
-    public void CloseSkills(){
-        for(int i = 0; i < SkillButtons.Count; i++){
+    public void CloseSkills()
+    {
+        for (int i = 0; i < SkillButtons.Count; i++)
+        {
             SkillButtons[i].gameObject.SetActive(false);
         }
     }
     public Skills NormalAttack;
-    public void SpawnGO(GameObject go, Transform dest, float time){
-       
+    public void SpawnGO(GameObject go, Transform dest, float time)
+    {
+
         go = Instantiate<GameObject>(go, dest.Find("EffectTrans"));
         go.GetComponent<DestroyThis>().Timer = time;
     }

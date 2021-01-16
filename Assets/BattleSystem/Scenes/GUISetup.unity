@@ -189,6 +189,7 @@ MonoBehaviour:
     targetCount: 0
     hitType: 0
     elementType: 0
+    AnimTrigger: 
 --- !u!114 &110864136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,6 +523,7 @@ MonoBehaviour:
       m_Calls: []
   AllowInput: 0
   ChooseActionPanel: {fileID: 1623648683}
+  DelayedStart: 1
   DelayNextTurn: 0
   AttackButton: {fileID: 597794518}
   SkillsButton: {fileID: 868683762}
@@ -549,6 +551,7 @@ MonoBehaviour:
     targetCount: 0
     hitType: 0
     elementType: 6
+    AnimTrigger: 
 --- !u!114 &170927425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -782,6 +785,7 @@ MonoBehaviour:
     targetCount: 0
     hitType: 0
     elementType: 0
+    AnimTrigger: 
   Targets: []
   user: {fileID: 0}
 --- !u!222 &265718079
@@ -1721,6 +1725,7 @@ MonoBehaviour:
     targetCount: 0
     hitType: 0
     elementType: 0
+    AnimTrigger: 
 --- !u!1 &696658977
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,17 +2042,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NormalAttack:
-    Name: 
+    Name: Attack
     Prefab:
       path: 
       asset: {fileID: 0}
-    BaseDamage: 0
-    DestructTimer: 0
+    BaseDamage: 4
+    DestructTimer: 4
     Rotation: {x: 0, y: 0, z: 0}
     Friendly: 0
     targetCount: 0
     hitType: 0
     elementType: 0
+    AnimTrigger: Attack
   DualSlash:
     Name: 
     Prefab:
@@ -2060,6 +2066,7 @@ MonoBehaviour:
     targetCount: 0
     hitType: 0
     elementType: 0
+    AnimTrigger: 
   BlindingSolar:
     Name: Blinding Solar Light
     Prefab:
@@ -2072,6 +2079,7 @@ MonoBehaviour:
     targetCount: 0
     hitType: 0
     elementType: 0
+    AnimTrigger: 
 --- !u!1 &811819846 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3325409305665614501, guid: 8d1b8c01204fede47b426f92bfa61cb4,
@@ -2376,6 +2384,7 @@ MonoBehaviour:
     targetCount: 0
     hitType: 0
     elementType: 0
+    AnimTrigger: 
 --- !u!114 &886482094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2758,6 +2767,7 @@ MonoBehaviour:
     targetCount: 0
     hitType: 0
     elementType: 0
+    AnimTrigger: 
   Targets: []
   user: {fileID: 0}
 --- !u!222 &962757484
@@ -3830,6 +3840,7 @@ MonoBehaviour:
     targetCount: 0
     hitType: 0
     elementType: 0
+    AnimTrigger: 
   Targets: []
   user: {fileID: 0}
 --- !u!114 &1361496475
@@ -4277,6 +4288,7 @@ MonoBehaviour:
     targetCount: 0
     hitType: 0
     elementType: 0
+    AnimTrigger: 
   Targets: []
   user: {fileID: 0}
 --- !u!114 &1391228798
@@ -5140,6 +5152,7 @@ MonoBehaviour:
     targetCount: 0
     hitType: 0
     elementType: 0
+    AnimTrigger: 
 --- !u!114 &1632126514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5716,6 +5729,7 @@ MonoBehaviour:
     targetCount: 0
     hitType: 0
     elementType: 0
+    AnimTrigger: 
 --- !u!114 &1764672746
 MonoBehaviour:
   m_ObjectHideFlags: 0
