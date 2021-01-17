@@ -102,7 +102,7 @@ public class Skills
             if (Defender.Actor.CurStats.HP < 0) Defender.Actor.CurStats.HP = 0;
             if (Defender.Actor.CurStats.HP > Defender.Actor.MaxStats.HP) Defender.Actor.CurStats.HP = Defender.Actor.MaxStats.HP;
 
-            popupText = modifier;
+            popupText = modifier * -1;
             GameObject.Find("BattleManager").GetComponent<BattleManager>().SpawnDamage(popupText, Defender);
 
         }

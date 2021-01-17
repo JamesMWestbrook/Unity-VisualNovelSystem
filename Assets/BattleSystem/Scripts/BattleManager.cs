@@ -365,7 +365,6 @@ public class BattleManager : MonoBehaviour
         //spawn
         //set parent
         //set local transform
-
         GameObject go = Instantiate<GameObject>(DamagePopupPrefab, actor.transform);
 
         if (actor.IsAI)
@@ -376,9 +375,11 @@ public class BattleManager : MonoBehaviour
         {
             go.GetComponent<RectTransform>().localPosition = new Vector3(135, 87, 0);
         }
-        go.GetComponent<TextMeshProUGUI>().text = Damage.ToString();
+        TextMeshProUGUI text = go.GetComponent<TextMeshProUGUI>();
+        text.text = Damage.ToString();
         if(Healing){
-            go.GetComponent<TextMeshProUGUI>().color = Color.green;
+            text.text = "+ " + text.text;
+            text.color = Color.green;
         }
     }
 }
