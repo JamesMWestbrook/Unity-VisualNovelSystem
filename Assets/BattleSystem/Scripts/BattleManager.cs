@@ -377,7 +377,7 @@ public class BattleManager : MonoBehaviour
         }
         TextMeshProUGUI text = go.GetComponent<TextMeshProUGUI>();
         text.text = Damage.ToString();
-        if(Healing){
+        if(Healing || Damage > 0){
             text.text = "+ " + text.text;
             text.color = Color.green;
         }
