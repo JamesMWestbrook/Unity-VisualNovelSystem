@@ -55,12 +55,13 @@ public class Skills
         //feed BM a prefab to spawn
         for (int i = 0; i < targets.Count; i++)
         {
-           if(!ai) bm.SpawnGO(Prefab.Asset, targets[i].transform, DestructTimer);
+            if (!ai) bm.SpawnGO(Prefab.Asset, targets[i].transform, DestructTimer);
             SkillProcess(targets[i], user, hitType);
             //run check for damage
         }
 
-        if(ai){
+        if (ai)
+        {
             Animator anim = user.GetComponent<Animator>();
             anim.SetTrigger(AnimTrigger);
         }
@@ -90,14 +91,20 @@ public class Skills
                     break;
             }
             modifier = BaseDamage * tempAttack - tempDefense; //This is where we'd plug elements in
-            if(modifier < 0) modifier = 0;
+            Debug.Log(modifier);
+            Debug.Log(Defender.Actor.Name);
+            if (modifier < 0) modifier = 0;
 
             //this is where we would calculate magic affecting the damage, here it would not matter if 
             //it was below 0, since magic damage can turn into negative
-           // Debug.Log(Name + "HP Before using "  + "  " + Defender.Actor.CurStats.HP);
+            // Debug.Log(Name + "HP Before using "  + "  " + Defender.Actor.CurStats.HP);
             Defender.Actor.CurStats.HP -= modifier;
-            if(Defender.Actor.CurStats.HP < 0) Defender.Actor.CurStats.HP = 0;
-            if(Defender.Actor.CurStats.HP > Defender.Actor.MaxStats.HP) Defender.Actor.CurStats.HP = Defender.Actor.MaxStats.HP;
+            if (Defender.Actor.CurStats.HP < 0) Defender.Actor.CurStats.HP = 0;
+            if (Defender.Actor.CurStats.HP > Defender.Actor.MaxStats.HP) Defender.Actor.CurStats.HP = Defender.Actor.MaxStats.HP;
+
+            popupText = modifier;
+            GameObject.Find("BattleManager").GetComponent<BattleManager>().SpawnDamage(popupText, Defender);
+
         }
         else
         {
@@ -113,7 +120,7 @@ public class Skills
                     Debug.Log("HP After " + Defender.Actor.CurStats.HP);
                     popupText = Defender.Actor.CurStats.HP - popupText;
                     GameObject.Find("BattleManager").GetComponent<BattleManager>().SpawnDamage(popupText, Defender, true);
-                    
+
                     break;
                 case Skills.HitType.Status: //not touched in demo
                     break;

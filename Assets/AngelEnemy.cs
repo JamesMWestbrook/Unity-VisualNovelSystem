@@ -7,7 +7,7 @@ public class AngelEnemy : MonoBehaviour, IEnemy
     public void AI()
     {
         List <GameObject> targets = new List<GameObject>();
-        targets.Add(GameObject.Find("BattleManager").GetComponent<BattleManager>().Actors[0].gameObject);
+        targets.Add(GameObject.Find("BattleManager").GetComponent<BattleManager>().Party[0].gameObject);
         NormalAttack.Action(targets, gameObject);
     }
 

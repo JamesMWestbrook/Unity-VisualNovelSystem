@@ -183,11 +183,11 @@ public class BattleManager : MonoBehaviour
         if (skill.targetCount == Skills.TargetCount.Multiple)
         {
             //assign the entire list to a button
-                TargetButtons[0].gameObject.SetActive(true);
-                TargetButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = "All";
-                TargetButtons[0].GetComponent<SkillButton>().AssignedSkill = skill;
-                TargetButtons[0].GetComponent<SkillButton>().Targets = targetsGO;
-                TargetButtons[0].GetComponent<SkillButton>().user = CurrentActor.gameObject;
+            TargetButtons[0].gameObject.SetActive(true);
+            TargetButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = "All";
+            TargetButtons[0].GetComponent<SkillButton>().AssignedSkill = skill;
+            TargetButtons[0].GetComponent<SkillButton>().Targets = targetsGO;
+            TargetButtons[0].GetComponent<SkillButton>().user = CurrentActor.gameObject;
         }
         else
         {//Single target
@@ -360,12 +360,25 @@ public class BattleManager : MonoBehaviour
         go = Instantiate<GameObject>(go, dest.Find("EffectTrans"));
         go.GetComponent<DestroyThis>().Timer = time;
     }
-    public void SpawnDamage(int Damage, ActorSlot actor, bool Healing = false){
+    public void SpawnDamage(int Damage, ActorSlot actor, bool Healing = false)
+    {
         //spawn
         //set parent
         //set local transform
- 
+
         GameObject go = Instantiate<GameObject>(DamagePopupPrefab, actor.transform);
-        go.GetComponent<RectTransform>().localPosition = new Vector3(135, 87,0);
+
+        if (actor.IsAI)
+        {
+
+        }
+        else
+        {
+            go.GetComponent<RectTransform>().localPosition = new Vector3(135, 87, 0);
+        }
+        go.GetComponent<TextMeshProUGUI>().text = Damage.ToString();
+        if(Healing){
+            go.GetComponent<TextMeshProUGUI>().color = Color.green;
+        }
     }
 }
