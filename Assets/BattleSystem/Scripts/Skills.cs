@@ -72,6 +72,7 @@ public class Skills
 
     public void SkillProcess(GameObject target, GameObject user, Skills.HitType hitType)
     {
+        BattleManager bm = GameObject.Find("BattleManager").GetComponent<BattleManager>();
         int tempAttack = 0;
         int tempDefense = 0;
         int modifier;
@@ -103,8 +104,7 @@ public class Skills
             if (Defender.Actor.CurStats.HP > Defender.Actor.MaxStats.HP) Defender.Actor.CurStats.HP = Defender.Actor.MaxStats.HP;
 
             popupText = modifier * -1;
-            GameObject.Find("BattleManager").GetComponent<BattleManager>().SpawnDamage(popupText, Defender);
-
+            bm.StartSpawn(DestructTimer, popupText, Defender);
         }
         else
         {
@@ -119,13 +119,13 @@ public class Skills
                     Debug.Log("Modifier " + modifier);
                     Debug.Log("HP After " + Defender.Actor.CurStats.HP);
                     popupText = Defender.Actor.CurStats.HP - popupText;
-                    GameObject.Find("BattleManager").GetComponent<BattleManager>().SpawnDamage(popupText, Defender, true);
-
+                    bm.StartSpawn(DestructTimer, popupText, Defender, true);
                     break;
                 case Skills.HitType.Status: //not touched in demo
                     break;
             }
         }
     }
+    
 }
 

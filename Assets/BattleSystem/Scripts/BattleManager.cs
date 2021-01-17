@@ -360,6 +360,13 @@ public class BattleManager : MonoBehaviour
         go = Instantiate<GameObject>(go, dest.Find("EffectTrans"));
         go.GetComponent<DestroyThis>().Timer = time;
     }
+public void StartSpawn(float DestructTimer, int popupText, ActorSlot Defender, bool Healing = false){
+    StartCoroutine(DelayedSpawn(DestructTimer, popupText, Defender, Healing));
+}
+    public IEnumerator DelayedSpawn(float DestructTimer, int popupText, ActorSlot Defender, bool Healing = false){
+        yield return new WaitForSeconds(DestructTimer);
+        SpawnDamage(popupText, Defender, Healing);
+    }
     public void SpawnDamage(int Damage, ActorSlot actor, bool Healing = false)
     {
         //spawn
