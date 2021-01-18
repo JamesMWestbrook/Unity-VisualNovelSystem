@@ -17,7 +17,7 @@ MonoBehaviour:
     NickName: EmptyNN
     Lvl: 1
     MaxStats:
-      HP: 20
+      HP: 10
       MP: 30
       Muscle: 3
       Vigor: 5

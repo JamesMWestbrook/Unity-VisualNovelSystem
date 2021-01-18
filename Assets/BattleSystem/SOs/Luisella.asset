@@ -17,20 +17,21 @@ MonoBehaviour:
     NickName: EmptyNN
     Lvl: 1
     MaxStats:
-      HP: 300
+      HP: 20
       MP: 50
       Muscle: 3
       Vigor: 5
       Will: 4
       Instinct: 5
       Agility: 3
-      Normal: 1
-      Currene: 1
-      Terrene: 1
-      Pyro: 1
-      Cyro: 1
-      Solar: 1
-      Lunar: 1
+      element:
+        Normal: 1
+        Currene: 1
+        Terrene: 1
+        Pyro: 1
+        Cyro: 1
+        Solar: 1
+        Lunar: 1
     CurStats:
       HP: 50
       MP: 30
@@ -39,36 +40,39 @@ MonoBehaviour:
       Will: 4
       Instinct: 5
       Agility: 3
-      Normal: 1
-      Currene: 1
-      Terrene: 1
-      Pyro: 1
-      Cyro: 1
-      Solar: 1
-      Lunar: 1
+      element:
+        Normal: 1
+        Currene: 1
+        Terrene: 1
+        Pyro: 1
+        Cyro: 1
+        Solar: 1
+        Lunar: 1
     Skills:
     - Name: Heal
       Prefab:
         path: KY_effects/MagicEffectsPackFree/prefab/GreenCore
         asset: {fileID: 100006, guid: 906ef3748a66347cfb2d72de10092732, type: 3}
       BaseDamage: 3
-      DestructTimer: 2
+      DestructTimer: 2.5
       Rotation: {x: 0, y: 0, z: 0}
       Friendly: 1
       targetCount: 0
       hitType: 2
       elementType: 6
+      AnimTrigger: 
     - Name: Bomb
       Prefab:
         path: KY_effects/MagicEffectsPackFree/prefab/WhityBomb
         asset: {fileID: 100010, guid: 4d0391f078db24fac9f5cba3075f9f5d, type: 3}
       BaseDamage: 1
-      DestructTimer: 2
+      DestructTimer: 2.5
       Rotation: {x: 0, y: 0, z: 0}
       Friendly: 0
       targetCount: 0
       hitType: 0
       elementType: 2
+      AnimTrigger: 
     ShowTest:
       path: BattleGraphics/Luisella/Body/LuisellaBattle
       asset: {fileID: 0}

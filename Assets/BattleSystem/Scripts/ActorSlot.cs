@@ -7,6 +7,7 @@ public class ActorSlot : MonoBehaviour
 {
 
     public bool IsAI;
+    public bool Dead;
 
     public Image Face;
     public Transform AnimationSpawnPoint;

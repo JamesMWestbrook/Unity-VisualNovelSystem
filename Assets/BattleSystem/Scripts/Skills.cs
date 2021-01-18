@@ -116,6 +116,7 @@ public class Skills
                     Debug.Log("HP Before " + Defender.Actor.CurStats.HP);
                     popupText = Defender.Actor.CurStats.HP;
                     Defender.Actor.CurStats.HP += modifier;
+                    if(Defender.Actor.CurStats.HP > Defender.Actor.MaxStats.HP) Defender.Actor.CurStats.HP = Defender.Actor.MaxStats.HP;
                     Debug.Log("Modifier " + modifier);
                     Debug.Log("HP After " + Defender.Actor.CurStats.HP);
                     popupText = Defender.Actor.CurStats.HP - popupText;

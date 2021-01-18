@@ -95,6 +95,7 @@ public class BattleManager : MonoBehaviour
 
     public void StartActor()
     {
+        if(BattleFinished) return;
         if (!CurrentActor.IsAI)
         {
             //Sprite
@@ -431,5 +432,57 @@ public class BattleManager : MonoBehaviour
         float result = curHP / actor.Actor.MaxStats.HP;
         actor.HPForeground.fillAmount = result;
         actor.HP.text = actor.Actor.CurStats.HP.ToString();
+
+        DeathCheck(actor);
+        //deduce if dead
+    }
+
+    public void DeathCheck(ActorSlot actor)
+    {
+        if (actor.Actor.CurStats.HP <= 0)
+        {
+            actor.Dead = true;
+            if (actor.IsAI)
+            {
+                //Add EXP to end
+                //Remove from list
+                Enemies.Remove(actor);
+                Actors.Remove(actor);
+
+                Destroy(actor.HP.transform.parent.gameObject);
+                Destroy(actor.gameObject);
+                
+
+                BattleWinCheck();
+            }
+            else
+            {
+                
+            }
+        }
+    }
+
+    bool BattleFinished;
+    public void BattleWinCheck(){
+        bool won = true;
+        foreach(ActorSlot enemy in Enemies){
+            if(!enemy.Dead) won = false;
+        }
+        if(won){
+            BattleFinished = true;
+            HideSprite();
+            Debug.Log("Battle is won");
+            //battle is won
+        }
+    }
+    public void BattleLoseCheck(){
+        bool lost = false;
+        foreach(ActorSlot actor in Party){
+            if(actor.Dead) lost = true;
+        }
+        if(lost){
+            //battle is lost
+            Debug.Log("Battle is lost, bye");
+        }
     }
 }

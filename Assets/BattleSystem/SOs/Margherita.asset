@@ -17,20 +17,21 @@ MonoBehaviour:
     NickName: EmptyNN
     Lvl: 1
     MaxStats:
-      HP: 250
-      MP: 30
+      HP: 25
+      MP: 35
       Muscle: 6
       Vigor: 6
       Will: 4
       Instinct: 5
       Agility: 3
-      Normal: 1
-      Currene: 1
-      Terrene: 1
-      Pyro: 1
-      Cyro: 1
-      Solar: 1
-      Lunar: 1
+      element:
+        Normal: 1
+        Currene: 1
+        Terrene: 1
+        Pyro: 1
+        Cyro: 1
+        Solar: 1
+        Lunar: 1
     CurStats:
       HP: 50
       MP: 30
@@ -39,34 +40,39 @@ MonoBehaviour:
       Will: 4
       Instinct: 5
       Agility: 3
-      Normal: 1
-      Currene: 1
-      Terrene: 1
-      Pyro: 1
-      Cyro: 1
-      Solar: 1
-      Lunar: 1
+      element:
+        Normal: 1
+        Currene: 1
+        Terrene: 1
+        Pyro: 1
+        Cyro: 1
+        Solar: 1
+        Lunar: 1
     Skills:
     - Name: Square Punch
       Prefab:
         path: KY_effects/MagicEffectsPackFree/prefab/skillAttack2
         asset: {fileID: 100002, guid: 75369bb81385f4904842bf20a51c14a2, type: 3}
       BaseDamage: 2
-      DestructTimer: 2
+      DestructTimer: 2.5
+      Rotation: {x: 0, y: 0, z: 0}
       Friendly: 0
       targetCount: 0
       hitType: 0
       elementType: 0
+      AnimTrigger: 
     - Name: Currene I
       Prefab:
         path: KY_effects/MagicEffectsPackFree/prefab/ErekiBall
         asset: {fileID: 100002, guid: 391ec6f1311384e75b4888fd6fc26b7e, type: 3}
       BaseDamage: 2
-      DestructTimer: 2
+      DestructTimer: 2.5
+      Rotation: {x: 0, y: 0, z: 0}
       Friendly: 0
       targetCount: 0
       hitType: 1
       elementType: 5
+      AnimTrigger: 
     ShowTest:
       path: 
       asset: {fileID: 0}
