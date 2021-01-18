@@ -147,13 +147,22 @@ public class BattleManager : MonoBehaviour
             SkillButtons[i].gameObject.SetActive(true);
             SkillButtons[i].GetComponent<OpenTargetsButton>().AssignedSkill = CurrentActor.Actor.Skills[i];
             SkillButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = SkillButtons[i].GetComponent<OpenTargetsButton>().AssignedSkill.Name;
+
+            TweenButton(SkillButtons[i].gameObject);
         }
         SelectButton(SkillButtons[0].gameObject);
     }
-public void SelectButton(GameObject button){
-EventSystem.current.SetSelectedGameObject(button);
+    public void TweenButton(GameObject go)
+    {
+        RectTransform rect = go.GetComponent<RectTransform>();
+        rect.localScale = Vector3.zero;
+        LeanTween.scale(go.gameObject, Vector3.one, 0.2f);
+    }
+    public void SelectButton(GameObject button)
+    {
+        EventSystem.current.SetSelectedGameObject(button);
         CurrentlySelected = button;
-}
+    }
 
     public void TargetMenu(Button self)
     {
@@ -204,13 +213,16 @@ EventSystem.current.SetSelectedGameObject(button);
                 TargetButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = targets[i].GetComponent<ActorSlot>().Actor.Name;
                 TargetButtons[i].GetComponent<SkillButton>().AssignedSkill = skill;
 
-
                 List<GameObject> singleTarget = new List<GameObject>();
                 singleTarget.Add(targetsGO[i]);
                 TargetButtons[i].GetComponent<SkillButton>().Targets = singleTarget;
-                //TargetButtons[i].GetComponent<SkillButton>().Targets = targetsGO;
                 TargetButtons[i].GetComponent<SkillButton>().user = CurrentActor.gameObject;
             }
+        }
+
+        for (int i = 0; i < targets.Count; i++)
+        {
+            TweenButton(TargetButtons[i].gameObject);
         }
         SelectButton(TargetButtons[0].gameObject);
     }
@@ -284,7 +296,8 @@ EventSystem.current.SetSelectedGameObject(button);
             // LeanTween.move(actorTrans.gameObject, endPos, 0.7f);
             LeanTween.scale(actorTrans, Vector3.one, 0.7f);
         }
-        foreach(ActorSlot enemy in Enemies){
+        foreach (ActorSlot enemy in Enemies)
+        {
             Transform parent = enemy.HP.transform.parent;
             parent.gameObject.SetActive(true);
             parent.localScale = Vector3.zero;
@@ -358,9 +371,12 @@ EventSystem.current.SetSelectedGameObject(button);
     public GameObject CurrentlySelected;
     void Update()
     {
-        if(EventSystem.current.currentSelectedGameObject != null){
+        if (EventSystem.current.currentSelectedGameObject != null)
+        {
             CurrentlySelected = EventSystem.current.currentSelectedGameObject;
-        }else{
+        }
+        else
+        {
             EventSystem.current.SetSelectedGameObject(CurrentlySelected);
         }
     }
@@ -378,10 +394,12 @@ EventSystem.current.SetSelectedGameObject(button);
         go = Instantiate<GameObject>(go, dest.Find("EffectTrans"));
         go.GetComponent<DestroyThis>().Timer = time;
     }
-public void StartSpawn(float DestructTimer, int popupText, ActorSlot Defender, bool Healing = false){
-    StartCoroutine(DelayedSpawn(DestructTimer, popupText, Defender, Healing));
-}
-    public IEnumerator DelayedSpawn(float DestructTimer, int popupText, ActorSlot Defender, bool Healing = false){
+    public void StartSpawn(float DestructTimer, int popupText, ActorSlot Defender, bool Healing = false)
+    {
+        StartCoroutine(DelayedSpawn(DestructTimer, popupText, Defender, Healing));
+    }
+    public IEnumerator DelayedSpawn(float DestructTimer, int popupText, ActorSlot Defender, bool Healing = false)
+    {
         yield return new WaitForSeconds(DestructTimer);
         SpawnDamage(popupText, Defender, Healing);
     }
@@ -404,12 +422,13 @@ public void StartSpawn(float DestructTimer, int popupText, ActorSlot Defender, b
         }
         TextMeshProUGUI text = go.GetComponent<TextMeshProUGUI>();
         text.text = Damage.ToString();
-        if(Healing || Damage > 0){
+        if (Healing || Damage > 0)
+        {
             text.text = "+ " + text.text;
             text.color = Color.green;
         }
         float curHP = actor.Actor.CurStats.HP;
-        float result =curHP/actor.Actor.MaxStats.HP;
+        float result = curHP / actor.Actor.MaxStats.HP;
         actor.HPForeground.fillAmount = result;
         actor.HP.text = actor.Actor.CurStats.HP.ToString();
     }
