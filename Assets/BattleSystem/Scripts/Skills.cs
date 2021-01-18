@@ -74,7 +74,6 @@ public class Skills
             anim.SetTrigger(AnimTrigger);
         }
         //end turn
-        Debug.Log(DestructTimer + " Destruct");
         bm.PostSkill(DestructTimer + 0.3f);
     }
 
@@ -100,8 +99,6 @@ public class Skills
                     break;
             }
             modifier = BaseDamage * tempAttack - tempDefense; //This is where we'd plug elements in
-            Debug.Log(modifier);
-            Debug.Log(Defender.Actor.Name);
             if (modifier < 0) modifier = 0;
 
             //this is where we would calculate magic affecting the damage, here it would not matter if 
@@ -121,12 +118,9 @@ public class Skills
                 case Skills.HitType.Heal:
                     tempAttack = Attacker.Actor.CurStats.Vigor;
                     modifier = BaseDamage * tempAttack;
-                    Debug.Log("HP Before " + Defender.Actor.CurStats.HP);
                     popupText = Defender.Actor.CurStats.HP;
                     Defender.Actor.CurStats.HP += modifier;
                     if (Defender.Actor.CurStats.HP > Defender.Actor.MaxStats.HP) Defender.Actor.CurStats.HP = Defender.Actor.MaxStats.HP;
-                    Debug.Log("Modifier " + modifier);
-                    Debug.Log("HP After " + Defender.Actor.CurStats.HP);
                     popupText = Defender.Actor.CurStats.HP - popupText;
                     bm.StartSpawn(DestructTimer, popupText, Defender, true);
                     break;

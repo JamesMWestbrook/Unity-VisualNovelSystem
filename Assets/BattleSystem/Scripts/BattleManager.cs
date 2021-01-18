@@ -475,7 +475,7 @@ public class BattleManager : MonoBehaviour
         if(won){
             BattleFinished = true;
             HideSprite();
-            Debug.Log("Battle is won");
+            EndOfBattle.Invoke();
             //battle is won
         }
     }

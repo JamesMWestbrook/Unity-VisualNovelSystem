@@ -12,8 +12,6 @@ public class AngelBattleEvents : MonoBehaviour
     public Cutscene cutscene;
     public void EndOfTurn(){
         
-        
-        Debug.Log("Turn ended");
         StartCoroutine(DelayTurn());
         }
     IEnumerator DelayTurn(){
