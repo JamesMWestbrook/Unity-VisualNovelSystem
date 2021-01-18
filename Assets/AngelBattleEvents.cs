@@ -16,7 +16,7 @@ public class AngelBattleEvents : MonoBehaviour
         }
     IEnumerator DelayTurn(){
         GameManager.Instance.BattleManager.DelayNextTurn = true;
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(1f);
         GameManager.Instance.BattleManager.DelayNextTurn = false;
     }
     public void EndOfBattle(){Debug.Log("Battle ended");}
