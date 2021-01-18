@@ -277,6 +277,12 @@ public class BattleManager : MonoBehaviour
             // LeanTween.move(actorTrans.gameObject, endPos, 0.7f);
             LeanTween.scale(actorTrans, Vector3.one, 0.7f);
         }
+        foreach(ActorSlot enemy in Enemies){
+            Transform parent = enemy.HP.transform.parent;
+            parent.gameObject.SetActive(true);
+            parent.localScale = Vector3.zero;
+            LeanTween.scale(parent.gameObject, Vector3.one, 0.7f);
+        }
     }
     public List<Button> TargetButtons;
     public List<Button> SkillButtons;
@@ -388,5 +394,9 @@ public void StartSpawn(float DestructTimer, int popupText, ActorSlot Defender, b
             text.text = "+ " + text.text;
             text.color = Color.green;
         }
+        float curHP = actor.Actor.CurStats.HP;
+        float result =curHP/actor.Actor.MaxStats.HP;
+        actor.HPForeground.fillAmount = result;
+        actor.HP.text = actor.Actor.CurStats.HP.ToString();
     }
 }

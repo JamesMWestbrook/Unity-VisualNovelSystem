@@ -42,6 +42,7 @@ public class ActorSlot : MonoBehaviour
             EnemySO.Character.MaxStats.CopyStats(Actor.MaxStats);
             Actor.MaxStats.CopyStats(Actor.CurStats);
         }
+        HP.text = Actor.CurStats.HP.ToString();
     }
 
     // Update is called once per frame
