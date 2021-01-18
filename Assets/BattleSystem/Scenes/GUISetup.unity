@@ -546,7 +546,7 @@ MonoBehaviour:
     Prefab:
       path: KY_effects/MagicEffectsPackFree/prefab/skillAttack
       asset: {fileID: 100004, guid: a89abc0d2591545288f4c041059ae633, type: 3}
-    BaseDamage: 1
+    BaseDamage: 2
     DestructTimer: 1
     Rotation: {x: 0, y: 0, z: 0}
     Friendly: 0
@@ -3004,7 +3004,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1030856678
 RectTransform:
   m_ObjectHideFlags: 0

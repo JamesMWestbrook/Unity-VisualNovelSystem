@@ -380,13 +380,15 @@ public void StartSpawn(float DestructTimer, int popupText, ActorSlot Defender, b
         //set local transform
         GameObject go = Instantiate<GameObject>(DamagePopupPrefab, actor.transform);
 
+        RectTransform rect = go.GetComponent<RectTransform>();
         if (actor.IsAI)
         {
-
+            go.transform.parent = actor.HP.transform.parent;
+            rect.localPosition = new Vector3(10, 35, 0);
         }
         else
         {
-            go.GetComponent<RectTransform>().localPosition = new Vector3(135, 87, 0);
+            rect.localPosition = new Vector3(135, 87, 0);
         }
         TextMeshProUGUI text = go.GetComponent<TextMeshProUGUI>();
         text.text = Damage.ToString();
