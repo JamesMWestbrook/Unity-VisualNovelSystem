@@ -50,7 +50,8 @@ public class Skills
         bool ai = user.GetComponent<ActorSlot>().IsAI;
         BattleManager bm = GameManager.Instance.BattleManager;
         bm.UpdateMove(GameManager.Instance.BattleManager.CurrentActor.Actor.Name);
-
+        bm.InTargetMenu = false;
+        bm.buttonState = BattleManager.ButtonState.First;
         //feed BM a prefab to spawn
         //ally spawn
         if (Prefab.Asset && !targets[0].GetComponent<ActorSlot>().IsAI)
@@ -79,7 +80,7 @@ public class Skills
 
     public void SkillProcess(GameObject target, GameObject user, Skills.HitType hitType)
     {
-        BattleManager bm = GameObject.Find("BattleManager").GetComponent<BattleManager>();
+        BattleManager bm = GameManager.Instance.BattleManager;
         int tempAttack = 0;
         int tempDefense = 0;
         int modifier;

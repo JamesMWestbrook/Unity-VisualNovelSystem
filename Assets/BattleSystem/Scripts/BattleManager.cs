@@ -95,10 +95,11 @@ public class BattleManager : MonoBehaviour
 
     public void StartActor()
     {
-        if(BattleFinished) return;
+        if (BattleFinished) return;
         if (!CurrentActor.IsAI)
         {
-            if(CurrentActor.Dead){
+            if (CurrentActor.Dead)
+            {
                 NextActor();
                 return;
             }
@@ -141,10 +142,12 @@ public class BattleManager : MonoBehaviour
         OpenTargetsButton TargetButton = AttackButton.GetComponent<OpenTargetsButton>();
         TargetButton.AssignedSkill = NormalAttack;
         SelectButton(AttackButton.gameObject);
+        TweenButton(AttackButton.gameObject);
+        TweenButton(SkillsButton.gameObject);
+
     }
     public void SkillMenu()
     {
-        InTargetMenu = true;
         buttonState = ButtonState.Skills;
         for (int i = 0; i < CurrentActor.Actor.Skills.Count; i++)
         {
@@ -264,8 +267,9 @@ public class BattleManager : MonoBehaviour
 
                 if (InTargetMenu)
                 {
+                    InTargetMenu = false;
                     CloseTargets();
-
+                    StartOptions();
                     //close target menu and open first menu
                 }
 
@@ -276,8 +280,12 @@ public class BattleManager : MonoBehaviour
                 if (InTargetMenu)
                 {
                     //close target menu and open skill menu
+                    InTargetMenu = false;
                     CloseTargets();
                     SkillMenu();
+                }else{//close skill menu and reopen main buttons
+                    CloseSkills();
+                    StartOptions();
                 }
 
                 //                InTargetMenu = false;
@@ -384,6 +392,10 @@ public class BattleManager : MonoBehaviour
         {
             EventSystem.current.SetSelectedGameObject(CurrentlySelected);
         }
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            CancelMenu();
+        }
     }
     public void CloseSkills()
     {
@@ -455,36 +467,42 @@ public class BattleManager : MonoBehaviour
 
                 Destroy(actor.HP.transform.parent.gameObject);
                 Destroy(actor.gameObject);
-                
+
 
                 BattleWinCheck();
             }
             else
             {
-                
+
             }
         }
     }
 
     bool BattleFinished;
-    public void BattleWinCheck(){
+    public void BattleWinCheck()
+    {
         bool won = true;
-        foreach(ActorSlot enemy in Enemies){
-            if(!enemy.Dead) won = false;
+        foreach (ActorSlot enemy in Enemies)
+        {
+            if (!enemy.Dead) won = false;
         }
-        if(won){
+        if (won)
+        {
             BattleFinished = true;
             HideSprite();
             EndOfBattle.Invoke();
             //battle is won
         }
     }
-    public void BattleLoseCheck(){
+    public void BattleLoseCheck()
+    {
         bool lost = false;
-        foreach(ActorSlot actor in Party){
-            if(actor.Dead) lost = true;
+        foreach (ActorSlot actor in Party)
+        {
+            if (actor.Dead) lost = true;
         }
-        if(lost){
+        if (lost)
+        {
             //battle is lost
             Debug.Log("Battle is lost, bye");
         }
