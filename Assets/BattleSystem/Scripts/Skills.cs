@@ -51,11 +51,19 @@ public class Skills
         BattleManager bm = GameManager.Instance.BattleManager;
         bm.UpdateMove(GameManager.Instance.BattleManager.CurrentActor.Actor.Name);
 
-
         //feed BM a prefab to spawn
+        //ally spawn
+        if (Prefab.Asset && !targets[0].GetComponent<ActorSlot>().IsAI)
+        {
+            bm.SpawnGO(Prefab.Asset, GameManager.Instance.BattleManager.EffectTrans, DestructTimer);
+        }
+        //enemy spawn
         for (int i = 0; i < targets.Count; i++)
         {
-            if (!ai) bm.SpawnGO(Prefab.Asset, targets[i].transform, DestructTimer);
+            if (Prefab.Asset && targets[0].GetComponent<ActorSlot>().IsAI)
+            {
+                bm.SpawnGO(Prefab.Asset, targets[i].transform.Find("EffectTrans"), DestructTimer);
+            }
             SkillProcess(targets[i], user, hitType);
             //run check for damage
         }
@@ -116,7 +124,7 @@ public class Skills
                     Debug.Log("HP Before " + Defender.Actor.CurStats.HP);
                     popupText = Defender.Actor.CurStats.HP;
                     Defender.Actor.CurStats.HP += modifier;
-                    if(Defender.Actor.CurStats.HP > Defender.Actor.MaxStats.HP) Defender.Actor.CurStats.HP = Defender.Actor.MaxStats.HP;
+                    if (Defender.Actor.CurStats.HP > Defender.Actor.MaxStats.HP) Defender.Actor.CurStats.HP = Defender.Actor.MaxStats.HP;
                     Debug.Log("Modifier " + modifier);
                     Debug.Log("HP After " + Defender.Actor.CurStats.HP);
                     popupText = Defender.Actor.CurStats.HP - popupText;
@@ -127,6 +135,6 @@ public class Skills
             }
         }
     }
-    
+
 }
 

@@ -396,7 +396,7 @@ public class BattleManager : MonoBehaviour
     public void SpawnGO(GameObject go, Transform dest, float time)
     {
 
-        go = Instantiate<GameObject>(go, dest.Find("EffectTrans"));
+        go = Instantiate<GameObject>(go, dest);
         go.GetComponent<DestroyThis>().Timer = time;
     }
     public void StartSpawn(float DestructTimer, int popupText, ActorSlot Defender, bool Healing = false)
