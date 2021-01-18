@@ -98,6 +98,10 @@ public class BattleManager : MonoBehaviour
         if(BattleFinished) return;
         if (!CurrentActor.IsAI)
         {
+            if(CurrentActor.Dead){
+                NextActor();
+                return;
+            }
             //Sprite
             CharacterSprite charSprite = CutsceneManager.Instance.rightCharacter.GetComponent<CharacterSprite>();
             charSprite.Face.enabled = true;
