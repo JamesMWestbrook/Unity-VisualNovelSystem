@@ -5,6 +5,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class BattleManager : MonoBehaviour
 {
@@ -134,6 +135,7 @@ public class BattleManager : MonoBehaviour
         ChooseActionPanel.SetActive(true);
         OpenTargetsButton TargetButton = AttackButton.GetComponent<OpenTargetsButton>();
         TargetButton.AssignedSkill = NormalAttack;
+        SelectButton(AttackButton.gameObject);
     }
     public void SkillMenu()
     {
@@ -146,8 +148,12 @@ public class BattleManager : MonoBehaviour
             SkillButtons[i].GetComponent<OpenTargetsButton>().AssignedSkill = CurrentActor.Actor.Skills[i];
             SkillButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = SkillButtons[i].GetComponent<OpenTargetsButton>().AssignedSkill.Name;
         }
+        SelectButton(SkillButtons[0].gameObject);
     }
-
+public void SelectButton(GameObject button){
+EventSystem.current.SetSelectedGameObject(button);
+        CurrentlySelected = button;
+}
 
     public void TargetMenu(Button self)
     {
@@ -206,6 +212,7 @@ public class BattleManager : MonoBehaviour
                 TargetButtons[i].GetComponent<SkillButton>().user = CurrentActor.gameObject;
             }
         }
+        SelectButton(TargetButtons[0].gameObject);
     }
     void FillTargetButton(Button button, List<ActorSlot> targets, Skills skill)
     {
@@ -348,9 +355,14 @@ public class BattleManager : MonoBehaviour
     }
 
     // Update is called once per frame
+    public GameObject CurrentlySelected;
     void Update()
     {
-
+        if(EventSystem.current.currentSelectedGameObject != null){
+            CurrentlySelected = EventSystem.current.currentSelectedGameObject;
+        }else{
+            EventSystem.current.SetSelectedGameObject(CurrentlySelected);
+        }
     }
     public void CloseSkills()
     {
