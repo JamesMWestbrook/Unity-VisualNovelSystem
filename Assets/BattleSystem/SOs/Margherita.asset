@@ -54,7 +54,7 @@ MonoBehaviour:
         path: KY_effects/MagicEffectsPackFree/prefab/skillAttack2
         asset: {fileID: 100002, guid: 75369bb81385f4904842bf20a51c14a2, type: 3}
       BaseDamage: 2
-      DestructTimer: 2.5
+      DestructTimer: 1.5
       Rotation: {x: 0, y: 0, z: 0}
       Friendly: 0
       targetCount: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
         path: KY_effects/MagicEffectsPackFree/prefab/ErekiBall
         asset: {fileID: 100002, guid: 391ec6f1311384e75b4888fd6fc26b7e, type: 3}
       BaseDamage: 2
-      DestructTimer: 2.5
+      DestructTimer: 1.5
       Rotation: {x: 0, y: 0, z: 0}
       Friendly: 0
       targetCount: 0
