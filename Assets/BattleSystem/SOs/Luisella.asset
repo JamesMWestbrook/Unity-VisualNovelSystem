@@ -53,6 +53,7 @@ MonoBehaviour:
       Prefab:
         path: KY_effects/MagicEffectsPackFree/prefab/GreenCore
         asset: {fileID: 100006, guid: 906ef3748a66347cfb2d72de10092732, type: 3}
+      Cost: 10
       BaseDamage: 3
       DestructTimer: 2
       Rotation: {x: 0, y: 0, z: 0}
@@ -61,10 +62,13 @@ MonoBehaviour:
       hitType: 2
       elementType: 6
       AnimTrigger: 
+      AffectsDead: 0
+      Description: Heals a single target for moderate health.
     - Name: Bomb
       Prefab:
         path: KY_effects/MagicEffectsPackFree/prefab/WhityBomb
         asset: {fileID: 100010, guid: 4d0391f078db24fac9f5cba3075f9f5d, type: 3}
+      Cost: 7
       BaseDamage: 2
       DestructTimer: 2
       Rotation: {x: 0, y: 0, z: 0}
@@ -73,6 +77,8 @@ MonoBehaviour:
       hitType: 0
       elementType: 2
       AnimTrigger: 
+      AffectsDead: 0
+      Description: Throws Terrene bomb at enemies, hitting all.
     ShowTest:
       path: BattleGraphics/Luisella/Body/LuisellaBattle
       asset: {fileID: 0}

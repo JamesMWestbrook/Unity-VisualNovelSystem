@@ -8,7 +8,6 @@ public class AngelEnemy : MonoBehaviour, IEnemy
     {
         List <GameObject> targets = new List<GameObject>();
         int targetIndex = Random.Range(0, 2);
-        Debug.Log(targetIndex);
         targets.Add(GameObject.Find("BattleManager").GetComponent<BattleManager>().Party[targetIndex].gameObject);
         NormalAttack.Action(targets, gameObject);
     }

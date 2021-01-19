@@ -148,6 +148,7 @@ public class BattleManager : MonoBehaviour
     }
     public void SkillMenu()
     {
+        int currentMP = CurrentActor.Actor.CurStats.MP;
         buttonState = ButtonState.Skills;
         for (int i = 0; i < CurrentActor.Actor.Skills.Count; i++)
         {
@@ -157,8 +158,12 @@ public class BattleManager : MonoBehaviour
             targetButton.AssignedSkill = CurrentActor.Actor.Skills[i];
             targetButton.SkillName.text = targetButton.AssignedSkill.Name;
             targetButton.SkillCost.text = targetButton.AssignedSkill.Cost.ToString();
-            
             TweenButton(SkillButtons[i].gameObject);
+
+            
+            SkillButtons[i].interactable = currentMP >= targetButton.AssignedSkill.Cost;
+//            if(currentMP < targetButton.AssignedSkill.Cost) targetButton.GetComponent<Button>().interactable = false;
+  //          else targetButton.GetComponent<Button>().interactable = true;
         }
         SkillDescPanel.SetActive(true);
         TweenButton(SkillDescPanel);
