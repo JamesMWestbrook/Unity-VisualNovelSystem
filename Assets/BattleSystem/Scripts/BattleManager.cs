@@ -453,7 +453,7 @@ public class BattleManager : MonoBehaviour
         }
         else
         {
-            rect.localPosition = new Vector3(135, 87, 0);
+            rect.localPosition = new Vector3(260, 0, 0);
         }
         TextMeshProUGUI text = go.GetComponent<TextMeshProUGUI>();
         text.text = Damage.ToString();

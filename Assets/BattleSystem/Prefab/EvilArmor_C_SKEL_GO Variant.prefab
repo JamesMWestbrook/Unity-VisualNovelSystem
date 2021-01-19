@@ -15,9 +15,13 @@ PrefabInstance:
       propertyPath: HPForeground
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 729800703, guid: 2988b50da91d6fc41901ad08e8797a4b, type: 3}
+      propertyPath: NormalAttack.DestructTimer
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1000012165564062, guid: 2988b50da91d6fc41901ad08e8797a4b, type: 3}
       propertyPath: m_Name
-      value: EvilArmor_C_SKEL_GO
+      value: EvilArmor_C_SKEL_GO Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4000013651661664, guid: 2988b50da91d6fc41901ad08e8797a4b, type: 3}
       propertyPath: m_LocalPosition.x
