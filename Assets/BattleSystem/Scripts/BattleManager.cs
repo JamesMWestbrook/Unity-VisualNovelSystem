@@ -436,7 +436,7 @@ public class BattleManager : MonoBehaviour
     {
         yield return new WaitForSeconds(DestructTimer);
         SpawnDamage(popupText, Defender, Healing);
-        if (Defender.IsAI) Defender.GetComponent<Animator>().SetTrigger("Damage");
+        if (Defender.IsAI && Defender.Actor.CurStats.HP > 0) Defender.GetComponent<Animator>().SetTrigger("Damage");
     }
     public void SpawnDamage(int Damage, ActorSlot actor, bool Healing = false)
     {
@@ -483,11 +483,7 @@ public class BattleManager : MonoBehaviour
                 Enemies.Remove(actor);
                 Actors.Remove(actor);
 
-                Destroy(actor.HP.transform.parent.gameObject);
-                Destroy(actor.gameObject);
-
-
-                BattleWinCheck();
+                StartCoroutine(DestroyEnemy(actor.gameObject));
             }
             else
             {
@@ -495,7 +491,13 @@ public class BattleManager : MonoBehaviour
             }
         }
     }
-
+public IEnumerator DestroyEnemy(GameObject enemy){
+    enemy.GetComponent<Animator>().SetTrigger("Death");
+    BattleWinCheck();
+    yield return new WaitForSeconds (3);
+    Destroy(enemy.GetComponent<ActorSlot>().HP.transform.parent.gameObject);
+    Destroy(enemy);
+}
     bool BattleFinished;
     public void BattleWinCheck()
     {
