@@ -160,10 +160,10 @@ public class BattleManager : MonoBehaviour
             targetButton.SkillCost.text = targetButton.AssignedSkill.Cost.ToString();
             TweenButton(SkillButtons[i].gameObject);
 
-            
+
             SkillButtons[i].interactable = currentMP >= targetButton.AssignedSkill.Cost;
-//            if(currentMP < targetButton.AssignedSkill.Cost) targetButton.GetComponent<Button>().interactable = false;
-  //          else targetButton.GetComponent<Button>().interactable = true;
+            //            if(currentMP < targetButton.AssignedSkill.Cost) targetButton.GetComponent<Button>().interactable = false;
+            //          else targetButton.GetComponent<Button>().interactable = true;
         }
         SkillDescPanel.SetActive(true);
         TweenButton(SkillDescPanel);
@@ -295,7 +295,9 @@ public class BattleManager : MonoBehaviour
                     InTargetMenu = false;
                     CloseTargets();
                     SkillMenu();
-                }else{//close skill menu and reopen main buttons
+                }
+                else
+                {//close skill menu and reopen main buttons
                     CloseSkills();
                     StartOptions();
                 }
@@ -434,6 +436,7 @@ public class BattleManager : MonoBehaviour
     {
         yield return new WaitForSeconds(DestructTimer);
         SpawnDamage(popupText, Defender, Healing);
+        if (Defender.IsAI) Defender.GetComponent<Animator>().SetTrigger("Damage");
     }
     public void SpawnDamage(int Damage, ActorSlot actor, bool Healing = false)
     {

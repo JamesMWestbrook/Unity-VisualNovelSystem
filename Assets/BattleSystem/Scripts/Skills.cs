@@ -83,6 +83,18 @@ public class Skills
     public void SkillProcess(GameObject target, GameObject user, Skills.HitType hitType)
     {
         BattleManager bm = GameManager.Instance.BattleManager;
+        ActorSlot actor = user.GetComponent<ActorSlot>();
+        if (!actor.IsAI)
+        {
+            actor.Actor.CurStats.MP -= Cost;
+            float curMP = actor.Actor.CurStats.MP;
+            float result = curMP / actor.Actor.MaxStats.MP;
+            actor.MPForeground.fillAmount = result;
+            actor.MP.text = curMP.ToString();
+
+        }
+
+
         int tempAttack = 0;
         int tempDefense = 0;
         int modifier;
