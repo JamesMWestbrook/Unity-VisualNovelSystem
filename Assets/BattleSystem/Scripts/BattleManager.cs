@@ -153,11 +153,16 @@ public class BattleManager : MonoBehaviour
         {
             //fill each of the target buttons
             SkillButtons[i].gameObject.SetActive(true);
-            SkillButtons[i].GetComponent<OpenTargetsButton>().AssignedSkill = CurrentActor.Actor.Skills[i];
-            SkillButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = SkillButtons[i].GetComponent<OpenTargetsButton>().AssignedSkill.Name;
-
+            OpenTargetsButton targetButton = SkillButtons[i].GetComponent<OpenTargetsButton>();
+            targetButton.AssignedSkill = CurrentActor.Actor.Skills[i];
+            targetButton.SkillName.text = targetButton.AssignedSkill.Name;
+            targetButton.SkillCost.text = targetButton.AssignedSkill.Cost.ToString();
+            
             TweenButton(SkillButtons[i].gameObject);
         }
+        SkillDescPanel.SetActive(true);
+        TweenButton(SkillDescPanel);
+        SkillDescText.text = SkillButtons[0].GetComponent<OpenTargetsButton>().AssignedSkill.Description;
         SelectButton(SkillButtons[0].gameObject);
     }
     public void TweenButton(GameObject go)
@@ -267,6 +272,7 @@ public class BattleManager : MonoBehaviour
 
                 if (InTargetMenu)
                 {
+                    CurrentlySelected.GetComponent<SkillButton>().OnDeselect(null);
                     InTargetMenu = false;
                     CloseTargets();
                     StartOptions();
@@ -280,6 +286,7 @@ public class BattleManager : MonoBehaviour
                 if (InTargetMenu)
                 {
                     //close target menu and open skill menu
+                    CurrentlySelected.GetComponent<SkillButton>().OnDeselect(null);
                     InTargetMenu = false;
                     CloseTargets();
                     SkillMenu();
@@ -319,6 +326,8 @@ public class BattleManager : MonoBehaviour
     }
     public List<Button> TargetButtons;
     public List<Button> SkillButtons;
+    public GameObject SkillDescPanel;
+    public TextMeshProUGUI SkillDescText;
     public ButtonState buttonState;
     public enum ButtonState
     {
@@ -403,6 +412,7 @@ public class BattleManager : MonoBehaviour
         {
             SkillButtons[i].gameObject.SetActive(false);
         }
+        SkillDescPanel.SetActive(false);
     }
     public Skills NormalAttack;
     public void SpawnGO(GameObject go, Transform dest, float time)

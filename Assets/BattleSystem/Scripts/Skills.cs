@@ -8,6 +8,7 @@ public class Skills
 {
     public string Name;
     public ResourcePathAsset<GameObject> Prefab;
+    public int Cost;
     [HorizontalGroup]
     public int BaseDamage;
     [HorizontalGroup]
@@ -22,7 +23,8 @@ public class Skills
     public ElementType elementType;
     public string AnimTrigger;
     //Affects dead party member
-    bool AffectsDead;
+    public bool AffectsDead;
+    [TextArea] public string Description;
     public enum TargetCount
     {
         Single,
