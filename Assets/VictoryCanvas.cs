@@ -59,36 +59,150 @@ public class VictoryCanvas : MonoBehaviour
         statline.SecondStat.gameObject.SetActive(false);
         statline.gameObject.SetActive(false);
     }
+    bool PauseProcessing;
     public IEnumerator Victory()
     {
         QuickScale(AftermathPanel);
-        yield return new WaitForSeconds(0.5f);
+        //  yield return new WaitForSeconds(0.5f);
         QuickScale(Drops);
-        yield return new WaitForSeconds(0.7f);
+        //    yield return new WaitForSeconds(0.7f);
 
         QuickScale(Currency.gameObject);
         QuickScale(CurrencyHeader);
         Currency.text = "0";
-        int tempCurrency = 0;        
-        yield return new WaitForSeconds(0.7f);
-        do{
+        int tempCurrency = 0;
+        // yield return new WaitForSeconds(0.7f);
+        do
+        {
             tempCurrency++;
             Currency.text = tempCurrency.ToString();
             //Play SFX
             yield return new WaitForSeconds(0.08f);
-        }while(tempCurrency != GameManager.Instance.BattleManager.MoneyPayout);
-        yield return new WaitForSeconds(1);
-        GameObject itemDrop = Instantiate<GameObject>(ItemDropPrefab,transform);
-        itemDrop.GetComponent<RectTransform>().localPosition = new Vector3(-329,106.6f,0);
+        } while (tempCurrency != GameManager.Instance.BattleManager.MoneyPayout);
+        //  yield return new WaitForSeconds(1);
+        GameObject itemDrop = Instantiate<GameObject>(ItemDropPrefab, transform);
+        itemDrop.GetComponent<RectTransform>().localPosition = new Vector3(-329, 106.6f, 0);
+        QuickScale(itemDrop);
+
+        //Lvl
+        for (int i = 0; i < GameManager.Instance.BattleManager.Party.Count; i++)
+        {
+            StartCoroutine(LevelProcess(GameManager.Instance.BattleManager.Party[i]));
+            if (PauseProcessing) yield return null;
+        }
     }
-    void QuickScale(GameObject go){
+
+    private IEnumerator LevelProcess(ActorSlot actor)
+    {
+        PauseProcessing = true;
+     
+        GameManager.Instance.BattleManager.SlideActor(actor);
+        int expDrain = GameManager.Instance.BattleManager.EXPPayout;
+        bool Leveled = false;
+        QuickScale(LvlNumber.transform.parent.gameObject);
+        QuickScale(ExpBar.gameObject);
+        QuickScale(ExpBG.gameObject);
+        QuickScale(LvlNumber.gameObject);
+        LvlNumber.text = actor.Actor.Lvl.ToString();
+        do
+        {
+            //increase fill
+            //sound
+            expDrain--;
+            actor.Actor.EXP++;
+            float exp = actor.Actor.EXP;
+            ExpBar.fillAmount = exp / actor.Actor.EXPToLevel();
+
+            if (actor.Actor.EXP >= actor.Actor.EXPToLevel())
+            {
+                Leveled = true;
+                actor.Actor.EXP += expDrain;
+            }
+            yield return new WaitForSeconds(0.08f);
+        } while (expDrain > 0 || !Leveled);
+
+
+
+        if (Leveled)
+        {
+            //ding
+
+
+            //tween in Statpanel
+            QuickScale(StatPanel);
+            //tween each stat base
+            QuickScale(HP.gameObject);
+            QuickScale(MP.gameObject);
+            QuickScale(Muscle.gameObject);
+            QuickScale(Vigor.gameObject);
+            QuickScale(Will.gameObject);
+            QuickScale(Instinct.gameObject);
+            QuickScale(Agility.gameObject);
+            SetStats(actor);
+
+            yield return new WaitForSeconds(1);
+            //tween in -> and newLvl 
+            QuickScale(Line);
+            QuickScale(NewLvl.gameObject);
+            //Add lvl and run lvl function on actor
+            actor.Actor.LevelUp();
+            NewLvl.text = actor.Actor.Lvl.ToString();
+            yield return new WaitForSeconds(1);
+            //Tween in each new stat
+            ShowArrow();
+            SetStats(actor, true);
+            yield return new WaitForSeconds(3);
+
+            //drop skills
+
+        }
+        PauseProcessing = false;
+    }
+    public void ShowArrow()
+    {
+        QuickScale(HP.Line);
+        QuickScale(MP.Line);
+        QuickScale(Muscle.Line);
+        QuickScale(Vigor.Line);
+        QuickScale(Will.Line);
+        QuickScale(Instinct.Line);
+        QuickScale(Agility.Line);
+
+        QuickScale(HP.SecondStat.gameObject);
+        QuickScale(MP.SecondStat.gameObject);
+        QuickScale(Muscle.SecondStat.gameObject);
+        QuickScale(Vigor.SecondStat.gameObject);
+        QuickScale(Will.SecondStat.gameObject);
+        QuickScale(Instinct.SecondStat.gameObject);
+        QuickScale(Agility.SecondStat.gameObject);
+    }
+    private void SetStats(ActorSlot actor, bool SecondStat = false)
+    {
+        Debug.Log(SecondStat);
+        SetSingleLine(HP, actor.Actor.MaxStats.HP, SecondStat);
+        SetSingleLine(MP, actor.Actor.MaxStats.MP, SecondStat);
+        SetSingleLine(Muscle, actor.Actor.MaxStats.Muscle, SecondStat);
+        SetSingleLine(Vigor, actor.Actor.MaxStats.Vigor, SecondStat);
+        SetSingleLine(Will, actor.Actor.MaxStats.Will, SecondStat);
+        SetSingleLine(Instinct, actor.Actor.MaxStats.Instinct, SecondStat);
+        SetSingleLine(Agility, actor.Actor.MaxStats.Agility, SecondStat);
+    }
+    private void SetSingleLine(Statline line, int stat, bool SecondStat = false)
+    {
+        if (!SecondStat)
+        {
+            Debug.Log("This in fact runs?" + stat.ToString());
+            line.GetComponent<TextMeshProUGUI>().text = string.Format("{0}: {1}", line.gameObject.name, stat.ToString());
+        }
+        else
+        {
+            line.SecondStat.text = stat.ToString();
+        }
+    }
+    void QuickScale(GameObject go)
+    {
         go.SetActive(true);
         go.GetComponent<RectTransform>().localScale = Vector3.zero;
         go.LeanScale(Vector3.one, 0.7f);
-    }
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

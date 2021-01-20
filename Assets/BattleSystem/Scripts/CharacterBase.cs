@@ -54,9 +54,15 @@ public class CharacterBase
     public int EXPToLevel()
     {
         int EXPNeeded = 0;
-        EXPNeeded = Lvl + Lvl * (int)0.5;
-        Debug.Log(EXPNeeded);
+        EXPNeeded = Lvl + Lvl * 20;
         return EXPNeeded;
+    }
+    public void LevelUp(){
+        do{
+        EXP -= EXPToLevel();
+        Lvl++;
+        }while(EXP > EXPToLevel());
+        StatIncrease();
     }
     public void StatIncrease()
     {

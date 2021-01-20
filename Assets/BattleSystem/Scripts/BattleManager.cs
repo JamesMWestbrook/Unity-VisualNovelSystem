@@ -106,11 +106,24 @@ public class BattleManager : MonoBehaviour
                 return;
             }
             //Sprite
+            SlideActor(CurrentActor);
+
+            //UI Buttons
+            StartOptions();
+        }
+        else
+        {
+            CurrentActor.GetComponent<IEnemy>().AI();
+            HideSprite();
+            // hide buttons
+        }
+    }
+    public void SlideActor(ActorSlot actor){
             CharacterSprite charSprite = CutsceneManager.Instance.rightCharacter.GetComponent<CharacterSprite>();
             charSprite.Face.enabled = true;
             charSprite.Outfit.enabled = true;
-            charSprite.Face.sprite = CurrentActor.Actor.BattleFacePath.Get();
-            charSprite.Outfit.sprite = CurrentActor.Actor.BattleOutfitPath.Get();
+            charSprite.Face.sprite = actor.Actor.BattleFacePath.Get();
+            charSprite.Outfit.sprite = actor.Actor.BattleOutfitPath.Get();
 
             Transform dest = CutsceneManager.Instance.RightSpot;
             Image rightImage = CutsceneManager.Instance.rightCharacter;
@@ -125,16 +138,6 @@ public class BattleManager : MonoBehaviour
 
             MovementNode.ColorChange(_outfit.gameObject, new Color(0.7f, 0.7f, 0.7f, 1), new Color(1, 1, 1, 1), SpriteTime);
             MovementNode.ColorChange(_face.gameObject, new Color(0.7f, 0.7f, 0.7f, 1), new Color(1, 1, 1, 1), SpriteTime);
-
-            //UI Buttons
-            StartOptions();
-        }
-        else
-        {
-            CurrentActor.GetComponent<IEnemy>().AI();
-            HideSprite();
-            // hide buttons
-        }
     }
     public void StartOptions()
     {
@@ -484,6 +487,7 @@ public class BattleManager : MonoBehaviour
                 //Remove from list
                 Enemies.Remove(actor);
                 Actors.Remove(actor);
+                EXPPayout += actor.Actor.EXP;
 
                 StartCoroutine(DestroyEnemy(actor.gameObject));
             }

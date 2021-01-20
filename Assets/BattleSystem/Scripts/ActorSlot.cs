@@ -35,13 +35,17 @@ public class ActorSlot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.Instance.BattleManager.Actors.Add(this);
         if (IsAI)
         {
+            GameManager.Instance.BattleManager.Actors.Add(this);
             GameManager.Instance.BattleManager.Enemies.Add(this);
             Actor.Name = EnemySO.name;
             EnemySO.Character.MaxStats.CopyStats(Actor.MaxStats);
             Actor.MaxStats.CopyStats(Actor.CurStats);
+        }
+        else
+        {
+            GameManager.Instance.BattleManager.Actors.Insert(0,this);
         }
         HP.text = Actor.CurStats.HP.ToString();
     }
