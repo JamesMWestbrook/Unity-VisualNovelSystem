@@ -10156,6 +10156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1733899067}
   - component: {fileID: 1733899066}
+  - component: {fileID: 1733899068}
   m_Layer: 0
   m_Name: GM
   m_TagString: Untagged
@@ -10190,6 +10191,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1733899068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733899065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ba875997bc5c4d85a9b0478acbccfc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mixer: {fileID: 0}
+  ScenePersistent: 0
+  CollapseObjectLibrary: 1
+  CollapseGroupLibrary: 0
+  SFXObjectLibrary:
+  - {fileID: 0}
+  - {fileID: 0}
+  SFXGroupLibrary: []
 --- !u!1 &1735251792 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 864688581, guid: 8d1b8c01204fede47b426f92bfa61cb4,
@@ -12108,6 +12129,8 @@ MonoBehaviour:
     type: 3}
   skillDropPrefab: {fileID: 4048856913934695286, guid: d34a692215f66a44a8726dbfae3e594a,
     type: 3}
+  EXPSound: {fileID: 11400000, guid: 95ded607daeaca540b3866026e2bc731, type: 2}
+  LevelUpSound: {fileID: 11400000, guid: 3769625ec712ae5429d19f47fdb1d99b, type: 2}
 --- !u!1 &2101238446
 GameObject:
   m_ObjectHideFlags: 0

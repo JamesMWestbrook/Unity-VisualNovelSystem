@@ -28,9 +28,11 @@ public class VictoryCanvas : MonoBehaviour
     [Header("Prefabs")]
     public GameObject ItemDropPrefab;
     public GameObject skillDropPrefab;
-
+    public SFXObject EXPSound;
+    public SFXObject LevelUpSound;
     void Start()
     {
+
         Drops.SetActive(false);
         Currency.gameObject.SetActive(false);
         CurrencyHeader.gameObject.SetActive(false);
@@ -112,11 +114,14 @@ public class VictoryCanvas : MonoBehaviour
             actor.Actor.EXP++;
             float exp = actor.Actor.EXP;
             ExpBar.fillAmount = exp / actor.Actor.EXPToLevel();
-
+            SFXManager.Main.Play(EXPSound);
+            //works here
             if (actor.Actor.EXP >= actor.Actor.EXPToLevel())
             {
+                Debug.Log("This runs you whore");
                 Leveled = true;
                 actor.Actor.EXP += expDrain;
+                //not here/????
             }
             yield return new WaitForSeconds(0.08f);
         } while (expDrain > 0 || !Leveled);
@@ -125,8 +130,7 @@ public class VictoryCanvas : MonoBehaviour
 
         if (Leveled)
         {
-            //ding
-
+            SFXManager.Main.Play(LevelUpSound); // Not here???
 
             //tween in Statpanel
             QuickScale(StatPanel);
@@ -152,9 +156,8 @@ public class VictoryCanvas : MonoBehaviour
             ShowArrow();
             SetStats(actor, true);
             yield return new WaitForSeconds(3);
-
             //drop skills
-
+            //works here for some reason?????
         }
         PauseProcessing = false;
     }
@@ -178,7 +181,6 @@ public class VictoryCanvas : MonoBehaviour
     }
     private void SetStats(ActorSlot actor, bool SecondStat = false)
     {
-        Debug.Log(SecondStat);
         SetSingleLine(HP, actor.Actor.MaxStats.HP, SecondStat);
         SetSingleLine(MP, actor.Actor.MaxStats.MP, SecondStat);
         SetSingleLine(Muscle, actor.Actor.MaxStats.Muscle, SecondStat);
@@ -191,7 +193,6 @@ public class VictoryCanvas : MonoBehaviour
     {
         if (!SecondStat)
         {
-            Debug.Log("This in fact runs?" + stat.ToString());
             line.GetComponent<TextMeshProUGUI>().text = string.Format("{0}: {1}", line.gameObject.name, stat.ToString());
         }
         else
@@ -205,4 +206,5 @@ public class VictoryCanvas : MonoBehaviour
         go.GetComponent<RectTransform>().localScale = Vector3.zero;
         go.LeanScale(Vector3.one, 0.7f);
     }
+
 }
