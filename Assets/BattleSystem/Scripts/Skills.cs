@@ -9,6 +9,8 @@ public class Skills
     public string Name;
     public ResourcePathAsset<GameObject> Prefab;
     public int Cost;
+    public int LevelLearned;
+    public bool Learned;
     [HorizontalGroup]
     public int BaseDamage;
     [HorizontalGroup]

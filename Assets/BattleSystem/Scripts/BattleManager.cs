@@ -13,7 +13,7 @@ public class BattleManager : MonoBehaviour
     public int TurnCounter;
     [Header(header: "Current actor's turn")]
     public int ActorCounter;
-
+    public VictoryCanvas VictoryCanvas;
     public TextMeshProUGUI MoveText;
     public GameObject DamagePopupPrefab;
     public List<ActorSlot> Party;
@@ -308,7 +308,11 @@ public class BattleManager : MonoBehaviour
     }
     public void RemoveUI()
     {
-
+        foreach (ActorSlot actor in Party)
+        {
+            RectTransform actorTrans = actor.GetComponent<RectTransform>();
+            LeanTween.scale(actorTrans, Vector3.zero, 0.7f);
+        }
     }
     public void EnableUI()
     {
@@ -317,10 +321,6 @@ public class BattleManager : MonoBehaviour
             actor.gameObject.SetActive(true);
             RectTransform actorTrans = actor.GetComponent<RectTransform>();
             actorTrans.LeanScale(new Vector3(0, 1, 1), 0);
-            Vector3 endPos = actorTrans.position;
-            //  actorTrans.position = new Vector3(-500, actorTrans.position.y, actorTrans.position.z);
-            // actorTrans.LeanMove(endPos, 0.7);
-            // LeanTween.move(actorTrans.gameObject, endPos, 0.7f);
             LeanTween.scale(actorTrans, Vector3.one, 0.7f);
         }
         foreach (ActorSlot enemy in Enemies)
@@ -491,14 +491,16 @@ public class BattleManager : MonoBehaviour
             }
         }
     }
-public IEnumerator DestroyEnemy(GameObject enemy){
-    enemy.GetComponent<Animator>().SetTrigger("Death");
-    BattleWinCheck();
-    yield return new WaitForSeconds (3);
-    Destroy(enemy.GetComponent<ActorSlot>().HP.transform.parent.gameObject);
-    Destroy(enemy);
-}
+    public IEnumerator DestroyEnemy(GameObject enemy)
+    {
+        enemy.GetComponent<Animator>().SetTrigger("Death");
+        BattleWinCheck();
+        yield return new WaitForSeconds(3);
+        Destroy(enemy.GetComponent<ActorSlot>().HP.transform.parent.gameObject);
+        Destroy(enemy);
+    }
     bool BattleFinished;
+    public bool DelayWin;
     public void BattleWinCheck()
     {
         bool won = true;
@@ -511,7 +513,7 @@ public IEnumerator DestroyEnemy(GameObject enemy){
             BattleFinished = true;
             HideSprite();
             EndOfBattle.Invoke();
-            //battle is won
+            if (!DelayWin) Win();
         }
     }
     public void BattleLoseCheck()
@@ -526,5 +528,9 @@ public IEnumerator DestroyEnemy(GameObject enemy){
             //battle is lost
             Debug.Log("Battle is lost, bye");
         }
+    }
+    public void Win()
+    {
+        RemoveUI();
     }
 }

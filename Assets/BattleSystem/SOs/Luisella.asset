@@ -16,6 +16,7 @@ MonoBehaviour:
     Name: Luisella
     NickName: EmptyNN
     Lvl: 1
+    EXP: 0
     MaxStats:
       HP: 20
       MP: 50
@@ -54,6 +55,8 @@ MonoBehaviour:
         path: KY_effects/MagicEffectsPackFree/prefab/GreenCore
         asset: {fileID: 100006, guid: 906ef3748a66347cfb2d72de10092732, type: 3}
       Cost: 10
+      LevelLearned: 0
+      Learned: 1
       BaseDamage: 3
       DestructTimer: 2
       Rotation: {x: 0, y: 0, z: 0}
@@ -69,6 +72,8 @@ MonoBehaviour:
         path: KY_effects/MagicEffectsPackFree/prefab/WhityBomb
         asset: {fileID: 100010, guid: 4d0391f078db24fac9f5cba3075f9f5d, type: 3}
       Cost: 7
+      LevelLearned: 0
+      Learned: 1
       BaseDamage: 2
       DestructTimer: 2
       Rotation: {x: 0, y: 0, z: 0}

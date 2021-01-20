@@ -11,8 +11,8 @@ public class CharacterBase
     public string Name = "Empty";
     public string NickName = "EmptyNN";
     public int Lvl = 1;
-
-
+    public int EXP;
+    public StatType statType;
     public CharStats MaxStats = new CharStats();
     public CharStats CurStats = new CharStats();
     [OdinSerialize] public List<Skills> Skills = new List<Skills>();
@@ -30,7 +30,10 @@ public class CharacterBase
     //public EquipmentBase Body;
     //public EquipmentBase AccOne;
     //public EquipmentBase AccTwo;
-
+    public enum StatType{
+        Healer,
+        Aggressive
+    }
     public CharacterBase DeepClone(){
         CharacterBase cb = new CharacterBase();
         DeepClone(cb);
@@ -45,7 +48,22 @@ public class CharacterBase
     {
         Debug.Log(this.Name);
     }
+    public int EXPToLevel(){
+        int EXPNeeded = 0;
+        EXPNeeded = Lvl + Lvl * (int)0.5;
+        Debug.Log(EXPNeeded);
+        return EXPNeeded;
+    }
+    public void StatIncrease(){
+        switch(statType){
+            case StatType.Aggressive:
 
+            break;
+            case StatType.Healer:
+
+            break;
+        }
+    }
 }
 
 public static class CharacterExtensions
