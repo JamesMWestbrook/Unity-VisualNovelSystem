@@ -70,14 +70,16 @@ public class VictoryCanvas : MonoBehaviour
         QuickScale(CurrencyHeader);
         Currency.text = "0";
         int tempCurrency = 0;        
+        yield return new WaitForSeconds(0.7f);
         do{
             tempCurrency++;
             Currency.text = tempCurrency.ToString();
             //Play SFX
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.08f);
         }while(tempCurrency != GameManager.Instance.BattleManager.MoneyPayout);
         yield return new WaitForSeconds(1);
-
+        GameObject itemDrop = Instantiate<GameObject>(ItemDropPrefab,transform);
+        itemDrop.GetComponent<RectTransform>().localPosition = new Vector3(-329,106.6f,0);
     }
     void QuickScale(GameObject go){
         go.SetActive(true);
