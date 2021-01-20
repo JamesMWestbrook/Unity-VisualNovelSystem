@@ -21,7 +21,7 @@ public class CharacterBase
     public string SpriteGUI;
     public ResourcePathAsset<Sprite> BattleOutfitPath;
     public ResourcePathAsset<Sprite> BattleFacePath;
-    
+
     //[SerializeField] public Dictionary<int, BaseBattleActions> BaseBattleActions;
 
     //public Weapon WeaponOne;
@@ -30,16 +30,19 @@ public class CharacterBase
     //public EquipmentBase Body;
     //public EquipmentBase AccOne;
     //public EquipmentBase AccTwo;
-    public enum StatType{
+    public enum StatType
+    {
         Healer,
         Aggressive
     }
-    public CharacterBase DeepClone(){
+    public CharacterBase DeepClone()
+    {
         CharacterBase cb = new CharacterBase();
         DeepClone(cb);
         return cb;
     }
-    public virtual void DeepClone(CharacterBase dst){
+    public virtual void DeepClone(CharacterBase dst)
+    {
         dst.Name = Name;
         dst.ShowTest = ShowTest;
     }
@@ -48,23 +51,45 @@ public class CharacterBase
     {
         Debug.Log(this.Name);
     }
-    public int EXPToLevel(){
+    public int EXPToLevel()
+    {
         int EXPNeeded = 0;
         EXPNeeded = Lvl + Lvl * (int)0.5;
         Debug.Log(EXPNeeded);
         return EXPNeeded;
     }
-    public void StatIncrease(){
-        switch(statType){
+    public void StatIncrease()
+    {
+        switch (statType)
+        {
             case StatType.Aggressive:
+                MaxStats.HP = GetGrowth(22, 7);
+                MaxStats.MP = GetGrowth(40, 4);
+                MaxStats.Muscle = GetGrowth(3,2);
+                MaxStats.Vigor = GetGrowth(2);
+                MaxStats.Will = GetGrowth(2);
+                MaxStats.Instinct = GetGrowth(3);
+                MaxStats.Agility = GetGrowth(2);
 
-            break;
+                break;
             case StatType.Healer:
-
-            break;
+                MaxStats.HP = GetGrowth(22, 8);
+                MaxStats.MP = GetGrowth(40, 6);
+                MaxStats.Muscle = GetGrowth(2);
+                MaxStats.Vigor = GetGrowth(3,2);
+                MaxStats.Will = GetGrowth(3);
+                MaxStats.Instinct = GetGrowth(3);
+                MaxStats.Agility = GetGrowth(3);
+                break;
         }
     }
+    int GetGrowth(int input, int inputTwo = 0)
+    {
+        int NewStat = input * Lvl + inputTwo * Lvl;
+        return NewStat;
+    }
 }
+
 
 public static class CharacterExtensions
 {

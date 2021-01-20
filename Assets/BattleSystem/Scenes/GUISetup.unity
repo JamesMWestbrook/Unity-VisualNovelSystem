@@ -440,7 +440,7 @@ PrefabInstance:
     - target: {fileID: 2114167955225375085, guid: d64464215f92eee4482188df9c40f177,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2323809598982941303, guid: d64464215f92eee4482188df9c40f177,
         type: 3}
@@ -602,6 +602,8 @@ MonoBehaviour:
   TurnCounter: 0
   ActorCounter: 0
   VictoryCanvas: {fileID: 2075248544}
+  MoneyPayout: 20
+  EXPPayout: 0
   MoveText: {fileID: 1030856679}
   DamagePopupPrefab: {fileID: 5049521027726395652, guid: 8602297671ab7784681bc453960e95f0,
     type: 3}
@@ -1597,7 +1599,7 @@ PrefabInstance:
     - target: {fileID: 8263853589309035014, guid: 672c149a1b0614085a57612a25f2eacb,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8263853589389631453, guid: 672c149a1b0614085a57612a25f2eacb,
         type: 3}

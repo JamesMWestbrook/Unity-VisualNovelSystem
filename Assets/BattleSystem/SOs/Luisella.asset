@@ -17,6 +17,7 @@ MonoBehaviour:
     NickName: EmptyNN
     Lvl: 1
     EXP: 0
+    statType: 0
     MaxStats:
       HP: 20
       MP: 50
@@ -74,12 +75,12 @@ MonoBehaviour:
       Cost: 7
       LevelLearned: 0
       Learned: 1
-      BaseDamage: 2
+      BaseDamage: 5
       DestructTimer: 2
       Rotation: {x: 0, y: 0, z: 0}
       Friendly: 0
       targetCount: 1
-      hitType: 0
+      hitType: 1
       elementType: 2
       AnimTrigger: 
       AffectsDead: 0

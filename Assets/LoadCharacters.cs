@@ -15,6 +15,9 @@ public      Data newData;
         for (int i = 0; i < _actors.Count; i++)
         {
             CharacterBase _curActor = _actors[i].Actor;
+            _curActor.Lvl = 1;
+            _curActor.StatIncrease();
+            Debug.Log("Stat initialization");
             _curActor.CurStats = _curActor.MaxStats.DeepStatsCopy(_curActor.MaxStats);
 
             _actors[i].SetGraphics();

@@ -59,9 +59,30 @@ public class VictoryCanvas : MonoBehaviour
         statline.SecondStat.gameObject.SetActive(false);
         statline.gameObject.SetActive(false);
     }
-    public void EnableLine(Statline statline)
+    public IEnumerator Victory()
     {
-        
+        QuickScale(AftermathPanel);
+        yield return new WaitForSeconds(0.5f);
+        QuickScale(Drops);
+        yield return new WaitForSeconds(0.7f);
+
+        QuickScale(Currency.gameObject);
+        QuickScale(CurrencyHeader);
+        Currency.text = "0";
+        int tempCurrency = 0;        
+        do{
+            tempCurrency++;
+            Currency.text = tempCurrency.ToString();
+            //Play SFX
+            yield return new WaitForSeconds(0.01f);
+        }while(tempCurrency != GameManager.Instance.BattleManager.MoneyPayout);
+        yield return new WaitForSeconds(1);
+
+    }
+    void QuickScale(GameObject go){
+        go.SetActive(true);
+        go.GetComponent<RectTransform>().localScale = Vector3.zero;
+        go.LeanScale(Vector3.one, 0.7f);
     }
     // Update is called once per frame
     void Update()

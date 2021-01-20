@@ -16,6 +16,8 @@ MonoBehaviour:
     Name: Fallen Angel
     NickName: EmptyNN
     Lvl: 1
+    EXP: 20
+    statType: 0
     MaxStats:
       HP: 10
       MP: 30

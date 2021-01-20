@@ -14,6 +14,8 @@ public class BattleManager : MonoBehaviour
     [Header(header: "Current actor's turn")]
     public int ActorCounter;
     public VictoryCanvas VictoryCanvas;
+    public int MoneyPayout;
+    public int EXPPayout;
     public TextMeshProUGUI MoveText;
     public GameObject DamagePopupPrefab;
     public List<ActorSlot> Party;
@@ -532,5 +534,6 @@ public class BattleManager : MonoBehaviour
     public void Win()
     {
         RemoveUI();
+        StartCoroutine(VictoryCanvas.Victory());
     }
 }
