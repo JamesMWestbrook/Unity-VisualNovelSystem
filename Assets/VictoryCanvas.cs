@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using QFSW.PL;
 public class VictoryCanvas : MonoBehaviour
 {
     [Header("Drops")]
@@ -30,9 +31,14 @@ public class VictoryCanvas : MonoBehaviour
     public GameObject skillDropPrefab;
     public SFXObject EXPSound;
     public SFXObject LevelUpSound;
+
+    public AudioListener AudioListener;
+    public AudioClip LevelUpClip;
+    public AudioSource AudioSource;
     void Start()
     {
-
+        SFXManager.Main.Play(LevelUpSound);
+      //  AudioSource.Play();
         Drops.SetActive(false);
         Currency.gameObject.SetActive(false);
         CurrencyHeader.gameObject.SetActive(false);
@@ -81,6 +87,7 @@ public class VictoryCanvas : MonoBehaviour
             //Play SFX
             yield return new WaitForSeconds(0.08f);
         } while (tempCurrency != GameManager.Instance.BattleManager.MoneyPayout);
+
         //  yield return new WaitForSeconds(1);
         GameObject itemDrop = Instantiate<GameObject>(ItemDropPrefab, transform);
         itemDrop.GetComponent<RectTransform>().localPosition = new Vector3(-329, 106.6f, 0);
@@ -96,40 +103,48 @@ public class VictoryCanvas : MonoBehaviour
 
     private IEnumerator LevelProcess(ActorSlot actor)
     {
+        PerformanceLogger.StartLogger();
         PauseProcessing = true;
      
         GameManager.Instance.BattleManager.SlideActor(actor);
         int expDrain = GameManager.Instance.BattleManager.EXPPayout;
         bool Leveled = false;
+        actor.Actor.EXP += expDrain;
+        if (actor.Actor.EXP >= actor.Actor.EXPToLevel()) Leveled = true;
         QuickScale(LvlNumber.transform.parent.gameObject);
         QuickScale(ExpBar.gameObject);
         QuickScale(ExpBG.gameObject);
         QuickScale(LvlNumber.gameObject);
         LvlNumber.text = actor.Actor.Lvl.ToString();
+
+        float plays = 0;
+        bool StopLoop = false;
         do
         {
-            //increase fill
-            //sound
-            expDrain--;
-            actor.Actor.EXP++;
+            plays++;
             float exp = actor.Actor.EXP;
-            ExpBar.fillAmount = exp / actor.Actor.EXPToLevel();
+            if (Leveled)
+            {
+                ExpBar.fillAmount = plays / 28;
+
+            }
+            else
+            {
+                float tempExp = actor.Actor.EXP;
+                float Jon = tempExp / actor.Actor.EXPToLevel();
+                if (plays >= Jon) StopLoop = true;
+            }
             SFXManager.Main.Play(EXPSound);
             //works here
-            if (actor.Actor.EXP >= actor.Actor.EXPToLevel())
-            {
-                Debug.Log("This runs you whore");
-                Leveled = true;
-                actor.Actor.EXP += expDrain;
-                //not here/????
-            }
+            
             yield return new WaitForSeconds(0.08f);
-        } while (expDrain > 0 || !Leveled);
-
+        } while (plays < 29 && !StopLoop);
+        Debug.Log(plays);
 
 
         if (Leveled)
         {
+            yield return null;
             SFXManager.Main.Play(LevelUpSound); // Not here???
 
             //tween in Statpanel
@@ -160,6 +175,14 @@ public class VictoryCanvas : MonoBehaviour
             //works here for some reason?????
         }
         PauseProcessing = false;
+
+
+
+    }
+    public void Test()
+    {
+        PerformanceLogger.LogCustomEvent("Tried to run sound");
+
     }
     public void ShowArrow()
     {
