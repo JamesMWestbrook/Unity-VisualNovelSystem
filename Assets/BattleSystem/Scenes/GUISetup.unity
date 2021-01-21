@@ -613,8 +613,8 @@ MonoBehaviour:
   DamagePopupPrefab: {fileID: 5049521027726395652, guid: 8602297671ab7784681bc453960e95f0,
     type: 3}
   Party:
-  - {fileID: 1031287733924045775}
   - {fileID: 1531820770}
+  - {fileID: 1031287733924045775}
   Actors: []
   Enemies: []
   EffectTrans: {fileID: 533616539}
