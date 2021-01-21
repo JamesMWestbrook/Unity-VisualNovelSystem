@@ -92,90 +92,101 @@ public class VictoryCanvas : MonoBehaviour
         QuickScale(itemDrop);
 
         //Lvl
-        for (int i = 0; i < GameManager.Instance.BattleManager.Party.Count; i++)
-        {
-            StartCoroutine(LevelProcess(GameManager.Instance.BattleManager.Party[i]));
-            if (PauseProcessing) yield return null;
-        }
+        StartCoroutine(LevelProcess(GameManager.Instance.BattleManager.Party[0], 0));
     }
 
-    private IEnumerator LevelProcess(ActorSlot actor)
+    private IEnumerator LevelProcess(ActorSlot actor, int index)
     {
-        PerformanceLogger.StartLogger();
-        PauseProcessing = true;
-     
-        GameManager.Instance.BattleManager.SlideActor(actor);
-        int expDrain = GameManager.Instance.BattleManager.EXPPayout;
-        bool Leveled = false;
-        actor.Actor.EXP += expDrain;
-        if (actor.Actor.EXP >= actor.Actor.EXPToLevel()) Leveled = true;
-        QuickScale(LvlNumber.transform.parent.gameObject);
-        QuickScale(ExpBar.gameObject);
-        QuickScale(ExpBG.gameObject);
-        QuickScale(LvlNumber.gameObject);
-        LvlNumber.text = actor.Actor.Lvl.ToString();
+       
+            Debug.Log(index);
+            PerformanceLogger.StartLogger();
+            PauseProcessing = true;
 
-        float plays = 0;
-        bool StopLoop = false;
-        do
-        {
-            plays++;
-            float exp = actor.Actor.EXP;
+            GameManager.Instance.BattleManager.SlideActor(actor);
+            int expDrain = GameManager.Instance.BattleManager.EXPPayout;
+            bool Leveled = false;
+            actor.Actor.EXP += expDrain;
+            if (actor.Actor.EXP >= actor.Actor.EXPToLevel()) Leveled = true;
+            QuickScale(LvlNumber.transform.parent.gameObject);
+            QuickScale(ExpBar.gameObject);
+            QuickScale(ExpBG.gameObject);
+            QuickScale(LvlNumber.gameObject);
+            LvlNumber.text = actor.Actor.Lvl.ToString();
+
+            float plays = 0;
+            bool StopLoop = false;
+            do
+            {
+                plays++;
+                float exp = actor.Actor.EXP;
+                if (Leveled)
+                {
+                    ExpBar.fillAmount = plays / 28;
+
+                }
+                else
+                {
+                    float tempExp = actor.Actor.EXP;
+                    float Jon = tempExp / actor.Actor.EXPToLevel();
+                    if (plays >= Jon) StopLoop = true;
+                }
+                SFXManager.Main.Play(EXPSound);
+                //works here
+
+                yield return new WaitForSeconds(0.08f);
+            } while (plays < 29 && !StopLoop);
+
+
             if (Leveled)
             {
-                ExpBar.fillAmount = plays / 28;
+                yield return null;
+                SFXManager.Main.Play(LevelUpSound); // Not here???
 
+                //tween in Statpanel
+                QuickScale(StatPanel);
+                //tween each stat base
+                QuickScale(HP.gameObject);
+                QuickScale(MP.gameObject);
+                QuickScale(Muscle.gameObject);
+                QuickScale(Vigor.gameObject);
+                QuickScale(Will.gameObject);
+                QuickScale(Instinct.gameObject);
+                QuickScale(Agility.gameObject);
+                SetStats(actor);
+
+                yield return new WaitForSeconds(1);
+                //tween in -> and newLvl 
+                QuickScale(Line);
+                QuickScale(NewLvl.gameObject);
+                //Add lvl and run lvl function on actor
+                actor.Actor.LevelUp();
+                NewLvl.text = actor.Actor.Lvl.ToString();
+                yield return new WaitForSeconds(1);
+                //Tween in each new stat
+                ShowArrow();
+                SetStats(actor, true);
+                yield return new WaitForSeconds(3);
+                //drop skills
+                //works here for some reason?????
             }
-            else
-            {
-                float tempExp = actor.Actor.EXP;
-                float Jon = tempExp / actor.Actor.EXPToLevel();
-                if (plays >= Jon) StopLoop = true;
-            }
-            SFXManager.Main.Play(EXPSound);
-            //works here
-            
-            yield return new WaitForSeconds(0.08f);
-        } while (plays < 29 && !StopLoop);
-        Debug.Log(plays);
+            DisableLine(HP);
+            DisableLine(MP);
+            DisableLine(Muscle);
+            DisableLine(Vigor);
+            DisableLine(Will);
+            DisableLine(Instinct);
+            DisableLine(Agility);
+            StatPanel.SetActive(false);
 
-
-        if (Leveled)
+            index++;
+        if (index < GameManager.Instance.BattleManager.Party.Count)
         {
-            yield return null;
-            SFXManager.Main.Play(LevelUpSound); // Not here???
-
-            //tween in Statpanel
-            QuickScale(StatPanel);
-            //tween each stat base
-            QuickScale(HP.gameObject);
-            QuickScale(MP.gameObject);
-            QuickScale(Muscle.gameObject);
-            QuickScale(Vigor.gameObject);
-            QuickScale(Will.gameObject);
-            QuickScale(Instinct.gameObject);
-            QuickScale(Agility.gameObject);
-            SetStats(actor);
-
-            yield return new WaitForSeconds(1);
-            //tween in -> and newLvl 
-            QuickScale(Line);
-            QuickScale(NewLvl.gameObject);
-            //Add lvl and run lvl function on actor
-            actor.Actor.LevelUp();
-            NewLvl.text = actor.Actor.Lvl.ToString();
-            yield return new WaitForSeconds(1);
-            //Tween in each new stat
-            ShowArrow();
-            SetStats(actor, true);
-            yield return new WaitForSeconds(3);
-            //drop skills
-            //works here for some reason?????
+            StartCoroutine(LevelProcess(GameManager.Instance.BattleManager.Party[index], index));
         }
-        PauseProcessing = false;
+        else
+        {
 
-
-
+        }
     }
     public void Test()
     {

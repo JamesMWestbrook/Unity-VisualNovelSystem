@@ -15,11 +15,11 @@ D:/Unity/Unity-VisualNovelSystem
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51696
+49571
 Successfully changed project path to: D:/Unity/Unity-VisualNovelSystem
 D:/Unity/Unity-VisualNovelSystem
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 33.81 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 32.08 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
@@ -35,31 +35,31 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56188
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56056
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001238 seconds.
+Registered in 0.001231 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 36.29 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 33.00 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.847 seconds
+- Completed reload, in  0.820 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002251 seconds.
+Registered in 0.002361 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.152 seconds
+- Completed reload, in  1.134 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
@@ -68,245 +68,68 @@ Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1999 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 95.8 MB.
-System memory in use after: 95.8 MB.
+System memory in use after: 95.9 MB.
 
 Unloading 112 unused Assets to reduce memory usage. Loaded Objects now: 2470.
-Total: 40.967500 ms (FindLiveObjects: 0.536600 ms CreateObjectMapping: 0.304100 ms MarkObjects: 40.010600 ms  DeleteObjects: 0.113800 ms)
+Total: 13.384400 ms (FindLiveObjects: 0.425500 ms CreateObjectMapping: 0.102100 ms MarkObjects: 12.739700 ms  DeleteObjects: 0.116100 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/BattleSystem/Scripts/CharacterBase.cs
-  artifactKey: Guid(358b5199f8e7d934393d8ee3ac74fe09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Scripts/CharacterBase.cs using Guid(358b5199f8e7d934393d8ee3ac74fe09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5717074d1540996accbba12e2fccf0c') in 0.016131 seconds
-  Import took 0.046500 seconds .
+  path: Assets/BattleSystem/SOs/Luisella.asset
+  artifactKey: Guid(f5542ddccb268e94f9bcaf2e13ae94cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/SOs/Luisella.asset using Guid(f5542ddccb268e94f9bcaf2e13ae94cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a91a3390d7bc9ef52baa2fd24133319') in 0.033387 seconds
+  Import took 0.050554 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002690 seconds.
+Registered in 0.002221 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.095 seconds
+- Completed reload, in  1.177 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1981 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 108.7 MB.
-System memory in use after: 108.7 MB.
+System memory in use after: 108.8 MB.
 
-Unloading 107 unused Assets to reduce memory usage. Loaded Objects now: 2472.
-Total: 13.561300 ms (FindLiveObjects: 0.240500 ms CreateObjectMapping: 0.089400 ms MarkObjects: 13.150000 ms  DeleteObjects: 0.080300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 65.481512 seconds.
-  path: Assets/BattleSystem/Scripts/CharacterBase.cs
-  artifactKey: Guid(358b5199f8e7d934393d8ee3ac74fe09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Scripts/CharacterBase.cs using Guid(358b5199f8e7d934393d8ee3ac74fe09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26897f8d7aeef850be7250f47511c2f3') in 0.003178 seconds
-  Import took 1.123356 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.717189 seconds.
-  path: Assets/BattleSystem/Sound/Battle
-  artifactKey: Guid(55b3da80959e6d44c974962f8a46f14a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle using Guid(55b3da80959e6d44c974962f8a46f14a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c03d8460cf5f2d87aace5978161e8ae') in 0.001050 seconds
-  Import took 0.034733 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.672951 seconds.
-  path: Assets/BattleSystem/Sound/Battle/BasePunch.asset
-  artifactKey: Guid(44a8eb957ad152347af2450fc5bb7d67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/BasePunch.asset using Guid(44a8eb957ad152347af2450fc5bb7d67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd938450a078190f142a7c18344f7c107') in 0.012467 seconds
-  Import took 0.026082 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.009664 seconds.
-  path: Assets/BattleSystem/Sound/Battle/BasePunch.asset
-  artifactKey: Guid(44a8eb957ad152347af2450fc5bb7d67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/BasePunch.asset using Guid(44a8eb957ad152347af2450fc5bb7d67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd938450a078190f142a7c18344f7c107') in 0.001316 seconds
-  Import took 0.003890 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.134873 seconds.
-  path: Assets/BattleSystem/Sound/Battle/BattleTheme_1_WithFinal_CompleteTrack_01.mp3
-  artifactKey: Guid(e321b0665db022a489a64945944ff950) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/BattleTheme_1_WithFinal_CompleteTrack_01.mp3 using Guid(e321b0665db022a489a64945944ff950) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c728fb080c70f59ed15445fbb8e37834') in 0.079183 seconds
-  Import took 0.176333 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.812276 seconds.
-  path: Assets/BattleSystem/Sound/Battle/BattleTheme.asset
-  artifactKey: Guid(bb593673599a1734daf7a57409da19ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/BattleTheme.asset using Guid(bb593673599a1734daf7a57409da19ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c9ba9df205d0ae5fa49022a510563a8') in 0.002262 seconds
-  Import took 0.016508 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.019318 seconds.
-  path: Assets/BattleSystem/Sound/Battle/BattleTheme.asset
-  artifactKey: Guid(bb593673599a1734daf7a57409da19ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/BattleTheme.asset using Guid(bb593673599a1734daf7a57409da19ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c9ba9df205d0ae5fa49022a510563a8') in 0.001814 seconds
-  Import took 0.004534 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.595350 seconds.
-  path: Assets/BattleSystem/Sound/Battle/BattleTheme.asset
-  artifactKey: Guid(bb593673599a1734daf7a57409da19ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/BattleTheme.asset using Guid(bb593673599a1734daf7a57409da19ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ec67a02e56d6b8792c2e55bf241ae08') in 0.001422 seconds
-  Import took 0.012838 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.142902 seconds.
-  path: Assets/BattleSystem/Sound/Battle/BattleTheme.asset
-  artifactKey: Guid(bb593673599a1734daf7a57409da19ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/BattleTheme.asset using Guid(bb593673599a1734daf7a57409da19ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad0f2b713f92ef74957aa9168bacb081') in 0.001677 seconds
-  Import took 0.005398 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.628246 seconds.
-  path: Assets/BattleSystem/Sound/Battle/Electric.mp3
-  artifactKey: Guid(56e76d622a8c5c54b8870506839f773a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/Electric.mp3 using Guid(56e76d622a8c5c54b8870506839f773a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '795bc5e3aacd1a8bff76738b0fa66f6b') in 0.005539 seconds
-  Import took 0.093637 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.196957 seconds.
-  path: Assets/BattleSystem/Sound/Battle/Electric.asset
-  artifactKey: Guid(75234245b0812d743b959d3116437ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/Electric.asset using Guid(75234245b0812d743b959d3116437ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1e1008044089736a2e62ed42552b478') in 0.001573 seconds
-  Import took 0.040695 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.993723 seconds.
-  path: Assets/BattleSystem/Sound/Battle/BasePunch.asset
-  artifactKey: Guid(44a8eb957ad152347af2450fc5bb7d67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/BasePunch.asset using Guid(44a8eb957ad152347af2450fc5bb7d67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e243a5e714e8452c98cd9ef202809e5e') in 0.001923 seconds
-  Import took 0.083858 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.202792 seconds.
-  path: Assets/BattleSystem/Sound/Battle/explosion.ogg
-  artifactKey: Guid(9b8ad7f7c5001ca4facb220aaf9a6958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/explosion.ogg using Guid(9b8ad7f7c5001ca4facb220aaf9a6958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79187c269cb4d6132ff2794a3ca0f0fd') in 0.006324 seconds
-  Import took 0.008894 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.042597 seconds.
-  path: Assets/BattleSystem/Sound/Battle/Explosion.asset
-  artifactKey: Guid(cb7409487d27c3b41a7bf1484c06e2cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/Explosion.asset using Guid(cb7409487d27c3b41a7bf1484c06e2cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86cc0ce0d4798ffdbd9eb01d9198fd5c') in 0.001634 seconds
-  Import took 0.101434 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.889727 seconds.
-  path: Assets/BattleSystem/Sound/Battle/Heal_01.wav
-  artifactKey: Guid(1735f755902a91242be5a227c82e6d76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/Heal_01.wav using Guid(1735f755902a91242be5a227c82e6d76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a833dec41ac1a329e54bbd72488074f5') in 0.006716 seconds
-  Import took 0.009404 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.493353 seconds.
-  path: Assets/BattleSystem/Sound/Battle/Heal_01.asset
-  artifactKey: Guid(c3ba34b7ef4bea942b78bc385025df36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/Heal_01.asset using Guid(c3ba34b7ef4bea942b78bc385025df36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1427707da1e873779e19cbdb9ca6608d') in 0.001481 seconds
-  Import took 0.106207 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.619501 seconds.
-  path: Assets/BattleSystem/Sound/Battle/hit37.mp3_01.mp3
-  artifactKey: Guid(e44b3f1624ab2be44bcbf39e8ab2982a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/hit37.mp3_01.mp3 using Guid(e44b3f1624ab2be44bcbf39e8ab2982a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b80d66c93424fb564a5672f43b3a4c1') in 0.006030 seconds
-  Import took 0.008630 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.687466 seconds.
-  path: Assets/BattleSystem/Sound/Battle/Hit37.asset
-  artifactKey: Guid(9b07bb0d2a80d6c439eea10a09069de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/Hit37.asset using Guid(9b07bb0d2a80d6c439eea10a09069de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '217a3e442cf38d9227c77dc159869c89') in 0.001714 seconds
-  Import took 0.005816 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.238275 seconds.
-  path: Assets/BattleSystem/Sound/Battle/pistol.ogg
-  artifactKey: Guid(4717742990d92e14f92115a3342f348e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/pistol.ogg using Guid(4717742990d92e14f92115a3342f348e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd58f4d37c4abaab064b056ae2e8d9f25') in 0.005077 seconds
-  Import took 0.038579 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.814356 seconds.
-  path: Assets/BattleSystem/Sound/Battle/Pistol.asset
-  artifactKey: Guid(8fbc4379d519ce14d83f06faa959d93d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/Pistol.asset using Guid(8fbc4379d519ce14d83f06faa959d93d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7097019b234fd22b8fa1435c3165448d') in 0.001699 seconds
-  Import took 0.117583 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.484223 seconds.
-  path: Assets/BattleSystem/Sound/Battle/Pistol.asset
-  artifactKey: Guid(8fbc4379d519ce14d83f06faa959d93d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Battle/Pistol.asset using Guid(8fbc4379d519ce14d83f06faa959d93d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64bc4b43fd145b173c97bcb6a86ec808') in 0.001445 seconds
-  Import took 0.004195 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 56.873427 seconds.
-  path: Assets/BattleSystem/SOs/Luisella.asset
-  artifactKey: Guid(f5542ddccb268e94f9bcaf2e13ae94cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/SOs/Luisella.asset using Guid(f5542ddccb268e94f9bcaf2e13ae94cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dc67270e1915147860f5daf3b7a0b28') in 0.010354 seconds
-  Import took 0.014248 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.496996 seconds.
-  path: Assets/BattleSystem/SOs/Luisella.asset
-  artifactKey: Guid(f5542ddccb268e94f9bcaf2e13ae94cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/SOs/Luisella.asset using Guid(f5542ddccb268e94f9bcaf2e13ae94cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dc67270e1915147860f5daf3b7a0b28') in 0.004751 seconds
-  Import took 0.009947 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 54.904927 seconds.
-  path: Assets/BattleSystem/SOs/Margherita.asset
-  artifactKey: Guid(2f72e4c67b7e32d4e9a96853cbc1aecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/SOs/Margherita.asset using Guid(2f72e4c67b7e32d4e9a96853cbc1aecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe59ba7b9bf51bae4631df170b80494c') in 0.003629 seconds
-  Import took 0.347035 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 30.393756 seconds.
-  path: Assets/BattleSystem/SOs/Margherita.asset
-  artifactKey: Guid(2f72e4c67b7e32d4e9a96853cbc1aecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/SOs/Margherita.asset using Guid(2f72e4c67b7e32d4e9a96853cbc1aecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b9f11d80955bb4d6a6eab478f94cf53') in 0.004629 seconds
-  Import took 0.007699 seconds .
+Unloading 107 unused Assets to reduce memory usage. Loaded Objects now: 2474.
+Total: 15.171100 ms (FindLiveObjects: 0.194100 ms CreateObjectMapping: 0.078600 ms MarkObjects: 14.805400 ms  DeleteObjects: 0.091200 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002263 seconds.
+Registered in 0.002262 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.205 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1981 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 109.0 MB.
+System memory in use after: 109.0 MB.
+
+Unloading 107 unused Assets to reduce memory usage. Loaded Objects now: 2476.
+Total: 15.284100 ms (FindLiveObjects: 0.230300 ms CreateObjectMapping: 0.077600 ms MarkObjects: 14.876600 ms  DeleteObjects: 0.097800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002599 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
@@ -315,188 +138,38 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.105 seconds
+- Completed reload, in  1.101 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1981 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 109.6 MB.
+System memory in use after: 109.6 MB.
+
+Unloading 107 unused Assets to reduce memory usage. Loaded Objects now: 2478.
+Total: 13.966300 ms (FindLiveObjects: 0.200500 ms CreateObjectMapping: 0.080000 ms MarkObjects: 13.604600 ms  DeleteObjects: 0.080000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002383 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.063 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1981 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 112.0 MB.
-System memory in use after: 112.0 MB.
+System memory in use before: 110.0 MB.
+System memory in use after: 110.0 MB.
 
-Unloading 107 unused Assets to reduce memory usage. Loaded Objects now: 2485.
-Total: 13.277300 ms (FindLiveObjects: 0.196600 ms CreateObjectMapping: 0.067700 ms MarkObjects: 12.933100 ms  DeleteObjects: 0.078000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 304.076478 seconds.
-  path: Assets/BattleSystem/SOs/Enemies/Fallen Angel.asset
-  artifactKey: Guid(ed1abc104fcf6a34b909157d2e1a423c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/SOs/Enemies/Fallen Angel.asset using Guid(ed1abc104fcf6a34b909157d2e1a423c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d48352ce3256c83336a1309e6b3e213') in 0.011872 seconds
-  Import took 0.015527 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 110.364744 seconds.
-  path: Assets/BattleSystem/Sound/swing3.wav
-  artifactKey: Guid(ff140bafeda34d24db0dd39dc249601f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/swing3.wav using Guid(ff140bafeda34d24db0dd39dc249601f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a2d50ece548684f0075c3da387db41a') in 0.025260 seconds
-  Import took 0.028051 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000495 seconds.
-  path: Assets/BattleSystem/Sound/swing3.wav
-  artifactKey: Guid(ff140bafeda34d24db0dd39dc249601f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/swing3.wav using Guid(ff140bafeda34d24db0dd39dc249601f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a2d50ece548684f0075c3da387db41a') in 0.006594 seconds
-  Import took 0.009167 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.686980 seconds.
-  path: Assets/BattleSystem/Sound/Swing3.asset
-  artifactKey: Guid(fe2647b272df51a41a5b490e3408b7b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Swing3.asset using Guid(fe2647b272df51a41a5b490e3408b7b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ab86a35694fcceeeeff545e5788542d') in 0.002766 seconds
-  Import took 0.006570 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.916880 seconds.
-  path: Assets/BattleSystem/Sound/Swing3.asset
-  artifactKey: Guid(fe2647b272df51a41a5b490e3408b7b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Swing3.asset using Guid(fe2647b272df51a41a5b490e3408b7b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '788c16ee0c9021ce3234b057ebd1813f') in 0.001422 seconds
-  Import took 0.004146 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.453940 seconds.
-  path: Assets/BattleSystem/Sound/Enter.wav
-  artifactKey: Guid(92a142671c098674189606e0598aed75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Enter.wav using Guid(92a142671c098674189606e0598aed75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e26e4936abf436c451c82467cad065d') in 0.005184 seconds
-  Import took 0.011840 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000547 seconds.
-  path: Assets/BattleSystem/Sound/Enter.wav
-  artifactKey: Guid(92a142671c098674189606e0598aed75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Enter.wav using Guid(92a142671c098674189606e0598aed75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e26e4936abf436c451c82467cad065d') in 0.004350 seconds
-  Import took 0.006968 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.220895 seconds.
-  path: Assets/BattleSystem/Sound/Cancel.asset
-  artifactKey: Guid(73e4fd3cf3ef22445b5bf912803bbf95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Cancel.asset using Guid(73e4fd3cf3ef22445b5bf912803bbf95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b38ac0ee164287d443913f1bf4018f04') in 0.001480 seconds
-  Import took 0.004089 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.077181 seconds.
-  path: Assets/BattleSystem/Sound/Enter.asset
-  artifactKey: Guid(6f43ca965c7d9df4a9b6b0abe7c0f41c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Enter.asset using Guid(6f43ca965c7d9df4a9b6b0abe7c0f41c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92a38eddd9f6661d7e201f2a8b2e9f1d') in 0.001406 seconds
-  Import took 0.004722 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.883115 seconds.
-  path: Assets/BattleSystem/Sound/Enter.asset
-  artifactKey: Guid(6f43ca965c7d9df4a9b6b0abe7c0f41c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/Sound/Enter.asset using Guid(6f43ca965c7d9df4a9b6b0abe7c0f41c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2b974e7db9b353214d8425471a7b4e0') in 0.001643 seconds
-  Import took 0.011157 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002275 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.104 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1981 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 112.6 MB.
-System memory in use after: 112.6 MB.
-
-Unloading 107 unused Assets to reduce memory usage. Loaded Objects now: 2488.
-Total: 13.461100 ms (FindLiveObjects: 0.173200 ms CreateObjectMapping: 0.066800 ms MarkObjects: 13.142500 ms  DeleteObjects: 0.077100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002451 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.090 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1981 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 113.0 MB.
-System memory in use after: 113.0 MB.
-
-Unloading 107 unused Assets to reduce memory usage. Loaded Objects now: 2490.
-Total: 13.738600 ms (FindLiveObjects: 0.250400 ms CreateObjectMapping: 0.096100 ms MarkObjects: 13.297400 ms  DeleteObjects: 0.092500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002250 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.071 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1981 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 112.3 MB.
-System memory in use after: 112.3 MB.
-
-Unloading 107 unused Assets to reduce memory usage. Loaded Objects now: 2492.
-Total: 13.106500 ms (FindLiveObjects: 0.212800 ms CreateObjectMapping: 0.072100 ms MarkObjects: 12.737300 ms  DeleteObjects: 0.083100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 215.624531 seconds.
-  path: Assets/BattleSystem/SOs/Luisella.asset
-  artifactKey: Guid(f5542ddccb268e94f9bcaf2e13ae94cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/SOs/Luisella.asset using Guid(f5542ddccb268e94f9bcaf2e13ae94cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8253b072dc2fe27055b04446971a209b') in 0.017061 seconds
-  Import took 0.091358 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.213625 seconds.
-  path: Assets/BattleSystem/SOs/Luisella.asset
-  artifactKey: Guid(f5542ddccb268e94f9bcaf2e13ae94cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/SOs/Luisella.asset using Guid(f5542ddccb268e94f9bcaf2e13ae94cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8253b072dc2fe27055b04446971a209b') in 0.004352 seconds
-  Import took 0.007606 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 21.192843 seconds.
-  path: Assets/BattleSystem/SOs/Luisella.asset
-  artifactKey: Guid(f5542ddccb268e94f9bcaf2e13ae94cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BattleSystem/SOs/Luisella.asset using Guid(f5542ddccb268e94f9bcaf2e13ae94cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffe2191b4bc60fa5bdd61e0e2933641c') in 0.004759 seconds
-  Import took 0.097581 seconds .
+Unloading 107 unused Assets to reduce memory usage. Loaded Objects now: 2480.
+Total: 13.309200 ms (FindLiveObjects: 0.198400 ms CreateObjectMapping: 0.079100 ms MarkObjects: 12.950700 ms  DeleteObjects: 0.080100 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
