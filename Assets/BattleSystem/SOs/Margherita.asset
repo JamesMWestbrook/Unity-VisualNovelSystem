@@ -68,6 +68,10 @@ MonoBehaviour:
       AnimTrigger: 
       AffectsDead: 0
       Description: 
+      SoundEffect:
+        path: Sound/Battle/Hit37
+        asset: {fileID: 11400000, guid: 9b07bb0d2a80d6c439eea10a09069de7, type: 2}
+      EffectDelay: 0
     - Name: Currene I
       Prefab:
         path: KY_effects/MagicEffectsPackFree/prefab/ErekiBall
@@ -85,6 +89,10 @@ MonoBehaviour:
       AnimTrigger: 
       AffectsDead: 0
       Description: 
+      SoundEffect:
+        path: Sound/Battle/Electric
+        asset: {fileID: 11400000, guid: 75234245b0812d743b959d3116437ee5, type: 2}
+      EffectDelay: 0
     ShowTest:
       path: 
       asset: {fileID: 0}
@@ -98,3 +106,6 @@ MonoBehaviour:
     BattleFacePath:
       path: BattleGraphics/Margherita/Face/MarghNormal
       asset: {fileID: 21300000, guid: 5f020ab600e0f02418a77f534a0bc0e0, type: 3}
+    DefaultAttackSound:
+      path: Sound/Battle/BasePunch
+      asset: {fileID: 11400000, guid: 44a8eb957ad152347af2450fc5bb7d67, type: 2}

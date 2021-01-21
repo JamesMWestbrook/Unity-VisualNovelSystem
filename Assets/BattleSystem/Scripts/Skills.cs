@@ -27,6 +27,8 @@ public class Skills
     //Affects dead party member
     public bool AffectsDead;
     [TextArea] public string Description;
+    public ResourcePathAsset<SFXObject> SoundEffect;
+    public float EffectDelay;
     public enum TargetCount
     {
         Single,
@@ -80,6 +82,7 @@ public class Skills
         }
         //end turn
         bm.PostSkill(DestructTimer + 0.3f);
+        bm.PlaySingleSFX(this);
     }
 
     public void SkillProcess(GameObject target, GameObject user, Skills.HitType hitType)

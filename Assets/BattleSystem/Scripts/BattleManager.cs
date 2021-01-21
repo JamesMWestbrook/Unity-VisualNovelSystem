@@ -146,6 +146,7 @@ public class BattleManager : MonoBehaviour
         ChooseActionPanel.SetActive(true);
         OpenTargetsButton TargetButton = AttackButton.GetComponent<OpenTargetsButton>();
         TargetButton.AssignedSkill = NormalAttack;
+        TargetButton.AssignedSkill.SoundEffect = CurrentActor.Actor.DefaultAttackSound;
         SelectButton(AttackButton.gameObject);
         TweenButton(AttackButton.gameObject);
         TweenButton(SkillsButton.gameObject);
@@ -432,10 +433,21 @@ public class BattleManager : MonoBehaviour
 
         go = Instantiate<GameObject>(go, dest);
         go.GetComponent<DestroyThis>().Timer = time;
+        
+    }
+    public void PlaySingleSFX(Skills skill)
+    {
+        StartCoroutine(PlaySFX(skill.SoundEffect.Get(), skill.EffectDelay));
+    }
+    public IEnumerator PlaySFX(SFXObject sFX, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SFXManager.Main.Play(sFX);
     }
     public void StartSpawn(float DestructTimer, int popupText, ActorSlot Defender, bool Healing = false)
     {
         StartCoroutine(DelayedSpawn(DestructTimer, popupText, Defender, Healing));
+        
     }
     public IEnumerator DelayedSpawn(float DestructTimer, int popupText, ActorSlot Defender, bool Healing = false)
     {

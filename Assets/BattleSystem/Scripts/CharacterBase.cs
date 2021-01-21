@@ -21,7 +21,7 @@ public class CharacterBase
     public string SpriteGUI;
     public ResourcePathAsset<Sprite> BattleOutfitPath;
     public ResourcePathAsset<Sprite> BattleFacePath;
-
+    public ResourcePathAsset<SFXObject> DefaultAttackSound;
     //[SerializeField] public Dictionary<int, BaseBattleActions> BaseBattleActions;
 
     //public Weapon WeaponOne;

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12c620a45fbaaa043a861b59517bc4a4, type: 3}
+  m_Name: Heal_01
+  m_EditorClassIdentifier: 
+  CollapseEditions: 0
+  SFXName: 
+  SFXLayers:
+  - LayerName: Heal_01
+    SFX: {fileID: 8300000, guid: 1735f755902a91242be5a227c82e6d76, type: 3}
+    RandomizeVolume: 0
+    FixedVolume: 1
+    MinVolume: 0.5
+    MaxVolume: 1
+    RandomizePitch: 0
+    FixedPitch: 1
+    MinPitch: 0.75
+    MaxPitch: 1.5
+    DelaySFX: 0
+    RandomizeDelay: 0
+    FixedDelayTime: 0
+    MinDelayTime: 0
+    MaxDelayTime: 0
+    Mute: 0
+    BypassEffects: 0
+    BypassReverbZones: 0
+    Priority: 128
+    StereoPan: 0
+    SpatialBlend: 0
+    ReverbZoneMix: 0
+  RandomizeVolume: 0
+  FixedVolume: 1
+  MinVolume: 0.5
+  MaxVolume: 1
+  RandomizePitch: 0
+  FixedPitch: 1
+  MinPitch: 0.75
+  MaxPitch: 1.5
+  DelaySFX: 0
+  RandomizeDelay: 0
+  FixedDelayTime: 0
+  MinDelayTime: 0
+  MaxDelayTime: 0
+  LimitPolyphony: 0
+  MaxVoices: 0
+  MinSeparation: 0

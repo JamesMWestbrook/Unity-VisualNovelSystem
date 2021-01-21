@@ -68,6 +68,10 @@ MonoBehaviour:
       AnimTrigger: 
       AffectsDead: 0
       Description: Heals a single target for moderate health.
+      SoundEffect:
+        path: Sound/Battle/Heal_01
+        asset: {fileID: 11400000, guid: c3ba34b7ef4bea942b78bc385025df36, type: 2}
+      EffectDelay: 0
     - Name: Bomb
       Prefab:
         path: KY_effects/MagicEffectsPackFree/prefab/WhityBomb
@@ -85,6 +89,10 @@ MonoBehaviour:
       AnimTrigger: 
       AffectsDead: 0
       Description: Throws Terrene bomb at enemies, hitting all.
+      SoundEffect:
+        path: Sound/Battle/Explosion
+        asset: {fileID: 11400000, guid: cb7409487d27c3b41a7bf1484c06e2cb, type: 2}
+      EffectDelay: 0
     ShowTest:
       path: BattleGraphics/Luisella/Body/LuisellaBattle
       asset: {fileID: 0}
@@ -98,3 +106,6 @@ MonoBehaviour:
     BattleFacePath:
       path: BattleGraphics/Luisella/Faces/LuisellaSmile
       asset: {fileID: 21300000, guid: 3320e0a74af230b4b8e70a4e23a75480, type: 3}
+    DefaultAttackSound:
+      path: Sound/Battle/Pistol
+      asset: {fileID: 11400000, guid: 8fbc4379d519ce14d83f06faa959d93d, type: 2}

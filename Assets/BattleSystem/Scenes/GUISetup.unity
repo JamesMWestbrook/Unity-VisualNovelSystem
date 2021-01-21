@@ -198,6 +198,10 @@ MonoBehaviour:
     AnimTrigger: 
     AffectsDead: 0
     Description: 
+    SoundEffect:
+      path: 
+      asset: {fileID: 0}
+    EffectDelay: 0
 --- !u!114 &30506797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -677,6 +681,10 @@ MonoBehaviour:
     AnimTrigger: 
     AffectsDead: 0
     Description: 
+    SoundEffect:
+      path: 
+      asset: {fileID: 0}
+    EffectDelay: 0
   DelayWin: 0
 --- !u!114 &170927425
 MonoBehaviour:
@@ -918,6 +926,10 @@ MonoBehaviour:
     AnimTrigger: 
     AffectsDead: 0
     Description: 
+    SoundEffect:
+      path: 
+      asset: {fileID: 0}
+    EffectDelay: 0
   Targets: []
   user: {fileID: 0}
 --- !u!222 &265718079
@@ -2338,6 +2350,10 @@ MonoBehaviour:
     AnimTrigger: 
     AffectsDead: 0
     Description: 
+    SoundEffect:
+      path: 
+      asset: {fileID: 0}
+    EffectDelay: 0
 --- !u!1 &600456567
 GameObject:
   m_ObjectHideFlags: 0
@@ -2788,6 +2804,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1344664707456357666, guid: 5ee3bcf92fcf52c429a9060e6c3c9b4e,
+        type: 3}
+      propertyPath: NormalAttack.EffectDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344664707456357666, guid: 5ee3bcf92fcf52c429a9060e6c3c9b4e,
+        type: 3}
+      propertyPath: NormalAttack.DestructTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344664707456357666, guid: 5ee3bcf92fcf52c429a9060e6c3c9b4e,
+        type: 3}
+      propertyPath: NormalAttack.SoundEffect.path
+      value: Sound/Swing3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344664707456357666, guid: 5ee3bcf92fcf52c429a9060e6c3c9b4e,
+        type: 3}
+      propertyPath: NormalAttack.SoundEffect.asset
+      value: 
+      objectReference: {fileID: 11400000, guid: fe2647b272df51a41a5b490e3408b7b1,
+        type: 2}
     - target: {fileID: 1344664707456357667, guid: 5ee3bcf92fcf52c429a9060e6c3c9b4e,
         type: 3}
       propertyPath: HP
@@ -2803,6 +2840,17 @@ PrefabInstance:
       propertyPath: HPForeground
       value: 
       objectReference: {fileID: 2107276631}
+    - target: {fileID: 1344664707456357667, guid: 5ee3bcf92fcf52c429a9060e6c3c9b4e,
+        type: 3}
+      propertyPath: Actor.DefaultAttackSound.path
+      value: Sound/Swing3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344664707456357667, guid: 5ee3bcf92fcf52c429a9060e6c3c9b4e,
+        type: 3}
+      propertyPath: Actor.DefaultAttackSound.asset
+      value: 
+      objectReference: {fileID: 11400000, guid: fe2647b272df51a41a5b490e3408b7b1,
+        type: 2}
     - target: {fileID: 1345090762599648323, guid: 5ee3bcf92fcf52c429a9060e6c3c9b4e,
         type: 3}
       propertyPath: m_Name
@@ -3825,6 +3873,10 @@ MonoBehaviour:
     AnimTrigger: 
     AffectsDead: 0
     Description: 
+    SoundEffect:
+      path: 
+      asset: {fileID: 0}
+    EffectDelay: 0
   Targets: []
   user: {fileID: 0}
 --- !u!222 &962757484
@@ -4077,6 +4129,10 @@ MonoBehaviour:
     AnimTrigger: 
     AffectsDead: 0
     Description: 
+    SoundEffect:
+      path: 
+      asset: {fileID: 0}
+    EffectDelay: 0
 --- !u!114 &1091764051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6738,6 +6794,10 @@ MonoBehaviour:
     AnimTrigger: 
     AffectsDead: 0
     Description: 
+    SoundEffect:
+      path: 
+      asset: {fileID: 0}
+    EffectDelay: 0
   Targets: []
   user: {fileID: 0}
 --- !u!114 &1361496475
@@ -7068,6 +7128,10 @@ MonoBehaviour:
     AnimTrigger: 
     AffectsDead: 0
     Description: 
+    SoundEffect:
+      path: 
+      asset: {fileID: 0}
+    EffectDelay: 0
   Targets: []
   user: {fileID: 0}
 --- !u!114 &1391228798
@@ -8120,6 +8184,10 @@ MonoBehaviour:
     AnimTrigger: 
     AffectsDead: 0
     Description: 
+    SoundEffect:
+      path: 
+      asset: {fileID: 0}
+    EffectDelay: 0
 --- !u!114 &1508034117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9752,6 +9820,10 @@ MonoBehaviour:
     AnimTrigger: 
     AffectsDead: 0
     Description: 
+    SoundEffect:
+      path: 
+      asset: {fileID: 0}
+    EffectDelay: 0
 --- !u!114 &1632126514
 MonoBehaviour:
   m_ObjectHideFlags: 0

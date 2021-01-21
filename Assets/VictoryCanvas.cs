@@ -37,8 +37,6 @@ public class VictoryCanvas : MonoBehaviour
     public AudioSource AudioSource;
     void Start()
     {
-        SFXManager.Main.Play(LevelUpSound);
-      //  AudioSource.Play();
         Drops.SetActive(false);
         Currency.gameObject.SetActive(false);
         CurrencyHeader.gameObject.SetActive(false);
