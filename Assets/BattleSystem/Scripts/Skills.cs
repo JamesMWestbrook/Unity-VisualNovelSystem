@@ -81,7 +81,7 @@ public class Skills
             anim.SetTrigger(AnimTrigger);
         }
         //end turn
-        bm.PostSkill(DestructTimer + 0.3f);
+        bm.PostSkill(DestructTimer);
         bm.PlaySingleSFX(this);
     }
 

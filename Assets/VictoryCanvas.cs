@@ -129,11 +129,9 @@ public class VictoryCanvas : MonoBehaviour
                     if (plays >= Jon) StopLoop = true;
                 }
                 SFXManager.Main.Play(EXPSound);
-                //works here
 
-                yield return new WaitForSeconds(0.08f);
+            yield return new WaitForSeconds(0.08f);
             } while (plays < 29 && !StopLoop);
-
 
             if (Leveled)
             {

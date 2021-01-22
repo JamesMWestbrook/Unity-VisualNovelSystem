@@ -2833,7 +2833,7 @@ PrefabInstance:
     - target: {fileID: 1344664707456357667, guid: 5ee3bcf92fcf52c429a9060e6c3c9b4e,
         type: 3}
       propertyPath: Actor.EXP
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1344664707456357667, guid: 5ee3bcf92fcf52c429a9060e6c3c9b4e,
         type: 3}
@@ -12221,6 +12221,7 @@ MonoBehaviour:
   AudioListener: {fileID: 0}
   LevelUpClip: {fileID: 0}
   AudioSource: {fileID: 0}
+  skillDrops: []
 --- !u!82 &2075248545
 AudioSource:
   m_ObjectHideFlags: 0
