@@ -50,6 +50,6 @@ MonoBehaviour:
   FixedDelayTime: 0
   MinDelayTime: 0
   MaxDelayTime: 0
-  LimitPolyphony: 0
+  LimitPolyphony: 1
   MaxVoices: 0
-  MinSeparation: 0
+  MinSeparation: 0.1

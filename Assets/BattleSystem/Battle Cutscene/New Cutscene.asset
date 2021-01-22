@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Set Sprite Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1144, y: -200}
+  position: {x: -1192, y: -216}
   ports:
     keys:
     - input
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Name: Movement Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1096, y: -392}
+  position: {x: -1000, y: -376}
   ports:
     keys:
     - input
@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Name: Battle Cutscene
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1368, y: -184}
+  position: {x: -1496, y: -200}
   ports:
     keys:
     - beginScene
@@ -445,6 +445,9 @@ MonoBehaviour:
       connections:
       - fieldName: input
         node: {fileID: -4814486401961950994}
+        reroutePoints: []
+      - fieldName: input
+        node: {fileID: 0}
         reroutePoints: []
       _direction: 1
       _connectionType: 0

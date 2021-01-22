@@ -416,34 +416,7 @@ public class CutsceneManager : MonoBehaviour {
         //GameManager.gm.Data.cutsceneBools[indexCutscene] = true;
     }
 
-   /* void SetSpriteOnScreen(int whichImage, Actor_SO _actor, int faceInt, int outfitInt, bool active = true)
-    {
-        
-        Image _characterImage = leftCharacter;
-        switch (whichImage)
-        {
-            case 1:
-                _characterImage = leftCharacter;
-                break;
-            case 2:
-                _characterImage = midLeftCharacter;
-                break;
-            case 3:
-                _characterImage = midRightCharacter;
-                break;
-            case 4:
-                _characterImage = rightCharacter;
-                break;
-        }
-
-        CharacterSprite _characterSprite = _characterImage.GetComponent<CharacterSprite>();
-        _characterSprite.Face.enabled = true;
-        _characterSprite.Face.sprite = _actor.Faces[faceInt];
-        _characterSprite.Outfit.enabled = true;
-        _characterSprite.Outfit.sprite = _actor.Outfits[outfitInt];
-
-    }
-    */
+   
     public float MoveDistance = 100f;
 
     public void SetImage(SetSpriteNode setSpriteNode){

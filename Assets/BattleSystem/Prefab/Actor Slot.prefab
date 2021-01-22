@@ -782,6 +782,8 @@ MonoBehaviour:
     Name: Empty
     NickName: EmptyNN
     Lvl: 1
+    EXP: 0
+    statType: 0
     MaxStats:
       HP: 50
       MP: 30
@@ -826,6 +828,9 @@ MonoBehaviour:
       path: 
       asset: {fileID: 0}
     BattleFacePath:
+      path: 
+      asset: {fileID: 0}
+    DefaultAttackSound:
       path: 
       asset: {fileID: 0}
   EnemySO: {fileID: 0}

@@ -6,7 +6,7 @@ public class AngelBattleEvents : MonoBehaviour
 {
     // Start is called before the first frame update
     public void StartOfBattle(){
-        CutsceneManager.Instance.PlayCutscene(cutscene);
+        StartCoroutine(DelayCutscene());
         Debug.Log("Battle started");
     }
     public Cutscene cutscene;
@@ -26,7 +26,12 @@ public class AngelBattleEvents : MonoBehaviour
     {
         
     }
+    public IEnumerator DelayCutscene()
+    {
+        yield return new WaitForSeconds(0.01f);
+        CutsceneManager.Instance.PlayCutscene(cutscene);
 
+    }
     // Update is called once per frame
     void Update()
     {

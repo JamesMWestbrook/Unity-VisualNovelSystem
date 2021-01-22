@@ -6044,7 +6044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 125.8597, y: -75.77986}
+  m_AnchoredPosition: {x: 125.85962, y: -75.77991}
   m_SizeDelta: {x: -981.61786, y: -391.54446}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1316099510
@@ -10287,7 +10287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ba875997bc5c4d85a9b0478acbccfc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mixer: {fileID: 0}
+  Mixer: {fileID: 24300002, guid: 6120952b9b6db7846a5358d4fa673f6b, type: 2}
   ScenePersistent: 0
   CollapseObjectLibrary: 1
   CollapseGroupLibrary: 0
