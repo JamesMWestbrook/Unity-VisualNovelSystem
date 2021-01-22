@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using QFSW.PL;
 public class VictoryCanvas : MonoBehaviour
 {
     [Header("Drops")]
@@ -99,7 +98,6 @@ public class VictoryCanvas : MonoBehaviour
     {
        
             Debug.Log(index);
-            PerformanceLogger.StartLogger();
             PauseProcessing = true;
 
             GameManager.Instance.BattleManager.SlideActor(actor);
@@ -165,9 +163,18 @@ public class VictoryCanvas : MonoBehaviour
                 //Tween in each new stat
                 ShowArrow();
                 SetStats(actor, true);
-                yield return new WaitForSeconds(3);
-                //drop skills
-                //works here for some reason?????
+                yield return new WaitForSeconds(2);
+            //drop skills
+            SkillCheck(actor);
+            //wait x time
+            yield return new WaitForSeconds(2 * Multiplier);
+            foreach(GameObject go in skillDrops)
+            {
+                go.GetComponent<SkillDrop>().SelfDestruct();
+            }
+            skillDrops.Clear();
+            Multiplier = 0;
+
             }
             DisableLine(HP);
             DisableLine(MP);
@@ -177,7 +184,7 @@ public class VictoryCanvas : MonoBehaviour
             DisableLine(Instinct);
             DisableLine(Agility);
             StatPanel.SetActive(false);
-
+            
             index++;
         if (index < GameManager.Instance.BattleManager.Party.Count)
         {
@@ -188,9 +195,28 @@ public class VictoryCanvas : MonoBehaviour
 
         }
     }
-    public void Test()
+
+    int Multiplier;
+    public List<GameObject> skillDrops = new List<GameObject>();
+    public void SkillCheck(ActorSlot actor)
     {
-        PerformanceLogger.LogCustomEvent("Tried to run sound");
+        List<Skills> skills = actor.Actor.Skills;
+
+        //Forloop check for skills that 1 are <= current level, but havent been marked as learned
+        for (int i = 0; i < actor.Actor.Skills.Count; i++)
+        {
+            if (skills[i].LevelLearned <= actor.Actor.Lvl && !skills[i].Learned)
+            {
+                //mark as learned && summon
+                skills[i].Learned = true;
+                GameObject go = Instantiate<GameObject>(skillDropPrefab, gameObject.transform);
+                go.transform.localPosition = new Vector3(125.86f, -142f + Multiplier * -34.56f);
+                Multiplier++;
+                QuickScale(go);
+                skillDrops.Add(go);
+                go.GetComponent<SkillDrop>().Name.text = skills[i].Name;
+            }
+        }
 
     }
     public void ShowArrow()

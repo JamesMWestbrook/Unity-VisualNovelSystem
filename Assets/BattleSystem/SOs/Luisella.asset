@@ -93,6 +93,27 @@ MonoBehaviour:
         path: Sound/Battle/Explosion
         asset: {fileID: 11400000, guid: cb7409487d27c3b41a7bf1484c06e2cb, type: 2}
       EffectDelay: 0
+    - Name: Bullet Barrage
+      Prefab:
+        path: 
+        asset: {fileID: 0}
+      Cost: 0
+      LevelLearned: 2
+      Learned: 0
+      BaseDamage: 0
+      DestructTimer: 0
+      Rotation: {x: 0, y: 0, z: 0}
+      Friendly: 0
+      targetCount: 0
+      hitType: 0
+      elementType: 6
+      AnimTrigger: 
+      AffectsDead: 0
+      Description: 
+      SoundEffect:
+        path: 
+        asset: {fileID: 0}
+      EffectDelay: 0
     ShowTest:
       path: BattleGraphics/Luisella/Body/LuisellaBattle
       asset: {fileID: 0}

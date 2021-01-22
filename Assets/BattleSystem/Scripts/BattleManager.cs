@@ -118,27 +118,28 @@ public class BattleManager : MonoBehaviour
             // hide buttons
         }
     }
-    public void SlideActor(ActorSlot actor){
+    public void SlideActor(ActorSlot actor)
+    {
         Debug.Log("Slide actor");
-            CharacterSprite charSprite = CutsceneManager.Instance.rightCharacter.GetComponent<CharacterSprite>();
-            charSprite.Face.enabled = true;
-            charSprite.Outfit.enabled = true;
-            charSprite.Face.sprite = actor.Actor.BattleFacePath.Get();
-            charSprite.Outfit.sprite = actor.Actor.BattleOutfitPath.Get();
+        CharacterSprite charSprite = CutsceneManager.Instance.rightCharacter.GetComponent<CharacterSprite>();
+        charSprite.Face.enabled = true;
+        charSprite.Outfit.enabled = true;
+        charSprite.Face.sprite = actor.Actor.BattleFacePath.Get();
+        charSprite.Outfit.sprite = actor.Actor.BattleOutfitPath.Get();
 
-            Transform dest = CutsceneManager.Instance.RightSpot;
-            Image rightImage = CutsceneManager.Instance.rightCharacter;
+        Transform dest = CutsceneManager.Instance.RightSpot;
+        Image rightImage = CutsceneManager.Instance.rightCharacter;
 
-            Vector3 _beginPoint = new Vector3(dest.position.x + 100, rightImage.transform.position.y, rightImage.transform.position.z);
-            Vector3 _endPoint = new Vector3(CutsceneManager.Instance.RightSpot.position.x, _beginPoint.y, _beginPoint.z);
+        Vector3 _beginPoint = new Vector3(dest.position.x + 100, rightImage.transform.position.y, rightImage.transform.position.z);
+        Vector3 _endPoint = new Vector3(CutsceneManager.Instance.RightSpot.position.x, _beginPoint.y, _beginPoint.z);
 
-            Image _face = charSprite.Face;
-            Image _outfit = charSprite.Outfit;
-            rightImage.transform.position = _beginPoint;
-            LeanTween.move(rightImage.gameObject, _endPoint, SpriteTime);
+        Image _face = charSprite.Face;
+        Image _outfit = charSprite.Outfit;
+        rightImage.transform.position = _beginPoint;
+        LeanTween.move(rightImage.gameObject, _endPoint, SpriteTime);
 
-            MovementNode.ColorChange(_outfit.gameObject, new Color(0.7f, 0.7f, 0.7f, 1), new Color(1, 1, 1, 1), SpriteTime);
-            MovementNode.ColorChange(_face.gameObject, new Color(0.7f, 0.7f, 0.7f, 1), new Color(1, 1, 1, 1), SpriteTime);
+        MovementNode.ColorChange(_outfit.gameObject, new Color(0.7f, 0.7f, 0.7f, 1), new Color(1, 1, 1, 1), SpriteTime);
+        MovementNode.ColorChange(_face.gameObject, new Color(0.7f, 0.7f, 0.7f, 1), new Color(1, 1, 1, 1), SpriteTime);
     }
     public void StartOptions()
     {
@@ -160,15 +161,19 @@ public class BattleManager : MonoBehaviour
         for (int i = 0; i < CurrentActor.Actor.Skills.Count; i++)
         {
             //fill each of the target buttons
-            SkillButtons[i].gameObject.SetActive(true);
-            OpenTargetsButton targetButton = SkillButtons[i].GetComponent<OpenTargetsButton>();
-            targetButton.AssignedSkill = CurrentActor.Actor.Skills[i];
-            targetButton.SkillName.text = targetButton.AssignedSkill.Name;
-            targetButton.SkillCost.text = targetButton.AssignedSkill.Cost.ToString();
-            TweenButton(SkillButtons[i].gameObject);
+            if (CurrentActor.Actor.Skills[i].Learned)
+            {
+                SkillButtons[i].gameObject.SetActive(true);
+                OpenTargetsButton targetButton = SkillButtons[i].GetComponent<OpenTargetsButton>();
+                targetButton.AssignedSkill = CurrentActor.Actor.Skills[i];
+                targetButton.SkillName.text = targetButton.AssignedSkill.Name;
+                targetButton.SkillCost.text = targetButton.AssignedSkill.Cost.ToString();
+                TweenButton(SkillButtons[i].gameObject);
 
 
-            SkillButtons[i].interactable = currentMP >= targetButton.AssignedSkill.Cost;
+                SkillButtons[i].interactable = currentMP >= targetButton.AssignedSkill.Cost;
+
+            }
             //            if(currentMP < targetButton.AssignedSkill.Cost) targetButton.GetComponent<Button>().interactable = false;
             //          else targetButton.GetComponent<Button>().interactable = true;
         }
@@ -434,7 +439,7 @@ public class BattleManager : MonoBehaviour
 
         go = Instantiate<GameObject>(go, dest);
         go.GetComponent<DestroyThis>().Timer = time;
-        
+
     }
     public void PlaySingleSFX(Skills skill)
     {
@@ -448,7 +453,7 @@ public class BattleManager : MonoBehaviour
     public void StartSpawn(float DestructTimer, int popupText, ActorSlot Defender, bool Healing = false)
     {
         StartCoroutine(DelayedSpawn(DestructTimer, popupText, Defender, Healing));
-        
+
     }
     public IEnumerator DelayedSpawn(float DestructTimer, int popupText, ActorSlot Defender, bool Healing = false)
     {

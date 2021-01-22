@@ -5,4 +5,8 @@ using TMPro;
 public class SkillDrop : MonoBehaviour
 {
     public TextMeshProUGUI Name;
+    public void SelfDestruct()
+    {
+        Destroy(gameObject);
+    }
 }
