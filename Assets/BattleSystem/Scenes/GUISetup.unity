@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 30506800}
   - component: {fileID: 30506797}
   - component: {fileID: 30506796}
+  - component: {fileID: 30506801}
   m_Layer: 5
   m_Name: SkillButton (2)
   m_TagString: Untagged
@@ -311,6 +312,71 @@ MonoBehaviour:
       - m_Target: {fileID: 170927423}
         m_TargetAssemblyTypeName: BattleManager, Assembly-CSharp
         m_MethodName: CloseSkills
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &30506801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30506794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 093d8d6245e39e64dbd48d45cc3c40c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OnInteractionStart:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnInteractionEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnInteractionAbort:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ForceStartHere: 0
+  m_ManualPositionOrder: 2
+  m_ManualPositionParent: {fileID: 170927421}
+  m_UseTargetForOutline: 0
+  m_PositionOrder: 0
+  m_SecondaryOrder: 0
+  m_Pos: {x: 0, y: 0}
+  m_TextAsAudio: {fileID: 0}
+  m_Prefix: 
+  m_PrefixIsLocalizationKey: 0
+  m_PrefixIsPostFix: 0
+  m_FilterText: 1
+  m_Text: SkillButton (2)
+  m_NameLabel: {fileID: 30506794}
+  m_AdditionalNameLabels: []
+  m_TestList: []
+  m_IsLocalizationKey: 0
+  m_TryToReadLabel: 1
+  m_ReferenceElement: {fileID: 0}
+  m_AllowVoiceOver: 1
+  m_ReadType: 1
+  m_WasJustAdded: 1
+  m_Type: 1
+  m_CustomHint: 0
+  m_HintAsAudio: {fileID: 0}
+  m_Hint: 
+  m_HintIsLocalizationKey: 0
+  m_IsInsideScrollView: 0
+  m_IsInitialized: 1
+  m_CallbackOnHighlight:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 30506796}
+        m_TargetAssemblyTypeName: OpenTargetsButton, Assembly-CSharp
+        m_MethodName: Select
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -686,6 +752,30 @@ MonoBehaviour:
       asset: {fileID: 0}
     EffectDelay: 0
   DelayWin: 0
+--- !u!114 &170927424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170927421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b8ed8a1982c3745b6fb7dd1a6cce2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PopUp: 0
+  m_AllowExternalJoining: 0
+  m_Priority: 0
+  m_ContainerName: 
+  m_IsLocalizationKey: 0
+  m_2DNavigation: 0
+  m_ConstrainToContainerUp: 0
+  m_ConstrainToContainerDown: 0
+  m_ConstrainToContainerLeft: 0
+  m_ConstrainToContainerRight: 0
+  m_AllowTouchExplore: 1
+  m_DoubleCheckUIElementsPositions: 1
 --- !u!114 &170927425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2184,6 +2274,7 @@ GameObject:
   - component: {fileID: 597794519}
   - component: {fileID: 597794518}
   - component: {fileID: 597794521}
+  - component: {fileID: 597794522}
   m_Layer: 5
   m_Name: Attack Button
   m_TagString: Untagged
@@ -2354,6 +2445,59 @@ MonoBehaviour:
       path: 
       asset: {fileID: 0}
     EffectDelay: 0
+--- !u!114 &597794522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597794516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 093d8d6245e39e64dbd48d45cc3c40c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OnInteractionStart:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnInteractionEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnInteractionAbort:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ForceStartHere: 0
+  m_ManualPositionOrder: -1
+  m_ManualPositionParent: {fileID: 0}
+  m_UseTargetForOutline: 0
+  m_PositionOrder: 0
+  m_SecondaryOrder: 0
+  m_Pos: {x: 0, y: 0}
+  m_TextAsAudio: {fileID: 0}
+  m_Prefix: 
+  m_PrefixIsLocalizationKey: 0
+  m_PrefixIsPostFix: 0
+  m_FilterText: 1
+  m_Text: Attack
+  m_NameLabel: {fileID: 0}
+  m_AdditionalNameLabels: []
+  m_TestList: []
+  m_IsLocalizationKey: 0
+  m_TryToReadLabel: 0
+  m_ReferenceElement: {fileID: 0}
+  m_AllowVoiceOver: 1
+  m_ReadType: 1
+  m_WasJustAdded: 1
+  m_Type: 1
+  m_CustomHint: 0
+  m_HintAsAudio: {fileID: 0}
+  m_Hint: 
+  m_HintIsLocalizationKey: 0
+  m_IsInsideScrollView: 0
+  m_IsInitialized: 1
+  m_CallbackOnHighlight:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &600456567
 GameObject:
   m_ObjectHideFlags: 0
@@ -3064,6 +3208,7 @@ GameObject:
   - component: {fileID: 868683764}
   - component: {fileID: 868683763}
   - component: {fileID: 868683762}
+  - component: {fileID: 868683765}
   m_Layer: 5
   m_Name: Skills
   m_TagString: Untagged
@@ -3198,6 +3343,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868683760}
   m_CullTransparentMesh: 0
+--- !u!114 &868683765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868683760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 093d8d6245e39e64dbd48d45cc3c40c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OnInteractionStart:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnInteractionEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnInteractionAbort:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ForceStartHere: 0
+  m_ManualPositionOrder: -1
+  m_ManualPositionParent: {fileID: 0}
+  m_UseTargetForOutline: 0
+  m_PositionOrder: 0
+  m_SecondaryOrder: 0
+  m_Pos: {x: 0, y: 0}
+  m_TextAsAudio: {fileID: 0}
+  m_Prefix: 
+  m_PrefixIsLocalizationKey: 0
+  m_PrefixIsPostFix: 0
+  m_FilterText: 1
+  m_Text: Use Skills
+  m_NameLabel: {fileID: 0}
+  m_AdditionalNameLabels: []
+  m_TestList: []
+  m_IsLocalizationKey: 0
+  m_TryToReadLabel: 0
+  m_ReferenceElement: {fileID: 0}
+  m_AllowVoiceOver: 1
+  m_ReadType: 1
+  m_WasJustAdded: 1
+  m_Type: 1
+  m_CustomHint: 0
+  m_HintAsAudio: {fileID: 0}
+  m_Hint: 
+  m_HintIsLocalizationKey: 0
+  m_IsInsideScrollView: 0
+  m_IsInitialized: 1
+  m_CallbackOnHighlight:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &874606136
 GameObject:
   m_ObjectHideFlags: 0
@@ -4068,6 +4266,7 @@ GameObject:
   - component: {fileID: 1091764054}
   - component: {fileID: 1091764051}
   - component: {fileID: 1091764050}
+  - component: {fileID: 1091764055}
   m_Layer: 5
   m_Name: SkillButton (1)
   m_TagString: Untagged
@@ -4249,6 +4448,71 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1091764055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091764048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 093d8d6245e39e64dbd48d45cc3c40c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OnInteractionStart:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnInteractionEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnInteractionAbort:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ForceStartHere: 0
+  m_ManualPositionOrder: 1
+  m_ManualPositionParent: {fileID: 170927421}
+  m_UseTargetForOutline: 0
+  m_PositionOrder: 0
+  m_SecondaryOrder: 0
+  m_Pos: {x: 0, y: 0}
+  m_TextAsAudio: {fileID: 0}
+  m_Prefix: 
+  m_PrefixIsLocalizationKey: 0
+  m_PrefixIsPostFix: 0
+  m_FilterText: 1
+  m_Text: SkillButton (1)
+  m_NameLabel: {fileID: 1091764048}
+  m_AdditionalNameLabels: []
+  m_TestList: []
+  m_IsLocalizationKey: 0
+  m_TryToReadLabel: 1
+  m_ReferenceElement: {fileID: 0}
+  m_AllowVoiceOver: 1
+  m_ReadType: 1
+  m_WasJustAdded: 1
+  m_Type: 1
+  m_CustomHint: 0
+  m_HintAsAudio: {fileID: 0}
+  m_Hint: 
+  m_HintIsLocalizationKey: 0
+  m_IsInsideScrollView: 0
+  m_IsInitialized: 1
+  m_CallbackOnHighlight:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1091764050}
+        m_TargetAssemblyTypeName: OpenTargetsButton, Assembly-CSharp
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: OnSelect
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1099993084
@@ -8047,6 +8311,7 @@ GameObject:
   - component: {fileID: 1508034114}
   - component: {fileID: 1508034117}
   - component: {fileID: 1508034116}
+  - component: {fileID: 1508034120}
   m_Layer: 5
   m_Name: SkillButton (3)
   m_TagString: Untagged
@@ -8230,6 +8495,71 @@ RectTransform:
   m_AnchoredPosition: {x: 14.668987, y: -173.2}
   m_SizeDelta: {x: 240, y: 56.26181}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1508034120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508034113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 093d8d6245e39e64dbd48d45cc3c40c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OnInteractionStart:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnInteractionEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnInteractionAbort:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ForceStartHere: 0
+  m_ManualPositionOrder: 3
+  m_ManualPositionParent: {fileID: 170927421}
+  m_UseTargetForOutline: 0
+  m_PositionOrder: 0
+  m_SecondaryOrder: 0
+  m_Pos: {x: 0, y: 0}
+  m_TextAsAudio: {fileID: 0}
+  m_Prefix: 
+  m_PrefixIsLocalizationKey: 0
+  m_PrefixIsPostFix: 0
+  m_FilterText: 1
+  m_Text: SkillButton (3)
+  m_NameLabel: {fileID: 1508034113}
+  m_AdditionalNameLabels: []
+  m_TestList: []
+  m_IsLocalizationKey: 0
+  m_TryToReadLabel: 1
+  m_ReferenceElement: {fileID: 0}
+  m_AllowVoiceOver: 1
+  m_ReadType: 1
+  m_WasJustAdded: 1
+  m_Type: 1
+  m_CustomHint: 0
+  m_HintAsAudio: {fileID: 0}
+  m_Hint: 
+  m_HintIsLocalizationKey: 0
+  m_IsInsideScrollView: 0
+  m_IsInitialized: 1
+  m_CallbackOnHighlight:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1508034116}
+        m_TargetAssemblyTypeName: OpenTargetsButton, Assembly-CSharp
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1524470850
 GameObject:
   m_ObjectHideFlags: 0
@@ -9759,6 +10089,7 @@ GameObject:
   - component: {fileID: 1632126514}
   - component: {fileID: 1632126517}
   - component: {fileID: 1632126513}
+  - component: {fileID: 1632126518}
   m_Layer: 5
   m_Name: SkillButton
   m_TagString: Untagged
@@ -9942,6 +10273,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7976dbb243ba64687c4d625a1cf4cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1632126518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632126511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 093d8d6245e39e64dbd48d45cc3c40c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OnInteractionStart:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnInteractionEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnInteractionAbort:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ForceStartHere: 0
+  m_ManualPositionOrder: 0
+  m_ManualPositionParent: {fileID: 170927421}
+  m_UseTargetForOutline: 0
+  m_PositionOrder: 0
+  m_SecondaryOrder: 0
+  m_Pos: {x: 0, y: 0}
+  m_TextAsAudio: {fileID: 0}
+  m_Prefix: '{0}.'
+  m_PrefixIsLocalizationKey: 0
+  m_PrefixIsPostFix: 1
+  m_FilterText: 1
+  m_Text: SkillButton
+  m_NameLabel: {fileID: 1632126511}
+  m_AdditionalNameLabels:
+  - {fileID: 1555753958}
+  m_TestList: []
+  m_IsLocalizationKey: 0
+  m_TryToReadLabel: 1
+  m_ReferenceElement: {fileID: 0}
+  m_AllowVoiceOver: 1
+  m_ReadType: 1
+  m_WasJustAdded: 1
+  m_Type: 1
+  m_CustomHint: 0
+  m_HintAsAudio: {fileID: 0}
+  m_Hint: 
+  m_HintIsLocalizationKey: 0
+  m_IsInsideScrollView: 0
+  m_IsInitialized: 1
+  m_CallbackOnHighlight:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1632126513}
+        m_TargetAssemblyTypeName: OpenTargetsButton, Assembly-CSharp
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1669094591
 GameObject:
   m_ObjectHideFlags: 0

@@ -106,6 +106,24 @@ MonoBehaviour:
     BattleFacePath:
       path: BattleGraphics/Margherita/Face/MarghNormal
       asset: {fileID: 21300000, guid: 5f020ab600e0f02418a77f534a0bc0e0, type: 3}
+    AttackVoices:
+      path: Voice Clips/Battle/Marg/MargAttackGroup
+      asset: {fileID: 11400000, guid: 329116c897f7e9c4fb43d9a8479daf1f, type: 2}
+    DefaultSpecialVoices:
+      path: Voice Clips/Battle/Marg/MargSpecialGroup
+      asset: {fileID: 11400000, guid: 1f8f513515f1b5c4fa635c341b7962f9, type: 2}
+    HealingVoices:
+      path: 
+      asset: {fileID: 0}
+    TurnStartVoices:
+      path: Voice Clips/Battle/Marg/MargStarts
+      asset: {fileID: 11400000, guid: ae9232d078b3fb0449142cfb42c939d5, type: 2}
+    VictoryVoices:
+      path: 
+      asset: {fileID: 0}
+    DamageVoices:
+      path: Voice Clips/Battle/Marg/MargDamageGroup
+      asset: {fileID: 11400000, guid: 3f3a122c860c8fe44b773a223d1c6b74, type: 2}
     DefaultAttackSound:
       path: Sound/Battle/BasePunch
       asset: {fileID: 11400000, guid: 44a8eb957ad152347af2450fc5bb7d67, type: 2}

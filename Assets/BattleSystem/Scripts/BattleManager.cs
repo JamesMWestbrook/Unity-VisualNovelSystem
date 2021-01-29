@@ -41,7 +41,10 @@ public class BattleManager : MonoBehaviour
     [Header("UI")]
     public GameObject ChooseActionPanel;
 
-
+    private void Awake()
+    {
+        GameManager.Instance.BattleManager = this;
+    }
     void Start()
     {
         StartOfBattle.Invoke();
@@ -110,6 +113,10 @@ public class BattleManager : MonoBehaviour
 
             //UI Buttons
             StartOptions();
+
+            //Voice
+            //SFXGroup group = CurrentActor.Actor.TurnStartVoices.Get();
+            SFXManager.Main.Play(CurrentActor.Actor.TurnStartVoices.Get());
         }
         else
         {
@@ -163,12 +170,15 @@ public class BattleManager : MonoBehaviour
             //fill each of the target buttons
             if (CurrentActor.Actor.Skills[i].Learned)
             {
-                SkillButtons[i].gameObject.SetActive(true);
                 OpenTargetsButton targetButton = SkillButtons[i].GetComponent<OpenTargetsButton>();
                 targetButton.AssignedSkill = CurrentActor.Actor.Skills[i];
                 targetButton.SkillName.text = targetButton.AssignedSkill.Name;
                 targetButton.SkillCost.text = targetButton.AssignedSkill.Cost.ToString();
                 TweenButton(SkillButtons[i].gameObject);
+                targetButton.gameObject.name = CurrentActor.Actor.Skills[i].Name;
+
+                SkillButtons[i].gameObject.SetActive(true);
+
 
 
                 SkillButtons[i].interactable = currentMP >= targetButton.AssignedSkill.Cost;
@@ -190,8 +200,17 @@ public class BattleManager : MonoBehaviour
     }
     public void SelectButton(GameObject button)
     {
-        EventSystem.current.SetSelectedGameObject(button);
-        CurrentlySelected = button;
+        if (UAP_AccessibilityManager.IsEnabled())
+        {
+            UAP_AccessibilityManager.SelectElement(button);
+
+        }
+        else
+        {
+            EventSystem.current.SetSelectedGameObject(button);
+            CurrentlySelected = button;
+
+        }
     }
 
     public void TargetMenu(Button self)
@@ -230,6 +249,7 @@ public class BattleManager : MonoBehaviour
             //assign the entire list to a button
             TargetButtons[0].gameObject.SetActive(true);
             TargetButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = "All";
+            TargetButtons[0].gameObject.name = "All";
             TargetButtons[0].GetComponent<SkillButton>().AssignedSkill = skill;
             TargetButtons[0].GetComponent<SkillButton>().Targets = targetsGO;
             TargetButtons[0].GetComponent<SkillButton>().user = CurrentActor.gameObject;
@@ -241,6 +261,7 @@ public class BattleManager : MonoBehaviour
             {
                 TargetButtons[i].gameObject.SetActive(true);
                 TargetButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = targets[i].GetComponent<ActorSlot>().Actor.Name;
+                TargetButtons[i].gameObject.name = targets[i].GetComponent<ActorSlot>().Actor.Name;
                 TargetButtons[i].GetComponent<SkillButton>().AssignedSkill = skill;
 
                 List<GameObject> singleTarget = new List<GameObject>();
@@ -412,6 +433,19 @@ public class BattleManager : MonoBehaviour
     public GameObject CurrentlySelected;
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            CancelMenu();
+        }
+        if (UAP_AccessibilityManager.IsEnabled())
+        {
+
+            if (Input.GetKeyDown(KeyCode.LeftControl))
+            {
+                ReadSkill();
+            }
+            return;
+        }
         if (EventSystem.current.currentSelectedGameObject != null)
         {
             CurrentlySelected = EventSystem.current.currentSelectedGameObject;
@@ -420,10 +454,7 @@ public class BattleManager : MonoBehaviour
         {
             EventSystem.current.SetSelectedGameObject(CurrentlySelected);
         }
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            CancelMenu();
-        }
+
     }
     public void CloseSkills()
     {
@@ -443,7 +474,8 @@ public class BattleManager : MonoBehaviour
     }
     public void PlaySingleSFX(Skills skill)
     {
-        StartCoroutine(PlaySFX(skill.SoundEffect.Get(), skill.EffectDelay));
+        if(UAP_AccessibilityManager.IsEnabled()) StartCoroutine(PlaySFX(skill.SoundEffect.Get(), 0f));
+        else StartCoroutine(PlaySFX(skill.SoundEffect.Get(), skill.EffectDelay));
     }
     public IEnumerator PlaySFX(SFXObject sFX, float delay)
     {
@@ -457,6 +489,7 @@ public class BattleManager : MonoBehaviour
     }
     public IEnumerator DelayedSpawn(float DestructTimer, int popupText, ActorSlot Defender, bool Healing = false)
     {
+
         yield return new WaitForSeconds(DestructTimer);
         SpawnDamage(popupText, Defender, Healing);
         if (Defender.IsAI && Defender.Actor.CurStats.HP > 0) Defender.GetComponent<Animator>().SetTrigger("Damage");
@@ -557,5 +590,9 @@ public class BattleManager : MonoBehaviour
     {
         RemoveUI();
         StartCoroutine(VictoryCanvas.Victory());
+    }
+    public void ReadSkill()
+    {
+        UAP_AccessibilityManager.Say(SkillDescText.text);
     }
 }

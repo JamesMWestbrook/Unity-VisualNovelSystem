@@ -106,6 +106,7 @@ public class Skills
         int popupText;
         ActorSlot Attacker = user.GetComponent<ActorSlot>();
         ActorSlot Defender = target.GetComponent<ActorSlot>();
+        string readThis = "";
         if (hitType == Skills.HitType.Physical || hitType == Skills.HitType.Magical)
         {
             tempDefense = Defender.Actor.CurStats.Will;
@@ -129,7 +130,14 @@ public class Skills
             if (Defender.Actor.CurStats.HP > Defender.Actor.MaxStats.HP) Defender.Actor.CurStats.HP = Defender.Actor.MaxStats.HP;
 
             popupText = modifier * -1;
-            bm.StartSpawn(DestructTimer, popupText, Defender);
+
+            if (UAP_AccessibilityManager.IsEnabled())
+            { bm.StartSpawn(0f, popupText, Defender); }
+            else { bm.StartSpawn(DestructTimer, popupText, Defender); }
+
+
+            readThis = string.Format("{0} hits {1} for {2} damage.", user.GetComponent<ActorSlot>().Actor.Name, Defender.Actor.Name, modifier.ToString());
+            //UAP_AccessibilityManager.Say()
         }
         else
         {
@@ -142,12 +150,21 @@ public class Skills
                     Defender.Actor.CurStats.HP += modifier;
                     if (Defender.Actor.CurStats.HP > Defender.Actor.MaxStats.HP) Defender.Actor.CurStats.HP = Defender.Actor.MaxStats.HP;
                     popupText = Defender.Actor.CurStats.HP - popupText;
-                    bm.StartSpawn(DestructTimer, popupText, Defender, true);
+                    if (UAP_AccessibilityManager.IsEnabled())
+                    {
+                        bm.StartSpawn(0f, popupText, Defender);
+                    }
+                    else
+                    {
+                        bm.StartSpawn(DestructTimer, popupText, Defender);
+                    }
+                    readThis = string.Format("{0} heals {1} for {2} health.", user.GetComponent<ActorSlot>().Actor.Name, Defender.Actor.Name, modifier.ToString());
                     break;
                 case Skills.HitType.Status: //not touched in demo
                     break;
             }
         }
+        UAP_AccessibilityManager.Say(readThis, false);
     }
 
 }

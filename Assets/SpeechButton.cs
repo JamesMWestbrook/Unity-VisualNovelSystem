@@ -5,21 +5,11 @@ using UnityEngine.EventSystems;
 using TMPro;
 public class SpeechButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public string ReadThis;
     public string altRead;
     private string temp;
     public bool value;
-
+    public TitleMenu titleMenu;
     public void Switch()
     {
         if (value)
@@ -32,11 +22,13 @@ public class SpeechButton : MonoBehaviour
         }
         else
         {
+            titleMenu.AccEnabled = true;
             UAP_AccessibilityManager.EnableAccessibility(true);
-            UAP_AccessibilityManager.Say("Accessibility is enabled.");
+            
             value = true;
             gameObject.name = "Press Enter To Disable Accessibility";
             GetComponentInChildren<TextMeshProUGUI>().text = "Disable Accessibility";
+            titleMenu.Reset();
         }
     }
 }

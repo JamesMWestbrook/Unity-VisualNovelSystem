@@ -21,6 +21,15 @@ public class CharacterBase
     public string SpriteGUI;
     public ResourcePathAsset<Sprite> BattleOutfitPath;
     public ResourcePathAsset<Sprite> BattleFacePath;
+
+    public ResourcePathAsset<SFXGroup> AttackVoices;
+    public ResourcePathAsset<SFXGroup> DefaultSpecialVoices;
+    public ResourcePathAsset<SFXGroup> HealingVoices;
+    public ResourcePathAsset<SFXGroup> TurnStartVoices;
+    public ResourcePathAsset<SFXGroup> VictoryVoices;
+    public ResourcePathAsset<SFXGroup> DamageVoices;
+
+
     public ResourcePathAsset<SFXObject> DefaultAttackSound;
     //[SerializeField] public Dictionary<int, BaseBattleActions> BaseBattleActions;
 

@@ -8,7 +8,11 @@ public class OpenTargetsButton : MonoBehaviour, ISelectHandler
     public TextMeshProUGUI SkillName;
     public TextMeshProUGUI SkillCost;
     public Skills AssignedSkill;
-    
+
+    public void Select()
+    {
+        OnSelect(null);
+    }
     public void OnSelect(BaseEventData eventData)
     {
         GameManager.Instance.BattleManager.SkillDescText.text = AssignedSkill.Description;

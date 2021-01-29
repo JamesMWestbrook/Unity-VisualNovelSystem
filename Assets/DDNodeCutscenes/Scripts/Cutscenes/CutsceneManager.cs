@@ -70,9 +70,12 @@ public class CutsceneManager : MonoBehaviour {
         if(Instance != null)
         {
             GameObject.Destroy(this);
-            return;
         }
-        Instance = this;
+        else
+        {
+            Instance = this;
+
+        }
 
 
         /*if (GM == null)
@@ -111,6 +114,7 @@ public class CutsceneManager : MonoBehaviour {
         {
             if (Input.GetButtonDown("Submit"))
             {
+                SFXManager.Main.StopAll();
                 if (CGWaitingForInput)
                 {
                     if (currentCGNode.GetOutputPort("output").IsConnected)
@@ -167,7 +171,14 @@ public class CutsceneManager : MonoBehaviour {
             }
 
 
+            if (_node.GetType() == typeof(VoiceClipNode))
+            {
+                VoiceClipNode voiceClipNode = _node as VoiceClipNode;
+                voiceClipNode.OnUse();
 
+                return;
+            }
+            
             if (_node.GetType() == typeof(EndSceneNode))
             {
                 EndCutscene();

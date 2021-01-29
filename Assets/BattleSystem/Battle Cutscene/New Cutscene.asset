@@ -285,6 +285,7 @@ MonoBehaviour:
   - {fileID: -4814486401961950994}
   - {fileID: -3962330162205849897}
   - {fileID: -1900283051725648602}
+  - {fileID: 8073175016975741468}
 --- !u!114 &2341088540226216607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,6 +311,9 @@ MonoBehaviour:
       connections:
       - fieldName: input
         node: {fileID: -9205362261383953376}
+        reroutePoints: []
+      - fieldName: input
+        node: {fileID: 8073175016975741468}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -408,6 +412,47 @@ MonoBehaviour:
   Speaker: Margherita
   Dialogue: Don't tell me what to do.
   IsMoving: 1
+--- !u!114 &8073175016975741468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bee448ce4bee8648b59f1c2f111a889, type: 3}
+  m_Name: Voice Clip Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1256, y: -440}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 8073175016975741468}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: beginScene
+        node: {fileID: 2341088540226216607}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 8073175016975741468}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  input: 0
+  output: 0
+  VoiceClip: {fileID: 11400000, guid: fe4a85ee1011dfe4e9ece329930788ca, type: 2}
 --- !u!114 &8375337891771427209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,9 +490,6 @@ MonoBehaviour:
       connections:
       - fieldName: input
         node: {fileID: -4814486401961950994}
-        reroutePoints: []
-      - fieldName: input
-        node: {fileID: 0}
         reroutePoints: []
       _direction: 1
       _connectionType: 0

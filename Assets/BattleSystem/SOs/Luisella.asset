@@ -127,6 +127,24 @@ MonoBehaviour:
     BattleFacePath:
       path: BattleGraphics/Luisella/Faces/LuisellaSmile
       asset: {fileID: 21300000, guid: 3320e0a74af230b4b8e70a4e23a75480, type: 3}
+    AttackVoices:
+      path: Voice Clips/Battle/Luisella/LuiAttackGroup
+      asset: {fileID: 11400000, guid: 99a32ef2cbe757144b4fededc5e53d38, type: 2}
+    DefaultSpecialVoices:
+      path: Voice Clips/Battle/Luisella/LuiSpecialGroup
+      asset: {fileID: 11400000, guid: 0da0a9e562e63d0488402ee50387e369, type: 2}
+    HealingVoices:
+      path: Voice Clips/Battle/Luisella/LuiHealGroup
+      asset: {fileID: 11400000, guid: 76b227927d0b1554dabaf165046c4a45, type: 2}
+    TurnStartVoices:
+      path: Voice Clips/Battle/Luisella/LuiStartTurnGroup
+      asset: {fileID: 11400000, guid: 28a00574cbf654b44812dbc4719a21c0, type: 2}
+    VictoryVoices:
+      path: Voice Clips/Battle/Luisella/LuiVictoryGroup
+      asset: {fileID: 11400000, guid: 19b51167ded864944b2d0d552b3756d7, type: 2}
+    DamageVoices:
+      path: Voice Clips/Battle/Luisella/LuiDamageGroup
+      asset: {fileID: 11400000, guid: b5ef6d3459465134096c129924049b54, type: 2}
     DefaultAttackSound:
       path: Sound/Battle/Pistol
       asset: {fileID: 11400000, guid: 8fbc4379d519ce14d83f06faa959d93d, type: 2}

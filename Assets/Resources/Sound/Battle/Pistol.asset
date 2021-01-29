@@ -18,7 +18,7 @@ MonoBehaviour:
   - LayerName: Pistol
     SFX: {fileID: 8300000, guid: 4717742990d92e14f92115a3342f348e, type: 3}
     RandomizeVolume: 0
-    FixedVolume: 1
+    FixedVolume: 0.483
     MinVolume: 0.5
     MaxVolume: 1
     RandomizePitch: 0

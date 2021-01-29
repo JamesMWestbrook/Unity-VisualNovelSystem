@@ -18,7 +18,7 @@ MonoBehaviour:
   - LayerName: Explosion
     SFX: {fileID: 8300000, guid: 9b8ad7f7c5001ca4facb220aaf9a6958, type: 3}
     RandomizeVolume: 0
-    FixedVolume: 1
+    FixedVolume: 0.55
     MinVolume: 0.5
     MaxVolume: 1
     RandomizePitch: 0

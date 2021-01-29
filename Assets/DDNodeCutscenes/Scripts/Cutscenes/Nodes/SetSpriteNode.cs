@@ -29,28 +29,3 @@ public class SetSpriteNode : Node {
 	}
 }
 
-public static class SetSpriteExtension
-{
-    /*
-    public static int spotNumber(this SetSpriteNode sNode)
-    {
-
-        switch (sNode.actor.spot)
-        {
-            case MovementNode.SpotOnScreen.Left:
-                return 1;
-
-            case MovementNode.SpotOnScreen.MidLeft:
-                return 2;
-
-            case MovementNode.SpotOnScreen.MidRight:
-                return 3;
-
-            case MovementNode.SpotOnScreen.Right:
-                return 4;
-        }
-
-        return 1;
-    }
-*/
-}

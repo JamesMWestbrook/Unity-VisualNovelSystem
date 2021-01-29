@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9147afdb5fbfd12458fcb691fc49c0c9, type: 3}
+  m_Name: LuiStartTurnGroup
+  m_EditorClassIdentifier: 
+  GroupName: 
+  SFXObjects:
+  - {fileID: 11400000, guid: e02f12e4debff454da4b4b5eeb87ba90, type: 2}
+  - {fileID: 11400000, guid: 7beaecf61e605d7429b4c9288b8b4d34, type: 2}
+  Randomization: 0

@@ -18,6 +18,18 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (UAP_AccessibilityManager.IsEnabled())
+            {
+                UAP_AccessibilityManager.EnableAccessibility(false);
+                UAP_AccessibilityManager.Say("Accessibility is disabled.");
+            }
+            else
+            {
+                UAP_AccessibilityManager.EnableAccessibility(true);
+                UAP_AccessibilityManager.Say("Accessibility is enabled.");
+            }
+        }
+       }
 }

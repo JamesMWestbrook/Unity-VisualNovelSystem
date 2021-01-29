@@ -8,12 +8,14 @@ public class TitleMenu : MonoBehaviour
     public GameObject StartSelect;
     void Start()
     {
+        if (UAP_AccessibilityManager.IsEnabled()) return;
         EventSystem.current.SetSelectedGameObject(StartSelect);
     }
     public GameObject CurrentlySelected;
+    public bool AccEnabled;
     void Update()
     {
-        if (UAP_AccessibilityManager.IsEnabled()) return;
+        if (AccEnabled) return;
         if (EventSystem.current.currentSelectedGameObject != null)
         {
             CurrentlySelected = EventSystem.current.currentSelectedGameObject;
@@ -22,5 +24,9 @@ public class TitleMenu : MonoBehaviour
         {
             EventSystem.current.SetSelectedGameObject(CurrentlySelected);
         }
+    }
+    public void Reset()
+    {
+        
     }
 }

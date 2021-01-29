@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 150851041}
   - component: {fileID: 150851040}
   - component: {fileID: 150851039}
+  - component: {fileID: 150851042}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -206,6 +207,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &150851042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150851038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a434361de31ffa4f9a180d0971bb2fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: GUISetup
 --- !u!1 &202981986
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,7 +283,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 202981990}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 150851042}
+        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
+        m_MethodName: Load
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &202981990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,7 +423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &460893316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,6 +438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartSelect: {fileID: 202981986}
   CurrentlySelected: {fileID: 0}
+  AccEnabled: 0
 --- !u!4 &460893317
 Transform:
   m_ObjectHideFlags: 0
@@ -994,6 +1021,10 @@ PrefabInstance:
       value: Accessibility Manager
       objectReference: {fileID: 0}
     - target: {fileID: 11475380, guid: 89f4a0ae7ea3fa84ea56c91291d7bd87, type: 3}
+      propertyPath: m_DefaultState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475380, guid: 89f4a0ae7ea3fa84ea56c91291d7bd87, type: 3}
       propertyPath: m_EditorOverride
       value: 1
       objectReference: {fileID: 0}
@@ -1067,7 +1098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1637756200
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1197,6 +1228,7 @@ MonoBehaviour:
   ReadThis: Hit Enter to Enable Accessibility Options
   altRead: Hit Enter to Disable Accessibility Options
   value: 0
+  titleMenu: {fileID: 460893316}
 --- !u!114 &1637756205
 MonoBehaviour:
   m_ObjectHideFlags: 0
