@@ -38,6 +38,7 @@ public class MovementNode : Node
 
     public void CharacterMovement()
     {
+        Debug.Log("This is run");
         MovementNode moveNode = this;
         MovementNode.SpotOnScreen scopedSpotOnScreen = moveNode.spotOnScreen;
         MovementNode.EnterOrLeave movementType = moveNode.enterOrLeave;
@@ -51,7 +52,6 @@ public class MovementNode : Node
 
         //setting up variables
         Image _image = CutsceneManager.Instance.rightCharacter;
-        CharacterSprite charSprite = _image.GetComponent<CharacterSprite>();
         switch (_whichImage)
         {
             case 1:
@@ -67,9 +67,11 @@ public class MovementNode : Node
                 _image = CutsceneManager.Instance.rightCharacter;
                 break;
         }
+        CharacterSprite charSprite = _image.GetComponent<CharacterSprite>();
+
+        charSprite.IsMoving = true;
+
         charSprite = _image.GetComponent<CharacterSprite>();
-
-
 
 
         Vector3 _beginPoint = new Vector3(CutsceneManager.Instance.RightSpot.transform.position.x + _distance, _image.transform.position.y, _image.transform.position.z);
@@ -77,6 +79,7 @@ public class MovementNode : Node
 
         float _lerpTime = 0.5f;
         float _curLerpTime = 0f;
+        charSprite.StartCoroutine(ResetMovingBool(_lerpTime, charSprite));
 
         Image _face = charSprite.Face;
         Image _outfit = charSprite.Outfit;
@@ -136,14 +139,14 @@ public class MovementNode : Node
         // _face.color = new Color(1,1,1,0);
         // _outfit.color = new Color(1,1,1,0);
         
-        LeanTween.value(_face.gameObject, new Color(1, 1, 1, _startOpacity), new Color(1, 1, 1, _endOpacity), _lerpTime).setOnUpdate(
+        LeanTween.value(_face.gameObject, new Color(_startDim, _startDim, _startDim, _startOpacity), new Color(_endDim, _endDim, _endDim, _endOpacity), _lerpTime).setOnUpdate(
             (Color val) =>
             {
                 UnityEngine.UI.Image image = (UnityEngine.UI.Image)_face.gameObject.GetComponent(typeof(UnityEngine.UI.Image));
                 image.color = val;
             }
         );
-        LeanTween.value(_outfit.gameObject, new Color(1, 1, 1, _startOpacity), new Color(1, 1, 1, _endOpacity), _lerpTime).setOnUpdate(
+        LeanTween.value(_outfit.gameObject, new Color(_startDim, _startDim, _startDim, _startOpacity), new Color(_endDim, _endDim, _endDim, _endOpacity), _lerpTime).setOnUpdate(
             (Color val) =>
             {
                 UnityEngine.UI.Image image = (UnityEngine.UI.Image)_outfit.gameObject.GetComponent(typeof(UnityEngine.UI.Image));
@@ -160,6 +163,12 @@ public class MovementNode : Node
                 image.color = val;
             }
         );
+        
+    }
+    public IEnumerator ResetMovingBool(float lerpTime, CharacterSprite charSprite)
+    {
+        yield return new WaitForSeconds(lerpTime);
+        charSprite.IsMoving = false;
     }
 }
 

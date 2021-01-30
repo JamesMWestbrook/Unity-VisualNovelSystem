@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
+    public bool DebugSkip;
    [SerializeField] public string scene;
     // Start is called before the first frame update
     void Start()
     {
+        if (DebugSkip) SceneManager.LoadScene(scene, LoadSceneMode.Single);
+      
     }
 
     // Update is called once per frame

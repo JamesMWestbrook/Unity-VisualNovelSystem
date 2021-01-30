@@ -308,54 +308,27 @@ public class CutsceneManager : MonoBehaviour {
             speakerCharacter = rightCharacter.GetComponent<CharacterSprite>();
             dimmedCharacter = leftCharacter.GetComponent<CharacterSprite>();
         }
-        Debug.Log(dimmedCharacter.Outfit.sprite.name);
         if (!dialogue.IsMoving)
         {
             speakerCharacter.IsSpeaking = true;
             dimmedCharacter.IsSpeaking = false;
             speakerCharacter.Outfit.color = new Color(1f, 1f, 1f);
-
+            speakerCharacter.Face.color = new Color(1f, 1f, 1f);
+        }
+        Debug.Log("Speaker " + speakerCharacter.Face.sprite.name + " " + speakerCharacter.IsMoving);
+        Debug.Log("Dimmer " + dimmedCharacter.Face.sprite.name + " " + dimmedCharacter.IsMoving);
+        if (!dimmedCharacter.IsMoving)
+        {
         }
         
-        if (dimmedCharacter.InScene)
+        /*if (dimmedCharacter.InScene)
         {
             dimmedCharacter.Outfit.color = new Color(0.7f, 0.7f, 0.7f);
-            StartCoroutine(AnimateDim(true, speakerCharacter));
-        }
+            StartCoroutine(AnimateDim(true, speakerCharacter.Outfit));
+            StartCoroutine(AnimateDim(true, speakerCharacter.Face));
+        }*/
         //StartCoroutine(AnimateDim(false, speakerCharacter));
         //StartCoroutine(AnimateDim(true, dimmedCharacter));
-    }
-
-    private IEnumerator AnimateDim(bool isDimmed, CharacterSprite cSprite)
-    {
-        float _lerpTime = 1f;
-        float _curLerpTime = 0f;
-
-
-        float _startDim = 0f;
-        float _endDim = 0.7f;
-
-        if (!isDimmed)
-        {
-            _endDim = 1f;
-        }
-
-        Color _outfitColor = new Color();
-
-        do
-        {
-            _curLerpTime += Time.deltaTime;
-            float t = _curLerpTime / _lerpTime;
-            float _currentDim = Mathf.Lerp(_startDim, _endDim, t);
-            
-            _outfitColor.r = _currentDim;
-            _outfitColor.g = _currentDim;
-            _outfitColor.b = _currentDim;
-
-            cSprite.Face.color = _outfitColor;
-
-            yield return null;
-        } while (_curLerpTime < _lerpTime);
     }
 
     private IEnumerator AnimateText(string dialogue)

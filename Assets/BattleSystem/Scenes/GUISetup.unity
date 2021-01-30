@@ -1573,6 +1573,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7559232954410217622, guid: 672c149a1b0614085a57612a25f2eacb,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7559232954410217622, guid: 672c149a1b0614085a57612a25f2eacb,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7559232954410217622, guid: 672c149a1b0614085a57612a25f2eacb,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8263853588372022747, guid: 672c149a1b0614085a57612a25f2eacb,
         type: 3}
       propertyPath: m_Sprite
@@ -2370,7 +2385,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533616538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.409836, y: 100.308464, z: 25.2}
+  m_LocalPosition: {x: -4.409836, y: 98.18, z: 16.21}
   m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13914,7 +13929,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489403078}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1489403080
 Camera:
   m_ObjectHideFlags: 0
