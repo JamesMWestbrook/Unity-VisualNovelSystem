@@ -38,7 +38,6 @@ public class MovementNode : Node
 
     public void CharacterMovement()
     {
-        Debug.Log("This is run");
         MovementNode moveNode = this;
         MovementNode.SpotOnScreen scopedSpotOnScreen = moveNode.spotOnScreen;
         MovementNode.EnterOrLeave movementType = moveNode.enterOrLeave;

@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Name: Set Sprite Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -696, y: -184}
+  position: {x: -1352, y: -568}
   ports:
     keys:
     - input
@@ -99,7 +99,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: output
-        node: {fileID: 8973097043227751818}
+        node: {fileID: 8073175016975741468}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: Movement Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -584, y: 40}
+  position: {x: -1064, y: -472}
   ports:
     keys:
     - input
@@ -204,7 +204,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: input
-        node: {fileID: -2256262010442038381}
+        node: {fileID: -1653563168049911753}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -213,7 +213,7 @@ MonoBehaviour:
   output: 0
   enterOrLeave: 0
   spotOnScreen: 0
-  IsSpeaking: 1
+  IsSpeaking: 0
 --- !u!114 &-3962330162205849897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +285,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: output
-        node: {fileID: -4982801205925920825}
+        node: {fileID: 8973097043227751818}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -306,7 +306,7 @@ MonoBehaviour:
   whoIsSpeaking: 0
   Speaker: Luisella
   Dialogue: "More of a fallen angel. An angel that\u2019s fallen from its grace."
-  IsMoving: 1
+  IsMoving: 0
 --- !u!114 &-1900283051725648602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,7 +366,7 @@ MonoBehaviour:
   m_Name: Dialogue Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -952, y: -104}
+  position: {x: -904, y: -72}
   ports:
     keys:
     - input
@@ -378,7 +378,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: output
-        node: {fileID: 8073175016975741468}
+        node: {fileID: -4982801205925920825}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -868,7 +868,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: input
-        node: {fileID: -1653563168049911753}
+        node: {fileID: -5472001955894630284}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -889,7 +889,7 @@ MonoBehaviour:
   m_Name: Voice Clip Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -664, y: -360}
+  position: {x: -376, y: -360}
   ports:
     keys:
     - input
@@ -912,7 +912,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: input
-        node: {fileID: -5472001955894630284}
+        node: {fileID: -2256262010442038381}
         reroutePoints: []
       _direction: 1
       _connectionType: 0

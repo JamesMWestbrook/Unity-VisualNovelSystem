@@ -308,17 +308,17 @@ public class CutsceneManager : MonoBehaviour {
             speakerCharacter = rightCharacter.GetComponent<CharacterSprite>();
             dimmedCharacter = leftCharacter.GetComponent<CharacterSprite>();
         }
+        speakerCharacter.IsSpeaking = true;
+        dimmedCharacter.IsSpeaking = false;
         if (!dialogue.IsMoving)
         {
-            speakerCharacter.IsSpeaking = true;
-            dimmedCharacter.IsSpeaking = false;
             speakerCharacter.Outfit.color = new Color(1f, 1f, 1f);
             speakerCharacter.Face.color = new Color(1f, 1f, 1f);
         }
-        Debug.Log("Speaker " + speakerCharacter.Face.sprite.name + " " + speakerCharacter.IsMoving);
-        Debug.Log("Dimmer " + dimmedCharacter.Face.sprite.name + " " + dimmedCharacter.IsMoving);
         if (!dimmedCharacter.IsMoving)
         {
+            dimmedCharacter.Outfit.color = new Color(0.7f, 0.7f, 0.7f);
+            dimmedCharacter.Face.color = new Color(0.7f, 0.7f, 0.7f);
         }
         
         /*if (dimmedCharacter.InScene)
