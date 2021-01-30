@@ -16,7 +16,7 @@ public class DialogueNode : Node {
     [Output] public float output;
     [HideInInspector] public WhoIsSpeaking whoIsSpeaking;
     [HideInInspector] public string Speaker;
-    [HideInInspector] public string Dialogue;
+    [HideInInspector] [TextArea] public string Dialogue;
     public bool IsMoving = false;
     public enum WhoIsSpeaking
     {

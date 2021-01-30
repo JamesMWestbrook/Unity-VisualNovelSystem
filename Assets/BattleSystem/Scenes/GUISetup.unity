@@ -751,6 +751,8 @@ MonoBehaviour:
       path: 
       asset: {fileID: 0}
     EffectDelay: 0
+  Defender: {fileID: 0}
+  IsHealing: 0
   DelayWin: 0
 --- !u!114 &170927424
 MonoBehaviour:
@@ -1491,12 +1493,12 @@ PrefabInstance:
     - target: {fileID: 8263853588439173203, guid: 672c149a1b0614085a57612a25f2eacb,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 6
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 8263853588439173203, guid: 672c149a1b0614085a57612a25f2eacb,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 174
+      value: 184.26
       objectReference: {fileID: 0}
     - target: {fileID: 8263853588555145922, guid: 672c149a1b0614085a57612a25f2eacb,
         type: 3}

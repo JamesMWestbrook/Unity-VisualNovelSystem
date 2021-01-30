@@ -74,6 +74,7 @@ public class Skills
             SkillProcess(targets[i], user, hitType);
             //run check for damage
         }
+        GameManager.Instance.BattleManager.Defender = targets[0].GetComponent<ActorSlot>();
 
         if (ai)
         {
@@ -81,13 +82,15 @@ public class Skills
             anim.SetTrigger(AnimTrigger);
         }
         //end turn
-        bm.PostSkill(DestructTimer);
+        bm.PostSkill(DestructTimer );
         bm.PlaySingleSFX(this);
     }
 
     public void SkillProcess(GameObject target, GameObject user, Skills.HitType hitType)
     {
         BattleManager bm = GameManager.Instance.BattleManager;
+
+        bm.IsHealing = false;
         ActorSlot actor = user.GetComponent<ActorSlot>();
         if (!actor.IsAI)
         {
@@ -133,7 +136,13 @@ public class Skills
 
             if (UAP_AccessibilityManager.IsEnabled())
             { bm.StartSpawn(0f, popupText, Defender); }
-            else { bm.StartSpawn(DestructTimer, popupText, Defender); }
+            else {
+                bm.StartSpawn(DestructTimer, popupText, Defender);
+                if (!actor.IsAI) {
+                    if (Name == "Attack") SFXManager.Main.Play(actor.Actor.AttackVoices.Get());
+                    else SFXManager.Main.Play(actor.Actor.DefaultSpecialVoices.Get());
+                }
+            }
 
 
             readThis = string.Format("{0} hits {1} for {2} damage.", user.GetComponent<ActorSlot>().Actor.Name, Defender.Actor.Name, modifier.ToString());
@@ -144,6 +153,7 @@ public class Skills
             switch (hitType)
             {
                 case Skills.HitType.Heal:
+                    bm.IsHealing = true;
                     tempAttack = Attacker.Actor.CurStats.Vigor;
                     modifier = BaseDamage * tempAttack;
                     popupText = Defender.Actor.CurStats.HP;
@@ -156,6 +166,10 @@ public class Skills
                     }
                     else
                     {
+                        if (!actor.IsAI)
+                        {
+                            SFXManager.Main.Play(actor.Actor.HealingVoices.Get());
+                        }
                         bm.StartSpawn(DestructTimer, popupText, Defender);
                     }
                     readThis = string.Format("{0} heals {1} for {2} health.", user.GetComponent<ActorSlot>().Actor.Name, Defender.Actor.Name, modifier.ToString());

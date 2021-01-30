@@ -15,11 +15,11 @@ D:/Unity/Unity-VisualNovelSystem
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63674
+64180
 Successfully changed project path to: D:/Unity/Unity-VisualNovelSystem
 D:/Unity/Unity-VisualNovelSystem
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 36.88 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 35.52 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
@@ -35,22 +35,1356 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56604
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56488
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001452 seconds.
+Registered in 0.001142 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 36.88 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 35.32 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.855 seconds
+- Completed reload, in  0.830 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002429 seconds.
+Registered in 0.002370 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.132 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.48 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2071 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.6 MB.
+System memory in use after: 98.7 MB.
+
+Unloading 126 unused Assets to reduce memory usage. Loaded Objects now: 2530.
+Total: 13.351500 ms (FindLiveObjects: 0.197700 ms CreateObjectMapping: 0.090300 ms MarkObjects: 12.927700 ms  DeleteObjects: 0.135000 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/DDNodeCutscenes/Scripts/XNodes/xNode
+  artifactKey: Guid(84c04b0b5b878a142820e03290d2670f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DDNodeCutscenes/Scripts/XNodes/xNode using Guid(84c04b0b5b878a142820e03290d2670f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '699327f5990424f7bcedcff774b68e55') in 0.004590 seconds
+  Import took 0.063499 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.090185 seconds.
+  path: Assets/DDNodeCutscenes/Scripts/XNodes/xNode/Scripts
+  artifactKey: Guid(eb4d83138b4e91d4fb816c6aeda51e8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DDNodeCutscenes/Scripts/XNodes/xNode/Scripts using Guid(eb4d83138b4e91d4fb816c6aeda51e8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '360c1ebc3664cdab6fc7b7c8e0bef84f') in 0.089550 seconds
+  Import took 0.127494 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002380 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.099 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2053 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.6 MB.
+System memory in use after: 111.7 MB.
+
+Unloading 121 unused Assets to reduce memory usage. Loaded Objects now: 2532.
+Total: 13.791200 ms (FindLiveObjects: 0.209600 ms CreateObjectMapping: 0.078700 ms MarkObjects: 13.415100 ms  DeleteObjects: 0.086800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.785017 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c2a71acb767481252d1aa09e7acd477') in 0.028040 seconds
+  Import took 0.062136 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.726053 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbc2affee74b22e20927af7251a956eb') in 0.003637 seconds
+  Import took 0.048386 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.606602 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07a6baca189d464d8bb129feb0dbbb03') in 0.013671 seconds
+  Import took 0.016595 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.188125 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6b3d7ef15787957ed00b0b08e91f6a5') in 0.003524 seconds
+  Import took 0.030288 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.800632 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83d73d6b23b9503c3581ab55649fb038') in 0.003400 seconds
+  Import took 0.009432 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.710020 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04182b369e0f0536972928311dc694d1') in 0.003437 seconds
+  Import took 0.048876 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.929054 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6252f2e7a079c713bcdb314811be112d') in 0.003355 seconds
+  Import took 0.015392 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.165653 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '938bcb1846526b50196c0c5ef0b36498') in 0.003413 seconds
+  Import took 0.083242 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.424812 seconds.
+  path: Assets/DDNodeCutscenes/Scripts/Cutscenes/Nodes/Editor/DialogueNodeEditor.cs
+  artifactKey: Guid(e07fea794b8974146b2aad349921e454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DDNodeCutscenes/Scripts/Cutscenes/Nodes/Editor/DialogueNodeEditor.cs using Guid(e07fea794b8974146b2aad349921e454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '854f8f446b96d4bb7600d29217564b90') in 0.003217 seconds
+  Import took 0.032925 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.082860 seconds.
+  path: Assets/DDNodeCutscenes/Scripts/Cutscenes/Nodes/DialogueNode.cs
+  artifactKey: Guid(922025726bb0ece4c9ac90e5fdad0955) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DDNodeCutscenes/Scripts/Cutscenes/Nodes/DialogueNode.cs using Guid(922025726bb0ece4c9ac90e5fdad0955) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6f2ea212728e8a1c838112d75a42dfa') in 0.001019 seconds
+  Import took 0.106512 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002407 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.104 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2053 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 112.5 MB.
+System memory in use after: 112.5 MB.
+
+Unloading 121 unused Assets to reduce memory usage. Loaded Objects now: 2534.
+Total: 13.166700 ms (FindLiveObjects: 0.216600 ms CreateObjectMapping: 0.076700 ms MarkObjects: 12.790100 ms  DeleteObjects: 0.082100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.017658 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9539c7798407469758eb4dbdda988c6c') in 0.011943 seconds
+  Import took 0.039595 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.016890 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13904668fa191d4ffe1ff4b0900db762') in 0.002386 seconds
+  Import took 0.052000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012611 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13904668fa191d4ffe1ff4b0900db762') in 0.002416 seconds
+  Import took 0.005141 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.207145 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Background2.png
+  artifactKey: Guid(ed3fe62e571b88443a131980c1fbbcfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Background2.png using Guid(ed3fe62e571b88443a131980c1fbbcfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2796e1f564d65b64f27210f5a48badae') in 0.242008 seconds
+  Import took 0.618879 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/blue.png
+  artifactKey: Guid(70e49db2cbbf3d4498dec477198f3c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/blue.png using Guid(70e49db2cbbf3d4498dec477198f3c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f7cc4a627b6d9a22a3fc20e4ee093d6') in 0.092166 seconds
+  Import took 0.156721 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/InstructionsButton.png
+  artifactKey: Guid(d70236a49cafb5848a333b12a84e6a47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/InstructionsButton.png using Guid(d70236a49cafb5848a333b12a84e6a47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea7b2d42ad8579139cd0b005cdf91748') in 0.117803 seconds
+  Import took 0.120445 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Pause Button.png
+  artifactKey: Guid(88071daf07f16ea4bae5ec44be7e2a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Pause Button.png using Guid(88071daf07f16ea4bae5ec44be7e2a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '035998550ecab13f8cdad762c0b114f1') in 0.061501 seconds
+  Import took 0.108182 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/purple.png
+  artifactKey: Guid(857f37d427f46044ba4edc9d83184b50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/purple.png using Guid(857f37d427f46044ba4edc9d83184b50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef1f315dd5727a3a48fcf68b81e4fda3') in 0.087282 seconds
+  Import took 0.130701 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/crystal.png
+  artifactKey: Guid(bbd7d2c813193164a903e9f105207ff7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/crystal.png using Guid(bbd7d2c813193164a903e9f105207ff7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa91de748cae63728f1826c49742bab3') in 0.078397 seconds
+  Import took 0.111407 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Heading.png
+  artifactKey: Guid(24328159be74c6543b93d8bdd02ecf5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Heading.png using Guid(24328159be74c6543b93d8bdd02ecf5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73677b5b11d8772372ec5f83acd3b4c5') in 0.044042 seconds
+  Import took 0.083418 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/DifficultyButton.png
+  artifactKey: Guid(8f13cf3b879862a41892a5a3fbc42046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/DifficultyButton.png using Guid(8f13cf3b879862a41892a5a3fbc42046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f04887793690dd86464704cc2aeea50c') in 0.019207 seconds
+  Import took 0.021803 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Close.png
+  artifactKey: Guid(ddf1ffdb31d23fc4095391f13491b7a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Close.png using Guid(ddf1ffdb31d23fc4095391f13491b7a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '845c6d959471be26c06f660d8ff57455') in 0.016299 seconds
+  Import took 0.019380 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/bar.png
+  artifactKey: Guid(568df2bb8bfbfd64f97f37b63bd9b4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/bar.png using Guid(568df2bb8bfbfd64f97f37b63bd9b4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f9a8c25ab421ec5ec1e3f85f906089d') in 0.018931 seconds
+  Import took 0.021455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/orange.png
+  artifactKey: Guid(0d2df4ca360a65541ab85643201fcf85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/orange.png using Guid(0d2df4ca360a65541ab85643201fcf85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc81fee7e7697830c6d0d8f47a579db9') in 0.041064 seconds
+  Import took 0.051043 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/gold.png
+  artifactKey: Guid(16580c05bb9b4f649aedba708d629a90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/gold.png using Guid(16580c05bb9b4f649aedba708d629a90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5f79e71cc389f7bb7674b50fa4d03b1') in 0.362828 seconds
+  Import took 0.425864 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000748 seconds.
+  path: Assets/UAP/Editor/img/Logo_Inspector_Dark.png
+  artifactKey: Guid(eeca0e97b0e44f54382c10bd463ade91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Editor/img/Logo_Inspector_Dark.png using Guid(eeca0e97b0e44f54382c10bd463ade91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8c1aa1df6c4f42c90ef0cc27c2758b2') in 0.028254 seconds
+  Import took 0.099149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/MainMenu.png
+  artifactKey: Guid(eac96847cfcaa3f4c815ebd7a727bbe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/MainMenu.png using Guid(eac96847cfcaa3f4c815ebd7a727bbe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0bfe6614b97893e3743caabeb4f12f4') in 0.121037 seconds
+  Import took 0.153180 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Rays2.png
+  artifactKey: Guid(8665efba70e770747b9933a4c33f8914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Rays2.png using Guid(8665efba70e770747b9933a4c33f8914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d38d807071ee320deffffddef13d991') in 0.059966 seconds
+  Import took 0.118285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/emerald.png
+  artifactKey: Guid(0dc18113cd25b844196e49bbf853afe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/emerald.png using Guid(0dc18113cd25b844196e49bbf853afe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdfe9382b9e4f4c2ec3d673fccb9c54a') in 0.046400 seconds
+  Import took 0.064815 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/PlayButton.png
+  artifactKey: Guid(eff9ac026a0ed9a42920ba3342cfd478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/PlayButton.png using Guid(eff9ac026a0ed9a42920ba3342cfd478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf971686cd1f16b6ddffdf2220555a9b') in 0.028046 seconds
+  Import took 0.047241 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000420 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Middle_1.png
+  artifactKey: Guid(ad6535c34b8edc04cbf8149e2d7a6e9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Middle_1.png using Guid(ad6535c34b8edc04cbf8149e2d7a6e9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35cf33b7ffa1007cfe7edd1b7adeb3d9') in 0.068466 seconds
+  Import took 0.072394 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/checkmark.png
+  artifactKey: Guid(8be58532d4f73824898e1968f9c6401e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/checkmark.png using Guid(8be58532d4f73824898e1968f9c6401e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8998531914ee8a28384db06f3df67db9') in 0.008235 seconds
+  Import took 0.010659 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/UAP/Editor/img/Logo_Inspector_Bright.png
+  artifactKey: Guid(512569da6e110404b8785c31c040b2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Editor/img/Logo_Inspector_Bright.png using Guid(512569da6e110404b8785c31c040b2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac9768533dc678745e673fc7b3230151') in 0.022837 seconds
+  Import took 0.050621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/DialogBackground.png
+  artifactKey: Guid(97d8c72058ed3ba4f87e46b817bdd1a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/DialogBackground.png using Guid(97d8c72058ed3ba4f87e46b817bdd1a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20eca17ffbce46ac76c9668aa40815d7') in 0.088159 seconds
+  Import took 0.140847 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/UAP/Examples/UI Navigation Example/Textures/Male.png
+  artifactKey: Guid(142547e846d5281488e396a2f0a18f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/UI Navigation Example/Textures/Male.png using Guid(142547e846d5281488e396a2f0a18f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8ff464d1439405038fbb61d7dd084cf') in 0.036531 seconds
+  Import took 0.068981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/GreenButton.png
+  artifactKey: Guid(c69e5c482c638df4ab170d400a79dcf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/GreenButton.png using Guid(c69e5c482c638df4ab170d400a79dcf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2536e684e814c227ca5bd7e98048027') in 0.030563 seconds
+  Import took 0.061096 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/UAP/Examples/UI Navigation Example/Textures/Female.png
+  artifactKey: Guid(31a927e187591c347b76507d7d7d8ecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/UI Navigation Example/Textures/Female.png using Guid(31a927e187591c347b76507d7d7d8ecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdb426fabe199ddf11c1e1298ca906f4') in 0.027018 seconds
+  Import took 0.029614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Play.png
+  artifactKey: Guid(fc3f7481b7e334e4d918b8d17bfc7583) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Play.png using Guid(fc3f7481b7e334e4d918b8d17bfc7583) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '490df6936f633f6585815fd5f7f73762') in 0.022564 seconds
+  Import took 0.054686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.914420 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Replay.png
+  artifactKey: Guid(97c3ca7f885eea34288812c8ba7990d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Replay.png using Guid(97c3ca7f885eea34288812c8ba7990d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '734448a2f1692a29cf3c8db6008ca290') in 0.053678 seconds
+  Import took 0.056656 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/ruby.png
+  artifactKey: Guid(71ff4e5eef810e94baea491d33682924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/ruby.png using Guid(71ff4e5eef810e94baea491d33682924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e432a0c85043c54e2053616ee6d321a7') in 0.127405 seconds
+  Import took 0.130488 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Replay.png
+  artifactKey: Guid(97c3ca7f885eea34288812c8ba7990d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Replay.png using Guid(97c3ca7f885eea34288812c8ba7990d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '734448a2f1692a29cf3c8db6008ca290') in 0.005878 seconds
+  Import took 0.008545 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/ruby.png
+  artifactKey: Guid(71ff4e5eef810e94baea491d33682924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/ruby.png using Guid(71ff4e5eef810e94baea491d33682924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e432a0c85043c54e2053616ee6d321a7') in 0.007100 seconds
+  Import took 0.009779 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/SoundON.png
+  artifactKey: Guid(0f67681fac49ce14da1a6e2568e254ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/SoundON.png using Guid(0f67681fac49ce14da1a6e2568e254ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96793534f93aa95543a65af34365f8de') in 0.366504 seconds
+  Import took 0.391850 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Star_Filled.png
+  artifactKey: Guid(6c62b3d1c0a956440857fe648be1d245) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Star_Filled.png using Guid(6c62b3d1c0a956440857fe648be1d245) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84208161ece8ebf1803cbd944b68eff5') in 0.025846 seconds
+  Import took 0.028443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/SoundOFF.png
+  artifactKey: Guid(c2eba11b8bb795c46a8a502adb243f5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/SoundOFF.png using Guid(c2eba11b8bb795c46a8a502adb243f5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a08d70dd43447b6be3d805ac1d9504b0') in 0.016763 seconds
+  Import took 0.019482 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/SettingsButton.png
+  artifactKey: Guid(67f948681ae4fdf44899a05de5750633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/SettingsButton.png using Guid(67f948681ae4fdf44899a05de5750633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a50a1662af29864f9c11cc75ec865c3d') in 0.020480 seconds
+  Import took 0.073993 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Top_Small_Purple.png
+  artifactKey: Guid(12c28df230de34c4dbdd13af27d628ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Top_Small_Purple.png using Guid(12c28df230de34c4dbdd13af27d628ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b93ad9e59bb91d89c2db2925131ad35') in 0.023091 seconds
+  Import took 0.048027 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Tile_1.png
+  artifactKey: Guid(08c6057091f1bef4a92866219e85ce56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Tile_1.png using Guid(08c6057091f1bef4a92866219e85ce56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9816d6d9fdf2156bf38a19d28b022fe3') in 0.025616 seconds
+  Import took 0.028441 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Top_Small_Blue.png
+  artifactKey: Guid(672aba7fad7ff7340a058827ba615198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Top_Small_Blue.png using Guid(672aba7fad7ff7340a058827ba615198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0d98eac024fd60ad3f96c9b001cd919') in 0.026379 seconds
+  Import took 0.044962 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Tile_2.png
+  artifactKey: Guid(a56fb291a6ea0fe499dc19c159fdb215) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Tile_2.png using Guid(a56fb291a6ea0fe499dc19c159fdb215) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c12853ed9b2a58217d447c5807cb943') in 0.025203 seconds
+  Import took 0.070760 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Tile_Glowing.png
+  artifactKey: Guid(e942ccef51dc8e144952b029ccfa35a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Tile_Glowing.png using Guid(e942ccef51dc8e144952b029ccfa35a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06b0063479d1d80f82cde6fa55942791') in 0.033232 seconds
+  Import took 0.046252 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/SettingsButton.png
+  artifactKey: Guid(67f948681ae4fdf44899a05de5750633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/SettingsButton.png using Guid(67f948681ae4fdf44899a05de5750633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a50a1662af29864f9c11cc75ec865c3d') in 0.004649 seconds
+  Import took 0.007140 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.722496 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '045c78bd2931dfc7e4b62b0ba3ae6200') in 0.002614 seconds
+  Import took 0.019696 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001975 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '045c78bd2931dfc7e4b62b0ba3ae6200') in 0.002502 seconds
+  Import took 0.005290 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.611040 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70293d90105937cc614ae5ef33e9a221') in 0.002499 seconds
+  Import took 0.005310 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.950387 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8a1c791fcfc3a710ae6cdb97abe4bcc') in 0.002638 seconds
+  Import took 0.136086 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.227322 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3aae9aba249b8dd74acc9e958c68d625') in 0.002641 seconds
+  Import took 0.008054 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.325689 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49c1c004e557f8e62eb8831a629194d4') in 0.002836 seconds
+  Import took 0.006199 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.198103 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '369f2391db1b94cf67601a19f3aab145') in 0.002864 seconds
+  Import took 0.005724 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.997880 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b86ca237c161128a81d2ecfafb8f96d2') in 0.002853 seconds
+  Import took 0.005658 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.197549 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bcdb13f013abe7ab9fc41bc77afdb08') in 0.002673 seconds
+  Import took 0.005393 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.981140 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3be20adaafaac9b9e1004c228862adc') in 0.003179 seconds
+  Import took 0.006580 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.062185 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '812108114134f6e6565b7aa359d00605') in 0.002983 seconds
+  Import took 0.039162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.270514 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b1c61d822f9e3f5d3cf2a1c17448eef') in 0.010040 seconds
+  Import took 0.023693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.242520 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5003570c90b06d96384b8eecc3c479b') in 0.003163 seconds
+  Import took 0.006227 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.477608 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51b3a5553c4dde942458064195ac55cc') in 0.002846 seconds
+  Import took 0.058900 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.583883 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fe65459a75ca59c9f2d517ad71c2a4c') in 0.003238 seconds
+  Import took 0.152323 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 68.395331 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Tutorial_01.png
+  artifactKey: Guid(7a34fe7464570dc4f973c3421563e682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Tutorial_01.png using Guid(7a34fe7464570dc4f973c3421563e682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a080ca0f3b8e9652ba48bcdde87bddf') in 0.022587 seconds
+  Import took 0.025597 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Tutorial_02.png
+  artifactKey: Guid(d31f42290e2a44a4bb9c59a1d6167054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Tutorial_02.png using Guid(d31f42290e2a44a4bb9c59a1d6167054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80adad6dff0a58805117306f4134d831') in 0.037855 seconds
+  Import took 0.062122 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/UAP/Textures/UAP_VirtualKeyboard_Return.png
+  artifactKey: Guid(85308860144577a4c9f1fe63f4e2f85b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Textures/UAP_VirtualKeyboard_Return.png using Guid(85308860144577a4c9f1fe63f4e2f85b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a60e2e6e56b78e48a53a096bd865ea32') in 0.032405 seconds
+  Import took 0.052209 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Tutorial_02.png
+  artifactKey: Guid(d31f42290e2a44a4bb9c59a1d6167054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Tutorial_02.png using Guid(d31f42290e2a44a4bb9c59a1d6167054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80adad6dff0a58805117306f4134d831') in 0.005300 seconds
+  Import took 0.007940 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/UAP/Editor/img/UAP_Icon.png
+  artifactKey: Guid(9ad27a74c6842a048b268a1cc32bcbbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Editor/img/UAP_Icon.png using Guid(9ad27a74c6842a048b268a1cc32bcbbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21006dd9518b92cc069d8e2daebd3700') in 0.005321 seconds
+  Import took 0.008075 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/UAP/Textures/UAP_VirtualKeyboard_Language.png
+  artifactKey: Guid(97cebd8073dc5534da5baddb7f274d26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Textures/UAP_VirtualKeyboard_Language.png using Guid(97cebd8073dc5534da5baddb7f274d26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c67294bd390f6f3df5909ef82b22ce20') in 0.030027 seconds
+  Import took 0.032677 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Tutorial_01.png
+  artifactKey: Guid(7a34fe7464570dc4f973c3421563e682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Tutorial_01.png using Guid(7a34fe7464570dc4f973c3421563e682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a080ca0f3b8e9652ba48bcdde87bddf') in 0.004623 seconds
+  Import took 0.007154 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/UAP/Textures/UAP_VirtualKeyboard_Backspace.png
+  artifactKey: Guid(014e81b8ff392904e9c65ebffd7c7742) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Textures/UAP_VirtualKeyboard_Backspace.png using Guid(014e81b8ff392904e9c65ebffd7c7742) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c28f18a82a04df26321bd57efb22b97f') in 0.022677 seconds
+  Import took 0.025259 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Tutorial_04.png
+  artifactKey: Guid(fdbaed746a232d140bc42459e3ce9c8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Tutorial_04.png using Guid(fdbaed746a232d140bc42459e3ce9c8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '047073f53408869c693468281ecdb9f4') in 0.029954 seconds
+  Import took 0.032775 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/Tutorial_03.png
+  artifactKey: Guid(119d92b4189b1d645b5a19ab72975970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/Tutorial_03.png using Guid(119d92b4189b1d645b5a19ab72975970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed6458b97bbcf282bfa12fe7f6924a49') in 0.006933 seconds
+  Import took 0.037273 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/UAP/Textures/UAP_VirtualKeyboard_Shift.png
+  artifactKey: Guid(09caf5c4c42e51c41a6c44ede55f8907) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Textures/UAP_VirtualKeyboard_Shift.png using Guid(09caf5c4c42e51c41a6c44ede55f8907) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af8df98b75d2bbdac67781adaa411e5e') in 0.021987 seconds
+  Import took 0.062430 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.673392 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c278b6c440fa69abb65aea83271a69df') in 0.003616 seconds
+  Import took 0.006801 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008058 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c278b6c440fa69abb65aea83271a69df') in 0.004258 seconds
+  Import took 0.007066 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.752774 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3a7033492bf39972e2e9d52db54427e') in 0.003433 seconds
+  Import took 0.017981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.991602 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8f05baa929e93a8d8acf0e167e2b804') in 0.003551 seconds
+  Import took 0.006617 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001948 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8f05baa929e93a8d8acf0e167e2b804') in 0.003479 seconds
+  Import took 0.006242 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.785402 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa2441b1a210f9c48ce919a55c7f2a80') in 0.004251 seconds
+  Import took 0.042353 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.659791 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00be2ca5ef500eae335e52de058109a7') in 0.003788 seconds
+  Import took 0.091761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.708547 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c95ddb14f3001e5cdbbb7732a99ab57c') in 0.004219 seconds
+  Import took 0.066270 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.841552 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5eefe54e3c48440e52ac411e16600dd') in 0.003624 seconds
+  Import took 0.006384 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002456 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5eefe54e3c48440e52ac411e16600dd') in 0.004164 seconds
+  Import took 0.006993 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.776522 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8aba3a8c27aabec3e5ea60cff6fb2ef3') in 0.003606 seconds
+  Import took 0.023715 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.857961 seconds.
+  path: Assets/UAP/Examples/Match 3 Game Example/Textures/WindowBG.png
+  artifactKey: Guid(87986f1259e73fa4486a5df30e6e0f2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UAP/Examples/Match 3 Game Example/Textures/WindowBG.png using Guid(87986f1259e73fa4486a5df30e6e0f2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb55d237c244f5a81c57bb1a7fa752a9') in 0.135547 seconds
+  Import took 0.191104 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.282262 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9f8e758d6f2a9b229d63ddd73319bac') in 0.004054 seconds
+  Import took 0.025627 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015228 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9f8e758d6f2a9b229d63ddd73319bac') in 0.003854 seconds
+  Import took 0.006619 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.633787 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dc49cca13ed1c5ade365d1841908208') in 0.003791 seconds
+  Import took 0.037627 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.520882 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2acc99174da575a4a977f6c4ab29a12f') in 0.004139 seconds
+  Import took 0.018730 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.586738 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99fd37311447b63c21e6d951c6bb210c') in 0.003851 seconds
+  Import took 0.006588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.642224 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99726fc9f694044e18db51195bfcbad0') in 0.005360 seconds
+  Import took 0.020560 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.754974 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd90b985be5b23efd4368f7636a270761') in 0.004038 seconds
+  Import took 0.006808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001674 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd90b985be5b23efd4368f7636a270761') in 0.004303 seconds
+  Import took 0.007095 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.693149 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f6e5620d387a208546c1f179a7e6e11') in 0.004503 seconds
+  Import took 0.007461 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001183 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f6e5620d387a208546c1f179a7e6e11') in 0.004250 seconds
+  Import took 0.007085 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.025211 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caf84c5e28a9cf6947e30d5c08edaed7') in 0.004166 seconds
+  Import took 0.022020 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.800641 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ae0f419083b8ceb1fb4e217ef133bd0') in 0.004066 seconds
+  Import took 0.006923 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.391764 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6110261f6367d8694b66828213e9a79') in 0.004311 seconds
+  Import took 0.007671 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.940792 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a93eeb928af2b9d2b96d7a028ec7c9a1') in 0.004256 seconds
+  Import took 0.007075 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.288102 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec48a67e94ebb0db1bd9190504fe85d2') in 0.005107 seconds
+  Import took 0.034268 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.813048 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b05d1a78cfe4c5628e3a9b54bf8de43f') in 0.004189 seconds
+  Import took 0.016051 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003649 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b05d1a78cfe4c5628e3a9b54bf8de43f') in 0.004164 seconds
+  Import took 0.007022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.294721 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2a390b1e71945aec584b129f76ba252') in 0.004157 seconds
+  Import took 0.006925 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.420290 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a98eb6620d62fee41c36d6470c0b669f') in 0.004361 seconds
+  Import took 0.007102 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001393 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a98eb6620d62fee41c36d6470c0b669f') in 0.004176 seconds
+  Import took 0.006983 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.771555 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db3f2a5b09c4588831678022dbb9416e') in 0.004777 seconds
+  Import took 0.007740 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.086304 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8f97d60c7739bb8ed19c0340c72c905') in 0.004399 seconds
+  Import took 0.007379 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.664168 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1631d31440f91c2e9fa10557889f5094') in 0.003970 seconds
+  Import took 0.006742 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.220568 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8913093d05be38efb8d0f60683575b9') in 0.004188 seconds
+  Import took 0.014106 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004602 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8913093d05be38efb8d0f60683575b9') in 0.004140 seconds
+  Import took 0.006933 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.002665 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8f337c7228017cedb14ccba778a7f86') in 0.004067 seconds
+  Import took 0.006963 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001874 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8f337c7228017cedb14ccba778a7f86') in 0.004476 seconds
+  Import took 0.007202 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.463225 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8261fc41596578bfc154622ff1897a3f') in 0.004113 seconds
+  Import took 0.087833 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.120074 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e92c7c40de59004b08b7ff726b0de237') in 0.004388 seconds
+  Import took 0.015903 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.632677 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '487d54cf4f3c2e27b627bd41d399d148') in 0.004497 seconds
+  Import took 0.016238 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.989780 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ac76f11addd80c41342a22b87e5518e') in 0.004353 seconds
+  Import took 0.007126 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.228076 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '261bb5617f20ab805ff585bff3e6ec78') in 0.004640 seconds
+  Import took 0.012435 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007837 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '261bb5617f20ab805ff585bff3e6ec78') in 0.004522 seconds
+  Import took 0.007620 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.954804 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '664a1258599c7a109980f0f1e41acd07') in 0.004420 seconds
+  Import took 0.007573 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.577831 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28a8b1d5ec7c4eea3b225be91d7395ec') in 0.004489 seconds
+  Import took 0.052976 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.861011 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa4bb5f3e1bf8c9b573edb6e38eb5b6e') in 0.004187 seconds
+  Import took 0.007963 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.843310 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89b64b3008e53f832cb033b6e66af5f3') in 0.004245 seconds
+  Import took 0.007059 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.195676 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7c49007928f2cedaf863de535332760') in 0.004554 seconds
+  Import took 0.019803 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.152011 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cbb620da804e328236b807e70b15e16') in 0.004312 seconds
+  Import took 0.007225 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001253 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cbb620da804e328236b807e70b15e16') in 0.004450 seconds
+  Import took 0.007200 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.043013 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3183231a6ed3d391bbee77f1f61d6005') in 0.004320 seconds
+  Import took 0.032975 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.075395 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3183231a6ed3d391bbee77f1f61d6005') in 0.004454 seconds
+  Import took 0.007823 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.925348 seconds.
+  path: Assets/Resources/Voice Clips/Marg_02.asset
+  artifactKey: Guid(031cc3cb6a3885140b9cd7bd665720f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Voice Clips/Marg_02.asset using Guid(031cc3cb6a3885140b9cd7bd665720f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f612fea3f1f19cc07fa443a928cfac88') in 0.001628 seconds
+  Import took 0.015262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.661414 seconds.
+  path: Assets/Resources/Voice Clips/Marg_03.asset
+  artifactKey: Guid(ff725415e102ae749be943f4a9a685dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Voice Clips/Marg_03.asset using Guid(ff725415e102ae749be943f4a9a685dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a7357c01bdc8b152551a3c8cfad9749') in 0.001521 seconds
+  Import took 0.104956 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.132575 seconds.
+  path: Assets/Resources/Voice Clips/Luisella_01.mp3
+  artifactKey: Guid(4cbc8803f93999341a052cc0c0b218ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Voice Clips/Luisella_01.mp3 using Guid(4cbc8803f93999341a052cc0c0b218ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b779c122c1b92fa0fdb6a534f785c58b') in 0.475661 seconds
+  Import took 0.478387 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.311648 seconds.
+  path: Assets/Resources/Voice Clips/Lui_01.asset
+  artifactKey: Guid(c6cb480ffd2316d4eb8a9e59b8685d56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Voice Clips/Lui_01.asset using Guid(c6cb480ffd2316d4eb8a9e59b8685d56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fe514f085c4d63d6426d06499a5837b') in 0.001654 seconds
+  Import took 0.004395 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.800622 seconds.
+  path: Assets/Resources/Voice Clips/Lui_02.asset
+  artifactKey: Guid(a01f39f4d10d34c4d92a2117f87189d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Voice Clips/Lui_02.asset using Guid(a01f39f4d10d34c4d92a2117f87189d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2420b83ebe87383ccd19b33cb5a8ae1') in 0.001451 seconds
+  Import took 0.091857 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.862883 seconds.
+  path: Assets/Resources/Voice Clips/Lui_02.asset
+  artifactKey: Guid(a01f39f4d10d34c4d92a2117f87189d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Voice Clips/Lui_02.asset using Guid(a01f39f4d10d34c4d92a2117f87189d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f1398ffe049546e3ba8dec3ee85ab87') in 0.001442 seconds
+  Import took 0.013699 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.757998 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3796e80940dd55768cfd3d787194da39') in 0.004798 seconds
+  Import took 0.007805 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019569 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3796e80940dd55768cfd3d787194da39') in 0.005523 seconds
+  Import took 0.008297 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.083016 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a78b64865e65a640bea7e15fd916dd7b') in 0.005915 seconds
+  Import took 0.012396 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.267775 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a2f6b5b6db87946adccba1f45ec331b') in 0.004459 seconds
+  Import took 0.011803 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.031294 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b5cbdf6b492c0bb6a9ac13586043b67') in 0.004786 seconds
+  Import took 0.007588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.577093 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '776a99eb0e27c8e67adb56406cf20194') in 0.004791 seconds
+  Import took 0.048358 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.320795 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65f91218605febbc5c69e3a7b87343f6') in 0.004792 seconds
+  Import took 0.007772 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.415700 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b087d291c0e7d405544d746a79ae57ed') in 0.005137 seconds
+  Import took 0.008625 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.655749 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc59130e29048af06bbe028ce7b3529d') in 0.005079 seconds
+  Import took 0.008021 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.956247 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2edaa75ab9879c223688f58845ca000e') in 0.007446 seconds
+  Import took 0.010374 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.817180 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27329229551ffe84d8d847bfc558152a') in 0.005628 seconds
+  Import took 0.015790 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.470131 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58a196f9f070043847d7a309ea0bfe4e') in 0.005003 seconds
+  Import took 0.015624 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.007804 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbde32463faf57ea1c093ee61472e5b8') in 0.005554 seconds
+  Import took 0.008574 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.196333 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec1293079d197b90d320fb509ad16f97') in 0.005866 seconds
+  Import took 0.008923 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.000659 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '323a9d9048bf0ecae639ff93919df3aa') in 0.005369 seconds
+  Import took 0.016872 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002553 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.113 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 116.0 MB.
+System memory in use after: 116.1 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2597.
+Total: 15.088100 ms (FindLiveObjects: 0.324500 ms CreateObjectMapping: 0.099200 ms MarkObjects: 14.574800 ms  DeleteObjects: 0.088100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002619 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.50 ms, found 4 plugins.
@@ -59,51 +1393,836 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.186 seconds
+- Completed reload, in  1.099 seconds
 Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 1.00 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.50 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2071 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.7 MB.
-System memory in use after: 98.7 MB.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 116.0 MB.
+System memory in use after: 116.2 MB.
 
-Unloading 126 unused Assets to reduce memory usage. Loaded Objects now: 2530.
-Total: 14.372900 ms (FindLiveObjects: 0.174400 ms CreateObjectMapping: 0.070800 ms MarkObjects: 13.985900 ms  DeleteObjects: 0.140600 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Resources/Sound/SoundOne.asset
-  artifactKey: Guid(95ded607daeaca540b3866026e2bc731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Sound/SoundOne.asset using Guid(95ded607daeaca540b3866026e2bc731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d962eb0f5bc7bbee603f6a5c566f134') in 0.027055 seconds
-  Import took 0.029724 seconds .
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2599.
+Total: 13.706300 ms (FindLiveObjects: 0.291700 ms CreateObjectMapping: 0.107000 ms MarkObjects: 13.222700 ms  DeleteObjects: 0.084000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 28.795533 seconds.
-  path: Assets/Resources/Sound/Battle/Explosion.asset
-  artifactKey: Guid(cb7409487d27c3b41a7bf1484c06e2cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Sound/Battle/Explosion.asset using Guid(cb7409487d27c3b41a7bf1484c06e2cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fc537fd0e28403090dfe98bbad0b818') in 0.002483 seconds
-  Import took 0.024623 seconds .
+  Time since last request: 36.097708 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7341a34bf9e54c03cedf2aac39e45462') in 0.012725 seconds
+  Import took 0.016244 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.955019 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '685282ef2f8a51280f71f9e819f16208') in 0.005923 seconds
+  Import took 0.037954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.542706 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b9724db0aa5dd3bcc3b77ca1ab9869f') in 0.006256 seconds
+  Import took 0.009305 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.255117 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0234d965a043810d3bde2a4837827b65') in 0.005726 seconds
+  Import took 0.008832 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.617979 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2deb5b402306eefbbc7a965ef27b54be') in 0.005450 seconds
+  Import took 0.014215 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.930188 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80ba542895ca567aed7806f67def2aa6') in 0.007245 seconds
+  Import took 0.010374 seconds .
 
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 4.53 ms, found 4 plugins.
+Registering precompiled user dll's ...
+Registered in 0.002447 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.5 MB.
-System memory in use after: 57.6 MB.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.676 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.6 MB.
+System memory in use after: 115.7 MB.
 
-Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 2530.
-Total: 13.150700 ms (FindLiveObjects: 0.289200 ms CreateObjectMapping: 0.092100 ms MarkObjects: 12.748900 ms  DeleteObjects: 0.018900 ms)
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2601.
+Total: 14.327000 ms (FindLiveObjects: 0.223700 ms CreateObjectMapping: 0.098400 ms MarkObjects: 13.912300 ms  DeleteObjects: 0.090900 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.270709 seconds.
-  path: Assets/Resources/Sound/Battle/Explosion.asset
-  artifactKey: Guid(cb7409487d27c3b41a7bf1484c06e2cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Sound/Battle/Explosion.asset using Guid(cb7409487d27c3b41a7bf1484c06e2cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '138b31fe4924ae1b49ad41a021c7d99e') in 0.003166 seconds
-  Import took 0.087159 seconds .
+  Time since last request: 29.970359 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c18a405f7ca691a35fc702c7709f4457') in 0.014835 seconds
+  Import took 0.027459 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.809611 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca0399d996b0cedf25854d2f0df15208') in 0.005486 seconds
+  Import took 0.012136 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002423 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.096 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 116.1 MB.
+System memory in use after: 116.2 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2603.
+Total: 13.445500 ms (FindLiveObjects: 0.219600 ms CreateObjectMapping: 0.079600 ms MarkObjects: 13.050300 ms  DeleteObjects: 0.094800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.154614 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9043f11eee2c91b9a8105b98cc800918') in 0.014467 seconds
+  Import took 0.049610 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.025319 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4b91ea4a2dd023fb67343f6186a6d72') in 0.006257 seconds
+  Import took 0.009294 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.440828 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aba6748816082b9c49cd806bae9e78b8') in 0.007815 seconds
+  Import took 0.010738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.433987 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f93bb4822d50747f0a6e0af45b24a16') in 0.005656 seconds
+  Import took 0.008585 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.533047 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba68be3ead4bc8f91cfbefd69d4acad3') in 0.006507 seconds
+  Import took 0.009676 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.528809 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb9d287b286d3fee6a45b1ba4c7a2c1e') in 0.005970 seconds
+  Import took 0.009070 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002536 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.105 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.9 MB.
+System memory in use after: 116.0 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2605.
+Total: 13.838300 ms (FindLiveObjects: 0.204600 ms CreateObjectMapping: 0.085300 ms MarkObjects: 13.439400 ms  DeleteObjects: 0.107900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.259743 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b500019b200becacb36c7c20b7a9980') in 0.014835 seconds
+  Import took 0.018511 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002455 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.091 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 116.1 MB.
+System memory in use after: 116.3 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2607.
+Total: 13.305900 ms (FindLiveObjects: 0.220100 ms CreateObjectMapping: 0.082200 ms MarkObjects: 12.919300 ms  DeleteObjects: 0.083300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002400 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.076 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 116.1 MB.
+System memory in use after: 116.2 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2609.
+Total: 13.754300 ms (FindLiveObjects: 0.251300 ms CreateObjectMapping: 0.126000 ms MarkObjects: 13.283500 ms  DeleteObjects: 0.092300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.998591 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0deae68a4e449f2c3ba79f211371e471') in 0.012179 seconds
+  Import took 0.015862 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.297753 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0deae68a4e449f2c3ba79f211371e471') in 0.005941 seconds
+  Import took 0.009045 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.347910 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22c9606a6999909e935bbb5d0dc6296f') in 0.005916 seconds
+  Import took 0.008774 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.551585 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61a15c31aade275b8e1c1789e7d22ed8') in 0.005572 seconds
+  Import took 0.008416 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.715506 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9c92dfd63796ba8cfa2206129b089ab') in 0.006578 seconds
+  Import took 0.009491 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002467 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.089 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.6 MB.
+System memory in use after: 115.7 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2611.
+Total: 13.719700 ms (FindLiveObjects: 0.300900 ms CreateObjectMapping: 0.091200 ms MarkObjects: 13.237100 ms  DeleteObjects: 0.089300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.906446 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e57ab1163d980e9d8dc750543f1c4db') in 0.013863 seconds
+  Import took 0.035123 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004427 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e57ab1163d980e9d8dc750543f1c4db') in 0.005296 seconds
+  Import took 0.008109 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.296634 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a54cc3f2a03ebc5777122248db0512cd') in 0.005658 seconds
+  Import took 0.008719 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.022991 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bed8a75a172379ca09c4ebb9375948b3') in 0.005356 seconds
+  Import took 0.018415 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002458 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.090 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 116.1 MB.
+System memory in use after: 116.3 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2613.
+Total: 13.990000 ms (FindLiveObjects: 0.251400 ms CreateObjectMapping: 0.084800 ms MarkObjects: 13.564000 ms  DeleteObjects: 0.088500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.803321 seconds.
+  path: Assets/DDNodeCutscenes/Scenes/Example.unity
+  artifactKey: Guid(0f80188efeb161745873c13998c6e65b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DDNodeCutscenes/Scenes/Example.unity using Guid(0f80188efeb161745873c13998c6e65b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0a658e5799b07fd4db1b106bbb5f491') in 0.018795 seconds
+  Import took 0.022269 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002485 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.091 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.9 MB.
+System memory in use after: 116.0 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2615.
+Total: 13.356200 ms (FindLiveObjects: 0.192900 ms CreateObjectMapping: 0.077400 ms MarkObjects: 12.999100 ms  DeleteObjects: 0.085900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002466 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.076 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 107.6 MB.
+System memory in use after: 107.8 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2617.
+Total: 16.529800 ms (FindLiveObjects: 0.301000 ms CreateObjectMapping: 0.102400 ms MarkObjects: 16.032900 ms  DeleteObjects: 0.092300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 114.579615 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67086cd9d88ce7da72bae2ff56977406') in 0.015245 seconds
+  Import took 0.020952 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.855736 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0304b04fae9f741032235078c9319e2c') in 0.005905 seconds
+  Import took 0.008756 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.009211 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bacb08d53f4862b9f9368c1f5878310') in 0.006537 seconds
+  Import took 0.010165 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.268726 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57dfc55b0b9683e64a8de3baac76d228') in 0.005813 seconds
+  Import took 0.008863 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.063022 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13419fbda460f308380c06041885bb4a') in 0.005832 seconds
+  Import took 0.008730 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.497080 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89667ef994da7577669afed8303a60df') in 0.006836 seconds
+  Import took 0.009994 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002788 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.142 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 116.1 MB.
+System memory in use after: 116.2 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2619.
+Total: 14.122500 ms (FindLiveObjects: 0.229500 ms CreateObjectMapping: 0.083800 ms MarkObjects: 13.718300 ms  DeleteObjects: 0.089700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.244636 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73c61316182d8b9ede3e203e56d4e3bd') in 0.014537 seconds
+  Import took 0.018120 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.562558 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77df142f7aa3a7b65d29eb881282a9bb') in 0.005454 seconds
+  Import took 0.008328 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.240408 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc4b472fe2f33518c3189f0729859331') in 0.005620 seconds
+  Import took 0.008506 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002404 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.113 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 107.1 MB.
+System memory in use after: 107.2 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2621.
+Total: 13.688000 ms (FindLiveObjects: 0.193800 ms CreateObjectMapping: 0.077500 ms MarkObjects: 13.327900 ms  DeleteObjects: 0.087700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.919642 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce6105a2c0da40534873ea9a013724c7') in 0.013984 seconds
+  Import took 0.017965 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.084232 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9abea19c360519b14e2db4aa0c2e1708') in 0.005962 seconds
+  Import took 0.035740 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.878399 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3998f8e25bd66a0e4618a56ed7c4a22') in 0.005916 seconds
+  Import took 0.090019 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.451424 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd39f9b3a1891e7b0072ba9002647117b') in 0.005605 seconds
+  Import took 0.008633 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.745324 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f17d10827bce28414e125a2fd49c5df4') in 0.006173 seconds
+  Import took 0.009164 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.513342 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94e3148fb6b8c0850f6166a6d27d1ed8') in 0.005494 seconds
+  Import took 0.008353 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.639056 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c32a24f8338209c344ffe7ce84dfe2e') in 0.005410 seconds
+  Import took 0.008283 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.586216 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44b1d2e26cadad5de963270c170fa072') in 0.006705 seconds
+  Import took 0.032469 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.739525 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe834eaf8267d0f91c1493525de727ff') in 0.005347 seconds
+  Import took 0.037457 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.441922 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ea897217ec315b3b9b9be05d4e03901') in 0.006498 seconds
+  Import took 0.009400 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.189858 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71d32607a3f7109e05887d61615a1d75') in 0.005632 seconds
+  Import took 0.105697 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.673974 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5f29c6d2fb6a9f265377724f72e0260') in 0.005602 seconds
+  Import took 0.008518 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.929737 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c45ed37fa8b5f573318a5bb3e21378ca') in 0.005910 seconds
+  Import took 0.009202 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.035442 seconds.
+  path: Assets/DDNodeCutscenes/Cutscenes/New Cutscene.asset
+  artifactKey: Guid(4ce06310c31f03f4ba2ec2893ae63125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DDNodeCutscenes/Cutscenes/New Cutscene.asset using Guid(4ce06310c31f03f4ba2ec2893ae63125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '809b6a18719e0df872dbb4a668f72e98') in 0.008767 seconds
+  Import took 0.012107 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002486 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.093 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 116.1 MB.
+System memory in use after: 116.3 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2623.
+Total: 13.452300 ms (FindLiveObjects: 0.232500 ms CreateObjectMapping: 0.080300 ms MarkObjects: 13.051200 ms  DeleteObjects: 0.087300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002524 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.083 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.9 MB.
+System memory in use after: 116.1 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2625.
+Total: 13.936300 ms (FindLiveObjects: 0.218600 ms CreateObjectMapping: 0.077900 ms MarkObjects: 13.550500 ms  DeleteObjects: 0.088500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004380 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.119 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 116.2 MB.
+System memory in use after: 116.3 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2627.
+Total: 13.265800 ms (FindLiveObjects: 0.211600 ms CreateObjectMapping: 0.088900 ms MarkObjects: 12.880300 ms  DeleteObjects: 0.083800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002498 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.090 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 116.1 MB.
+System memory in use after: 116.3 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2629.
+Total: 14.160200 ms (FindLiveObjects: 0.271000 ms CreateObjectMapping: 0.106900 ms MarkObjects: 13.692600 ms  DeleteObjects: 0.088500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002452 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.101 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.6 MB.
+System memory in use after: 115.8 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2631.
+Total: 14.959000 ms (FindLiveObjects: 0.350700 ms CreateObjectMapping: 0.108700 ms MarkObjects: 14.405800 ms  DeleteObjects: 0.092000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002541 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.090 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 116.2 MB.
+System memory in use after: 116.3 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2633.
+Total: 14.076900 ms (FindLiveObjects: 0.488300 ms CreateObjectMapping: 0.202700 ms MarkObjects: 13.278800 ms  DeleteObjects: 0.091900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 802.288638 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03ec77e3ae4cde02e45504f104a028cb') in 0.012442 seconds
+  Import took 0.016182 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.282110 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03ec77e3ae4cde02e45504f104a028cb') in 0.006021 seconds
+  Import took 0.009402 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002577 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.158 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.57 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2058 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.9 MB.
+System memory in use after: 116.1 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2635.
+Total: 14.515000 ms (FindLiveObjects: 0.244700 ms CreateObjectMapping: 0.086200 ms MarkObjects: 14.088700 ms  DeleteObjects: 0.094100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.852880 seconds.
+  path: Assets/BattleSystem/Battle Cutscene/New Cutscene.asset
+  artifactKey: Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleSystem/Battle Cutscene/New Cutscene.asset using Guid(a405981689f8a0141b06c1fe0f8b86d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64c87e2dc16b2a9196d8a93e653fb5d9') in 0.016610 seconds
+  Import took 0.020303 seconds .
 

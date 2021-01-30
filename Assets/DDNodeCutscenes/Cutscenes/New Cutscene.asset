@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Name: Set Sprite Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -440, y: -136}
+  position: {x: -472, y: -248}
   ports:
     keys:
     - input
@@ -1015,7 +1015,7 @@ MonoBehaviour:
   m_Name: Movement Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -216, y: -136}
+  position: {x: -248, y: -248}
   ports:
     keys:
     - input

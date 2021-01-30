@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12c620a45fbaaa043a861b59517bc4a4, type: 3}
-  m_Name: Electric
+  m_Name: Marg_02
   m_EditorClassIdentifier: 
   CollapseEditions: 0
   SFXName: 
   SFXLayers:
-  - LayerName: Electric
-    SFX: {fileID: 8300000, guid: 56e76d622a8c5c54b8870506839f773a, type: 3}
+  - LayerName: 
+    SFX: {fileID: 8300000, guid: e7a6425e5dee1444a81dfee2c140fc6a, type: 3}
     RandomizeVolume: 0
-    FixedVolume: 0.4
+    FixedVolume: 1
     MinVolume: 0.5
     MaxVolume: 1
     RandomizePitch: 0

@@ -307,6 +307,7 @@ public class CutsceneManager : MonoBehaviour {
             speakerCharacter = rightCharacter.GetComponent<CharacterSprite>();
             dimmedCharacter = leftCharacter.GetComponent<CharacterSprite>();
         }
+        Debug.Log(dimmedCharacter.Outfit.sprite.name);
         if (!dialogue.IsMoving)
         {
             speakerCharacter.IsSpeaking = true;

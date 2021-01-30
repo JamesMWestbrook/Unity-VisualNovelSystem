@@ -400,7 +400,7 @@ public class BattleManager : MonoBehaviour
     }
     public IEnumerator DelayAction(Action action, float secondsToWait)
     {
-        yield return new WaitForSeconds(secondsToWait);
+        yield return new WaitForSeconds(secondsToWait + 1);
         action();
     }
     [NonSerialized] public float SpriteTime = 0.3f;
@@ -467,20 +467,22 @@ public class BattleManager : MonoBehaviour
     public Skills NormalAttack;
     public void SpawnGO(GameObject go, Transform dest, float time)
     {
-
         go = Instantiate<GameObject>(go, dest);
         go.GetComponent<DestroyThis>().Timer = time;
 
     }
+    public ActorSlot Defender;
+    public bool IsHealing;
     public void PlaySingleSFX(Skills skill)
     {
-        if(UAP_AccessibilityManager.IsEnabled()) StartCoroutine(PlaySFX(skill.SoundEffect.Get(), 0f));
-        else StartCoroutine(PlaySFX(skill.SoundEffect.Get(), skill.EffectDelay));
+        if(UAP_AccessibilityManager.IsEnabled()) StartCoroutine(PlaySFX(skill.SoundEffect.Get(), 0f + 0.1f));
+        else StartCoroutine(PlaySFX(skill.SoundEffect.Get(), skill.EffectDelay + 0.1f));
     }
     public IEnumerator PlaySFX(SFXObject sFX, float delay)
     {
         yield return new WaitForSeconds(delay);
         SFXManager.Main.Play(sFX);
+        if (!Defender.IsAI && !IsHealing) SFXManager.Main.Play(Defender.Actor.DamageVoices.Get());
     }
     public void StartSpawn(float DestructTimer, int popupText, ActorSlot Defender, bool Healing = false)
     {
