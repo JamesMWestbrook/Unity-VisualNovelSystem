@@ -347,8 +347,11 @@ public class BattleManager : MonoBehaviour
             LeanTween.scale(actorTrans, Vector3.zero, 0.7f);
         }
     }
+    public Track BattleTheme;
+
     public void EnableUI()
     {
+        MusicManager.Main.Play(BattleTheme);
         foreach (ActorSlot actor in Party)
         {
             actor.gameObject.SetActive(true);

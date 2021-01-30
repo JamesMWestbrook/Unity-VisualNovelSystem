@@ -31,9 +31,7 @@ public class VictoryCanvas : MonoBehaviour
     public SFXObject EXPSound;
     public SFXObject LevelUpSound;
 
-    public AudioListener AudioListener;
-    public AudioClip LevelUpClip;
-    public AudioSource AudioSource;
+    public SFXObject VictorySong;
     void Start()
     {
         Drops.SetActive(false);
@@ -65,32 +63,39 @@ public class VictoryCanvas : MonoBehaviour
         statline.gameObject.SetActive(false);
     }
     bool PauseProcessing;
+    public SFXObject VictorySound;
     public IEnumerator Victory()
     {
+        MusicManager.Main.Stop(1);
+        yield return new WaitForSeconds(1f);
+        SFXManager.Main.Play(VictorySong);
         QuickScale(AftermathPanel);
         //  yield return new WaitForSeconds(0.5f);
         QuickScale(Drops);
         //    yield return new WaitForSeconds(0.7f);
-
         QuickScale(Currency.gameObject);
         QuickScale(CurrencyHeader);
         Currency.text = "0";
         int tempCurrency = 0;
-        // yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.7f);
+        SFXManager.Main.Play(VictorySound);
+        GameManager.Instance.BattleManager.SlideActor(GameManager.Instance.BattleManager.Party[1]);
+
         do
         {
             tempCurrency++;
             Currency.text = tempCurrency.ToString();
-            //Play SFX
+            SFXManager.Main.Play(EXPSound);
             yield return new WaitForSeconds(0.08f);
         } while (tempCurrency != GameManager.Instance.BattleManager.MoneyPayout);
+        yield return new WaitForSeconds(1.5f);
 
-        //  yield return new WaitForSeconds(1);
         GameObject itemDrop = Instantiate<GameObject>(ItemDropPrefab, transform);
         itemDrop.GetComponent<RectTransform>().localPosition = new Vector3(-329, 106.6f, 0);
         QuickScale(itemDrop);
+        SFXManager.Main.Play(LevelUpSound);
 
-        //Lvl
+        yield return new WaitForSeconds(0.7f);
         StartCoroutine(LevelProcess(GameManager.Instance.BattleManager.Party[0], 0));
     }
 

@@ -188,6 +188,7 @@ public class CutsceneManager : MonoBehaviour {
                 BattleManager BM = GameObject.Find("BattleManager").GetComponent<BattleManager>();
                 BM.EnableUI();
                 BM.StartActor();
+
                 //Move Battle UI Back In?
                 return;
             }

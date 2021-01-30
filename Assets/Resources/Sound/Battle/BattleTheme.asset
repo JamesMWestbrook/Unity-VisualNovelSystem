@@ -15,13 +15,13 @@ MonoBehaviour:
   CollapseEditions: 0
   Name: BattleTheme
   Intro: {fileID: 0}
-  IntroVolume: 1
+  IntroVolume: 0.353
   OverlapDuration: 0
   Editions:
   - Name: BattleTheme_1
     Soundtrack: {fileID: 8300000, guid: e321b0665db022a489a64945944ff950, type: 3}
-    SoundtrackVolume: 1
+    SoundtrackVolume: 0.18
     TransitionSound: {fileID: 0}
     TransitionVolume: 1
     KeepPlaybackTime: 0
-    FadeLength: 0
+    FadeLength: 3

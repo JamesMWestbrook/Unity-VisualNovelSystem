@@ -556,7 +556,7 @@ MonoBehaviour:
   actor: {fileID: 0}
   Outfit: {fileID: 0}
   Face: {fileID: 21300000, guid: 5f020ab600e0f02418a77f534a0bc0e0, type: 3}
-  Spot: 0
+  Spot: 3
 --- !u!114 &3193288436787619203
 MonoBehaviour:
   m_ObjectHideFlags: 0

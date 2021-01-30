@@ -20,7 +20,9 @@ public class AngelBattleEvents : MonoBehaviour
         GameManager.Instance.BattleManager.DelayNextTurn = false;
     }
     public void EndOfBattle(){Debug.Log("Battle ended");}
-    public void StartOfTurn(){Debug.Log("Turn started");}
+    public void StartOfTurn(){
+        Debug.Log("Turn started");
+    }
 
     void Start()
     {
