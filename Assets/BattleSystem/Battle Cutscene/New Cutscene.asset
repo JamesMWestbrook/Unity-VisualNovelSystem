@@ -413,7 +413,7 @@ MonoBehaviour:
   m_Name: Dialogue Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 248, y: -152}
+  position: {x: 232, y: -136}
   ports:
     keys:
     - input

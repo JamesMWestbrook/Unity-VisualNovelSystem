@@ -21,7 +21,7 @@ MonoBehaviour:
     MaxStats:
       HP: 20
       MP: 50
-      Muscle: 3
+      Muscle: 4
       Vigor: 5
       Will: 4
       Instinct: 5

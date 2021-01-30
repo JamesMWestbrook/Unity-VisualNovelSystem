@@ -3347,6 +3347,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1344664706077752957, guid: 5ee3bcf92fcf52c429a9060e6c3c9b4e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344664706077752957, guid: 5ee3bcf92fcf52c429a9060e6c3c9b4e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.631
+      objectReference: {fileID: 0}
     - target: {fileID: 1344664707456357666, guid: 5ee3bcf92fcf52c429a9060e6c3c9b4e,
         type: 3}
       propertyPath: NormalAttack.EffectDelay

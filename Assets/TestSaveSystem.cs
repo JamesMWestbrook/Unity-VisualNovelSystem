@@ -20,8 +20,15 @@ public class TestSaveSystem : MonoBehaviour
 
         data = startData.data;
         SaveState("Assets/Resources/SaveData/StarterData.bytes");
-        Debug.Log("Saved");
         // SceneManager.LoadScene("GUISetup", LoadSceneMode.Single);
+        StartCoroutine(SaveMessage());
+    }
+    public IEnumerator SaveMessage()
+    {
+        yield return new WaitForSeconds(15f);
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 
     // Update is called once per frame

@@ -504,8 +504,12 @@ public class BattleManager : MonoBehaviour
         //spawn
         //set parent
         //set local transform
-        GameObject go = Instantiate<GameObject>(DamagePopupPrefab, actor.transform);
 
+        Transform parent = actor.transform;
+        if (actor.IsAI) parent = actor.HP.transform.parent;
+
+        GameObject go = Instantiate<GameObject>(DamagePopupPrefab, parent);
+        Debug.Log(actor.gameObject.name);
         RectTransform rect = go.GetComponent<RectTransform>();
         if (actor.IsAI)
         {
