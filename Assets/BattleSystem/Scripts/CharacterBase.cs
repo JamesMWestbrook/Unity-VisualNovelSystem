@@ -81,7 +81,7 @@ public class CharacterBase
                 MaxStats.HP = GetGrowth(22, 7);
                 MaxStats.MP = GetGrowth(40, 4);
                 MaxStats.Muscle = GetGrowth(3,2);
-                MaxStats.Vigor = GetGrowth(2);
+                MaxStats.Vigor = GetGrowth(2,1);
                 MaxStats.Will = GetGrowth(2);
                 MaxStats.Instinct = GetGrowth(3);
                 MaxStats.Agility = GetGrowth(2);
@@ -90,7 +90,7 @@ public class CharacterBase
             case StatType.Healer:
                 MaxStats.HP = GetGrowth(22, 8);
                 MaxStats.MP = GetGrowth(40, 6);
-                MaxStats.Muscle = GetGrowth(2);
+                MaxStats.Muscle = GetGrowth(3, 1);
                 MaxStats.Vigor = GetGrowth(3,2);
                 MaxStats.Will = GetGrowth(3);
                 MaxStats.Instinct = GetGrowth(3);

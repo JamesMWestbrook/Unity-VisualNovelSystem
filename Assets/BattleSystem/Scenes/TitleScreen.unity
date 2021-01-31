@@ -150,7 +150,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150851038}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &150851040
 Camera:
   m_ObjectHideFlags: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a434361de31ffa4f9a180d0971bb2fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DebugSkip: 1
+  DebugSkip: 0
   scene: GUISetup
 --- !u!114 &150851043
 MonoBehaviour:

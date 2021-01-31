@@ -58,7 +58,7 @@ MonoBehaviour:
       Cost: 0
       LevelLearned: 0
       Learned: 1
-      BaseDamage: 5
+      BaseDamage: 3
       DestructTimer: 1.5
       Rotation: {x: 0, y: 0, z: 0}
       Friendly: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
       Cost: 0
       LevelLearned: 0
       Learned: 1
-      BaseDamage: 5
+      BaseDamage: 3
       DestructTimer: 1.5
       Rotation: {x: 0, y: 0, z: 0}
       Friendly: 0

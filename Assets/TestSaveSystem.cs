@@ -19,13 +19,13 @@ public class TestSaveSystem : MonoBehaviour
         }
 
         data = startData.data;
-        SaveState("Assets/Resources/SaveData/StarterData.bytes");
+        SaveState("Assets/Resources/SaveData/StarterData.json");
         // SceneManager.LoadScene("GUISetup", LoadSceneMode.Single);
         StartCoroutine(SaveMessage());
     }
     public IEnumerator SaveMessage()
     {
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(8);
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
@@ -38,7 +38,7 @@ public class TestSaveSystem : MonoBehaviour
     }
     public void SaveState(string filePath)
     {
-        byte[] bytes = SerializationUtility.SerializeValue(startData.data, DataFormat.Binary);
+        byte[] bytes = SerializationUtility.SerializeValue(startData.data, DataFormat.JSON);
         File.WriteAllBytes(filePath, bytes);
     }
 }

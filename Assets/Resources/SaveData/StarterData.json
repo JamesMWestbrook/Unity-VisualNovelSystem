@@ -1,0 +1,1983 @@
+{
+    "$id": 0,
+    "$type": "0|Data, Assembly-CSharp",
+    "Party": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.List`1[[CharacterBase, Assembly-CSharp]], mscorlib",
+        "$rlength": 2,
+        "$rcontent": [
+            {
+                "$id": 2,
+                "$type": "2|CharacterBase, Assembly-CSharp",
+                "Name": "No",
+                "NickName": "EmptyNN",
+                "Lvl": 1,
+                "EXP": 0,
+                "statType": 0,
+                "MaxStats": {
+                    "$id": 3,
+                    "$type": "3|CharStats, Assembly-CSharp",
+                    "HP": 20,
+                    "MP": 50,
+                    "Muscle": 4,
+                    "Vigor": 5,
+                    "Will": 4,
+                    "Instinct": 5,
+                    "Agility": 3,
+                    "element": {
+                        "$id": 4,
+                        "$type": "4|Element, Assembly-CSharp",
+                        "Normal": 1,
+                        "Currene": 1,
+                        "Terrene": 1,
+                        "Pyro": 1,
+                        "Cyro": 1,
+                        "Solar": 1,
+                        "Lunar": 1
+                    }
+                },
+                "CurStats": {
+                    "$id": 5,
+                    "$type": 3,
+                    "HP": 50,
+                    "MP": 30,
+                    "Muscle": 3,
+                    "Vigor": 5,
+                    "Will": 4,
+                    "Instinct": 5,
+                    "Agility": 3,
+                    "element": {
+                        "$id": 6,
+                        "$type": 4,
+                        "Normal": 1,
+                        "Currene": 1,
+                        "Terrene": 1,
+                        "Pyro": 1,
+                        "Cyro": 1,
+                        "Solar": 1,
+                        "Lunar": 1
+                    }
+                },
+                "Skills": {
+                    "$id": 7,
+                    "$type": "5|System.Collections.Generic.List`1[[Skills, Assembly-CSharp]], mscorlib",
+                    "$rlength": 3,
+                    "$rcontent": [
+                        {
+                            "$id": 8,
+                            "$type": "6|Skills, Assembly-CSharp",
+                            "Name": "Heal",
+                            "Prefab": {
+                                "$id": 9,
+                                "$type": "7|ResourcePathAsset`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], Assembly-CSharp",
+                                "path": "KY_effects/MagicEffectsPackFree/prefab/GreenCore",
+                                "asset": {
+                                    "$id": 10,
+                                    "$type": "8|UnityEngine.GameObject, UnityEngine.CoreModule"
+                                }
+                            },
+                            "Cost": 10,
+                            "LevelLearned": 0,
+                            "Learned": true,
+                            "BaseDamage": 3,
+                            "DestructTimer": 2,
+                            "Rotation": {
+                                "$type": "9|UnityEngine.Vector3, UnityEngine.CoreModule",
+                                0,
+                                0,
+                                0
+                            },
+                            "Friendly": true,
+                            "targetCount": 0,
+                            "hitType": 2,
+                            "elementType": 6,
+                            "AnimTrigger": "",
+                            "AffectsDead": false,
+                            "Description": "Heals a single target for moderate health.",
+                            "SoundEffect": {
+                                "$id": 11,
+                                "$type": "10|ResourcePathAsset`1[[SFXObject, Assembly-CSharp-firstpass]], Assembly-CSharp",
+                                "path": "Sound/Battle/Heal_01",
+                                "asset": {
+                                    "$id": 12,
+                                    "$type": "11|SFXObject, Assembly-CSharp-firstpass",
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 13,
+                                        "$type": "12|SFXLayer[], Assembly-CSharp-firstpass",
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": "13|SFXLayer, Assembly-CSharp-firstpass",
+                                                "LayerName": "Heal_01",
+                                                "SFX": {
+                                                    "$id": 14,
+                                                    "$type": "14|UnityEngine.AudioClip, UnityEngine.AudioModule"
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                }
+                            },
+                            "EffectDelay": 0
+                        },
+                        {
+                            "$id": 15,
+                            "$type": 6,
+                            "Name": "Bomb",
+                            "Prefab": {
+                                "$id": 16,
+                                "$type": 7,
+                                "path": "KY_effects/MagicEffectsPackFree/prefab/WhityBomb",
+                                "asset": {
+                                    "$id": 17,
+                                    "$type": 8
+                                }
+                            },
+                            "Cost": 7,
+                            "LevelLearned": 0,
+                            "Learned": true,
+                            "BaseDamage": 3,
+                            "DestructTimer": 2,
+                            "Rotation": {
+                                "$type": 9,
+                                0,
+                                0,
+                                0
+                            },
+                            "Friendly": false,
+                            "targetCount": 1,
+                            "hitType": 1,
+                            "elementType": 2,
+                            "AnimTrigger": "",
+                            "AffectsDead": false,
+                            "Description": "Throws Terrene bomb at enemies, hitting all.",
+                            "SoundEffect": {
+                                "$id": 18,
+                                "$type": 10,
+                                "path": "Sound/Battle/Explosion",
+                                "asset": {
+                                    "$id": 19,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 20,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "Explosion",
+                                                "SFX": {
+                                                    "$id": 21,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 0.55,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                }
+                            },
+                            "EffectDelay": 0
+                        },
+                        {
+                            "$id": 22,
+                            "$type": 6,
+                            "Name": "Bullet Barrage",
+                            "Prefab": {
+                                "$id": 23,
+                                "$type": 7,
+                                "path": "",
+                                "asset": {
+                                    "$id": 24,
+                                    "$type": 8
+                                }
+                            },
+                            "Cost": 0,
+                            "LevelLearned": 2,
+                            "Learned": false,
+                            "BaseDamage": 0,
+                            "DestructTimer": 0,
+                            "Rotation": {
+                                "$type": 9,
+                                0,
+                                0,
+                                0
+                            },
+                            "Friendly": false,
+                            "targetCount": 0,
+                            "hitType": 0,
+                            "elementType": 6,
+                            "AnimTrigger": "",
+                            "AffectsDead": false,
+                            "Description": "",
+                            "SoundEffect": {
+                                "$id": 25,
+                                "$type": 10,
+                                "path": "",
+                                "asset": null
+                            },
+                            "EffectDelay": 0
+                        }
+                    ]
+                },
+                "ShowTest": {
+                    "$id": 26,
+                    "$type": "15|ResourcePathAsset`1[[UnityEngine.Sprite, UnityEngine.CoreModule]], Assembly-CSharp",
+                    "path": "BattleGraphics/Luisella/Body/LuisellaBattle",
+                    "asset": {
+                        "$id": 27,
+                        "$type": "16|UnityEngine.Sprite, UnityEngine.CoreModule"
+                    }
+                },
+                "FacePath": {
+                    "$id": 28,
+                    "$type": 15,
+                    "path": "Luisella Face",
+                    "asset": {
+                        "$id": 29,
+                        "$type": 16
+                    }
+                },
+                "SpriteGUI": "",
+                "BattleOutfitPath": {
+                    "$id": 30,
+                    "$type": 15,
+                    "path": "BattleGraphics/Luisella/Body/LuisellaBattle",
+                    "asset": {
+                        "$id": 31,
+                        "$type": 16
+                    }
+                },
+                "BattleFacePath": {
+                    "$id": 32,
+                    "$type": 15,
+                    "path": "BattleGraphics/Luisella/Faces/LuisellaSmile",
+                    "asset": {
+                        "$id": 33,
+                        "$type": 16
+                    }
+                },
+                "AttackVoices": {
+                    "$id": 34,
+                    "$type": "17|ResourcePathAsset`1[[SFXGroup, Assembly-CSharp-firstpass]], Assembly-CSharp",
+                    "path": "Voice Clips/Battle/Luisella/LuiAttackGroup",
+                    "asset": {
+                        "$id": 35,
+                        "$type": "18|SFXGroup, Assembly-CSharp-firstpass",
+                        "GroupName": "",
+                        "SFXObjects": {
+                            "$id": 36,
+                            "$type": "19|SFXObject[], Assembly-CSharp-firstpass",
+                            "$rlength": 1,
+                            "$rcontent": [
+                                {
+                                    "$id": 37,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 38,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "",
+                                                "SFX": {
+                                                    "$id": 39,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                }
+                            ]
+                        },
+                        "Randomization": 0
+                    }
+                },
+                "DefaultSpecialVoices": {
+                    "$id": 40,
+                    "$type": 17,
+                    "path": "Voice Clips/Battle/Luisella/LuiSpecialGroup",
+                    "asset": {
+                        "$id": 41,
+                        "$type": 18,
+                        "GroupName": "",
+                        "SFXObjects": {
+                            "$id": 42,
+                            "$type": 19,
+                            "$rlength": 2,
+                            "$rcontent": [
+                                {
+                                    "$id": 43,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 44,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "",
+                                                "SFX": {
+                                                    "$id": 45,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                },
+                                {
+                                    "$id": 46,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 47,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "",
+                                                "SFX": {
+                                                    "$id": 48,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                }
+                            ]
+                        },
+                        "Randomization": 0
+                    }
+                },
+                "HealingVoices": {
+                    "$id": 49,
+                    "$type": 17,
+                    "path": "Voice Clips/Battle/Luisella/LuiHealGroup",
+                    "asset": {
+                        "$id": 50,
+                        "$type": 18,
+                        "GroupName": "",
+                        "SFXObjects": {
+                            "$id": 51,
+                            "$type": 19,
+                            "$rlength": 2,
+                            "$rcontent": [
+                                {
+                                    "$id": 52,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 53,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "",
+                                                "SFX": {
+                                                    "$id": 54,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                },
+                                {
+                                    "$id": 55,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 56,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "",
+                                                "SFX": {
+                                                    "$id": 57,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                }
+                            ]
+                        },
+                        "Randomization": 0
+                    }
+                },
+                "TurnStartVoices": {
+                    "$id": 58,
+                    "$type": 17,
+                    "path": "Voice Clips/Battle/Luisella/LuiStartTurnGroup",
+                    "asset": {
+                        "$id": 59,
+                        "$type": 18,
+                        "GroupName": "",
+                        "SFXObjects": {
+                            "$id": 60,
+                            "$type": 19,
+                            "$rlength": 2,
+                            "$rcontent": [
+                                {
+                                    "$id": 61,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 62,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "",
+                                                "SFX": {
+                                                    "$id": 63,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                },
+                                {
+                                    "$id": 64,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 65,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "",
+                                                "SFX": {
+                                                    "$id": 66,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                }
+                            ]
+                        },
+                        "Randomization": 0
+                    }
+                },
+                "VictoryVoices": {
+                    "$id": 67,
+                    "$type": 17,
+                    "path": "Voice Clips/Battle/Luisella/LuiVictoryGroup",
+                    "asset": {
+                        "$id": 68,
+                        "$type": 18,
+                        "GroupName": "",
+                        "SFXObjects": {
+                            "$id": 69,
+                            "$type": 19,
+                            "$rlength": 1,
+                            "$rcontent": [
+                                {
+                                    "$id": 70,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 71,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "",
+                                                "SFX": {
+                                                    "$id": 72,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                }
+                            ]
+                        },
+                        "Randomization": 0
+                    }
+                },
+                "DamageVoices": {
+                    "$id": 73,
+                    "$type": 17,
+                    "path": "Voice Clips/Battle/Luisella/LuiDamageGroup",
+                    "asset": {
+                        "$id": 74,
+                        "$type": 18,
+                        "GroupName": "",
+                        "SFXObjects": {
+                            "$id": 75,
+                            "$type": 19,
+                            "$rlength": 2,
+                            "$rcontent": [
+                                {
+                                    "$id": 76,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 77,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "",
+                                                "SFX": {
+                                                    "$id": 78,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                },
+                                {
+                                    "$id": 79,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 80,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "",
+                                                "SFX": {
+                                                    "$id": 81,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                }
+                            ]
+                        },
+                        "Randomization": 0
+                    }
+                },
+                "DefaultAttackSound": {
+                    "$id": 82,
+                    "$type": 10,
+                    "path": "Sound/Battle/Pistol",
+                    "asset": {
+                        "$id": 83,
+                        "$type": 11,
+                        "CollapseEditions": false,
+                        "SFXName": "",
+                        "SFXLayers": {
+                            "$id": 84,
+                            "$type": 12,
+                            "$rlength": 1,
+                            "$rcontent": [
+                                {
+                                    "$type": 13,
+                                    "LayerName": "Pistol",
+                                    "SFX": {
+                                        "$id": 85,
+                                        "$type": 14
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 0.483,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "Mute": false,
+                                    "BypassEffects": false,
+                                    "BypassReverbZones": false,
+                                    "Priority": 128,
+                                    "StereoPan": 0,
+                                    "SpatialBlend": 0,
+                                    "ReverbZoneMix": 0
+                                }
+                            ]
+                        },
+                        "RandomizeVolume": false,
+                        "FixedVolume": 1,
+                        "MinVolume": 0.5,
+                        "MaxVolume": 1,
+                        "RandomizePitch": false,
+                        "FixedPitch": 1,
+                        "MinPitch": 0.75,
+                        "MaxPitch": 1.5,
+                        "DelaySFX": false,
+                        "RandomizeDelay": false,
+                        "FixedDelayTime": 0,
+                        "MinDelayTime": 0,
+                        "MaxDelayTime": 0,
+                        "LimitPolyphony": false,
+                        "MaxVoices": 0,
+                        "MinSeparation": 0
+                    }
+                }
+            },
+            {
+                "$id": 86,
+                "$type": 2,
+                "Name": "Margherita",
+                "NickName": "EmptyNN",
+                "Lvl": 1,
+                "EXP": 0,
+                "statType": 1,
+                "MaxStats": {
+                    "$id": 87,
+                    "$type": 3,
+                    "HP": 25,
+                    "MP": 35,
+                    "Muscle": 5,
+                    "Vigor": 4,
+                    "Will": 4,
+                    "Instinct": 5,
+                    "Agility": 3,
+                    "element": {
+                        "$id": 88,
+                        "$type": 4,
+                        "Normal": 1,
+                        "Currene": 1,
+                        "Terrene": 1,
+                        "Pyro": 1,
+                        "Cyro": 1,
+                        "Solar": 1,
+                        "Lunar": 1
+                    }
+                },
+                "CurStats": {
+                    "$id": 89,
+                    "$type": 3,
+                    "HP": 50,
+                    "MP": 30,
+                    "Muscle": 3,
+                    "Vigor": 5,
+                    "Will": 4,
+                    "Instinct": 5,
+                    "Agility": 3,
+                    "element": {
+                        "$id": 90,
+                        "$type": 4,
+                        "Normal": 1,
+                        "Currene": 1,
+                        "Terrene": 1,
+                        "Pyro": 1,
+                        "Cyro": 1,
+                        "Solar": 1,
+                        "Lunar": 1
+                    }
+                },
+                "Skills": {
+                    "$id": 91,
+                    "$type": 5,
+                    "$rlength": 2,
+                    "$rcontent": [
+                        {
+                            "$id": 92,
+                            "$type": 6,
+                            "Name": "Square Punch",
+                            "Prefab": {
+                                "$id": 93,
+                                "$type": 7,
+                                "path": "KY_effects/MagicEffectsPackFree/prefab/skillAttack2",
+                                "asset": {
+                                    "$id": 94,
+                                    "$type": 8
+                                }
+                            },
+                            "Cost": 0,
+                            "LevelLearned": 0,
+                            "Learned": true,
+                            "BaseDamage": 3,
+                            "DestructTimer": 1.5,
+                            "Rotation": {
+                                "$type": 9,
+                                0,
+                                0,
+                                0
+                            },
+                            "Friendly": false,
+                            "targetCount": 0,
+                            "hitType": 0,
+                            "elementType": 0,
+                            "AnimTrigger": "",
+                            "AffectsDead": false,
+                            "Description": "",
+                            "SoundEffect": {
+                                "$id": 95,
+                                "$type": 10,
+                                "path": "Sound/Battle/Hit37",
+                                "asset": {
+                                    "$id": 96,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 97,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "Hit37",
+                                                "SFX": {
+                                                    "$id": 98,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                }
+                            },
+                            "EffectDelay": 0
+                        },
+                        {
+                            "$id": 99,
+                            "$type": 6,
+                            "Name": "Currene I",
+                            "Prefab": {
+                                "$id": 100,
+                                "$type": 7,
+                                "path": "KY_effects/MagicEffectsPackFree/prefab/ErekiBall",
+                                "asset": {
+                                    "$id": 101,
+                                    "$type": 8
+                                }
+                            },
+                            "Cost": 0,
+                            "LevelLearned": 0,
+                            "Learned": true,
+                            "BaseDamage": 3,
+                            "DestructTimer": 1.5,
+                            "Rotation": {
+                                "$type": 9,
+                                0,
+                                0,
+                                0
+                            },
+                            "Friendly": false,
+                            "targetCount": 0,
+                            "hitType": 1,
+                            "elementType": 5,
+                            "AnimTrigger": "",
+                            "AffectsDead": false,
+                            "Description": "",
+                            "SoundEffect": {
+                                "$id": 102,
+                                "$type": 10,
+                                "path": "Sound/Battle/Electric",
+                                "asset": {
+                                    "$id": 103,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 104,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "Electric",
+                                                "SFX": {
+                                                    "$id": 105,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 0.4,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                }
+                            },
+                            "EffectDelay": 0
+                        }
+                    ]
+                },
+                "ShowTest": {
+                    "$id": 106,
+                    "$type": 15,
+                    "path": "",
+                    "asset": {
+                        "$id": 107,
+                        "$type": 16
+                    }
+                },
+                "FacePath": {
+                    "$id": 108,
+                    "$type": 15,
+                    "path": "Margherita Face",
+                    "asset": {
+                        "$id": 109,
+                        "$type": 16
+                    }
+                },
+                "SpriteGUI": "",
+                "BattleOutfitPath": {
+                    "$id": 110,
+                    "$type": 15,
+                    "path": "BattleGraphics/Margherita/Body/MargheritaBattle",
+                    "asset": {
+                        "$id": 111,
+                        "$type": 16
+                    }
+                },
+                "BattleFacePath": {
+                    "$id": 112,
+                    "$type": 15,
+                    "path": "BattleGraphics/Margherita/Face/MarghNormal",
+                    "asset": {
+                        "$id": 113,
+                        "$type": 16
+                    }
+                },
+                "AttackVoices": {
+                    "$id": 114,
+                    "$type": 17,
+                    "path": "Voice Clips/Battle/Marg/MargAttackGroup",
+                    "asset": {
+                        "$id": 115,
+                        "$type": 18,
+                        "GroupName": "",
+                        "SFXObjects": {
+                            "$id": 116,
+                            "$type": 19,
+                            "$rlength": 2,
+                            "$rcontent": [
+                                {
+                                    "$id": 117,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 118,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "",
+                                                "SFX": {
+                                                    "$id": 119,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                },
+                                {
+                                    "$id": 120,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 121,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "",
+                                                "SFX": {
+                                                    "$id": 122,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                }
+                            ]
+                        },
+                        "Randomization": 0
+                    }
+                },
+                "DefaultSpecialVoices": {
+                    "$id": 123,
+                    "$type": 17,
+                    "path": "Voice Clips/Battle/Marg/MargSpecialGroup",
+                    "asset": {
+                        "$id": 124,
+                        "$type": 18,
+                        "GroupName": "",
+                        "SFXObjects": {
+                            "$id": 125,
+                            "$type": 19,
+                            "$rlength": 1,
+                            "$rcontent": [
+                                {
+                                    "$id": 126,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 127,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "",
+                                                "SFX": {
+                                                    "$id": 128,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                }
+                            ]
+                        },
+                        "Randomization": 0
+                    }
+                },
+                "HealingVoices": {
+                    "$id": 129,
+                    "$type": 17,
+                    "path": "",
+                    "asset": null
+                },
+                "TurnStartVoices": {
+                    "$id": 130,
+                    "$type": 17,
+                    "path": "Voice Clips/Battle/Marg/MargStarts",
+                    "asset": {
+                        "$id": 131,
+                        "$type": 18,
+                        "GroupName": "Marg Starts",
+                        "SFXObjects": {
+                            "$id": 132,
+                            "$type": 19,
+                            "$rlength": 2,
+                            "$rcontent": [
+                                {
+                                    "$id": 133,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 134,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "",
+                                                "SFX": {
+                                                    "$id": 135,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                },
+                                {
+                                    "$id": 136,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 137,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "",
+                                                "SFX": {
+                                                    "$id": 138,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                }
+                            ]
+                        },
+                        "Randomization": 0
+                    }
+                },
+                "VictoryVoices": {
+                    "$id": 139,
+                    "$type": 17,
+                    "path": "",
+                    "asset": null
+                },
+                "DamageVoices": {
+                    "$id": 140,
+                    "$type": 17,
+                    "path": "Voice Clips/Battle/Marg/MargDamageGroup",
+                    "asset": {
+                        "$id": 141,
+                        "$type": 18,
+                        "GroupName": "MargDamage",
+                        "SFXObjects": {
+                            "$id": 142,
+                            "$type": 19,
+                            "$rlength": 3,
+                            "$rcontent": [
+                                {
+                                    "$id": 143,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 144,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "",
+                                                "SFX": {
+                                                    "$id": 145,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                },
+                                {
+                                    "$id": 146,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 147,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "",
+                                                "SFX": {
+                                                    "$id": 148,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                },
+                                {
+                                    "$id": 149,
+                                    "$type": 11,
+                                    "CollapseEditions": false,
+                                    "SFXName": "",
+                                    "SFXLayers": {
+                                        "$id": 150,
+                                        "$type": 12,
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": 13,
+                                                "LayerName": "",
+                                                "SFX": {
+                                                    "$id": 151,
+                                                    "$type": 14
+                                                },
+                                                "RandomizeVolume": false,
+                                                "FixedVolume": 1,
+                                                "MinVolume": 0.5,
+                                                "MaxVolume": 1,
+                                                "RandomizePitch": false,
+                                                "FixedPitch": 1,
+                                                "MinPitch": 0.75,
+                                                "MaxPitch": 1.5,
+                                                "DelaySFX": false,
+                                                "RandomizeDelay": false,
+                                                "FixedDelayTime": 0,
+                                                "MinDelayTime": 0,
+                                                "MaxDelayTime": 0,
+                                                "Mute": false,
+                                                "BypassEffects": false,
+                                                "BypassReverbZones": false,
+                                                "Priority": 128,
+                                                "StereoPan": 0,
+                                                "SpatialBlend": 0,
+                                                "ReverbZoneMix": 0
+                                            }
+                                        ]
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "LimitPolyphony": false,
+                                    "MaxVoices": 0,
+                                    "MinSeparation": 0
+                                }
+                            ]
+                        },
+                        "Randomization": 0
+                    }
+                },
+                "DefaultAttackSound": {
+                    "$id": 152,
+                    "$type": 10,
+                    "path": "Sound/Battle/BasePunch",
+                    "asset": {
+                        "$id": 153,
+                        "$type": 11,
+                        "CollapseEditions": false,
+                        "SFXName": "",
+                        "SFXLayers": {
+                            "$id": 154,
+                            "$type": 12,
+                            "$rlength": 1,
+                            "$rcontent": [
+                                {
+                                    "$type": 13,
+                                    "LayerName": "BasePunch",
+                                    "SFX": {
+                                        "$id": 155,
+                                        "$type": 14
+                                    },
+                                    "RandomizeVolume": false,
+                                    "FixedVolume": 1,
+                                    "MinVolume": 0.5,
+                                    "MaxVolume": 1,
+                                    "RandomizePitch": false,
+                                    "FixedPitch": 1,
+                                    "MinPitch": 0.75,
+                                    "MaxPitch": 1.5,
+                                    "DelaySFX": false,
+                                    "RandomizeDelay": false,
+                                    "FixedDelayTime": 0,
+                                    "MinDelayTime": 0,
+                                    "MaxDelayTime": 0,
+                                    "Mute": false,
+                                    "BypassEffects": false,
+                                    "BypassReverbZones": false,
+                                    "Priority": 128,
+                                    "StereoPan": 0,
+                                    "SpatialBlend": 0,
+                                    "ReverbZoneMix": 0
+                                }
+                            ]
+                        },
+                        "RandomizeVolume": false,
+                        "FixedVolume": 1,
+                        "MinVolume": 0.5,
+                        "MaxVolume": 1,
+                        "RandomizePitch": false,
+                        "FixedPitch": 1,
+                        "MinPitch": 0.75,
+                        "MaxPitch": 1.5,
+                        "DelaySFX": false,
+                        "RandomizeDelay": false,
+                        "FixedDelayTime": 0,
+                        "MinDelayTime": 0,
+                        "MaxDelayTime": 0,
+                        "LimitPolyphony": false,
+                        "MaxVoices": 0,
+                        "MinSeparation": 0
+                    }
+                }
+            }
+        ]
+    },
+    "PartySO": {
+        "$id": 156,
+        "$type": "20|System.Collections.Generic.List`1[[CharacterSO, Assembly-CSharp]], mscorlib",
+        "$rlength": 2,
+        "$rcontent": [
+            {
+                "$id": 157,
+                "$type": "21|CharacterSO, Assembly-CSharp",
+                "Character": $iref:2
+            },
+            {
+                "$id": 158,
+                "$type": 21,
+                "Character": $iref:86
+            }
+        ]
+    }
+}

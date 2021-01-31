@@ -75,7 +75,7 @@ public class Skills
             //run check for damage
         }
         GameManager.Instance.BattleManager.Defender = targets[0].GetComponent<ActorSlot>();
-
+        
         if (ai)
         {
             Animator anim = user.GetComponent<Animator>();

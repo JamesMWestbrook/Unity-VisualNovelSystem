@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Luisella
   m_EditorClassIdentifier: 
   Character:
-    Name: Luisella
+    Name: No
     NickName: EmptyNN
     Lvl: 1
     EXP: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
       Cost: 7
       LevelLearned: 0
       Learned: 1
-      BaseDamage: 5
+      BaseDamage: 3
       DestructTimer: 2
       Rotation: {x: 0, y: 0, z: 0}
       Friendly: 0

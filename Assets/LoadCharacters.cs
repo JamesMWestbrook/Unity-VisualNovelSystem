@@ -10,6 +10,7 @@ public      Data newData;
     {
         LoadData("SaveData/StarterData");
         List<ActorSlot> _actors = GetComponent<BattleManager>().Party;
+        Debug.Log(newData.Party.Count);
         _actors[0].Actor = newData.Party[0];
         _actors[1].Actor = newData.Party[1];
         for (int i = 0; i < _actors.Count; i++)
@@ -30,6 +31,8 @@ public      Data newData;
     }
     public void LoadData(string path){
         byte[] bytes = Resources.Load<TextAsset>(path).bytes;
-        newData = SerializationUtility.DeserializeValue<Data>(bytes, DataFormat.Binary);
+        newData = SerializationUtility.DeserializeValue<Data>(bytes, DataFormat.JSON);
+        Debug.Log("dd");
+        // newData = SerializationUtility.DeserializeValue<Data>(bytes, DataFormat.Binary);
     }
 }

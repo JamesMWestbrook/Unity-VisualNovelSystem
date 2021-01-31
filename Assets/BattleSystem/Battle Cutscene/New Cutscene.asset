@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Voice Clip Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 184, y: -360}
+  position: {x: 328, y: -360}
   ports:
     keys:
     - input
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Name: Set Sprite Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1352, y: -568}
+  position: {x: -888, y: -168}
   ports:
     keys:
     - input
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: Movement Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1064, y: -472}
+  position: {x: -648, y: -168}
   ports:
     keys:
     - input
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Name: Dialogue Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -312, y: -152}
+  position: {x: -120, y: -136}
   ports:
     keys:
     - input
@@ -366,7 +366,7 @@ MonoBehaviour:
   m_Name: Dialogue Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -904, y: -72}
+  position: {x: -424, y: -136}
   ports:
     keys:
     - input
@@ -413,7 +413,7 @@ MonoBehaviour:
   m_Name: Dialogue Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 232, y: -136}
+  position: {x: 376, y: -136}
   ports:
     keys:
     - input
@@ -445,7 +445,7 @@ MonoBehaviour:
   output: 0
   whoIsSpeaking: 1
   Speaker: Margherita
-  Dialogue: So, an demon?
+  Dialogue: So, a demon?
   IsMoving: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Name: Battle Cutscene
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1672, y: -200}
+  position: {x: -1784, y: -280}
   ports:
     keys:
     - beginScene
@@ -661,7 +661,7 @@ MonoBehaviour:
   m_Name: Movement Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1352, y: -8}
+  position: {x: -1336, y: -296}
   ports:
     keys:
     - input
@@ -707,7 +707,7 @@ MonoBehaviour:
   m_Name: Set Sprite Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1384, y: -248}
+  position: {x: -1576, y: -280}
   ports:
     keys:
     - input
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_Name: Set Sprite Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -40, y: -152}
+  position: {x: 104, y: -152}
   ports:
     keys:
     - input
@@ -845,7 +845,7 @@ MonoBehaviour:
   m_Name: Voice Clip Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1096, y: -280}
+  position: {x: -1112, y: -168}
   ports:
     keys:
     - input
@@ -889,7 +889,7 @@ MonoBehaviour:
   m_Name: Voice Clip Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -376, y: -360}
+  position: {x: -200, y: -296}
   ports:
     keys:
     - input

@@ -19,11 +19,11 @@ MonoBehaviour:
     EXP: 20
     statType: 0
     MaxStats:
-      HP: 10
+      HP: 40
       MP: 30
       Muscle: 3
       Vigor: 5
-      Will: 4
+      Will: 3
       Instinct: 5
       Agility: 3
       element:
@@ -62,5 +62,26 @@ MonoBehaviour:
       path: 
       asset: {fileID: 0}
     BattleFacePath:
+      path: 
+      asset: {fileID: 0}
+    AttackVoices:
+      path: 
+      asset: {fileID: 0}
+    DefaultSpecialVoices:
+      path: 
+      asset: {fileID: 0}
+    HealingVoices:
+      path: 
+      asset: {fileID: 0}
+    TurnStartVoices:
+      path: 
+      asset: {fileID: 0}
+    VictoryVoices:
+      path: 
+      asset: {fileID: 0}
+    DamageVoices:
+      path: 
+      asset: {fileID: 0}
+    DefaultAttackSound:
       path: 
       asset: {fileID: 0}

@@ -127,7 +127,6 @@ public class BattleManager : MonoBehaviour
     }
     public void SlideActor(ActorSlot actor)
     {
-        Debug.Log("Slide actor");
         CharacterSprite charSprite = CutsceneManager.Instance.rightCharacter.GetComponent<CharacterSprite>();
         charSprite.Face.enabled = true;
         charSprite.Outfit.enabled = true;
@@ -509,7 +508,6 @@ public class BattleManager : MonoBehaviour
         if (actor.IsAI) parent = actor.HP.transform.parent;
 
         GameObject go = Instantiate<GameObject>(DamagePopupPrefab, parent);
-        Debug.Log(actor.gameObject.name);
         RectTransform rect = go.GetComponent<RectTransform>();
         if (actor.IsAI)
         {
